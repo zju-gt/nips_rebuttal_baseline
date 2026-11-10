@@ -1,0 +1,3250 @@
+{
+  "components": {
+    "sop-world": {
+      "content_sha256": "9e4a7e64e3676e10baab2fd0b7c022da1ec8fc26d5b5c0fbd405eb160d9aeaf3",
+      "dirty": false,
+      "git_head": "f9d6f35f0a744fe9b3fe1132e6f50b43c1544cb1",
+      "source_path": "/home/duyuetian/projects/sop-world"
+    },
+    "sop-world-AWM": {
+      "content_sha256": "5d983923d1274244279921193c84d3e88018f360c72ccc5c86b64fd5149bb5c8",
+      "dirty": true,
+      "git_head": "5b6a64b88b39a3c5ed9de10fee0ae40f9a4b5917",
+      "source_path": "/home/duyuetian/projects/sop-world-AWM"
+    },
+    "sop-world-EvoTest": {
+      "content_sha256": "831473fc1e78cc3f6b2474bf4327059d000e8fc17f6baa0029ef4fa65cf2a790",
+      "dirty": true,
+      "git_head": "f9d6f35f0a744fe9b3fe1132e6f50b43c1544cb1",
+      "source_path": "/home/duyuetian/projects/sop-world-EvoTest"
+    },
+    "sop-world-Reasoning": {
+      "content_sha256": "e3960a7d6e41ed2f40ff300197869485b8460eca2fc417381c615184f58cf354",
+      "dirty": true,
+      "git_head": "f9d6f35f0a744fe9b3fe1132e6f50b43c1544cb1",
+      "source_path": "/home/duyuetian/projects/sop-world-Reasoning"
+    },
+    "sop-world-flexion": {
+      "content_sha256": "e1f35cf69ea12eda405e041453e8ace3df900f0aab3ead485ec2f1f3c3de562a",
+      "dirty": true,
+      "git_head": "1c3aae6d1af3f9974de63053c1387c2099996a82",
+      "source_path": "/home/duyuetian/projects/sop-world-flexion"
+    },
+    "sop-world-react": {
+      "content_sha256": "804880a1d1faf63035658c1514b3bed96c6d2615b61821f475455fbd990bc245",
+      "dirty": true,
+      "git_head": "1c3aae6d1af3f9974de63053c1387c2099996a82",
+      "source_path": "/home/duyuetian/projects/sop-world-react"
+    },
+    "tau2-bench": {
+      "content_sha256": "895ca4767823b171b07c08783f7969d101c5ca09d4be432e4db64a7e21307e12",
+      "dirty": false,
+      "git_head": "cf2fdcef3cf964a12666fd0b1deeb513ce43a324",
+      "source_path": "/home/duyuetian/projects/tau2-bench"
+    }
+  },
+  "files": [
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/evolution/experience_failure_extractor.md",
+      "sha256": "b37645a12889f06b0589e334d8aae61815e19cd7bc7d088c47b7f4b7ec2523f3",
+      "size": 2488
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/evolution/experience_success_extractor.md",
+      "sha256": "838a2557c2bb0497dba53bfdb6eac21a27f09e8e80bdb59f1447b6aa680912e1",
+      "size": 2387
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/evolution/workflow_success_extractor.md",
+      "sha256": "7962480c0ec26078ffbfeb2aab4d2a7fef364090f00419efa80506a0ed70198a",
+      "size": 1354
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/generation/benchmark_prior_generation.md",
+      "sha256": "b696443864cb3ba6b94d1c5dbb77c95a3716dbbfad4fb3ef51f325a87edfe200",
+      "size": 421
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/generation/domain_prior_generation.md",
+      "sha256": "59d9f3d4df2f4957d27293f694cba7339d0b90aa718c06c552ea476cfeca4b05",
+      "size": 537
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/generation/meta_sop_generation.md",
+      "sha256": "c00696726c5ae7f112deba650d4f4448b831683417c9ad47de745ce0a1d1b94c",
+      "size": 580
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_airline.md",
+      "sha256": "70ec8016e47dbe3a8b2b476c8aecf76f45437152b666adc31f46bdbc26f1b98f",
+      "size": 515
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_attraction.md",
+      "sha256": "227a20e0072fcb2ecf2d35456d1a8fa96e0b6bd307703cb11bbc2f9fb6ff1d91",
+      "size": 252
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_hotel.md",
+      "sha256": "ae30708031ab0f20cdaf3f962086f06d65e458447839077e37cfc78c1182a758",
+      "size": 299
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_restaurant.md",
+      "sha256": "617abe8554b40ad77f8d5ecfe058a4a0272fc2ca0c10f8412ad4d1a23ab64acd",
+      "size": 307
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_retail.md",
+      "sha256": "ab5227e5132e6f8199a95f30aa0cfa26e9d03c95cad16515b2549bdf22ea3205",
+      "size": 486
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_taxi.md",
+      "sha256": "e570dda76e0235a60b16f85d22e1bc1d30631f0df507d8e399946f95dce688c8",
+      "size": 223
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_telecom.md",
+      "sha256": "b04591a80f6dad27d8711fe2d653dc9345e9ae3f66b816f110192681e00dd385",
+      "size": 532
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/meta_sop/meta_sop_train.md",
+      "sha256": "86ee8fee9ec271eb24a2f541655145b8018d868ecfcf9d4f1913460202f62dd2",
+      "size": 293
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/benchmark_prior_multiwoz.md",
+      "sha256": "f9d6137a87083db48c23966fae0eb902e7ac9fed19a3d8f926fa23f8ea0f3249",
+      "size": 307
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/benchmark_prior_tau2.md",
+      "sha256": "5c12d7395568800cf58bc0cdab05aeaaee2f3e9a63de9b18193b10b8a30b3c20",
+      "size": 370
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_airline.md",
+      "sha256": "c968cdb2eb0cecf3c76af8face4ec7efcc9db9d011af028bd878bfe8ec662298",
+      "size": 484
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_attraction.md",
+      "sha256": "fe24168a7fc23291fa94eafa7ed752b2d1a1920a9557a8a2a151acc1b1d06c40",
+      "size": 287
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_hotel.md",
+      "sha256": "d7bfceedd3f0d58f259146cb62e3cc6047f264631f97222d3ca856e667c51b28",
+      "size": 336
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_restaurant.md",
+      "sha256": "11ad7d65bb4d1c4be16693ab1d9a667a28f434d11b58c0a188ae186c523155ab",
+      "size": 331
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_retail.md",
+      "sha256": "d2f307874d1b284cdd134120ee531b7bf0c819893aa71d935f9f3fb9dcbf0bfa",
+      "size": 422
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_taxi.md",
+      "sha256": "fba79a19ea4778a9ec67feac6e8b704dbec4573ba55efd0886b0f6a4f4464946",
+      "size": 262
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_telecom.md",
+      "sha256": "c50cf1529f1c6ebd18a5b5bc79151fabfbd1c78e18d99239f29d045d02fee52b",
+      "size": 535
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/prompts/prior/domain_prior_train.md",
+      "sha256": "b0957bc9e1ff8dedb8de01919fe773ea5aa247a30c0ec4cd683ebd9a94c5507d",
+      "size": 385
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/context_builder.py",
+      "sha256": "cceda293a40f1661372a082c8982ed5dbeb0b836726c63507ebeaa4ff527c7f9",
+      "size": 1404
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/evolve_state.py",
+      "sha256": "2d7b40569f9b7dcfa093b7cb24645dc15b063edec7803b784e018d105ce9a0b6",
+      "size": 8782
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/execution.py",
+      "sha256": "d06fa9e56d69a65fb2d1a08eb5873b12e864d4cce42d36cf709d7aef4970696f",
+      "size": 14702
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/llm_backend.py",
+      "sha256": "ad2572112ad7e90cd20bf44c998aac7d0c8a74a3de1608e03200b877f05309f7",
+      "size": 10424
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/memory.py",
+      "sha256": "270dd8a17e633280498fc5a864bd23e8c36d74319ff7f9689aead39b4b91c89d",
+      "size": 9953
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/meta_sop.py",
+      "sha256": "3158dc8c4f2d9ae4e3ca493b84bee884feec3064311f4621f12801229b4c3d7b",
+      "size": 1519
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/multiwoz_prompt_context.py",
+      "sha256": "dce5515c86e6eac3915991ae6609f484863c253b203a5fb0e7fd603b9f38431c",
+      "size": 4682
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/multiwoz_runner.py",
+      "sha256": "830c3d2d713cf34e95c197c40a262d9dab28786b1cdd162cf9cd46707ddfe977",
+      "size": 51320
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/retrieval.py",
+      "sha256": "ede22b6765b91a5bd986941ea54df590237050be6a65724bd0e9d5170bdcb3fe",
+      "size": 12712
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/rewards.py",
+      "sha256": "2226503c86d1ec1f2db615fbef04eab876d38b5cdc753507c1481312483e687e",
+      "size": 42543
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/session_cache.py",
+      "sha256": "c764f37080a84120ee833db061b8529bd842307c00a40828ae1c519ddceef3e6",
+      "size": 4065
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/state_graph.py",
+      "sha256": "ee289ce6f49354e51d7ae70dd1990e8c64808703ae1eed088ad88ed0b931c867",
+      "size": 11952
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/tau2_runner.py",
+      "sha256": "6d1265f933982777a0cdbf460f2482929304fe5f3b3f2cce4e9fb20d7338dc11",
+      "size": 133779
+    },
+    {
+      "component": "sop-world-AWM",
+      "path": "sop-world-AWM/src/workflow_memory.py",
+      "sha256": "c751fb4418df53c7a51a10a8e016c8e29ecff29011ecd619f8ff02b604ed64eb",
+      "size": 20086
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/evolution/experience_failure_extractor.md",
+      "sha256": "b37645a12889f06b0589e334d8aae61815e19cd7bc7d088c47b7f4b7ec2523f3",
+      "size": 2488
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/evolution/experience_success_extractor.md",
+      "sha256": "838a2557c2bb0497dba53bfdb6eac21a27f09e8e80bdb59f1447b6aa680912e1",
+      "size": 2387
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/evolution/memory_extractor.md",
+      "sha256": "c0a49c32c45ace452b8721ac0c6e5ca81a2089e3d14c190fe4c583f562a6b86e",
+      "size": 1614
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/evolution/posterior_generator.md",
+      "sha256": "f257cd0196b962aa9dccc49ce628cf00dd0e903f73bb91dbe80cfb0b0101e6a9",
+      "size": 1687
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/evolution/workflow_extractor.md",
+      "sha256": "50d54dbaf8db8206ea9d98ea56818f0da28d39e9ef61ccab28604480686ccf5e",
+      "size": 1505
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/generation/benchmark_prior_generation.md",
+      "sha256": "b696443864cb3ba6b94d1c5dbb77c95a3716dbbfad4fb3ef51f325a87edfe200",
+      "size": 421
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/generation/domain_prior_generation.md",
+      "sha256": "59d9f3d4df2f4957d27293f694cba7339d0b90aa718c06c552ea476cfeca4b05",
+      "size": 537
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/generation/meta_sop_generation.md",
+      "sha256": "79a2a1e71625cade67a3cfdcb1118bfa0c801dd9fa3beb68264969fd1c96f21a",
+      "size": 1121
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_airline.md",
+      "sha256": "5afe10175dfce226772650d68b51ae53ae6d99272f29f4336443feba5b7b0347",
+      "size": 2382
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_attraction.md",
+      "sha256": "227a20e0072fcb2ecf2d35456d1a8fa96e0b6bd307703cb11bbc2f9fb6ff1d91",
+      "size": 252
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_hotel.md",
+      "sha256": "ae30708031ab0f20cdaf3f962086f06d65e458447839077e37cfc78c1182a758",
+      "size": 299
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_restaurant.md",
+      "sha256": "617abe8554b40ad77f8d5ecfe058a4a0272fc2ca0c10f8412ad4d1a23ab64acd",
+      "size": 307
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_retail.md",
+      "sha256": "ef0eb2c0c0d39f51779f4b9245d7ec58baaa95dbd8d5bc572ffcaaa910c90c10",
+      "size": 2466
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_taxi.md",
+      "sha256": "e570dda76e0235a60b16f85d22e1bc1d30631f0df507d8e399946f95dce688c8",
+      "size": 223
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_telecom.md",
+      "sha256": "0b0543b786a8c5c3597081cbe058042f90aeca1a6e50e92d4279fdf241b27ad0",
+      "size": 2220
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/meta_sop/meta_sop_train.md",
+      "sha256": "86ee8fee9ec271eb24a2f541655145b8018d868ecfcf9d4f1913460202f62dd2",
+      "size": 293
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/benchmark_prior_multiwoz.md",
+      "sha256": "f9d6137a87083db48c23966fae0eb902e7ac9fed19a3d8f926fa23f8ea0f3249",
+      "size": 307
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/benchmark_prior_tau2.md",
+      "sha256": "5c12d7395568800cf58bc0cdab05aeaaee2f3e9a63de9b18193b10b8a30b3c20",
+      "size": 370
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_airline.md",
+      "sha256": "c968cdb2eb0cecf3c76af8face4ec7efcc9db9d011af028bd878bfe8ec662298",
+      "size": 484
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_attraction.md",
+      "sha256": "fe24168a7fc23291fa94eafa7ed752b2d1a1920a9557a8a2a151acc1b1d06c40",
+      "size": 287
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_hotel.md",
+      "sha256": "d7bfceedd3f0d58f259146cb62e3cc6047f264631f97222d3ca856e667c51b28",
+      "size": 336
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_restaurant.md",
+      "sha256": "11ad7d65bb4d1c4be16693ab1d9a667a28f434d11b58c0a188ae186c523155ab",
+      "size": 331
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_retail.md",
+      "sha256": "d2f307874d1b284cdd134120ee531b7bf0c819893aa71d935f9f3fb9dcbf0bfa",
+      "size": 422
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_taxi.md",
+      "sha256": "fba79a19ea4778a9ec67feac6e8b704dbec4573ba55efd0886b0f6a4f4464946",
+      "size": 262
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_telecom.md",
+      "sha256": "c50cf1529f1c6ebd18a5b5bc79151fabfbd1c78e18d99239f29d045d02fee52b",
+      "size": 535
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/prompts/prior/domain_prior_train.md",
+      "sha256": "b0957bc9e1ff8dedb8de01919fe773ea5aa247a30c0ec4cd683ebd9a94c5507d",
+      "size": 385
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/context_builder.py",
+      "sha256": "cceda293a40f1661372a082c8982ed5dbeb0b836726c63507ebeaa4ff527c7f9",
+      "size": 1404
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/evolution_pipeline.py",
+      "sha256": "ca9a2efbe884071900d18788caf4969c2a503f5edb8cc2c40f4b88b802c6313a",
+      "size": 45510
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/evolve_state.py",
+      "sha256": "3bb46c8d18417c2537655b8a6675b69bbab419d8b50466dbd677ee7f8e9cfc13",
+      "size": 8701
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/evotest_hints.py",
+      "sha256": "eceb5efcc0b3133a3e6b1d90fad677454866b7b5f2433cea332fe3875ff7a779",
+      "size": 8632
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/execution.py",
+      "sha256": "d06fa9e56d69a65fb2d1a08eb5873b12e864d4cce42d36cf709d7aef4970696f",
+      "size": 14702
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/llm_backend.py",
+      "sha256": "91ed1f3ad5a0f2bc76613d90e060c1de819f5a56e07bff916f8fca83840dcc09",
+      "size": 14704
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/memory.py",
+      "sha256": "517e2237425d02e0b291b248331c4014c13736f7660e1e78559557572a50866c",
+      "size": 13244
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/meta_sop.py",
+      "sha256": "3158dc8c4f2d9ae4e3ca493b84bee884feec3064311f4621f12801229b4c3d7b",
+      "size": 1519
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/multiwoz_prompt_context.py",
+      "sha256": "dce5515c86e6eac3915991ae6609f484863c253b203a5fb0e7fd603b9f38431c",
+      "size": 4682
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/multiwoz_runner.py",
+      "sha256": "830c3d2d713cf34e95c197c40a262d9dab28786b1cdd162cf9cd46707ddfe977",
+      "size": 51320
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/retrieval.py",
+      "sha256": "9d4a71943fd5264e128f37773c0617fa54cd05ecc8844b55850582353ded26e8",
+      "size": 15310
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/rewards.py",
+      "sha256": "97c7f28bfbf5eb61b59cab5d739b54e81d1c6f20bc426c40aa0251966e2c8ae1",
+      "size": 41513
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/session_cache.py",
+      "sha256": "c764f37080a84120ee833db061b8529bd842307c00a40828ae1c519ddceef3e6",
+      "size": 4065
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/state_graph.py",
+      "sha256": "fea5a2a43334269203058fb525a64dab6761692765a76b89396b04165b4fe164",
+      "size": 15588
+    },
+    {
+      "component": "sop-world-EvoTest",
+      "path": "sop-world-EvoTest/src/tau2_runner.py",
+      "sha256": "704c2957c6a15674a0e6359dc2d3851bc5d7044508ed6de9483f08abe22f02f4",
+      "size": 148827
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/evolution/experience_failure_extractor.md",
+      "sha256": "b37645a12889f06b0589e334d8aae61815e19cd7bc7d088c47b7f4b7ec2523f3",
+      "size": 2488
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/evolution/experience_success_extractor.md",
+      "sha256": "838a2557c2bb0497dba53bfdb6eac21a27f09e8e80bdb59f1447b6aa680912e1",
+      "size": 2387
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/evolution/memory_extractor.md",
+      "sha256": "c0a49c32c45ace452b8721ac0c6e5ca81a2089e3d14c190fe4c583f562a6b86e",
+      "size": 1614
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/evolution/posterior_generator.md",
+      "sha256": "f257cd0196b962aa9dccc49ce628cf00dd0e903f73bb91dbe80cfb0b0101e6a9",
+      "size": 1687
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/evolution/workflow_extractor.md",
+      "sha256": "50d54dbaf8db8206ea9d98ea56818f0da28d39e9ef61ccab28604480686ccf5e",
+      "size": 1505
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/generation/benchmark_prior_generation.md",
+      "sha256": "b696443864cb3ba6b94d1c5dbb77c95a3716dbbfad4fb3ef51f325a87edfe200",
+      "size": 421
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/generation/domain_prior_generation.md",
+      "sha256": "59d9f3d4df2f4957d27293f694cba7339d0b90aa718c06c552ea476cfeca4b05",
+      "size": 537
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/generation/meta_sop_generation.md",
+      "sha256": "79a2a1e71625cade67a3cfdcb1118bfa0c801dd9fa3beb68264969fd1c96f21a",
+      "size": 1121
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_airline.md",
+      "sha256": "5afe10175dfce226772650d68b51ae53ae6d99272f29f4336443feba5b7b0347",
+      "size": 2382
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_attraction.md",
+      "sha256": "227a20e0072fcb2ecf2d35456d1a8fa96e0b6bd307703cb11bbc2f9fb6ff1d91",
+      "size": 252
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_hotel.md",
+      "sha256": "ae30708031ab0f20cdaf3f962086f06d65e458447839077e37cfc78c1182a758",
+      "size": 299
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_restaurant.md",
+      "sha256": "617abe8554b40ad77f8d5ecfe058a4a0272fc2ca0c10f8412ad4d1a23ab64acd",
+      "size": 307
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_retail.md",
+      "sha256": "ef0eb2c0c0d39f51779f4b9245d7ec58baaa95dbd8d5bc572ffcaaa910c90c10",
+      "size": 2466
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_taxi.md",
+      "sha256": "e570dda76e0235a60b16f85d22e1bc1d30631f0df507d8e399946f95dce688c8",
+      "size": 223
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_telecom.md",
+      "sha256": "0b0543b786a8c5c3597081cbe058042f90aeca1a6e50e92d4279fdf241b27ad0",
+      "size": 2220
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/meta_sop/meta_sop_train.md",
+      "sha256": "86ee8fee9ec271eb24a2f541655145b8018d868ecfcf9d4f1913460202f62dd2",
+      "size": 293
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/benchmark_prior_multiwoz.md",
+      "sha256": "f9d6137a87083db48c23966fae0eb902e7ac9fed19a3d8f926fa23f8ea0f3249",
+      "size": 307
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/benchmark_prior_tau2.md",
+      "sha256": "5c12d7395568800cf58bc0cdab05aeaaee2f3e9a63de9b18193b10b8a30b3c20",
+      "size": 370
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_airline.md",
+      "sha256": "c968cdb2eb0cecf3c76af8face4ec7efcc9db9d011af028bd878bfe8ec662298",
+      "size": 484
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_attraction.md",
+      "sha256": "fe24168a7fc23291fa94eafa7ed752b2d1a1920a9557a8a2a151acc1b1d06c40",
+      "size": 287
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_hotel.md",
+      "sha256": "d7bfceedd3f0d58f259146cb62e3cc6047f264631f97222d3ca856e667c51b28",
+      "size": 336
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_restaurant.md",
+      "sha256": "11ad7d65bb4d1c4be16693ab1d9a667a28f434d11b58c0a188ae186c523155ab",
+      "size": 331
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_retail.md",
+      "sha256": "d2f307874d1b284cdd134120ee531b7bf0c819893aa71d935f9f3fb9dcbf0bfa",
+      "size": 422
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_taxi.md",
+      "sha256": "fba79a19ea4778a9ec67feac6e8b704dbec4573ba55efd0886b0f6a4f4464946",
+      "size": 262
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_telecom.md",
+      "sha256": "c50cf1529f1c6ebd18a5b5bc79151fabfbd1c78e18d99239f29d045d02fee52b",
+      "size": 535
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/prompts/prior/domain_prior_train.md",
+      "sha256": "b0957bc9e1ff8dedb8de01919fe773ea5aa247a30c0ec4cd683ebd9a94c5507d",
+      "size": 385
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/context_builder.py",
+      "sha256": "cceda293a40f1661372a082c8982ed5dbeb0b836726c63507ebeaa4ff527c7f9",
+      "size": 1404
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/evolution_pipeline.py",
+      "sha256": "ca9a2efbe884071900d18788caf4969c2a503f5edb8cc2c40f4b88b802c6313a",
+      "size": 45510
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/evolve_state.py",
+      "sha256": "3bb46c8d18417c2537655b8a6675b69bbab419d8b50466dbd677ee7f8e9cfc13",
+      "size": 8701
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/execution.py",
+      "sha256": "d06fa9e56d69a65fb2d1a08eb5873b12e864d4cce42d36cf709d7aef4970696f",
+      "size": 14702
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/llm_backend.py",
+      "sha256": "91ed1f3ad5a0f2bc76613d90e060c1de819f5a56e07bff916f8fca83840dcc09",
+      "size": 14704
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/memory.py",
+      "sha256": "517e2237425d02e0b291b248331c4014c13736f7660e1e78559557572a50866c",
+      "size": 13244
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/meta_sop.py",
+      "sha256": "3158dc8c4f2d9ae4e3ca493b84bee884feec3064311f4621f12801229b4c3d7b",
+      "size": 1519
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/multiwoz_prompt_context.py",
+      "sha256": "dce5515c86e6eac3915991ae6609f484863c253b203a5fb0e7fd603b9f38431c",
+      "size": 4682
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/multiwoz_runner.py",
+      "sha256": "a996cb8d14267abbe53d3683746e11d368bc8e9f7ad7d40f3b69aeb128930a2c",
+      "size": 53834
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/reasoning_bank.py",
+      "sha256": "007279b6e1bf2996fc35d8904c32bd3c32990505e4dcddc2d8d7ccc61e0ed670",
+      "size": 11371
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/retrieval.py",
+      "sha256": "d00bbc42c9ea52a882e9e1b159e2fa7ba35e7ee337b29e43b158592049b0aa2c",
+      "size": 18185
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/rewards.py",
+      "sha256": "97c7f28bfbf5eb61b59cab5d739b54e81d1c6f20bc426c40aa0251966e2c8ae1",
+      "size": 41513
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/session_cache.py",
+      "sha256": "c764f37080a84120ee833db061b8529bd842307c00a40828ae1c519ddceef3e6",
+      "size": 4065
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/state_graph.py",
+      "sha256": "fea5a2a43334269203058fb525a64dab6761692765a76b89396b04165b4fe164",
+      "size": 15588
+    },
+    {
+      "component": "sop-world-Reasoning",
+      "path": "sop-world-Reasoning/src/tau2_runner.py",
+      "sha256": "f866012297203242b9da4ad9f06dabe4ca3e3193f912446279dd2df74328f960",
+      "size": 147436
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/generation/benchmark_prior_generation.md",
+      "sha256": "b696443864cb3ba6b94d1c5dbb77c95a3716dbbfad4fb3ef51f325a87edfe200",
+      "size": 421
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/generation/domain_prior_generation.md",
+      "sha256": "59d9f3d4df2f4957d27293f694cba7339d0b90aa718c06c552ea476cfeca4b05",
+      "size": 537
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/generation/meta_sop_generation.md",
+      "sha256": "c00696726c5ae7f112deba650d4f4448b831683417c9ad47de745ce0a1d1b94c",
+      "size": 580
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_airline.md",
+      "sha256": "70ec8016e47dbe3a8b2b476c8aecf76f45437152b666adc31f46bdbc26f1b98f",
+      "size": 515
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_attraction.md",
+      "sha256": "227a20e0072fcb2ecf2d35456d1a8fa96e0b6bd307703cb11bbc2f9fb6ff1d91",
+      "size": 252
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_hotel.md",
+      "sha256": "ae30708031ab0f20cdaf3f962086f06d65e458447839077e37cfc78c1182a758",
+      "size": 299
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_restaurant.md",
+      "sha256": "617abe8554b40ad77f8d5ecfe058a4a0272fc2ca0c10f8412ad4d1a23ab64acd",
+      "size": 307
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_retail.md",
+      "sha256": "ab5227e5132e6f8199a95f30aa0cfa26e9d03c95cad16515b2549bdf22ea3205",
+      "size": 486
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_taxi.md",
+      "sha256": "e570dda76e0235a60b16f85d22e1bc1d30631f0df507d8e399946f95dce688c8",
+      "size": 223
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_telecom.md",
+      "sha256": "b04591a80f6dad27d8711fe2d653dc9345e9ae3f66b816f110192681e00dd385",
+      "size": 532
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/meta_sop/meta_sop_train.md",
+      "sha256": "86ee8fee9ec271eb24a2f541655145b8018d868ecfcf9d4f1913460202f62dd2",
+      "size": 293
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/benchmark_prior_multiwoz.md",
+      "sha256": "f9d6137a87083db48c23966fae0eb902e7ac9fed19a3d8f926fa23f8ea0f3249",
+      "size": 307
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/benchmark_prior_tau2.md",
+      "sha256": "5c12d7395568800cf58bc0cdab05aeaaee2f3e9a63de9b18193b10b8a30b3c20",
+      "size": 370
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_airline.md",
+      "sha256": "c968cdb2eb0cecf3c76af8face4ec7efcc9db9d011af028bd878bfe8ec662298",
+      "size": 484
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_attraction.md",
+      "sha256": "fe24168a7fc23291fa94eafa7ed752b2d1a1920a9557a8a2a151acc1b1d06c40",
+      "size": 287
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_hotel.md",
+      "sha256": "d7bfceedd3f0d58f259146cb62e3cc6047f264631f97222d3ca856e667c51b28",
+      "size": 336
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_restaurant.md",
+      "sha256": "11ad7d65bb4d1c4be16693ab1d9a667a28f434d11b58c0a188ae186c523155ab",
+      "size": 331
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_retail.md",
+      "sha256": "d2f307874d1b284cdd134120ee531b7bf0c819893aa71d935f9f3fb9dcbf0bfa",
+      "size": 422
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_taxi.md",
+      "sha256": "fba79a19ea4778a9ec67feac6e8b704dbec4573ba55efd0886b0f6a4f4464946",
+      "size": 262
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_telecom.md",
+      "sha256": "c50cf1529f1c6ebd18a5b5bc79151fabfbd1c78e18d99239f29d045d02fee52b",
+      "size": 535
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/prompts/prior/domain_prior_train.md",
+      "sha256": "b0957bc9e1ff8dedb8de01919fe773ea5aa247a30c0ec4cd683ebd9a94c5507d",
+      "size": 385
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/context_builder.py",
+      "sha256": "cceda293a40f1661372a082c8982ed5dbeb0b836726c63507ebeaa4ff527c7f9",
+      "size": 1404
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/evolve_state.py",
+      "sha256": "44caacf51896ff9b1f9a07d53ae5aca7a79f047e198b044cc09063245c6e5dd6",
+      "size": 4430
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/execution.py",
+      "sha256": "d06fa9e56d69a65fb2d1a08eb5873b12e864d4cce42d36cf709d7aef4970696f",
+      "size": 14702
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/llm_backend.py",
+      "sha256": "2824adda991d9044f4898c78b9d225a66df65f6739386fae52699e1e00d57482",
+      "size": 3762
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/memory.py",
+      "sha256": "415f4a6694a1fdb4dc93ae1748cd5553732622303e297a0bd19ce52c039db1e1",
+      "size": 4581
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/meta_sop.py",
+      "sha256": "3158dc8c4f2d9ae4e3ca493b84bee884feec3064311f4621f12801229b4c3d7b",
+      "size": 1519
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/multiwoz_prompt_context.py",
+      "sha256": "dce5515c86e6eac3915991ae6609f484863c253b203a5fb0e7fd603b9f38431c",
+      "size": 4682
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/multiwoz_runner.py",
+      "sha256": "599b4f85ee3d614751b5b6f6273861bdb5d85c771c1ad8e221e180ca04a9ab40",
+      "size": 27342
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/rewards.py",
+      "sha256": "c3b11f21866f4d822e82380aae235cefaac98267fae94799c05f1129bb6d7eb9",
+      "size": 2839
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/session_cache.py",
+      "sha256": "c764f37080a84120ee833db061b8529bd842307c00a40828ae1c519ddceef3e6",
+      "size": 4065
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/state_graph.py",
+      "sha256": "6e1b8157c06a77751fca829cd998a9ba911203535b9e1642c9ffce9ff1436e32",
+      "size": 5401
+    },
+    {
+      "component": "sop-world-flexion",
+      "path": "sop-world-flexion/src/tau2_runner.py",
+      "sha256": "66eb87c398eac966cc770fadaea0713bb15b422448ccd945a0402f068a375bcf",
+      "size": 107167
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/generation/benchmark_prior_generation.md",
+      "sha256": "b696443864cb3ba6b94d1c5dbb77c95a3716dbbfad4fb3ef51f325a87edfe200",
+      "size": 421
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/generation/domain_prior_generation.md",
+      "sha256": "59d9f3d4df2f4957d27293f694cba7339d0b90aa718c06c552ea476cfeca4b05",
+      "size": 537
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/generation/meta_sop_generation.md",
+      "sha256": "c00696726c5ae7f112deba650d4f4448b831683417c9ad47de745ce0a1d1b94c",
+      "size": 580
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_airline.md",
+      "sha256": "70ec8016e47dbe3a8b2b476c8aecf76f45437152b666adc31f46bdbc26f1b98f",
+      "size": 515
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_attraction.md",
+      "sha256": "227a20e0072fcb2ecf2d35456d1a8fa96e0b6bd307703cb11bbc2f9fb6ff1d91",
+      "size": 252
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_hotel.md",
+      "sha256": "ae30708031ab0f20cdaf3f962086f06d65e458447839077e37cfc78c1182a758",
+      "size": 299
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_restaurant.md",
+      "sha256": "617abe8554b40ad77f8d5ecfe058a4a0272fc2ca0c10f8412ad4d1a23ab64acd",
+      "size": 307
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_retail.md",
+      "sha256": "ab5227e5132e6f8199a95f30aa0cfa26e9d03c95cad16515b2549bdf22ea3205",
+      "size": 486
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_taxi.md",
+      "sha256": "e570dda76e0235a60b16f85d22e1bc1d30631f0df507d8e399946f95dce688c8",
+      "size": 223
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_telecom.md",
+      "sha256": "b04591a80f6dad27d8711fe2d653dc9345e9ae3f66b816f110192681e00dd385",
+      "size": 532
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/meta_sop/meta_sop_train.md",
+      "sha256": "86ee8fee9ec271eb24a2f541655145b8018d868ecfcf9d4f1913460202f62dd2",
+      "size": 293
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/benchmark_prior_multiwoz.md",
+      "sha256": "f9d6137a87083db48c23966fae0eb902e7ac9fed19a3d8f926fa23f8ea0f3249",
+      "size": 307
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/benchmark_prior_tau2.md",
+      "sha256": "5c12d7395568800cf58bc0cdab05aeaaee2f3e9a63de9b18193b10b8a30b3c20",
+      "size": 370
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_airline.md",
+      "sha256": "c968cdb2eb0cecf3c76af8face4ec7efcc9db9d011af028bd878bfe8ec662298",
+      "size": 484
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_attraction.md",
+      "sha256": "fe24168a7fc23291fa94eafa7ed752b2d1a1920a9557a8a2a151acc1b1d06c40",
+      "size": 287
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_hotel.md",
+      "sha256": "d7bfceedd3f0d58f259146cb62e3cc6047f264631f97222d3ca856e667c51b28",
+      "size": 336
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_restaurant.md",
+      "sha256": "11ad7d65bb4d1c4be16693ab1d9a667a28f434d11b58c0a188ae186c523155ab",
+      "size": 331
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_retail.md",
+      "sha256": "d2f307874d1b284cdd134120ee531b7bf0c819893aa71d935f9f3fb9dcbf0bfa",
+      "size": 422
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_taxi.md",
+      "sha256": "fba79a19ea4778a9ec67feac6e8b704dbec4573ba55efd0886b0f6a4f4464946",
+      "size": 262
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_telecom.md",
+      "sha256": "c50cf1529f1c6ebd18a5b5bc79151fabfbd1c78e18d99239f29d045d02fee52b",
+      "size": 535
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/prompts/prior/domain_prior_train.md",
+      "sha256": "b0957bc9e1ff8dedb8de01919fe773ea5aa247a30c0ec4cd683ebd9a94c5507d",
+      "size": 385
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/context_builder.py",
+      "sha256": "cceda293a40f1661372a082c8982ed5dbeb0b836726c63507ebeaa4ff527c7f9",
+      "size": 1404
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/evolve_state.py",
+      "sha256": "44caacf51896ff9b1f9a07d53ae5aca7a79f047e198b044cc09063245c6e5dd6",
+      "size": 4430
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/execution.py",
+      "sha256": "d06fa9e56d69a65fb2d1a08eb5873b12e864d4cce42d36cf709d7aef4970696f",
+      "size": 14702
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/llm_backend.py",
+      "sha256": "fcf929abfe04ddee65cb1395831be03b470511afd548fe30b7104a2c30816c46",
+      "size": 3977
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/memory.py",
+      "sha256": "415f4a6694a1fdb4dc93ae1748cd5553732622303e297a0bd19ce52c039db1e1",
+      "size": 4581
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/meta_sop.py",
+      "sha256": "3158dc8c4f2d9ae4e3ca493b84bee884feec3064311f4621f12801229b4c3d7b",
+      "size": 1519
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/multiwoz_prompt_context.py",
+      "sha256": "dce5515c86e6eac3915991ae6609f484863c253b203a5fb0e7fd603b9f38431c",
+      "size": 4682
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/multiwoz_runner.py",
+      "sha256": "599b4f85ee3d614751b5b6f6273861bdb5d85c771c1ad8e221e180ca04a9ab40",
+      "size": 27342
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/rewards.py",
+      "sha256": "c3b11f21866f4d822e82380aae235cefaac98267fae94799c05f1129bb6d7eb9",
+      "size": 2839
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/session_cache.py",
+      "sha256": "c764f37080a84120ee833db061b8529bd842307c00a40828ae1c519ddceef3e6",
+      "size": 4065
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/state_graph.py",
+      "sha256": "6e1b8157c06a77751fca829cd998a9ba911203535b9e1642c9ffce9ff1436e32",
+      "size": 5401
+    },
+    {
+      "component": "sop-world-react",
+      "path": "sop-world-react/src/tau2_runner.py",
+      "sha256": "3c04790c4438ed094bb05a8eda9b5c17b257e3194745a6ee44f1101a79fe0470",
+      "size": 101458
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/evolution/experience_failure_extractor.md",
+      "sha256": "b37645a12889f06b0589e334d8aae61815e19cd7bc7d088c47b7f4b7ec2523f3",
+      "size": 2488
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/evolution/experience_success_extractor.md",
+      "sha256": "838a2557c2bb0497dba53bfdb6eac21a27f09e8e80bdb59f1447b6aa680912e1",
+      "size": 2387
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/evolution/memory_extractor.md",
+      "sha256": "c0a49c32c45ace452b8721ac0c6e5ca81a2089e3d14c190fe4c583f562a6b86e",
+      "size": 1614
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/evolution/posterior_generator.md",
+      "sha256": "f257cd0196b962aa9dccc49ce628cf00dd0e903f73bb91dbe80cfb0b0101e6a9",
+      "size": 1687
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/evolution/workflow_extractor.md",
+      "sha256": "50d54dbaf8db8206ea9d98ea56818f0da28d39e9ef61ccab28604480686ccf5e",
+      "size": 1505
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/generation/benchmark_prior_generation.md",
+      "sha256": "b696443864cb3ba6b94d1c5dbb77c95a3716dbbfad4fb3ef51f325a87edfe200",
+      "size": 421
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/generation/domain_prior_generation.md",
+      "sha256": "59d9f3d4df2f4957d27293f694cba7339d0b90aa718c06c552ea476cfeca4b05",
+      "size": 537
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/generation/meta_sop_generation.md",
+      "sha256": "79a2a1e71625cade67a3cfdcb1118bfa0c801dd9fa3beb68264969fd1c96f21a",
+      "size": 1121
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_airline.md",
+      "sha256": "5afe10175dfce226772650d68b51ae53ae6d99272f29f4336443feba5b7b0347",
+      "size": 2382
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_attraction.md",
+      "sha256": "227a20e0072fcb2ecf2d35456d1a8fa96e0b6bd307703cb11bbc2f9fb6ff1d91",
+      "size": 252
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_hotel.md",
+      "sha256": "ae30708031ab0f20cdaf3f962086f06d65e458447839077e37cfc78c1182a758",
+      "size": 299
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_restaurant.md",
+      "sha256": "617abe8554b40ad77f8d5ecfe058a4a0272fc2ca0c10f8412ad4d1a23ab64acd",
+      "size": 307
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_retail.md",
+      "sha256": "ef0eb2c0c0d39f51779f4b9245d7ec58baaa95dbd8d5bc572ffcaaa910c90c10",
+      "size": 2466
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_taxi.md",
+      "sha256": "e570dda76e0235a60b16f85d22e1bc1d30631f0df507d8e399946f95dce688c8",
+      "size": 223
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_telecom.md",
+      "sha256": "0b0543b786a8c5c3597081cbe058042f90aeca1a6e50e92d4279fdf241b27ad0",
+      "size": 2220
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/meta_sop/meta_sop_train.md",
+      "sha256": "86ee8fee9ec271eb24a2f541655145b8018d868ecfcf9d4f1913460202f62dd2",
+      "size": 293
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/benchmark_prior_multiwoz.md",
+      "sha256": "f9d6137a87083db48c23966fae0eb902e7ac9fed19a3d8f926fa23f8ea0f3249",
+      "size": 307
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/benchmark_prior_tau2.md",
+      "sha256": "5c12d7395568800cf58bc0cdab05aeaaee2f3e9a63de9b18193b10b8a30b3c20",
+      "size": 370
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_airline.md",
+      "sha256": "c968cdb2eb0cecf3c76af8face4ec7efcc9db9d011af028bd878bfe8ec662298",
+      "size": 484
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_attraction.md",
+      "sha256": "fe24168a7fc23291fa94eafa7ed752b2d1a1920a9557a8a2a151acc1b1d06c40",
+      "size": 287
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_hotel.md",
+      "sha256": "d7bfceedd3f0d58f259146cb62e3cc6047f264631f97222d3ca856e667c51b28",
+      "size": 336
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_restaurant.md",
+      "sha256": "11ad7d65bb4d1c4be16693ab1d9a667a28f434d11b58c0a188ae186c523155ab",
+      "size": 331
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_retail.md",
+      "sha256": "d2f307874d1b284cdd134120ee531b7bf0c819893aa71d935f9f3fb9dcbf0bfa",
+      "size": 422
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_taxi.md",
+      "sha256": "fba79a19ea4778a9ec67feac6e8b704dbec4573ba55efd0886b0f6a4f4464946",
+      "size": 262
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_telecom.md",
+      "sha256": "c50cf1529f1c6ebd18a5b5bc79151fabfbd1c78e18d99239f29d045d02fee52b",
+      "size": 535
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/prompts/prior/domain_prior_train.md",
+      "sha256": "b0957bc9e1ff8dedb8de01919fe773ea5aa247a30c0ec4cd683ebd9a94c5507d",
+      "size": 385
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/context_builder.py",
+      "sha256": "cceda293a40f1661372a082c8982ed5dbeb0b836726c63507ebeaa4ff527c7f9",
+      "size": 1404
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/evolution_pipeline.py",
+      "sha256": "ca9a2efbe884071900d18788caf4969c2a503f5edb8cc2c40f4b88b802c6313a",
+      "size": 45510
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/evolve_state.py",
+      "sha256": "3bb46c8d18417c2537655b8a6675b69bbab419d8b50466dbd677ee7f8e9cfc13",
+      "size": 8701
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/execution.py",
+      "sha256": "d06fa9e56d69a65fb2d1a08eb5873b12e864d4cce42d36cf709d7aef4970696f",
+      "size": 14702
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/llm_backend.py",
+      "sha256": "91ed1f3ad5a0f2bc76613d90e060c1de819f5a56e07bff916f8fca83840dcc09",
+      "size": 14704
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/memory.py",
+      "sha256": "517e2237425d02e0b291b248331c4014c13736f7660e1e78559557572a50866c",
+      "size": 13244
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/meta_sop.py",
+      "sha256": "3158dc8c4f2d9ae4e3ca493b84bee884feec3064311f4621f12801229b4c3d7b",
+      "size": 1519
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/multiwoz_prompt_context.py",
+      "sha256": "dce5515c86e6eac3915991ae6609f484863c253b203a5fb0e7fd603b9f38431c",
+      "size": 4682
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/multiwoz_runner.py",
+      "sha256": "830c3d2d713cf34e95c197c40a262d9dab28786b1cdd162cf9cd46707ddfe977",
+      "size": 51320
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/retrieval.py",
+      "sha256": "9d4a71943fd5264e128f37773c0617fa54cd05ecc8844b55850582353ded26e8",
+      "size": 15310
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/rewards.py",
+      "sha256": "97c7f28bfbf5eb61b59cab5d739b54e81d1c6f20bc426c40aa0251966e2c8ae1",
+      "size": 41513
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/session_cache.py",
+      "sha256": "c764f37080a84120ee833db061b8529bd842307c00a40828ae1c519ddceef3e6",
+      "size": 4065
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/state_graph.py",
+      "sha256": "fea5a2a43334269203058fb525a64dab6761692765a76b89396b04165b4fe164",
+      "size": 15588
+    },
+    {
+      "component": "sop-world",
+      "path": "sop-world/src/tau2_runner.py",
+      "sha256": "2f24e430ec1bcb387b518dedc3d44738833f1e62d3df95c0c6b3bdee5f52d89e",
+      "size": 144128
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/LICENSE",
+      "sha256": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+      "size": 1072
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/README.md",
+      "sha256": "e235c8794d879c900f40079537955478bee7964a86677cdc2232d3fbae2d785a",
+      "size": 9661
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/airline/db.json",
+      "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b",
+      "size": 7042725
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/airline/policy.md",
+      "sha256": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+      "size": 7676
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/airline/split_tasks.json",
+      "sha256": "b22ced4d9a9850ac9aea31c53bdcb6d6009058140bd9acc7db37c1d36222ba8b",
+      "size": 1443
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/airline/tasks.json",
+      "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052",
+      "size": 155528
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/retail/db.json",
+      "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765",
+      "size": 2811616
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/retail/policy.md",
+      "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+      "size": 6699
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/retail/split_tasks.json",
+      "sha256": "ed0580ec52575b63fbf76568af42490da6ee7783ecb4aa81af46961291358f20",
+      "size": 3263
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/retail/tasks.json",
+      "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8",
+      "size": 345982
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/db.toml",
+      "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0",
+      "size": 9628
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/main_policy.md",
+      "sha256": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7",
+      "size": 5699
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/main_policy_solo.md",
+      "sha256": "781296ae5419169cb64aac0c4fa2aa6129c78f3c1592f64abd80df6fbabb7042",
+      "size": 5200
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/split_tasks.json",
+      "sha256": "605b488bb9a6acb3c7f4505240a855fdc8681d09aadb16a8f38b2efcfc5c3aec",
+      "size": 356149
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/tasks.json",
+      "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4",
+      "size": 13977063
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/tech_support_manual.md",
+      "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba",
+      "size": 17589
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/tech_support_workflow.md",
+      "sha256": "64f3ccd13875d14f358b21b9af221dab09e0e7bf5690d0e4322fb91855a43a4d",
+      "size": 16390
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/tech_support_workflow_solo.md",
+      "sha256": "b174d1f9705b5d7df49468daf99560a5633f86d23e10499a1166a7753706a412",
+      "size": 15470
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/domains/telecom/user_db.toml",
+      "sha256": "4886107ea0c16f8e16d74bef91cfb557de61822afe9361f5a9b241806aea2e4c",
+      "size": 933
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/user_simulator/simulation_guidelines.md",
+      "sha256": "740a29dfa64d7bc08eea3bf7493575b914a63f744acbaf7f199ee07eddaf72d3",
+      "size": 1449
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/user_simulator/simulation_guidelines_tools.md",
+      "sha256": "cbf3d8a4d8642fd04e559862f1afef55d7dd4e6a7e727ca49e239023c599de0c",
+      "size": 2747
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/user_simulator/simulation_guidelines_voice.md",
+      "sha256": "2442aed36d303a55b3b933860a2de9c45310b783fe9c67cb48506c58709c725f",
+      "size": 6540
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/data/tau2/user_simulator/simulation_guidelines_voice_tools.md",
+      "sha256": "4a77374fb680181ffc40eda84c9810e10deb9e20c6585597a4a0256a70d40235",
+      "size": 7912
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/pyproject.toml",
+      "sha256": "a019397eef9592abbcdcd0b7a1a46c717c476dee60d6b31073448b3811a1d1fd",
+      "size": 2417
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/README.md",
+      "sha256": "a3abcd545d0cbaa7958b7e9287bbdfd3759991358266516d7bd3a2c9f7856362",
+      "size": 2272
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/.gitignore",
+      "sha256": "5e8374be1e4f222c25ed2bd7d81d29c511dab2fbd8d9a26b752b7304d4b47c7f",
+      "size": 148
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/.python-version",
+      "sha256": "3713acffd953d571bccbe163951aeef988a75f945c049b7fba53f080311267fa",
+      "size": 7
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/Makefile",
+      "sha256": "ed18caa3d991f754ba1a4dd7e697426016e23f05eef7be90b48280928d6d9af0",
+      "size": 1024
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/Procfile",
+      "sha256": "3546873597ba4660580bf7a56e8bcc3d7eaf7be88cb2a2bfbd7acc83dbc2f7d8",
+      "size": 24
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/README.md",
+      "sha256": "2c121c8da1f0fa129ba2c494ecc4072da9737010bc6c69a794e96fb7e4f8b227",
+      "size": 7155
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/pyproject.toml",
+      "sha256": "e4cb6159ed56dc21cc13d89cdda420a87ab2c0cb030a0ac351bdb9f3b3610c70",
+      "size": 964
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/run.sh",
+      "sha256": "523c97fab5e0256e1ca1ae11949f2c05b5b11090d150cf09f09681dfe891851b",
+      "size": 53
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/__init__.py",
+      "sha256": "e179f4869d80d84b1d502c65417c941297c4f365b8e286b83789a9c08e0d51f2",
+      "size": 91
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/green_agent/__init__.py",
+      "sha256": "b010eb04702ffa2d413987ecc61832a83b6c3f155377b65dc8bcae5bad110eae",
+      "size": 166
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/green_agent/agent.py",
+      "sha256": "cc9890be60542e1aebf596ba07907715e3733b57329da8dc7997fce5615851ec",
+      "size": 13108
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/green_agent/tau2_green_agent.toml",
+      "sha256": "a4f8981adeb6f84bfa2eafb3c98762adb6a86e14fe04de8d44c6502e4e546e17",
+      "size": 778
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/launcher.py",
+      "sha256": "573a42c819e922d9c1c343430fb85d3e8937e2fdfa93ec7542bb926fb58194c2",
+      "size": 2264
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/main.py",
+      "sha256": "ab47a6936fe21484eb209cd2e2e5a0a12524424b4cd8bc6a0cfdfecee4182059",
+      "size": 1252
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/utils/__init__.py",
+      "sha256": "fbd0709c65acf1aebcf9d52345f7064cb48d588dcd40fde503063264e8a3b8bc",
+      "size": 253
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/utils/a2a_utils.py",
+      "sha256": "a61da9e285bebf16a345011394527a5ad740f04700da21c31333039e5c76b507",
+      "size": 2515
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/utils/utils.py",
+      "sha256": "4ea156b259dcba77af4192f94118a17c36b62b41bca9cca09be02dec9bb17387",
+      "size": 586
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/white_agent/__init__.py",
+      "sha256": "71c633ac5e3db78b3418af0f460dc5e8ebd2b1b8ec24c5d42ee10152738bd914",
+      "size": 129
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/src/agentify_tau_bench/white_agent/agent.py",
+      "sha256": "9950aa3f3d53468ae021ad7fe9c0cb577f27e3724ecc57c4eae95fd8121ad17a",
+      "size": 3439
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/agentify_tau_bench/uv.lock",
+      "sha256": "01c36fabd9ebf209a10608feed2a6536ca94daafaddc4f25d6a867e88cf28486",
+      "size": 541593
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/README.md",
+      "sha256": "e966bdec54f9c803c5a729ed693dfb57a8b34d074bbbc18db299ee1c6d604ea3",
+      "size": 7130
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/analyze_config.py",
+      "sha256": "2428c66de1c1ba0a729d3ec6cfc7145f79f916d3b0fa8c31b61ea47f312c141e",
+      "size": 2056
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/analyze_results.py",
+      "sha256": "c6b8251d7d5f60f597707b0e9ea2707ca35a0286bced4695f468421f2507514f",
+      "size": 105898
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/cli.py",
+      "sha256": "1ffba08a3262645e7e9c2231182ddee15d1ac03c6146470cf2591ca74413214f",
+      "size": 7200
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/demo.sh",
+      "sha256": "8049c4ed360eb56d878922de1b9cd167f1d28e9622d1cdf4edb7790db73812c5",
+      "size": 2013
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/hyperparam/run_eval.py",
+      "sha256": "f8e641f40059aab0f46064fb5e15f8827892b5371eb81a2f661c7852199c8247",
+      "size": 9005
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/blog_figure.html",
+      "sha256": "3a9bbbefe2af73261dad762ee8cee4903b35a2085569df0be599c20f86dd5efa",
+      "size": 32199
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/blog_figure.pdf",
+      "sha256": "07989f8d5d78d298bbfaf572563eb80173a35d5b32607e00b18fd989e53ca0f5",
+      "size": 599584
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/blog_figure_landscape.html",
+      "sha256": "5cc5ce032ff4545b13536ef5eeeb6f464970492f14bb7a0a50268d180f288809",
+      "size": 28888
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/export_viewer.py",
+      "sha256": "8f7ebdf90cb2de8d63abe779842a9ea0a15f84f1b8df042f6689dd209620b675",
+      "size": 23965
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/tau-voice.html",
+      "sha256": "5b273c1afcb3750442b00ee838590deb7d47151a494b7a9215e2795d3ec269f7",
+      "size": 55895
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/templates/viewer.css",
+      "sha256": "82eaca57cabc5c53fd9ae43bc7f4425bc542a9cecf3306bf31146ed4d5f3479d",
+      "size": 23032
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/experiments/tau_voice/visualization/templates/viewer.js",
+      "sha256": "e6eba45a4a9e9ed001263b1645283d9516496feba576cd86d40de8636e120791",
+      "size": 49556
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/__init__.py",
+      "sha256": "0ce892494155fa432fe4e8caabc2ffb1349a19959ad756215f2d9031156bfb78",
+      "size": 3615
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/AGENTS.md",
+      "sha256": "fb614bcd050c50310064fc5d7375e71b55fa393c1e533c12f87cc15d2e10e7b3",
+      "size": 2642
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/README.md",
+      "sha256": "6b8ff0946d53ed2e7712f9bf3b9c32f07880bdcecf44f0990c1304788ff79005",
+      "size": 9576
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/__init__.py",
+      "sha256": "fe543554d2638c983cbbc64ca19b2a4ce39c08c36dbf8ec303ac4d65a0244075",
+      "size": 3177
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/README.md",
+      "sha256": "852c2dc905a8f5f65ed8f3cfefe22052c3507ab92ad99c802d9012d3c7c67454",
+      "size": 17100
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/__init__.py",
+      "sha256": "c0099fefb99b15f6f1482c9ebd918d560d104aaa47471e86b8574b25c259f534",
+      "size": 2584
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/llm_config.py",
+      "sha256": "3b5bf4c5f69e5df5357374a9e379e6932096bcdbfcf3e411c4791c33d73d35b4",
+      "size": 1276
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/participant.py",
+      "sha256": "64609023945372948cbec447fbf3b9d7b2eb53701a185680305af5247402d420",
+      "size": 8137
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/streaming.py",
+      "sha256": "2bd6ae56cee0469ecdb88a3d7437f35f19982c5799ea27a942c547e9a67e94c4",
+      "size": 106836
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/streaming_utils.py",
+      "sha256": "e9b26a7f4f4bf1decd291fe8b3fd12da97a8158ecc250281a18b175f8d79cc15",
+      "size": 7656
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base/voice.py",
+      "sha256": "d749493fca8b1ca1be65af9ec57371e40dd1293bd24f0adf4814864669a1cd53",
+      "size": 7691
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/base_agent.py",
+      "sha256": "97f1033723d03da99f3338ff7a12ed60114a55ed293928ff4ca0bdace6851b4d",
+      "size": 6331
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/discrete_time_audio_native_agent.py",
+      "sha256": "1edc8bc6eb048292be7d3ec88247f7f9885ad124727e9be02d6e733a5dffad13",
+      "size": 32805
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/agent/llm_agent.py",
+      "sha256": "d13412ff502859f0ef0492af0128f1b2666be32640057ba8e076d2602af084d8",
+      "size": 18019
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/api_service/__init__.py",
+      "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032",
+      "size": 19
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/api_service/api_config.py",
+      "sha256": "7eedc4d41d7dd41c45afa243037c6eb03b7de68f8be28bdda8db869ecae3ebc0",
+      "size": 1033
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/api_service/data_model.py",
+      "sha256": "3aa78323402498716bc5773217ff7d79ed0b703e2d0bce0d6f37699426a4152e",
+      "size": 277
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/api_service/simulation_service.py",
+      "sha256": "b74b43da92ba0db9434130a9f403ce709d33c38b361ab63dd99cfb9b253564b2",
+      "size": 1307
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/cli.py",
+      "sha256": "f8929299cbfaf1b02efc5afc00c08d6c812406c401dd62bf6a6f6f9922e93c7e",
+      "size": 39667
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/config.py",
+      "sha256": "2768b34f8db46f2890ce15e514d6d14bc7c09088f92385a4fe3467d1768152ad",
+      "size": 9865
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/audio.py",
+      "sha256": "443de1a2c4fa856621eaccf8b6d0637f4e8d4f0de0aba990e9732c49b3751bb0",
+      "size": 6148
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/audio_effects.py",
+      "sha256": "30fc2e70e27e1691b5e098c7e165cdaee44108efff48ee36c41ccef9fb448ee0",
+      "size": 9102
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/message.py",
+      "sha256": "378cc451ded5b4314c4fe177bf83e72abb2e0bba53b79c2a0e27c53f3cbd15b0",
+      "size": 32440
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/persona.py",
+      "sha256": "e012387070438f51673aed61291288541c7270bce310b9851fde89493fac8e19",
+      "size": 5854
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/simulation.py",
+      "sha256": "bf779d03d3f95f5df19738c6d54271cf18f3f40253d336af78fc100fd7b0d5be",
+      "size": 57891
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/tasks.py",
+      "sha256": "a2feb565a5420223f96d565f05be546970e09aac82919a69301250c8f1883eb1",
+      "size": 20017
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/voice.py",
+      "sha256": "8c554c5d3e5773d81993ce943e510294455a915191f3aa42a011f2bf1a758991",
+      "size": 13145
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/data_model/voice_personas.py",
+      "sha256": "93d3056db562176b6cb024607aee89d068e9b4868f64fafe7d7b91eab0a2a8a2",
+      "size": 8404
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/AGENTS.md",
+      "sha256": "2332cebc44528f6ad1582102de7bc0aba19eb7a67a511566bf7c59cf9e14ec5d",
+      "size": 3670
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/README.md",
+      "sha256": "6c41171f329c4deff8863fe535dc88b5530c7254f3784618bb8261cc0c21ab68",
+      "size": 4548
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/airline/__init__.py",
+      "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032",
+      "size": 19
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/airline/data_model.py",
+      "sha256": "a8083e2f590e4b9b66a65d7cd50b7a0247e4fa33d6961aaeb02e4d92488b3cff",
+      "size": 10402
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/airline/environment.py",
+      "sha256": "64589faffbcb75c8ac7c95d2c94ad27f4bd70e23b9856a6928fa678a0f7fcc8d",
+      "size": 1612
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/airline/tools.py",
+      "sha256": "3987f21c286314cb48764f97052934ff4fd60e27a0b2e4a43423911adf8eaa26",
+      "size": 28123
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/airline/utils.py",
+      "sha256": "9da26327af3d7fa94e05d48869d8b06cd8110313fc24d308993a750106b11f06",
+      "size": 256
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/DATABASE_GUIDE.md",
+      "sha256": "987db29707bd8d3126b6a9f9d664ba8e1e57f45e45fe89752dfa85375e4d8c70",
+      "size": 1831
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/__init__.py",
+      "sha256": "090929481bbbf2436b2e7ab84cba3d736b6dbd79f0c408157e41fc116fcf5cbc",
+      "size": 613
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/data_model.py",
+      "sha256": "8451829795c7cf18668b26adc2db06c10426f4e69b553824ea886c40765ee3c4",
+      "size": 7735
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/db_query.py",
+      "sha256": "0f42b5cba53fdb8f41984af160bd6f2bc20416460973b3256542785fd318065a",
+      "size": 17039
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/environment.py",
+      "sha256": "c8e4731a73db27faef16e00f59c87f515eab4382ee0b47c52d55669870e5100e",
+      "size": 3886
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/retrieval.py",
+      "sha256": "9dc4d042a972c9fba43c5a8dbd5ed56096d15e7f82733afdcb09662cae601087",
+      "size": 24026
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/retrieval_mixins.py",
+      "sha256": "801836c3ec008b89f17e6c131882bc9634062ef3639068b6af3f8769a86f0eb4",
+      "size": 5440
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/retrieval_toolkits.py",
+      "sha256": "e348d870ab6adfe8a488fb6b11bb3023766c500389563194872e5c43b729bbb4",
+      "size": 2746
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/tools.py",
+      "sha256": "deb0132254516d00b9eefcc4b178462ef656759f2d445c8930623e3d4219799d",
+      "size": 184671
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/banking_knowledge/utils.py",
+      "sha256": "ff116aef99e023d7492690fafff54fc24e9b6f3d3af18b7402a26b974b41fc66",
+      "size": 11497
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/__init__.py",
+      "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032",
+      "size": 19
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/data_model.py",
+      "sha256": "12f8be77d805d8d332291d6f0b3283d30ff0581c15d887ab5a1f37f8a9f395aa",
+      "size": 1089
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/environment.py",
+      "sha256": "4a45228c388606fe16203c107ae107622fb5d9505d90b56e6fbc33acc2dc0d51",
+      "size": 2294
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/tools.py",
+      "sha256": "926b077132c8eabd2bbae8173dbed299eea7fcd4a78c74c3986766626a24b928",
+      "size": 3806
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/user_data_model.py",
+      "sha256": "0c1d084d1f2e4539e050f28ba01d97528d2e05c6d4c4a3cb49cb8c9a0eb4ebd9",
+      "size": 927
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/user_tools.py",
+      "sha256": "75a8e33dca3b358b2fab08786922aa142d03e053bc02c69c0d292af325a3131f",
+      "size": 2286
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/mock/utils.py",
+      "sha256": "d9f43cf5eeefad0817973d188dad2113e73c37d1b9bae6fc86a6b0f1a703622e",
+      "size": 340
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/retail/__init__.py",
+      "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032",
+      "size": 19
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/retail/data_model.py",
+      "sha256": "f5ad09590953855cc49d2ab2ad5c0594be408cae74d1500fb278e5a6bf2c50d6",
+      "size": 8799
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/retail/environment.py",
+      "sha256": "5b819fb895a4ef49df71404c3d9678ab09e8578eec841b8ec9229c8f51e32405",
+      "size": 1615
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/retail/tools.py",
+      "sha256": "34f4fe9702d36f0dd4697700fbcd63d0cf5386e6eb8e7499aaa336243bad8750",
+      "size": 29202
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/retail/utils.py",
+      "sha256": "a385b085b63d0e5921c15f7e2201b00df1d984990f4dbb7b24a867e3bf7cb648",
+      "size": 248
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/__init__.py",
+      "sha256": "48747a78fd49944aaef6f540269b5b77e558b8b996cb0f7210b80317769bc032",
+      "size": 19
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/data_model.py",
+      "sha256": "f868cbbd344cadf6c376f21976edfa38b8cfe199922748e31eee666f791a0628",
+      "size": 9418
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/environment.py",
+      "sha256": "7bc335d717a8cb6bda54551fa2b5c12ff073f6287878d215f4181572e551abcd",
+      "size": 7286
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/const.py",
+      "sha256": "1f7100229a56c86ea2f47d6c78fe26f7e0fbab65ad91150f9436f0fee09d7784",
+      "size": 2204
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/create_tasks.py",
+      "sha256": "7ce75c5afc869a344985e68f7725d18709e51f6aa1233a91e5d387ba45bfac59",
+      "size": 3639
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/manager.py",
+      "sha256": "ba1fe1c514e8a85c58c417cfbe5ecfa853289bbc181874e37e90e610bdee3e9e",
+      "size": 8836
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/mms_issues.py",
+      "sha256": "f7350a6771ac28464ee392731f741486b421126ddf907082891d2cfc4a739b24",
+      "size": 10313
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/mobile_data_issues.py",
+      "sha256": "2c5169d82c6fad894ffd9447b98c249312155354d428fb3d3f373176b82fd667",
+      "size": 16347
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/service_issues.py",
+      "sha256": "a646ab516cdd7f9a3716dfa9acd7ca60741bb7db81494c26c2c988f2efe3db2a",
+      "size": 14396
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tasks/utils.py",
+      "sha256": "aaf9ee7d1e3699918292902951ca929ff7d0e7d7a2c8f782a0bd14e3bf13ca26",
+      "size": 4162
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/tools.py",
+      "sha256": "388552434d1b8225e33e7958bdb6efccfe92b49e11d1838568d9b559514e9d01",
+      "size": 26442
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/user_data_model.py",
+      "sha256": "27be0006694e9a740dd378f42099d6d1afecbd445f7906aedcd1f800087377c2",
+      "size": 15172
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/user_tools.py",
+      "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d",
+      "size": 48531
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/domains/telecom/utils.py",
+      "sha256": "9195707fca3d96b41d78de661bd2408cfaab75793769c9a739a7521b690fc6dd",
+      "size": 1260
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/db.py",
+      "sha256": "49e12f900a8aabe62d6137a9baa1e7d471f9b3e516cf7c85fb61ecde8a65154c",
+      "size": 1267
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/environment.py",
+      "sha256": "bfa3fcc5ee681482015a0f4cf65b0a56bd76a90f072c1a9a091f6e3db147b6a5",
+      "size": 16840
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/server.py",
+      "sha256": "5ec31d6b75139106bf331a8a0125854ecf873fa3517bfe7420323bd560d12d4e",
+      "size": 7918
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/tool.py",
+      "sha256": "6dd74021ba95a6f8dfa0971546b768b90e15b212f8f9051156ae6bcdd24b77d3",
+      "size": 8092
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/toolkit.py",
+      "sha256": "3e897891e8878c3399aec72e42eb0eb5546642420c0c902b225421fc936b924a",
+      "size": 11313
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/environment/utils/interface_agent.py",
+      "sha256": "9c26fdc3f787c0551c2335d0932f6099c1e054cfa7d5f4da733ee8396a82b040",
+      "size": 9563
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/AGENTS.md",
+      "sha256": "a7421af5240acc7e4203a5a8571be61bc33abd8fcf24c6b63f567ab5dbbb3a3e",
+      "size": 4211
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size": 1
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/auth_classifier.py",
+      "sha256": "3a9184b16c7212ddfb81050d94bcc0f591c12ddec7517db0c4e7e83701eb2c2f",
+      "size": 7884
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/evaluator.py",
+      "sha256": "85a05cf75f19708bf855ac8f97cf34d8aef05c99332d57dc066725200ca59444",
+      "size": 13749
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/evaluator_action.py",
+      "sha256": "4347ec90fd09db73b9f7e46515220363f91f0c3b12aeddf7ece83346f49227f8",
+      "size": 8150
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/evaluator_base.py",
+      "sha256": "1f79c11e5cb5c8cabc26cdaad7ff3a3a1687380f4d7fb1f9fbd9b6f9ab18e1ff",
+      "size": 665
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/evaluator_communicate.py",
+      "sha256": "7a082f91c746b84cc37c6994eb6ff78f297222fd067503a4cc86d45750696507",
+      "size": 7462
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/evaluator_env.py",
+      "sha256": "e932ea5f675d7a172557350f30b73d66474659d9b4d976ecd763ca2929017633",
+      "size": 13426
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/evaluator_nl_assertions.py",
+      "sha256": "cb6b3758cdceb02a726732b4ee1af618affcc08f8ab84b44f060146b8f3ad90a",
+      "size": 8843
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/hallucination_reviewer.py",
+      "sha256": "10bb19e7dd0ae19a82df8fc6aa28d7c52e34c820316f72f73f12bcb17e212faa",
+      "size": 8894
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/review_llm_judge.py",
+      "sha256": "63128687cae53f86393908ba8ad75ede6b09a8d57d911ebb61f11b4d1ee66689",
+      "size": 28809
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/review_llm_judge_user_only.py",
+      "sha256": "a0a037d54e5187a829a4a55235a745a2dcf44f373501363bdd7a4a40b7873cf1",
+      "size": 23716
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/evaluator/reviewer.py",
+      "sha256": "4f373008c0d6ab907873a0b2afdacfd8995824038025251f998a446bf1ea0700",
+      "size": 6942
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/gym/README.md",
+      "sha256": "a0292533146f6cd60100504d04494b4d765fdaf53f016957313697c59837f1a2",
+      "size": 17545
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/gym/__init__.py",
+      "sha256": "8b617d7665ee63a601dd5b70e9b20afb85a826a81c5bad72f2a0192f4acd6511",
+      "size": 330
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/gym/gym_agent.py",
+      "sha256": "109a7d5a84ecae3c84c56bc7a20fd4b9be8e87727a6cfd0e3bd3e6c011f4dcf7",
+      "size": 60236
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/README.md",
+      "sha256": "577cb149e81325e75583f875f7771edd06a37d4f95d96eb232f57f3eb068d35a",
+      "size": 2505
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/__init__.py",
+      "sha256": "7b2f1aa6e9f265c70cabe0c8aabcfe34bc27c2b680a841cd6c8d145b689e60d0",
+      "size": 1034
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/config.py",
+      "sha256": "3c2d0048dc9af7d6af49cebfe25be54dff88cee2bdaff84456b17a6020b3e1dd",
+      "size": 4551
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/document_preprocessors/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/document_preprocessors/base.py",
+      "sha256": "1256bc851213dd0c28b3242938f97521503d7a6ea64faad65c2e621888451699",
+      "size": 1355
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/document_preprocessors/bm25_indexer.py",
+      "sha256": "5808f4bd2a8406fcbe575dd8412dbfcdab7637b94bc0ca053414710dad0a9059",
+      "size": 1359
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/document_preprocessors/embedding_indexer.py",
+      "sha256": "5861371cb3879c8027a03da409d6c1e8c7f6dcf70c71599d60ec00e4338fe638",
+      "size": 4197
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/embedders/__init__.py",
+      "sha256": "8c4a2b6728007db804ab6dd135243ad5db1acd46cffe6230ffb581693ba56e80",
+      "size": 267
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/embedders/base.py",
+      "sha256": "8905218ed326c3ebca8cabdb21ab11e28aff752c61ba567e82379d40298aaf4d",
+      "size": 595
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/embedders/openai_embedder.py",
+      "sha256": "3da18207179a790930e507464d94d97be9f2cdbfdccb712df10a75c6f9cb47f9",
+      "size": 1519
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/embedders/openrouter_embedder.py",
+      "sha256": "e3eed96867aaef0de493fd7535abd2ae58c5ba56f3e5421bf464554de4f7fb58",
+      "size": 7524
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/embeddings_cache.py",
+      "sha256": "0e47155db5f29c1c9cc3e2b80fecd3df840122bd0a5d29dc2776d45019b040bb",
+      "size": 22278
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/input_preprocessors/__init__.py",
+      "sha256": "10a9fb1fc962f9b7642dbb338762945078309e3380a5aa08552cfd7902d239e6",
+      "size": 242
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/input_preprocessors/base.py",
+      "sha256": "32c1064e520195df17c0b0d0a1d0a8c1863ce84546dcd6139b9f9b697df2090c",
+      "size": 1481
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/input_preprocessors/embedding_encoder.py",
+      "sha256": "d4b0406b78fe4b7d07de7a37cec018c222e9f198342a45154172f6202925cbf7",
+      "size": 4873
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/pipeline.py",
+      "sha256": "6aed4b8d6186986299a3af5cb840985b1041a69893ce94bf62c5ecdc2fc64286",
+      "size": 10143
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/postprocessors/__init__.py",
+      "sha256": "63c5a76cb486e25617d2942c17378a9bda8211fc31fd9c4d590ce6b2fae4f6db",
+      "size": 421
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/postprocessors/base.py",
+      "sha256": "4cbffeb5028150f50a06d72e2cb861f651c5b34e56726ddc0c90875830935875",
+      "size": 1861
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/postprocessors/bge_reranker.py",
+      "sha256": "4430889114d7f519abe3a69afa22a0815528d60e549e5c05699c5392306d811b",
+      "size": 7219
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/postprocessors/pointwise_llm_reranker.py",
+      "sha256": "878a8f22f507727357e2d7cff8ff6d289b3101ea33b602a198594eb5e8e23503",
+      "size": 4054
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/postprocessors/qwen_reranker.py",
+      "sha256": "430c5f4e7371950cba39457b77f49c8201809ce2da6ace868571969b8b19ea67",
+      "size": 9532
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/registry.py",
+      "sha256": "98b476f3ac15de7555e2ee621c6ea16cf1b860d383b6e6b85e47bb0e097d815c",
+      "size": 1914
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/retrievers/__init__.py",
+      "sha256": "1ebced75a6122c66f071f38443e6cab1d8eba909b8066935863428021d73c514",
+      "size": 363
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/retrievers/base.py",
+      "sha256": "14d5584225cf31d90bed97175e6b74c9e49a5b94f2296f673cbdf3f382cd1930",
+      "size": 1560
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/retrievers/bm25_retriever.py",
+      "sha256": "2a9f6dc19db6e7bd05eb5d2d39d9944a5dc87019c69ea708c42b1d515f2834ba",
+      "size": 2267
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/retrievers/cosine_retriever.py",
+      "sha256": "1c06852a79299e58d3a0b56175e72d870b90ae022b814ea68487ff7336bf01eb",
+      "size": 3154
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/retrievers/grep_retriever.py",
+      "sha256": "ea7d5427b128666b71049ac5e5dc4851ef8c65ac4ddd0faf29a04b9bcc1d52cd",
+      "size": 1835
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/knowledge/sandbox_manager.py",
+      "sha256": "469b892e983fb3d285dbf4abc09d96470e30f89deace284141bd3a7aec2f5447",
+      "size": 16162
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/metrics/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/metrics/agent_metrics.py",
+      "sha256": "136b5ebcc0c115b5817a4f6d6b485a871aba199ddedf56458f35f339569a54dc",
+      "size": 18374
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/metrics/break_down_metrics.py",
+      "sha256": "8eb9e7571d49d7fa9e6a3dcf3c9dd9004b5326dea5cb8f7694f53ffb7b8d92fd",
+      "size": 5582
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/README.md",
+      "sha256": "880d08235518048278e7e6007965dfdcc25dd125fe9f677d6b0fd6dd9cb8289b",
+      "size": 5201
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/__init__.py",
+      "sha256": "8cfdda384404bbc2a14999757d3f304da71db2191d828723dbd19a40c8906828",
+      "size": 500
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/environment_manager.py",
+      "sha256": "c548268b3c7a9a526c7b9fcfcef9058bff878dc3b17cef31793eccc695b6a049",
+      "size": 8876
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/full_duplex_orchestrator.py",
+      "sha256": "a674b6d2cba44dc3374eb80d054485cc0e96772bd7c8f527621cf25930e08b13",
+      "size": 24005
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/modes.py",
+      "sha256": "b2d131cef3f15b1558568b1e4b0b316aeea26ae7fbe1e1092d79febbb7d74553",
+      "size": 808
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/orchestrator.py",
+      "sha256": "6c689e5d1037dd08aef8834b46f58efa14359824cbebf7084de0172e5f580cba",
+      "size": 40843
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/orchestrator/utils.py",
+      "sha256": "b0940cb324f4c44bfd6a63e9a3cbaf9336a5b95c50c3da201ad1ea8340858dbe",
+      "size": 319
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/registry.py",
+      "sha256": "d170c1f4b7323a75e26b2ead6754ed423b17a3deb91fe2c89e7e8ec78c6bf12a",
+      "size": 13109
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/run.py",
+      "sha256": "d3c218e8250be6c2243e892db819799ab8f3788f2c4e388e0239b852fac17d44",
+      "size": 9737
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/README.md",
+      "sha256": "b04a5b17ddf516a86172eccd1153901633bf6c794e980e52995a69464dcc1c97",
+      "size": 4443
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/__init__.py",
+      "sha256": "a4691118a6a612a7e3339ae638a76910d2f1746ff3bd3ed584946e32731aef6e",
+      "size": 1564
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/batch.py",
+      "sha256": "3750705b4dfd68e9839fdd39ad0165e1b63c79fd49bca2cf0027f6ee595cbecd",
+      "size": 32872
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/build.py",
+      "sha256": "753b1b8ebc6039c109366cbab1026de3e83c51e278a5ae6d56224aaa947146c5",
+      "size": 20072
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/checkpoint.py",
+      "sha256": "3c4cf66101ec30a3dc47ad7b3be35a4e542ffcbf85b3ba2bad66ad28064e9ca3",
+      "size": 16355
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/helpers.py",
+      "sha256": "3436f3746f7e7fa393920e2833fb07040ba5e5589bf4674637b960c6e5548653",
+      "size": 6851
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/progress.py",
+      "sha256": "3264ea8ad797f6d513626b9baec1a57c2a3b0aa499cebf9915f9038b90edf68f",
+      "size": 7868
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/runner/simulation.py",
+      "sha256": "1b98532199a05d87dcc14aead9d59c320d20f11d3d8e4c8458663ed5964eafef",
+      "size": 3240
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/analyze_vad_silence.py",
+      "sha256": "2396b1b2326bfb1bf5a43864d68a927dfff0451175ac80015422a37fbcd9e317",
+      "size": 7779
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/check_data.py",
+      "sha256": "60878ba719227e2583c02fbe9dec93b6589ed33c6e56ce6874f1f2c7492acf03",
+      "size": 812
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/evaluate_trajectories.py",
+      "sha256": "95359191d088d5fc4880ee05bcb1d6997b766611e9387cd0bd601a80098f7dd7",
+      "size": 6790
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/get_experiment_results.py",
+      "sha256": "d6355f0e4386c472ee84db55ad7acb7665ec623050951d0de55eb742cbe979a7",
+      "size": 3994
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/MAINTAINER.md",
+      "sha256": "cb36b5f51ae71545d3a8c44956231b4bed97d6df8dcc71ba810d3c1e7d2533f7",
+      "size": 4714
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/__init__.py",
+      "sha256": "f82a4fd9932a92a61c332beb5910127fa8c53f6813d6f55983376cb2840699ff",
+      "size": 2500
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/generate_schema.py",
+      "sha256": "4b8926308fd24d9478e42f8308022e2bbfed8f9ecd1a373ea2a63c91a470897f",
+      "size": 2300
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/leaderboard.py",
+      "sha256": "ec27bc5e56a6705003e49b72fe54d8b4b395c697c6d114bf6aad90558dd2b903",
+      "size": 17996
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/prepare_submission.py",
+      "sha256": "099d1775bb9a7426c3cde6053144472613f1deee96a1c6b895d7b01f39a77534",
+      "size": 34396
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/review_submission.py",
+      "sha256": "ea184d7cdff6d58ea1fadc6fdb4163fd49c504f8480d45f0c9eca1a16b9bc23e",
+      "size": 15083
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/submission.py",
+      "sha256": "e6385f3ba3f45003801c4c68335f560c60dd25ca6094453fff424838719264ee",
+      "size": 13665
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/trim_trajectories.py",
+      "sha256": "9c38da31b884f96c29681ef93d965c071b4472bdfc73c6642051edaeafe4929e",
+      "size": 8896
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/verify_trajectories.py",
+      "sha256": "33260c9c00ea329aaabbf998d6413450af818f2e8f9fb66f8f82a94f0eca681a",
+      "size": 3482
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/verify_trajectories_private.py",
+      "sha256": "8559f11d219655a01093f74028a7be232161dcdea5fe6d1346c15184a463c22a",
+      "size": 243
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/leaderboard/verify_trajectories_public.py",
+      "sha256": "577fdd4be68cfcada461698c60607a7f61487759819dd9dd4b44258075c69b71",
+      "size": 2607
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/manual_mode.py",
+      "sha256": "2b44a8dc68c7267bb859bc1b347e3bbac16cff9320865ed7762d0221f841cd60",
+      "size": 27665
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/per_task_summary.py",
+      "sha256": "2a2d23496501adda712e66b46cb0e298b800cb938b9c62f7034ef018c1e05b7a",
+      "size": 14203
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/recombine_rewards.py",
+      "sha256": "8c4843e7d3cd202a34441492570f7980fe7d874a7bcf2a6f9084405c1dd4ce0d",
+      "size": 9763
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/review_conversation.py",
+      "sha256": "03f50ba18c7941d1f7e2edd0ed34b462e4285ef2ac7bdffeec525373506de514",
+      "size": 42488
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/show_domain_doc.py",
+      "sha256": "af6b584d51d05fa961df91434d2e262a10a751d5362d8fc1ad570ceec06432cc",
+      "size": 2122
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/start_servers.py",
+      "sha256": "d1d98bc7c6fb34b57569ded1ee2bf155b30f84028c9582d07913a79895d29688",
+      "size": 3462
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/scripts/view_simulations.py",
+      "sha256": "8f51839672bd89224196b4522daeaa8bc50e319d4d82cd54c889dc3dfc4408cb",
+      "size": 42616
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/user/__init__.py",
+      "sha256": "7698d14639e2eea82fc40169113ad99d0f57de30207a3cb47b8f9d5fa96ca351",
+      "size": 2240
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/user/user_simulator.py",
+      "sha256": "bfe1defe73bce25450b2be697c249d6cec2f3ba25a70e32e2452ba75a53a630c",
+      "size": 9350
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/user/user_simulator_base.py",
+      "sha256": "e6c4bae08fb7ae6fa6ee5ee29624bc35e0dd6c6fe8ffeab065592c7b51fa32f2",
+      "size": 6622
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/user/user_simulator_streaming.py",
+      "sha256": "2f045564e3e17192d83ac6fae23789bfc5af2d8d976cc0cc96473437895973b3",
+      "size": 61021
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/user/user_simulator_voice.py",
+      "sha256": "e4543b619836a5dab127ba125ffc150aa012ec2ee154109716095556d7563aeb",
+      "size": 4357
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/user_simulation_voice_presets.py",
+      "sha256": "0d5c480871549a6d565b9ec90339e66c1c43d674072b4b7c2a6cc325d91ddc30",
+      "size": 35426
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/__init__.py",
+      "sha256": "e255aeff0258cf0042f57283c5375cd78b034509b886ba827cd927a2a6d27c6a",
+      "size": 353
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/display.py",
+      "sha256": "3f15b046d636b89999d53cb0411a7e340b374012053177a5196c1e536decef97",
+      "size": 115552
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/io_utils.py",
+      "sha256": "ce66fb275b9bbf09a17be2cb2092bf2e696ab07655bf7571fe53ba8db4ed3015",
+      "size": 5890
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/llm_utils.py",
+      "sha256": "8c1f1c297e879b2a2d48ac65394cdd497bbd10f42fefa0ce770e7a65ce42bf95",
+      "size": 16869
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/pydantic_utils.py",
+      "sha256": "618dfc39b619bb0f623151682962ddc52bf2ea70bc2562dded884f118c84b78a",
+      "size": 994
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/retry.py",
+      "sha256": "8a4f833ea1880b79a3d6086ad2a87f78372949e8918acdff76d500e8a33bc550",
+      "size": 4875
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/tools.py",
+      "sha256": "0b7900a9a31a5a65c32780410f30539dface4fdb94c68196199eb2dd575e5763",
+      "size": 10589
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/utils/utils.py",
+      "sha256": "e0c39544b01700e60a3a26c7cf2c2d17e37e3852d5f0fa466b8517f82b83622b",
+      "size": 2957
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/AGENTS.md",
+      "sha256": "580fdbda55a9192da6d7b6c3b4ca278e14b1458c65613aac50c3c8ce168b5d3a",
+      "size": 5747
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/README.md",
+      "sha256": "70101152119c5e94a719a437d509b5ff733b6b75de034cc82f70a0a13eca7b72",
+      "size": 5040
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/__init__.py",
+      "sha256": "e134adb31cb51580d967b2ef853ecd0c54537f73f5f72336642cb52622e73b77",
+      "size": 59
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/AGENTS.md",
+      "sha256": "058ed3e649037b64d1376d1be7d00f6449089635b8303e86827d800574bae1af",
+      "size": 1974
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/README.md",
+      "sha256": "e3379965b5920d36d6fa468db423b75be2d331006dcc1228577ada6445f1d23b",
+      "size": 3081
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/__init__.py",
+      "sha256": "946065799bbc9687cf4c4d9a9e49a71d59ed3a6016ce71bd986c0dcf382685ef",
+      "size": 160
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/adapter.py",
+      "sha256": "d9f627d84da3ed2655cff699c1480095102e2227aa4360991359460c5b55fd23",
+      "size": 16707
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/async_loop.py",
+      "sha256": "5597fb2e629f032474d22da1a122e96333709e2aa05f328c67aa55a5e270e7c0",
+      "size": 2890
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/audio_converter.py",
+      "sha256": "d674b43bfbf273a3e5691e6bb3625f6db9f154e99aac703fbdb58245cdf6abdb",
+      "size": 3955
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/gemini/README.md",
+      "sha256": "1fd35255bc262e64046778fc81ac4067e31d20b5e4d4b6e611904df83a2eb407",
+      "size": 1771
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/gemini/__init__.py",
+      "sha256": "2452584629ff6ee1db4bc5c72ae4b8a4d4c0d9213db76d6e10d38848fa4bf024",
+      "size": 1151
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/gemini/discrete_time_adapter.py",
+      "sha256": "350eed4c21a3b676a7126ab865df1665c8d0d0dcb67c402e986915709e04428c",
+      "size": 18952
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/gemini/events.py",
+      "sha256": "d8274f8addc5b401aa42463af4447fde2093c9318e2ed4ba0aa1d9fe3bcd3dd9",
+      "size": 5481
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/gemini/provider.py",
+      "sha256": "a9b2fb23639097959c6640b6f62c4abddb04593947d766212cf3da500e92cc29",
+      "size": 53590
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/livekit/README.md",
+      "sha256": "e0105f4eda4db88bf711108d882cce7e75a3ff960377e35400c77b07cbbb2d5d",
+      "size": 5505
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/livekit/__init__.py",
+      "sha256": "e42ede2bb9f0ba349036c5be8586feca35f1f6a45edd3d3ab8bcf32810a72463",
+      "size": 3342
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/livekit/config.py",
+      "sha256": "6a52bf4cb220da20d197dc6c19c7a54b4bac4c284aa7fe91eb071c6ec1136d81",
+      "size": 7707
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/livekit/discrete_time_adapter.py",
+      "sha256": "43192570ccc640ef8c66281aa96a6bc5b727dc7b0bc0c6f7c981b9a65e889819",
+      "size": 22715
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/livekit/provider.py",
+      "sha256": "404f468619b7c01ed57f2ca24490e88fb060db2103c908f23a82016401971c45",
+      "size": 42139
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/nova/__init__.py",
+      "sha256": "69f4c0b2cce21dac956a14a82f3a478d4eccfa6c50958512914240c9a2b0aae4",
+      "size": 1027
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/nova/discrete_time_adapter.py",
+      "sha256": "fc3656852368f0a9f6597ec863c7c000b180e2920e1e80fa96f16b72c4bbfeb3",
+      "size": 21253
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/nova/events.py",
+      "sha256": "5a3dc62d596cb4bc339bd01cfab75281e4cdf14d1cdbabf42fed061a5c4a4275",
+      "size": 12105
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/nova/provider.py",
+      "sha256": "e1f40124b1a845b692b01eda0d74095a3659c7d0bcfba05bba80c6673d8ef6ed",
+      "size": 31331
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/nova/test_provider_standalone.py",
+      "sha256": "cea112576479eecae2f8d5e2f8e2040c249f55f81f32bc7c55bb87e55efc72ff",
+      "size": 8247
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/openai/__init__.py",
+      "sha256": "cccf047f0b2c9252ba147535114f363a0c5df9b1e79c180724f604825a7feeb7",
+      "size": 1643
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/openai/discrete_time_adapter.py",
+      "sha256": "fedc091cdb09959d3fdd437c9ef4e9c0356e44dfed33af345cbac1a94fcd349f",
+      "size": 11875
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/openai/events.py",
+      "sha256": "c2404395b20c2227cf08b44e5d1e8eafe4cb2e54fdba2ae63ca64159fa34b3ad",
+      "size": 9677
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/openai/provider.py",
+      "sha256": "054537ca64d8a7d604fc01514f20511fbb8676ce70a5e18e53399f81f063b7a1",
+      "size": 18010
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/qwen/__init__.py",
+      "sha256": "c6a58014c11c456b01982c4b2269314bf7ae03627c2700cf42d03c514ba37d4c",
+      "size": 2130
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/qwen/discrete_time_adapter.py",
+      "sha256": "4cfe8e5e1b6725a3a62a31a8b9649be04c30abdddcdbdaf4d54932e8c17c82dc",
+      "size": 14272
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/qwen/events.py",
+      "sha256": "ef6c33e4f001bb3967086a5b837a8c65399583796f3e62642d0b615c514ca74e",
+      "size": 12970
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/qwen/provider.py",
+      "sha256": "1402626e68f35717a2fe4638b5970d004c51131c31fb6d18d9591a98ef7598ec",
+      "size": 16562
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/tick_result.py",
+      "sha256": "40f5e2cbd5f4c9d6c76b7082e80ea70210f59c79e42bfda0e7aa4c746e7e171f",
+      "size": 19687
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/xai/__init__.py",
+      "sha256": "4b3c6e19820146b6481bb946acba25e865b5ec739879e9c2dda1f2245fd47f46",
+      "size": 2340
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/xai/discrete_time_adapter.py",
+      "sha256": "ad7c9049040130491b4b0e157f73054d74ce1b6154312ff1c26d2e4ca0e284d0",
+      "size": 12883
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/xai/events.py",
+      "sha256": "93100ffc2f63e9034dc4b2e5e748d500f54bac5f4c7068e80980ed037ef0ba76",
+      "size": 12733
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/audio_native/xai/provider.py",
+      "sha256": "cbc99718597be8e9f30cf34258da8793d4aaaf2d944a2bd99a5e3e20e74f72a9",
+      "size": 13879
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/scripts/elevenlabs.py",
+      "sha256": "4eaf14e9a529b62083b66d1b5afd6a0d79bc473276560f6a82da3a3271b9c7d0",
+      "size": 4551
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/__init__.py",
+      "sha256": "2568ad9034e97543894a35d973a11973ca74fcd3f70e88227c42111091b5a9a8",
+      "size": 49
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/README.md",
+      "sha256": "9b2327ce23b2928068bb7b025a869de3d02cc1712ed1413b4b252e5ddcf75920",
+      "size": 8464
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/__init__.py",
+      "sha256": "4a7f6f50bb323e96b3e03854ba334231fa23e10a332097562dd5075291b68328",
+      "size": 71
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/effects.py",
+      "sha256": "5de2d38c9ad0403394bd82fd629759baa8e39a861f19875f11c56e8622032b41",
+      "size": 14217
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/noise_generator.py",
+      "sha256": "97ee7b2ee4b44e9d593718a3e6cd60554a2be4332bfa63a7675ca42fc59ee4d9",
+      "size": 14407
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/processor.py",
+      "sha256": "9d91250848bb350a2740913a1d377a92ba723b5e4d1fda79c7d59cc3aed4b023",
+      "size": 11692
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/scheduler.py",
+      "sha256": "c52bc5a5d3a4f21c4c2b090c0861a089c07bf6c82e5bb55e217597b076b12fdf",
+      "size": 13901
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/audio_effects/speech_generator.py",
+      "sha256": "4a5392fed0c75c542582e1289a515da2c0ac54f510383e8cc6b1075abb83ef25",
+      "size": 5280
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/cli.py",
+      "sha256": "f4c46f67ea3a843c483f4f57e637fd759317921399b8602f1e5ce9889c829a0e",
+      "size": 9491
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/conversation_builder.py",
+      "sha256": "1fd98cb3d14b46daa6b74d7b09aeab748a5f9d8917b7c458fcc7b1f2ee6671d1",
+      "size": 26802
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/synthesis/synthesize.py",
+      "sha256": "c5436ead082d5bd58fb6e2e9f373b59bb1359157d3366bd0288e001f68013b01",
+      "size": 947
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/transcription/__init__.py",
+      "sha256": "43d1f7cca8b2919f4a489422c818e9f110169d777fa7553b717815d0952a1118",
+      "size": 247
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/transcription/transcribe.py",
+      "sha256": "79fafd188681f7e32ee290218fd0e463e07ab271fd8f9c357f56f3c482d336e2",
+      "size": 8827
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/transcription/transcription_test.py",
+      "sha256": "3383d6792d96bc8a2a50ee9fefb4b6f559e0171fda33831672b44cdc88817435",
+      "size": 3692
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/audio_debug.py",
+      "sha256": "1b41b8f362a4ccef7ccf386da65467b9e53ea6994f77b8fe4cab8649142dc87e",
+      "size": 17189
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/audio_io.py",
+      "sha256": "0a42d9ae79029edcafead1639ddda9c78f275430ff34320b040ad6f495fae32e",
+      "size": 3869
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/audio_preprocessing.py",
+      "sha256": "88bc6d226f3d0423b3398769d3358eb284915f37c2fc518cc6c09070af7798e1",
+      "size": 22153
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/audio_tap.py",
+      "sha256": "7a1cfc3b84d629a7ce40dac51d67ef120cb0c32762e6320ded5f9f53e3cdcce1",
+      "size": 3566
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/conversation_builder.py",
+      "sha256": "8ce5f45becc6dd5439f9019155f274485419ee5b4e47c397a917d6fb519ce924",
+      "size": 8984
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/convert_audio_files.py",
+      "sha256": "923b7398b919d6d0632dca4a2a942f0fd282c0212b6b01112a82821f16e2aa12",
+      "size": 5254
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/elevenlabs_utils.py",
+      "sha256": "f488172e46b373b8902f56edd0fc8e24ae9c447aba49827464a7f6b00c225a71",
+      "size": 3797
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/openai_utils.py",
+      "sha256": "912ee02bcd16504fe3d276a7ef4534232fdc6ef80c7f2b03e9ec0b4723d43ef0",
+      "size": 3407
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/probability.py",
+      "sha256": "76403e6293cf6cd170288fcad4972087dd1db267b1c6dd2e9b07c466404f38ec",
+      "size": 5030
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/text_effects.py",
+      "sha256": "ac9b4c92bf8a35b020b4bf6e365362f3e5593ef69638a94bf74328b1ad8225c3",
+      "size": 1129
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/transcript_utils.py",
+      "sha256": "cbe7b406058c8140448c5b6fc571794b87e24970e5e9e9baeeb6ffe98ee34312",
+      "size": 9893
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice/utils/utils.py",
+      "sha256": "70bc0caa3d46a7188535a2f941206d355ef2c3da311a36dd49827a851d1305a9",
+      "size": 1121
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/src/tau2/voice_config.py",
+      "sha256": "b644b1ef1c1f32c17e318d4f253ce420216b68c7ce30f184c6a1f5ff113f8121",
+      "size": 4071
+    },
+    {
+      "component": "tau2-bench",
+      "path": "tau2-bench/uv.lock",
+      "sha256": "62d3a8c4807b89e85703b3c03f2c21048a2da9736ca83d9af6f61adc74ac5314",
+      "size": 466363
+    }
+  ],
+  "generated_at": "2026-11-10T05:12:08.164336+00:00",
+  "schema_version": 1,
+  "total_bytes": 31494225,
+  "total_files": 533
+}

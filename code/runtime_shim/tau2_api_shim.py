@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import dataclasses
+import fcntl
 import importlib.abc
 import importlib.machinery
 import json
@@ -22,6 +23,7 @@ class ShimSettings:
     user_model: str
     seed: int
     usage_log: Path
+    rpm_limit: int = 0
 
 
 _TARGET_MODULES = frozenset({"tau2_runner", "litellm"})
@@ -48,11 +50,18 @@ def _settings_from_environment(environ: Mapping[str, str]) -> ShimSettings | Non
         seed = int(environ["TAU2_RUN_SEED"])
     except ValueError as exc:
         raise ValueError("TAU2_RUN_SEED must be an integer") from exc
+    try:
+        rpm_limit = int(environ.get("TAU2_API_RPM_LIMIT", "0"))
+    except ValueError as exc:
+        raise ValueError("TAU2_API_RPM_LIMIT must be an integer") from exc
+    if rpm_limit < 0:
+        raise ValueError("TAU2_API_RPM_LIMIT must not be negative")
     return ShimSettings(
         output_dir=Path(environ["TAU2_ASSIGNED_OUTPUT_DIR"]).expanduser().resolve(),
         user_model=environ["TAU2_USER_MODEL"],
         seed=seed,
         usage_log=Path(environ["TAU2_API_USAGE_LOG"]).expanduser().resolve(),
+        rpm_limit=rpm_limit,
     )
 
 
@@ -198,6 +207,28 @@ def append_usage_record(path: Path, record: Mapping[str, Any]) -> None:
         os.close(fd)
 
 
+def _pace_api_request(settings: ShimSettings) -> None:
+    """Space requests from all workers of one job using a shared file lock."""
+    if settings.rpm_limit <= 0:
+        return
+    path = settings.output_dir / ".api_next_request"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd = os.open(path, os.O_RDWR | os.O_CREAT, 0o600)
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX)
+        raw = os.read(fd, 64).decode("ascii").strip()
+        next_at = float(raw) if raw else 0.0
+        now = time.monotonic()
+        slot = max(now, next_at)
+        os.lseek(fd, 0, os.SEEK_SET)
+        os.ftruncate(fd, 0)
+        os.write(fd, f"{slot + 60.0 / settings.rpm_limit:.9f}\n".encode("ascii"))
+    finally:
+        os.close(fd)
+    if slot > now:
+        time.sleep(slot - now)
+
+
 def _value(obj: Any, name: str, default: Any = None) -> Any:
     if isinstance(obj, Mapping):
         return obj.get(name, default)
@@ -254,30 +285,40 @@ def patch_litellm(module: ModuleType, settings: ShimSettings) -> None:
 
     @wraps(original)
     def completion(*args: Any, **kwargs: Any) -> Any:
-        started_at = time.perf_counter()
-        try:
-            response = original(*args, **kwargs)
-        except Exception as exc:
+        for attempt in range(4):
+            _pace_api_request(settings)
+            started_at = time.perf_counter()
+            try:
+                response = original(*args, **kwargs)
+            except Exception as exc:
+                append_usage_record(
+                    settings.usage_log,
+                    _usage_record(
+                        kwargs=kwargs,
+                        started_at=started_at,
+                        status="failed",
+                        error=exc,
+                    ),
+                )
+                if (
+                    settings.rpm_limit > 0
+                    and getattr(exc, "status_code", None) == 429
+                    and attempt < 3
+                ):
+                    time.sleep(60)
+                    continue
+                raise
             append_usage_record(
                 settings.usage_log,
                 _usage_record(
                     kwargs=kwargs,
                     started_at=started_at,
-                    status="failed",
-                    error=exc,
+                    status="succeeded",
+                    response=response,
                 ),
             )
-            raise
-        append_usage_record(
-            settings.usage_log,
-            _usage_record(
-                kwargs=kwargs,
-                started_at=started_at,
-                status="succeeded",
-                response=response,
-            ),
-        )
-        return response
+            return response
+        raise AssertionError("unreachable rate-limit retry state")
 
     completion._tau2_usage_wrapper = True
     completion._tau2_original_completion = original
@@ -305,6 +346,10 @@ class _PatchingLoader(importlib.abc.Loader):
         if create_module is None:
             return None
         return create_module(spec)
+
+    def get_resource_reader(self, fullname: str) -> Any:
+        get_reader = getattr(self._wrapped, "get_resource_reader", None)
+        return get_reader(fullname) if get_reader is not None else None
 
     def exec_module(self, module: ModuleType) -> None:
         exec_module = getattr(self._wrapped, "exec_module", None)

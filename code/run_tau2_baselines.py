@@ -4,8 +4,11 @@ import argparse
 import json
 import os
 import shutil
+import signal
 import subprocess
 import sys
+import threading
+from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -55,8 +58,11 @@ def render_sanitized_environment(environ: Mapping[str, str]) -> dict[str, str]:
         "NL_JUDGE_MODEL",
         "PROC_PER_NODE",
         "PYTHONPATH",
+        "RESULT_BATCH_SIZE",
+        "RESULT_SAVE_EVERY",
         "START_VLLM_SERVER",
         "TAU2_API_USAGE_LOG",
+        "TAU2_API_RPM_LIMIT",
         "TAU2_ASSIGNED_OUTPUT_DIR",
         "TAU2_DATA_DIR",
         "TAU2_REPO",
@@ -88,6 +94,10 @@ def build_child_env(
     if workers < 1:
         raise ValueError("workers must be at least 1")
     env = {str(key): str(value) for key, value in base_environ.items()}
+    env.setdefault("RESULT_BATCH_SIZE", "1")
+    env.setdefault("RESULT_SAVE_EVERY", "1")
+    if baseline.name in {"awm", "reasoningbank", "evotest"}:
+        env.setdefault("TAU2_API_RPM_LIMIT", "20")
     existing_pythonpath = env.get("PYTHONPATH", "")
     python_paths = [str(runtime_shim.resolve()), str(repo_src.resolve())]
     if existing_pythonpath:
@@ -194,6 +204,10 @@ def classify_resume_output(output_dir: Path) -> str:
         raise ValueError(f"invalid summary.json in resume output: {output_dir}") from exc
     if not isinstance(summary, dict):
         raise ValueError(f"summary.json must contain an object: {output_dir}")
+    if not _valid_summary(output_dir):
+        raise ValueError(
+            f"job output has infrastructure errors and must be moved before resume: {output_dir}"
+        )
     return "skipped"
 
 
@@ -226,6 +240,7 @@ def _manifest(
     statuses: Sequence[str],
     api_config: ApiConfig,
     workers: int,
+    parallel_jobs: int,
     dry_run: bool,
 ) -> dict[str, Any]:
     return {
@@ -238,6 +253,7 @@ def _manifest(
         "base_url": api_config.base_url,
         "seed": DEFAULT_SEED,
         "workers": workers,
+        "parallel_jobs": parallel_jobs,
         "jobs": [
             _job_record(job, status) for job, status in zip(jobs, statuses, strict=True)
         ],
@@ -271,6 +287,8 @@ def _reconcile_resume_manifest(
     ):
         if existing.get(field) != candidate.get(field):
             raise ValueError(f"incompatible resume configuration: {field}")
+    if existing.get("parallel_jobs", 1) != candidate.get("parallel_jobs", 1):
+        raise ValueError("incompatible resume configuration: parallel_jobs")
 
     existing_jobs = existing.get("jobs")
     candidate_jobs = candidate.get("jobs")
@@ -333,7 +351,10 @@ def _valid_summary(output_dir: Path) -> bool:
         value = json.loads((output_dir / "summary.json").read_text(encoding="utf-8"))
     except (FileNotFoundError, OSError, json.JSONDecodeError):
         return False
-    return isinstance(value, dict)
+    if not isinstance(value, dict):
+        return False
+    infra_errors = value.get("infra_error_count", 0)
+    return isinstance(infra_errors, int) and infra_errors == 0
 
 
 def run_jobs(
@@ -346,61 +367,81 @@ def run_jobs(
     continue_on_error: bool,
     terminal: TextIO | None = None,
 ) -> int:
+    from tqdm import tqdm
+
     stream = sys.stdout if terminal is None else terminal
+    progress_stream = sys.stderr if terminal is None else terminal
     any_failed = False
+    failed_jobs = 0
     records = manifest["jobs"]
     records_by_key = {
         (str(record["method"]), str(record["domain"])): record
         for record in records
     }
-    for job in jobs:
-        record = records_by_key[(job.method, job.domain)]
-        if record["status"] == "skipped":
-            continue
-        record["status"] = "running"
-        write_manifest(manifest_path, manifest)
-        job.log_path.parent.mkdir(parents=True, exist_ok=True)
-        command = [
-            python_executable,
-            str(entry_script),
-            "--repo",
-            str(job.repo),
-            "--output-dir",
-            str(job.output_dir),
-            "--method",
-            job.method,
-        ]
-        return_code = 1
-        with job.log_path.open("w", encoding="utf-8") as log_file:
-            try:
-                process = subprocess.Popen(
-                    command,
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.STDOUT,
-                    text=True,
-                    env=dict(job.env),
-                    bufsize=1,
-                )
-                assert process.stdout is not None
-                for line in process.stdout:
-                    safe_line = _redact_output(line, job.env)
+    skipped_jobs = sum(
+        records_by_key[(job.method, job.domain)]["status"] == "skipped"
+        for job in jobs
+    )
+    with tqdm(
+        total=len(jobs),
+        initial=skipped_jobs,
+        desc="tau2 jobs",
+        unit="job",
+        dynamic_ncols=True,
+        file=progress_stream,
+    ) as progress:
+        for job in jobs:
+            record = records_by_key[(job.method, job.domain)]
+            if record["status"] == "skipped":
+                continue
+            progress.set_postfix(job=f"{job.method}/{job.domain}", failed=failed_jobs)
+            record["status"] = "running"
+            write_manifest(manifest_path, manifest)
+            job.log_path.parent.mkdir(parents=True, exist_ok=True)
+            command = [
+                python_executable,
+                str(entry_script),
+                "--repo",
+                str(job.repo),
+                "--output-dir",
+                str(job.output_dir),
+                "--method",
+                job.method,
+            ]
+            return_code = 1
+            with job.log_path.open("w", encoding="utf-8") as log_file:
+                try:
+                    process = subprocess.Popen(
+                        command,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.STDOUT,
+                        text=True,
+                        env=dict(job.env),
+                        bufsize=1,
+                    )
+                    assert process.stdout is not None
+                    for line in process.stdout:
+                        safe_line = _redact_output(line, job.env)
+                        log_file.write(safe_line)
+                        log_file.flush()
+                        stream.write(safe_line)
+                        stream.flush()
+                    return_code = process.wait()
+                except OSError as exc:
+                    safe_line = f"failed to start child process ({type(exc).__name__})\n"
                     log_file.write(safe_line)
-                    log_file.flush()
                     stream.write(safe_line)
                     stream.flush()
-                return_code = process.wait()
-            except OSError as exc:
-                safe_line = f"failed to start child process ({type(exc).__name__})\n"
-                log_file.write(safe_line)
-                stream.write(safe_line)
-                stream.flush()
-        succeeded = return_code == 0 and _valid_summary(job.output_dir)
-        record["status"] = "succeeded" if succeeded else "failed"
-        record["exit_code"] = return_code
-        write_manifest(manifest_path, manifest)
-        if not succeeded:
-            any_failed = True
-            if not continue_on_error:
+            succeeded = return_code == 0 and _valid_summary(job.output_dir)
+            record["status"] = "succeeded" if succeeded else "failed"
+            record["exit_code"] = return_code
+            write_manifest(manifest_path, manifest)
+            if not succeeded:
+                any_failed = True
+                failed_jobs += 1
+            progress.update(1)
+            progress.set_postfix(job=f"{job.method}/{job.domain}", failed=failed_jobs)
+            if not succeeded and not continue_on_error:
                 break
     all_statuses = {str(record.get("status", "")) for record in records}
     if "failed" in all_statuses:
@@ -413,12 +454,215 @@ def run_jobs(
     return 1 if any_failed else 0
 
 
+def _run_parallel_job(
+    job: JobSpec,
+    *,
+    python_executable: str,
+    entry_script: Path,
+    active_processes: dict[tuple[str, str], subprocess.Popen[str]],
+    process_lock: threading.Lock,
+    stopping: threading.Event,
+) -> tuple[int, bool]:
+    key = (job.method, job.domain)
+    command = [
+        python_executable,
+        str(entry_script),
+        "--repo",
+        str(job.repo),
+        "--output-dir",
+        str(job.output_dir),
+        "--method",
+        job.method,
+    ]
+    job.log_path.parent.mkdir(parents=True, exist_ok=True)
+    return_code = 1
+    with job.log_path.open("w", encoding="utf-8") as log_file:
+        try:
+            with process_lock:
+                if stopping.is_set():
+                    return 130, False
+                process = subprocess.Popen(
+                    command,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    env=dict(job.env),
+                    bufsize=1,
+                    start_new_session=True,
+                )
+                active_processes[key] = process
+            try:
+                assert process.stdout is not None
+                for line in process.stdout:
+                    log_file.write(_redact_output(line, job.env))
+                    log_file.flush()
+                return_code = process.wait()
+            finally:
+                with process_lock:
+                    active_processes.pop(key, None)
+        except OSError as exc:
+            log_file.write(f"failed to start child process ({type(exc).__name__})\n")
+    return return_code, return_code == 0 and _valid_summary(job.output_dir)
+
+
+def _stop_parallel_processes(
+    active_processes: dict[tuple[str, str], subprocess.Popen[str]],
+    process_lock: threading.Lock,
+    stopping: threading.Event,
+) -> None:
+    with process_lock:
+        stopping.set()
+        processes = list(active_processes.values())
+    for process in processes:
+        if process.poll() is None:
+            try:
+                os.killpg(process.pid, signal.SIGTERM)
+            except ProcessLookupError:
+                pass
+    for process in processes:
+        try:
+            process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            try:
+                os.killpg(process.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+
+
+def run_jobs_parallel(
+    jobs: Sequence[JobSpec],
+    *,
+    manifest: dict[str, Any],
+    manifest_path: Path,
+    python_executable: str,
+    entry_script: Path,
+    continue_on_error: bool,
+    parallel_jobs: int,
+    terminal: TextIO | None = None,
+) -> int:
+    from tqdm import tqdm
+
+    if parallel_jobs < 1:
+        raise ValueError("parallel_jobs must be at least 1")
+    progress_stream = sys.stderr if terminal is None else terminal
+    records = manifest["jobs"]
+    records_by_key = {
+        (str(record["method"]), str(record["domain"])): record
+        for record in records
+    }
+    skipped_jobs = sum(
+        records_by_key[(job.method, job.domain)]["status"] == "skipped"
+        for job in jobs
+    )
+    pending_jobs = [
+        job
+        for job in jobs
+        if records_by_key[(job.method, job.domain)]["status"] != "skipped"
+    ]
+    active_processes: dict[tuple[str, str], subprocess.Popen[str]] = {}
+    process_lock = threading.Lock()
+    stopping = threading.Event()
+    futures: dict[Future[tuple[int, bool]], JobSpec] = {}
+    executor = ThreadPoolExecutor(max_workers=parallel_jobs)
+    failed_jobs = 0
+    next_job_index = 0
+    stop_scheduling = False
+    try:
+        with tqdm(
+            total=len(jobs),
+            initial=skipped_jobs,
+            desc="tau2 jobs",
+            unit="job",
+            dynamic_ncols=True,
+            file=progress_stream,
+        ) as progress:
+
+            def submit_next_job() -> None:
+                nonlocal next_job_index
+                job = pending_jobs[next_job_index]
+                next_job_index += 1
+                record = records_by_key[(job.method, job.domain)]
+                record["status"] = "running"
+                write_manifest(manifest_path, manifest)
+                future = executor.submit(
+                    _run_parallel_job,
+                    job,
+                    python_executable=python_executable,
+                    entry_script=entry_script,
+                    active_processes=active_processes,
+                    process_lock=process_lock,
+                    stopping=stopping,
+                )
+                futures[future] = job
+                progress.write(f"started {job.method}/{job.domain}", file=progress_stream)
+                progress.set_postfix(running=len(futures), failed=failed_jobs)
+
+            while next_job_index < len(pending_jobs) and len(futures) < parallel_jobs:
+                submit_next_job()
+
+            while futures:
+                completed, _ = wait(tuple(futures), return_when=FIRST_COMPLETED)
+                for future in completed:
+                    job = futures.pop(future)
+                    record = records_by_key[(job.method, job.domain)]
+                    try:
+                        return_code, succeeded = future.result()
+                    except Exception as exc:
+                        return_code, succeeded = 1, False
+                        job.log_path.parent.mkdir(parents=True, exist_ok=True)
+                        with job.log_path.open("a", encoding="utf-8") as log_file:
+                            log_file.write(f"job worker failed ({type(exc).__name__})\n")
+                    record["status"] = "succeeded" if succeeded else "failed"
+                    record["exit_code"] = return_code
+                    write_manifest(manifest_path, manifest)
+                    if not succeeded:
+                        failed_jobs += 1
+                        if not continue_on_error:
+                            stop_scheduling = True
+                    progress.update(1)
+                    progress.write(
+                        f"finished {job.method}/{job.domain}: {record['status']}",
+                        file=progress_stream,
+                    )
+                    progress.set_postfix(running=len(futures), failed=failed_jobs)
+                while (
+                    not stop_scheduling
+                    and next_job_index < len(pending_jobs)
+                    and len(futures) < parallel_jobs
+                ):
+                    submit_next_job()
+    except KeyboardInterrupt:
+        _stop_parallel_processes(active_processes, process_lock, stopping)
+        for job in jobs:
+            record = records_by_key[(job.method, job.domain)]
+            if record["status"] == "running":
+                record["status"] = "failed"
+                record["exit_code"] = -int(signal.SIGTERM)
+        manifest["status"] = "failed"
+        manifest["interrupted_at"] = datetime.now(timezone.utc).isoformat()
+        write_manifest(manifest_path, manifest)
+        return 130
+    finally:
+        executor.shutdown(wait=True, cancel_futures=True)
+
+    all_statuses = {str(record.get("status", "")) for record in records}
+    if "failed" in all_statuses:
+        manifest["status"] = "failed"
+    elif all_statuses & {"pending", "running"}:
+        manifest["status"] = "partial"
+    else:
+        manifest["status"] = "succeeded"
+    write_manifest(manifest_path, manifest)
+    return 1 if failed_jobs else 0
+
+
 def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run all selected tau2 baselines through an OpenAI-compatible API"
     )
     parser.add_argument("--methods")
     parser.add_argument("--domains")
+    parser.add_argument("--jobs", help="comma-separated method/domain pairs")
     parser.add_argument("--run-id")
     parser.add_argument("--workspace-root", type=Path, default=CODE_DIR / "vendor")
     parser.add_argument("--output-root", type=Path, default=CODE_DIR / "results")
@@ -426,6 +670,7 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     parser.add_argument("--tau2-repo", type=Path)
     parser.add_argument("--python", default=sys.executable)
     parser.add_argument("--workers", type=int, default=1)
+    parser.add_argument("--parallel-jobs", type=int, default=1)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--continue-on-error", action="store_true")
@@ -433,9 +678,28 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+def _parse_job_selection(raw: str) -> list[tuple[str, str]]:
+    selected: list[tuple[str, str]] = []
+    for item in raw.split(","):
+        parts = item.strip().split("/")
+        if len(parts) != 2:
+            raise ValueError(f"invalid --jobs entry: {item.strip()}")
+        method, domain = (part.strip() for part in parts)
+        if method not in METHOD_ORDER or domain not in DOMAIN_ORDER:
+            raise ValueError(f"unknown method/domain in --jobs: {item.strip()}")
+        pair = (method, domain)
+        if pair in selected:
+            raise ValueError(f"duplicate --jobs entry: {item.strip()}")
+        selected.append(pair)
+    if not selected:
+        raise ValueError("--jobs must select at least one method/domain pair")
+    return selected
+
+
 def _resolve_python(value: str) -> str:
     if os.sep in value:
-        path = Path(value).expanduser().resolve()
+        # Keep a venv's python symlink: resolving it selects the system interpreter.
+        path = Path(value).expanduser().absolute()
         if not path.is_file() or not os.access(path, os.X_OK):
             raise ValueError(f"Python executable is not executable: {path}")
         return str(path)
@@ -501,8 +765,18 @@ def _validate_inputs(
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = _parse_args(argv)
-    methods = parse_selection(args.methods, METHOD_ORDER, "method")
-    domains = parse_selection(args.domains, DOMAIN_ORDER, "domain")
+    if args.parallel_jobs < 1:
+        raise ValueError("--parallel-jobs must be at least 1")
+    if args.jobs is not None:
+        if args.methods is not None or args.domains is not None:
+            raise ValueError("--jobs cannot be combined with --methods or --domains")
+        selected_pairs = _parse_job_selection(args.jobs)
+        methods = list(dict.fromkeys(method for method, _ in selected_pairs))
+        domains = list(dict.fromkeys(domain for _, domain in selected_pairs))
+    else:
+        selected_pairs = None
+        methods = parse_selection(args.methods, METHOD_ORDER, "method")
+        domains = parse_selection(args.domains, DOMAIN_ORDER, "domain")
     workspace_root = args.workspace_root.expanduser().resolve()
     bundled_workspace = workspace_root == (CODE_DIR / "vendor").resolve()
     tau2_repo = (
@@ -539,6 +813,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         workers=args.workers,
         base_environ=os.environ,
     )
+    if selected_pairs is not None:
+        jobs_by_pair = {(job.method, job.domain): job for job in jobs}
+        jobs = [jobs_by_pair[pair] for pair in selected_pairs]
     statuses = (
         [classify_resume_output(job.output_dir) for job in jobs]
         if args.resume
@@ -550,6 +827,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         statuses=statuses,
         api_config=api_config,
         workers=args.workers,
+        parallel_jobs=args.parallel_jobs,
         dry_run=args.dry_run,
     )
     manifest_path = run_dir / "manifest.json"
@@ -578,13 +856,16 @@ def main(argv: Sequence[str] | None = None) -> int:
             )
         )
         return 0
-    return run_jobs(
+    runner = run_jobs_parallel if args.parallel_jobs > 1 else run_jobs
+    runner_options = {"parallel_jobs": args.parallel_jobs} if args.parallel_jobs > 1 else {}
+    return runner(
         jobs,
         manifest=manifest,
         manifest_path=manifest_path,
         python_executable=python_executable,
         entry_script=CODE_DIR / "tau2_baseline_entry.py",
         continue_on_error=args.continue_on_error,
+        **runner_options,
     )
 
 

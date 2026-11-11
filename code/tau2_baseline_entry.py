@@ -29,6 +29,10 @@ def _import_runner(repo: Path) -> ModuleType:
     sys.path.insert(0, str(runner_path.parent))
     try:
         return importlib.import_module("tau2_runner")
+    except ModuleNotFoundError as exc:
+        raise EntryError(
+            f"failed to import tau2_runner (missing Python module: {exc.name})"
+        ) from exc
     except Exception as exc:
         raise EntryError(
             f"failed to import tau2_runner ({type(exc).__name__})"
@@ -58,6 +62,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         raise EntryError("tau2_runner does not provide run_benchmark()")
     try:
         returned_summary = run_benchmark()
+    except ModuleNotFoundError as exc:
+        raise EntryError(
+            f"tau2 runner failed (missing Python module: {exc.name})"
+        ) from exc
+    except FileNotFoundError as exc:
+        missing_path = exc.filename or str(exc)
+        raise EntryError(f"tau2 runner failed (missing file: {missing_path})") from exc
     except Exception as exc:
         raise EntryError(f"tau2 runner failed ({type(exc).__name__})") from exc
     if not isinstance(returned_summary, Mapping):

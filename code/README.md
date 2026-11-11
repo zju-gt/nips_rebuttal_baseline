@@ -71,13 +71,40 @@ bash sop-world-rebuttal/code/run_tau2_baselines.sh \
   --run-id exp1-subset
 ```
 
+AWM, ReasoningBank, and EvoTest use asynchronous sample scheduling. Within one
+method/domain job, up to `--workers` samples run at once. When a sample finishes,
+its evolution update is applied and the next sample is submitted immediately
+with the latest available state. Samples already in flight keep the state
+snapshot they received when submitted. This avoids waiting for the slowest
+sample in a fixed batch.
+
+To rerun AWM/telecom and all ReasoningBank and EvoTest domains in sequence,
+with eight sample workers per job:
+
+```bash
+bash run_tau2_baselines.sh \
+  --jobs awm/telecom,reasoningbank/retail,reasoningbank/airline,reasoningbank/telecom,evotest/retail,evotest/airline,evotest/telecom \
+  --workers 8 \
+  --run-id evolve-retry
+```
+
+`run_evolve_remaining.sh` runs that seven-job selection with bundle verification
+and a timestamped run ID. Jobs run one at a time; samples within each job run
+asynchronously. Their API calls share a 20 requests/minute limit, configurable
+with `TAU2_API_RPM_LIMIT`. HTTP 429 responses are retried after a pause. A job
+with infrastructure errors is marked failed, and later jobs are not started.
+
 Useful options:
 
 - `--verify-bundle`: recompute every vendored file hash and reject missing, added, or modified files before planning jobs.
 - `--workspace-root`: explicit external directory containing the six `sop-world*` repositories and `tau2-bench`; by default the runner uses `code/vendor`.
 - `--tau2-repo`: explicit tau2-bench checkout override; by default it is `<workspace-root>/tau2-bench`.
 - `--output-root`: central result root; defaults to `code/results`.
-- `--workers`: sets `PROC_PER_NODE`; defaults to `1`. Stateful methods retain strict update ordering.
+- `--workers`: sets `PROC_PER_NODE`; defaults to `1`. AWM, ReasoningBank, and EvoTest use it for asynchronous sample workers.
+- `--parallel-jobs`: runs independent method/domain jobs concurrently; defaults to `1`.
+- `--jobs`: select exact `method/domain` pairs instead of a methods × domains matrix.
+- Active runs show a tqdm bar for completed method/domain jobs, including the current job and failure count.
+- Each worker sends and saves completed samples individually (`RESULT_BATCH_SIZE=1` and `RESULT_SAVE_EVERY=1` by default).
 - `--continue-on-error`: continue to later jobs after a failed job.
 - `--resume`: skip only job directories whose `summary.json` is valid.
 - `--python`: Python executable used for child jobs.

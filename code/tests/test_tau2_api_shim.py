@@ -240,6 +240,45 @@ def test_usage_wrapper_records_sanitized_failure_and_reraises(
     assert "secret-value" not in raw
 
 
+def test_rate_limited_wrapper_retries_http_429(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from runtime_shim.tau2_api_shim import ShimSettings, patch_litellm
+
+    class RateLimitFailure(RuntimeError):
+        status_code = 429
+
+    attempts = 0
+    waits: list[float] = []
+    response = SimpleNamespace(id="recovered", usage=None)
+
+    def _complete(*args: object, **kwargs: object) -> object:
+        nonlocal attempts
+        attempts += 1
+        if attempts == 1:
+            raise RateLimitFailure("RPM exceeded")
+        return response
+
+    monkeypatch.setattr("runtime_shim.tau2_api_shim.time.sleep", waits.append)
+    module = ModuleType("litellm")
+    module.completion = _complete
+    settings = ShimSettings(
+        output_dir=tmp_path / "output",
+        user_model="gpt-5.1-2025-11-13",
+        seed=300,
+        usage_log=tmp_path / "usage.jsonl",
+        rpm_limit=20,
+    )
+    patch_litellm(module, settings)
+
+    assert module.completion(model="openai/test") is response
+    assert attempts == 2
+    assert 60 in waits
+    assert settings.output_dir.joinpath(".api_next_request").exists()
+    records = [json.loads(line) for line in settings.usage_log.read_text().splitlines()]
+    assert [record["status"] for record in records] == ["failed", "succeeded"]
+
+
 def test_sitecustomize_patches_spawned_interpreters(tmp_path: Path) -> None:
     fake_modules = tmp_path / "fake_modules"
     fake_modules.mkdir()

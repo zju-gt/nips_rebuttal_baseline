@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import io
 import os
 import sys
 from pathlib import Path
@@ -163,11 +164,14 @@ def test_build_child_environment_is_complete_and_sanitized(tmp_path: Path) -> No
     assert env["PYTHONDONTWRITEBYTECODE"] == "1"
     assert env["GPU"] == ""
     assert env["PROC_PER_NODE"] == "2"
+    assert env["RESULT_BATCH_SIZE"] == "1"
+    assert env["RESULT_SAVE_EVERY"] == "1"
     assert env["DOMAIN"] == "retail"
     assert env["TAU2_DATA_DIR"] == str((tau2_repo / "data").resolve())
     assert env["TAU2_RUN_SEED"] == "300"
     assert env["TAU2_ASSIGNED_OUTPUT_DIR"] == str(output_dir.resolve())
     assert env["TAU2_API_USAGE_LOG"] == str((output_dir / "api_usage.jsonl").resolve())
+    assert env["TAU2_API_RPM_LIMIT"] == "20"
     assert env["EVOTEST_HINTS_ENABLED"] == "1"
     assert env["PYTHONPATH"].split(os.pathsep)[:2] == [
         str((CODE_DIR / "runtime_shim").resolve()),
@@ -177,6 +181,36 @@ def test_build_child_environment_is_complete_and_sanitized(tmp_path: Path) -> No
     assert "old-secret" not in rendered
     assert "api_key" not in rendered.lower()
     assert "authorization" not in rendered.lower()
+    assert '"RESULT_BATCH_SIZE": "1"' in rendered
+    assert '"RESULT_SAVE_EVERY": "1"' in rendered
+
+
+def test_evolve_baselines_use_async_sample_workers(tmp_path: Path) -> None:
+    from run_tau2_baselines import build_child_env
+
+    workspace, tau2_repo = _fake_workspace(tmp_path)
+    api = ApiConfig(
+        model="gpt-5.2-2025-12-11",
+        base_url="https://api.example.invalid/v1",
+        api_key="secret",
+    )
+    for method in ("awm", "reasoningbank", "evotest"):
+        spec = get_baseline_specs()[method]
+        env = build_child_env(
+            base_environ={},
+            api_config=api,
+            baseline=spec,
+            domain="telecom",
+            output_dir=tmp_path / method,
+            tau2_repo=tau2_repo,
+            workers=16,
+            runtime_shim=CODE_DIR / "runtime_shim",
+            repo_src=workspace / spec.repo_name / "src",
+        )
+        assert env["EVOLVE_PARALLEL_MODE"] == "async"
+        assert env["PROC_PER_NODE"] == "16"
+        assert env["RESULT_BATCH_SIZE"] == "1"
+        assert env["TAU2_API_RPM_LIMIT"] == "20"
 
 
 def test_bundled_workspace_is_default_and_jobs_stay_under_code_vendor(
@@ -310,6 +344,107 @@ def test_execution_failure_policy(
     assert [item["status"] for item in saved["jobs"]] == expected_statuses
 
 
+def test_parallel_jobs_run_independent_domains_together(tmp_path: Path) -> None:
+    from run_tau2_baselines import run_jobs_parallel, write_manifest
+
+    child = tmp_path / "barrier_child.py"
+    child.write_text(
+        "\n".join(
+            [
+                "import argparse, json, sys, time",
+                "from pathlib import Path",
+                "p = argparse.ArgumentParser()",
+                "p.add_argument('--repo')",
+                "p.add_argument('--output-dir')",
+                "p.add_argument('--method')",
+                "a = p.parse_args()",
+                "barrier = Path(a.repo).parent / 'barrier'",
+                "barrier.mkdir(exist_ok=True)",
+                "(barrier / (a.method + '_' + Path(a.output_dir).name)).write_text('ready')",
+                "deadline = time.monotonic() + 10",
+                "while len(list(barrier.glob('*'))) < 3:",
+                "    if time.monotonic() > deadline: sys.exit(9)",
+                "    time.sleep(0.05)",
+                "out = Path(a.output_dir)",
+                "out.mkdir(parents=True, exist_ok=True)",
+                "(out / 'summary.json').write_text(json.dumps({'ok': True}))",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    jobs = [
+        _job(tmp_path, "awm", "telecom"),
+        _job(tmp_path, "reasoningbank", "retail"),
+        _job(tmp_path, "evotest", "airline"),
+    ]
+    manifest = {
+        "jobs": [
+            {"method": job.method, "domain": job.domain, "status": "pending"}
+            for job in jobs
+        ]
+    }
+    manifest_path = tmp_path / "manifest.json"
+    write_manifest(manifest_path, manifest)
+    terminal = io.StringIO()
+
+    status = run_jobs_parallel(
+        jobs,
+        manifest=manifest,
+        manifest_path=manifest_path,
+        python_executable=sys.executable,
+        entry_script=child,
+        continue_on_error=True,
+        parallel_jobs=3,
+        terminal=terminal,
+    )
+
+    saved = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert status == 0
+    assert saved["status"] == "succeeded"
+    assert [record["status"] for record in saved["jobs"]] == ["succeeded"] * 3
+    assert "3/3" in terminal.getvalue()
+    assert all(job.log_path.is_file() for job in jobs)
+
+
+def test_explicit_job_selection_plans_only_requested_pairs(tmp_path: Path) -> None:
+    from run_tau2_baselines import main
+
+    workspace, tau2_repo = _fake_workspace(tmp_path)
+    output_root = tmp_path / "results"
+    selected = "awm/telecom,reasoningbank/retail,evotest/airline"
+    assert main(
+        [
+            "--dry-run",
+            "--jobs",
+            selected,
+            "--parallel-jobs",
+            "3",
+            "--workers",
+            "1",
+            "--run-id",
+            "selected",
+            "--workspace-root",
+            str(workspace),
+            "--output-root",
+            str(output_root),
+            "--openai-test",
+            str(_api_file(tmp_path)),
+            "--tau2-repo",
+            str(tau2_repo),
+            "--python",
+            sys.executable,
+        ]
+    ) == 0
+
+    manifest = json.loads((output_root / "selected" / "manifest.json").read_text())
+    assert manifest["parallel_jobs"] == 3
+    assert [(job["method"], job["domain"]) for job in manifest["jobs"]] == [
+        ("awm", "telecom"),
+        ("reasoningbank", "retail"),
+        ("evotest", "airline"),
+    ]
+
+
 def test_resume_skips_valid_summary_and_rejects_partial_output(tmp_path: Path) -> None:
     from run_tau2_baselines import classify_resume_output
 
@@ -330,6 +465,18 @@ def test_resume_skips_valid_summary_and_rejects_partial_output(tmp_path: Path) -
     (malformed / "summary.json").write_text("[]", encoding="utf-8")
     with pytest.raises(ValueError, match="summary"):
         classify_resume_output(malformed)
+
+
+def test_infrastructure_errors_make_job_summary_invalid(tmp_path: Path) -> None:
+    from run_tau2_baselines import _valid_summary, classify_resume_output
+
+    summary = tmp_path / "summary.json"
+    summary.write_text('{"total_samples": 114, "infra_error_count": 114}')
+    assert not _valid_summary(tmp_path)
+    with pytest.raises(ValueError, match="infrastructure errors"):
+        classify_resume_output(tmp_path)
+    summary.write_text('{"total_samples": 114, "infra_error_count": 0}')
+    assert _valid_summary(tmp_path)
 
 
 def test_existing_run_directory_requires_resume(tmp_path: Path) -> None:

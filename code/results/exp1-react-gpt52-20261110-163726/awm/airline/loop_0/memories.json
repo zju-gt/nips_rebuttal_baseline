@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "domain": "airline",
+  "families": [
+    "cancellation",
+    "modification",
+    "compensation",
+    "booking",
+    "verification"
+  ],
+  "entries": [],
+  "family_index": {},
+  "events": []
+}

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "domain": "retail",
+  "families": [
+    "exchange_modify",
+    "status"
+  ],
+  "entries": [
+    {
+      "id": "exchange_modify:096e2ecedb23",
+      "content_hash": "096e2ecedb23",
+      "title": "Authenticate first, then fetch order details and variant.",
+      "lesson": "Authenticate first, then fetch order details and variant availability, present the best-match plus fallback options, and require explicit confirmation of replacement item_ids and payment method before submitting the exchange.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate first, then fetch order details and variant.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate first, then fetch order details and variant availability, present the best-match plus fallback options, and require explicit confirmation of replacement item_ids and payment method before submitting the exchange.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "0",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:4fbbb4389a27",
+      "content_hash": "4fbbb4389a27",
+      "title": "Authenticate first, then verify order eligibility and variant.",
+      "lesson": "Authenticate first, then verify order eligibility and variant availability; when user provides conditional preferences, explicitly apply the fallback based on inventory and confirm the final exchange plus payment method before submitting.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate first, then verify order eligibility and variant.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate first, then verify order eligibility and variant availability; when user provides conditional preferences, explicitly apply the fallback based on inventory and confirm the final exchange plus payment method before submitting.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "1-c0-t0-s626729",
+      "task_id": "1",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "status:31879525923d",
+      "content_hash": "31879525923d",
+      "title": "When the user can’t recall the order email.",
+      "lesson": "When the user can’t recall the order email, use name+ZIP to resolve the account, then confirm exact item_ids and refund method before submitting returns; for inventory questions, count only in‑stock (available=true) variants.",
+      "applicability": "when handling similar status cases",
+      "family": "status",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When the user can’t recall the order email.\nApplicability: when handling similar status cases\nLesson: When the user can’t recall the order email, use name+ZIP to resolve the account, then confirm exact item_ids and refund method before submitting returns; for inventory questions, count only in‑stock (available=true) variants.\nFamily: status\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "2-c0-t0-s626729",
+      "task_id": "2",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    }
+  ],
+  "family_index": {
+    "exchange_modify": [
+      "exchange_modify:096e2ecedb23",
+      "exchange_modify:4fbbb4389a27"
+    ],
+    "status": [
+      "status:31879525923d"
+    ]
+  },
+  "events": [
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "0",
+      "reward_value": 1.0,
+      "content_hash": "096e2ecedb23"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "1-c0-t0-s626729",
+      "task_id": "1",
+      "reward_value": 1.0,
+      "content_hash": "4fbbb4389a27"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "2-c0-t0-s626729",
+      "task_id": "2",
+      "reward_value": 1.0,
+      "content_hash": "31879525923d"
+    }
+  ]
+}

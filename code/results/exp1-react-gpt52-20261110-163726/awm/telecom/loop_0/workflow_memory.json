@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "domain": "telecom",
+  "families": [
+    "mobile_data",
+    "mms",
+    "roaming",
+    "billing",
+    "apn_reboot"
+  ],
+  "entries": [
+    {
+      "id": "roaming:ba1067f16905",
+      "family": "roaming",
+      "title": "Restore roaming mobile data when abroad is slow or drops",
+      "task_signature": "User traveling internationally reports mobile data is extremely slow or not working; calls/SMS may still work. Diagnose device settings and account/plan status, then apply.",
+      "workflow": [
+        "Confirm the user’s location (country) and whether the issue is widespread or.",
+        "Validate account/line status and plan constraints (active/suspended, data usage vs limit, roaming.",
+        "Collect on-device diagnostics: airplane mode state, mobile data state, data roaming toggle.",
+        "If service is blocked, instruct the user to turn off airplane mode.",
+        "Re-check network status and re-run speed test; if still poor, proceed to."
+      ],
+      "applicability": "Reuse when a roaming customer abroad reports intermittent/no mobile data or very slow speeds and you need a structured sequence to restore connectivity and optimize performance.",
+      "retrieval_text": "Title: Restore roaming mobile data when abroad is slow or drops\nApplicability: Reuse when a roaming customer abroad reports intermittent/no mobile data or very slow speeds and you need a structured sequence to restore connectivity and optimize performance.\nTask Signature: User traveling internationally reports mobile data is extremely slow or not working; calls/SMS may still work. Diagnose device settings and account/plan status, then apply.\nWorkflow: Confirm the user’s location (country) and whether the issue is widespread or. -> Validate account/line status and plan constraints (active/suspended, data usage vs limit, roaming. -> Collect on-device diagnostics: airplane mode state, mobile data state, data roaming toggle. -> If service is blocked, instruct the user to turn off airplane mode. -> Re-check network status and re-run speed test; if still poor, proceed to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]"
+      ],
+      "last_task_query": "My mobile data is giving me a lot of trouble. I’m currently in France, and the internet on my phone keeps either stopping completely or getting very slow. I don’t have access to Wi‑Fi, so I really need my mobile.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:622eafa45b52",
+      "family": "mobile_data",
+      "title": "Restore basic cellular connectivity before diagnosing slow mobile data",
+      "task_signature": "Mobile data is unusable (no connection/very slow); determine whether device settings are blocking service and then validate performance with status + speed test.",
+      "workflow": [
+        "Confirm scope and context: user location (domestic vs roaming), whether calls/SMS work.",
+        "Verify account/line health and data allowance (line active, not suspended, not out.",
+        "Collect device network readout and a speed test result (airplane mode, signal.",
+        "If the device shows no service or speed test fails, correct blocking.",
+        "Once service returns (4G/5G + signal), rerun speed test and proceed with."
+      ],
+      "applicability": "Use when a customer reports mobile data intermittently dropping, not working, or extremely slow and you need to distinguish device-setting issues from plan/network problems before optimizing speed.",
+      "retrieval_text": "Title: Restore basic cellular connectivity before diagnosing slow mobile data\nApplicability: Use when a customer reports mobile data intermittently dropping, not working, or extremely slow and you need to distinguish device-setting issues from plan/network problems before optimizing speed.\nTask Signature: Mobile data is unusable (no connection/very slow); determine whether device settings are blocking service and then validate performance with status + speed test.\nWorkflow: Confirm scope and context: user location (domestic vs roaming), whether calls/SMS work. -> Verify account/line health and data allowance (line active, not suspended, not out. -> Collect device network readout and a speed test result (airplane mode, signal. -> If the device shows no service or speed test fails, correct blocking. -> Once service returns (4G/5G + signal), rerun speed test and proceed with.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]"
+      ],
+      "last_task_query": "My mobile data has been acting up. It either stops working completely or is so slow it’s basically unusable. I’m at home in the US, no access to Wi‑Fi, and I want this fixed so that my phone gets excellent.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:a0017c2bbdcc",
+      "family": "roaming",
+      "title": "Fix slow or intermittent roaming data abroad",
+      "task_signature": "User reports mobile data is slow or stops while traveling internationally; verify carrier-side roaming status and correct device-side roaming settings, then re-register to the.",
+      "workflow": [
+        "Confirm the affected line/account and check carrier-side status: line active, roaming feature.",
+        "Ask the user to verify device-side prerequisites: Mobile Data ON, Data Roaming.",
+        "Provide device-specific steps to enable Data Roaming and other required toggles; have.",
+        "Force a network re-registration (toggle Airplane Mode briefly or restart) and re-test.",
+        "If still slow/unstable, proceed to advanced checks: network selection (auto/manual), APN review/reset."
+      ],
+      "applicability": "Reuse when a traveler reports poor cellular data performance abroad and needs step-by-step guidance to restore roaming data service.",
+      "retrieval_text": "Title: Fix slow or intermittent roaming data abroad\nApplicability: Reuse when a traveler reports poor cellular data performance abroad and needs step-by-step guidance to restore roaming data service.\nTask Signature: User reports mobile data is slow or stops while traveling internationally; verify carrier-side roaming status and correct device-side roaming settings, then re-register to the.\nWorkflow: Confirm the affected line/account and check carrier-side status: line active, roaming feature. -> Ask the user to verify device-side prerequisites: Mobile Data ON, Data Roaming. -> Provide device-specific steps to enable Data Roaming and other required toggles; have. -> Force a network re-registration (toggle Airplane Mode briefly or restart) and re-test. -> If still slow/unstable, proceed to advanced checks: network selection (auto/manual), APN review/reset.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to get help from you. My mobile data hasn’t been working properly while I’m abroad in France. It either stops completely or is very slow. I don’t have Wi‑Fi available, so I really need.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:3c06ff349611",
+      "family": "roaming",
+      "title": "Fix roaming data not working or very slow abroad",
+      "task_signature": "User abroad has intermittent/slow/no mobile data and needs roaming data restored and improved.",
+      "workflow": [
+        "Verify the affected line and confirm account/line status plus roaming eligibility/enabled status.",
+        "Collect current on-device indicators: signal quality, network type (2G/3G/4G/5G), mobile data toggle.",
+        "If roaming is off or the device is stuck on low network.",
+        "Re-check network type/signal and re-run the test; if still failing, try manual.",
+        "Set expectations that speed depends on local coverage/signal; escalate to carrier-side investigation."
+      ],
+      "applicability": "Reuse when a customer reports no data or very slow data while traveling internationally, especially when the device shows 2G/3G or data roaming is disabled.",
+      "retrieval_text": "Title: Fix roaming data not working or very slow abroad\nApplicability: Reuse when a customer reports no data or very slow data while traveling internationally, especially when the device shows 2G/3G or data roaming is disabled.\nTask Signature: User abroad has intermittent/slow/no mobile data and needs roaming data restored and improved.\nWorkflow: Verify the affected line and confirm account/line status plus roaming eligibility/enabled status. -> Collect current on-device indicators: signal quality, network type (2G/3G/4G/5G), mobile data toggle. -> If roaming is off or the device is stuck on low network. -> Re-check network type/signal and re-run the test; if still failing, try manual. -> Set expectations that speed depends on local coverage/signal; escalate to carrier-side investigation.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello! I’m actually the one who needs help today. My mobile data on my phone isn’t working properly. It either stops completely or becomes very slow, and I’m currently abroad in France without any Wi‑Fi. I really need the internet.",
+      "status": "candidate"
+    }
+  ],
+  "family_index": {
+    "roaming": [
+      "roaming:ba1067f16905",
+      "roaming:a0017c2bbdcc",
+      "roaming:3c06ff349611"
+    ],
+    "mobile_data": [
+      "mobile_data:622eafa45b52"
+    ]
+  },
+  "events": [
+    {
+      "family": "roaming",
+      "entry_id": "roaming:ba1067f16905",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "task_query": "My mobile data is giving me a lot of trouble. I’m currently in France, and the internet on my phone keeps either stopping completely or getting very slow. I don’t have access to Wi‑Fi, so I really need my mobile.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:622eafa45b52",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+      "task_query": "My mobile data has been acting up. It either stops working completely or is so slow it’s basically unusable. I’m at home in the US, no access to Wi‑Fi, and I want this fixed so that my phone gets excellent.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:a0017c2bbdcc",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to get help from you. My mobile data hasn’t been working properly while I’m abroad in France. It either stops completely or is very slow. I don’t have Wi‑Fi available, so I really need.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:3c06ff349611",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "task_query": "Hello! I’m actually the one who needs help today. My mobile data on my phone isn’t working properly. It either stops completely or becomes very slow, and I’m currently abroad in France without any Wi‑Fi. I really need the internet.",
+      "status": "candidate",
+      "success_count": 1
+    }
+  ]
+}

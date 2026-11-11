@@ -1,0 +1,8 @@
+
+tau2-bench/telecom (evolve):   0%|          | 0/114 [00:00<?, ?it/s]
+tau2-bench/telecom (evolve):   0%|          | 0/114 [03:22<?, ?it/s, cycle=1/1, failure=0, success=1]
+tau2-bench/telecom (evolve):   1%|          | 1/114 [03:22<6:21:08, 202.38s/it, cycle=1/1, failure=0, success=1]
+tau2-bench/telecom (evolve):   1%|          | 1/114 [10:15<6:21:08, 202.38s/it, cycle=1/1, failure=0, success=2]
+tau2-bench/telecom (evolve):   2%|▏         | 2/114 [10:15<10:09:11, 326.35s/it, cycle=1/1, failure=0, success=2]
+tau2-bench/telecom (evolve):   2%|▏         | 2/114 [26:26<10:09:11, 326.35s/it, cycle=1/1, failure=0, success=3]
+tau2-bench/telecom (evolve):   3%|▎         | 3/114 [26:26<19:08:12, 620.65s/it, cycle=1/1, failure=0, success=3]

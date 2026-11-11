@@ -1,0 +1,1034 @@
+{
+  "version": 1,
+  "domain": "retail",
+  "families": [
+    "exchange_modify",
+    "authentication",
+    "status",
+    "variant",
+    "payment"
+  ],
+  "entries": [
+    {
+      "id": "exchange_modify:c3fe839efb73",
+      "content_hash": "c3fe839efb73",
+      "title": "When an exchange request has conditional logic, verify.",
+      "lesson": "When an exchange request has conditional logic, verify SKU/variant availability first, then restate the exact item IDs and get explicit confirmation before submitting the exchange and payment method for any price difference.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When an exchange request has conditional logic, verify.\nApplicability: when handling similar exchange_modify cases\nLesson: When an exchange request has conditional logic, verify SKU/variant availability first, then restate the exact item IDs and get explicit confirmation before submitting the exchange and payment method for any price difference.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "1-c0-t0-s626729",
+      "task_id": "1",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "authentication:d7153d263a6a",
+      "content_hash": "d7153d263a6a",
+      "title": "Verify DB-aligned final state after return/cancel updates",
+      "lesson": "When submitting cancellations/returns/refunds via tools and then concluding the authentication workflow. | No explicit end-to-end verification that the persisted order state (order IDs, exact return_items set, refund method IDs, and resulting status/required fields) matched what the evaluator/DB check expects. | After tool submission, re-fetch the affected order(s) (and/or any available validation endpoint) and cross-check: order status, returned item IDs list, refund/payment method ID, and totals/fields required by the system; only then provide the final confirmation to the user.",
+      "applicability": "When submitting cancellations/returns/refunds via tools and then concluding the authentication workflow.",
+      "family": "authentication",
+      "outcome_type": "failure",
+      "retrieval_text": "Title: Verify DB-aligned final state after return/cancel updates\nApplicability: When submitting cancellations/returns/refunds via tools and then concluding the authentication workflow.\nLesson: When submitting cancellations/returns/refunds via tools and then concluding the authentication workflow. | No explicit end-to-end verification that the persisted order state (order IDs, exact return_items set, refund method IDs, and resulting status/required fields) matched what the evaluator/DB check expects. | After tool submission, re-fetch the affected order(s) (and/or any available validation endpoint) and cross-check: order status, returned item IDs list, refund/payment method ID, and totals/fields required by the system; only then provide the final confirmation to the user.\nFamily: authentication\nOutcome: failure",
+      "source_cycle": 0,
+      "source_task": "13-c0-t0-s626729",
+      "task_id": "13",
+      "reward_value": 0.0,
+      "confidence": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "status:6f88f849003f",
+      "content_hash": "6f88f849003f",
+      "title": "Keep the successful ordering and re-verify prerequisites before.",
+      "lesson": "Keep the successful ordering and re-verify prerequisites before mutation.",
+      "applicability": "when handling similar status cases",
+      "family": "status",
+      "outcome_type": "infra_error",
+      "retrieval_text": "Title: Keep the successful ordering and re-verify prerequisites before.\nApplicability: when handling similar status cases\nLesson: Keep the successful ordering and re-verify prerequisites before mutation.\nFamily: status\nOutcome: infra_error",
+      "source_cycle": 0,
+      "source_task": "4-c0-t0-s626729",
+      "task_id": "108",
+      "reward_value": null,
+      "confidence": 19.5,
+      "status": "active",
+      "last_cycle": 0,
+      "last_task": "108-c0-t0-s626729"
+    },
+    {
+      "id": "authentication:a877665ee1ea",
+      "content_hash": "a877665ee1ea",
+      "title": "Keep the successful ordering and re-verify prerequisites before.",
+      "lesson": "Keep the successful ordering and re-verify prerequisites before mutation.",
+      "applicability": "when handling similar authentication cases",
+      "family": "authentication",
+      "outcome_type": "infra_error",
+      "retrieval_text": "Title: Keep the successful ordering and re-verify prerequisites before.\nApplicability: when handling similar authentication cases\nLesson: Keep the successful ordering and re-verify prerequisites before mutation.\nFamily: authentication\nOutcome: infra_error",
+      "source_cycle": 0,
+      "source_task": "10-c0-t0-s626729",
+      "task_id": "69",
+      "reward_value": null,
+      "confidence": 22.5,
+      "status": "active",
+      "last_cycle": 0,
+      "last_task": "69-c0-t0-s626729"
+    },
+    {
+      "id": "variant:a796cd7dd470",
+      "content_hash": "a796cd7dd470",
+      "title": "Keep the successful ordering and re-verify prerequisites before.",
+      "lesson": "Keep the successful ordering and re-verify prerequisites before mutation.",
+      "applicability": "when handling similar variant cases",
+      "family": "variant",
+      "outcome_type": "infra_error",
+      "retrieval_text": "Title: Keep the successful ordering and re-verify prerequisites before.\nApplicability: when handling similar variant cases\nLesson: Keep the successful ordering and re-verify prerequisites before mutation.\nFamily: variant\nOutcome: infra_error",
+      "source_cycle": 0,
+      "source_task": "20-c0-t0-s626729",
+      "task_id": "20",
+      "reward_value": null,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:f5852ec38649",
+      "content_hash": "f5852ec38649",
+      "title": "Keep the successful ordering and re-verify prerequisites before.",
+      "lesson": "Keep the successful ordering and re-verify prerequisites before mutation.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "infra_error",
+      "retrieval_text": "Title: Keep the successful ordering and re-verify prerequisites before.\nApplicability: when handling similar exchange_modify cases\nLesson: Keep the successful ordering and re-verify prerequisites before mutation.\nFamily: exchange_modify\nOutcome: infra_error",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "113",
+      "reward_value": null,
+      "confidence": 34.5,
+      "status": "active",
+      "last_cycle": 0,
+      "last_task": "113-c0-t0-s626729"
+    },
+    {
+      "id": "payment:0b68ca148095",
+      "content_hash": "0b68ca148095",
+      "title": "Keep the successful ordering and re-verify prerequisites before.",
+      "lesson": "Keep the successful ordering and re-verify prerequisites before mutation.",
+      "applicability": "when handling similar payment cases",
+      "family": "payment",
+      "outcome_type": "infra_error",
+      "retrieval_text": "Title: Keep the successful ordering and re-verify prerequisites before.\nApplicability: when handling similar payment cases\nLesson: Keep the successful ordering and re-verify prerequisites before mutation.\nFamily: payment\nOutcome: infra_error",
+      "source_cycle": 0,
+      "source_task": "40-c0-t0-s626729",
+      "task_id": "84",
+      "reward_value": null,
+      "confidence": 3.75,
+      "status": "active",
+      "last_cycle": 0,
+      "last_task": "84-c0-t0-s626729"
+    }
+  ],
+  "family_index": {
+    "exchange_modify": [
+      "exchange_modify:c3fe839efb73",
+      "exchange_modify:f5852ec38649"
+    ],
+    "authentication": [
+      "authentication:d7153d263a6a",
+      "authentication:a877665ee1ea"
+    ],
+    "status": [
+      "status:6f88f849003f"
+    ],
+    "variant": [
+      "variant:a796cd7dd470"
+    ],
+    "payment": [
+      "payment:0b68ca148095"
+    ]
+  },
+  "events": [
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "1-c0-t0-s626729",
+      "task_id": "1",
+      "reward_value": 1.0,
+      "content_hash": "c3fe839efb73"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "13-c0-t0-s626729",
+      "task_id": "13",
+      "reward_value": 0.0,
+      "content_hash": "d7153d263a6a"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "4-c0-t0-s626729",
+      "task_id": "4",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "17-c0-t0-s626729",
+      "task_id": "17",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "10-c0-t0-s626729",
+      "task_id": "10",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "5-c0-t0-s626729",
+      "task_id": "5",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "14-c0-t0-s626729",
+      "task_id": "14",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "2-c0-t0-s626729",
+      "task_id": "2",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "8-c0-t0-s626729",
+      "task_id": "8",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "15-c0-t0-s626729",
+      "task_id": "15",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "variant",
+      "source_cycle": 0,
+      "source_task": "20-c0-t0-s626729",
+      "task_id": "20",
+      "reward_value": null,
+      "content_hash": "a796cd7dd470"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "7-c0-t0-s626729",
+      "task_id": "7",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "19-c0-t0-s626729",
+      "task_id": "19",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "12-c0-t0-s626729",
+      "task_id": "12",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "11-c0-t0-s626729",
+      "task_id": "11",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "6-c0-t0-s626729",
+      "task_id": "6",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "0",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "9-c0-t0-s626729",
+      "task_id": "9",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "18-c0-t0-s626729",
+      "task_id": "18",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "3-c0-t0-s626729",
+      "task_id": "3",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "23-c0-t0-s626729",
+      "task_id": "23",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "28-c0-t0-s626729",
+      "task_id": "28",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "29-c0-t0-s626729",
+      "task_id": "29",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "26-c0-t0-s626729",
+      "task_id": "26",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "32-c0-t0-s626729",
+      "task_id": "32",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "37-c0-t0-s626729",
+      "task_id": "37",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "24-c0-t0-s626729",
+      "task_id": "24",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "34-c0-t0-s626729",
+      "task_id": "34",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "36-c0-t0-s626729",
+      "task_id": "36",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "16-c0-t0-s626729",
+      "task_id": "16",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "33-c0-t0-s626729",
+      "task_id": "33",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "payment",
+      "source_cycle": 0,
+      "source_task": "40-c0-t0-s626729",
+      "task_id": "40",
+      "reward_value": null,
+      "content_hash": "0b68ca148095"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "39-c0-t0-s626729",
+      "task_id": "39",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "38-c0-t0-s626729",
+      "task_id": "38",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "30-c0-t0-s626729",
+      "task_id": "30",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "27-c0-t0-s626729",
+      "task_id": "27",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "21-c0-t0-s626729",
+      "task_id": "21",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "44-c0-t0-s626729",
+      "task_id": "44",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "41-c0-t0-s626729",
+      "task_id": "41",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "43-c0-t0-s626729",
+      "task_id": "43",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "45-c0-t0-s626729",
+      "task_id": "45",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "42-c0-t0-s626729",
+      "task_id": "42",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "46-c0-t0-s626729",
+      "task_id": "46",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "35-c0-t0-s626729",
+      "task_id": "35",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "49-c0-t0-s626729",
+      "task_id": "49",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "48-c0-t0-s626729",
+      "task_id": "48",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "51-c0-t0-s626729",
+      "task_id": "51",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "50-c0-t0-s626729",
+      "task_id": "50",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "47-c0-t0-s626729",
+      "task_id": "47",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "52-c0-t0-s626729",
+      "task_id": "52",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "53-c0-t0-s626729",
+      "task_id": "53",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "payment",
+      "source_cycle": 0,
+      "source_task": "57-c0-t0-s626729",
+      "task_id": "57",
+      "reward_value": null,
+      "content_hash": "0b68ca148095"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "55-c0-t0-s626729",
+      "task_id": "55",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "58-c0-t0-s626729",
+      "task_id": "58",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "60-c0-t0-s626729",
+      "task_id": "60",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "61-c0-t0-s626729",
+      "task_id": "61",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "63-c0-t0-s626729",
+      "task_id": "63",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "54-c0-t0-s626729",
+      "task_id": "54",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "62-c0-t0-s626729",
+      "task_id": "62",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "65-c0-t0-s626729",
+      "task_id": "65",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "59-c0-t0-s626729",
+      "task_id": "59",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "66-c0-t0-s626729",
+      "task_id": "66",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "64-c0-t0-s626729",
+      "task_id": "64",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "67-c0-t0-s626729",
+      "task_id": "67",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "68-c0-t0-s626729",
+      "task_id": "68",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "69-c0-t0-s626729",
+      "task_id": "69",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "71-c0-t0-s626729",
+      "task_id": "71",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "73-c0-t0-s626729",
+      "task_id": "73",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "72-c0-t0-s626729",
+      "task_id": "72",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "74-c0-t0-s626729",
+      "task_id": "74",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "75-c0-t0-s626729",
+      "task_id": "75",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "76-c0-t0-s626729",
+      "task_id": "76",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "77-c0-t0-s626729",
+      "task_id": "77",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "70-c0-t0-s626729",
+      "task_id": "70",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "78-c0-t0-s626729",
+      "task_id": "78",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "79-c0-t0-s626729",
+      "task_id": "79",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "80-c0-t0-s626729",
+      "task_id": "80",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "81-c0-t0-s626729",
+      "task_id": "81",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "payment",
+      "source_cycle": 0,
+      "source_task": "82-c0-t0-s626729",
+      "task_id": "82",
+      "reward_value": null,
+      "content_hash": "0b68ca148095"
+    },
+    {
+      "family": "payment",
+      "source_cycle": 0,
+      "source_task": "83-c0-t0-s626729",
+      "task_id": "83",
+      "reward_value": null,
+      "content_hash": "0b68ca148095"
+    },
+    {
+      "family": "payment",
+      "source_cycle": 0,
+      "source_task": "84-c0-t0-s626729",
+      "task_id": "84",
+      "reward_value": null,
+      "content_hash": "0b68ca148095"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "85-c0-t0-s626729",
+      "task_id": "85",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "86-c0-t0-s626729",
+      "task_id": "86",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "87-c0-t0-s626729",
+      "task_id": "87",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "88-c0-t0-s626729",
+      "task_id": "88",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "89-c0-t0-s626729",
+      "task_id": "89",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "90-c0-t0-s626729",
+      "task_id": "90",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "92-c0-t0-s626729",
+      "task_id": "92",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "91-c0-t0-s626729",
+      "task_id": "91",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "93-c0-t0-s626729",
+      "task_id": "93",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "94-c0-t0-s626729",
+      "task_id": "94",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "96-c0-t0-s626729",
+      "task_id": "96",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "95-c0-t0-s626729",
+      "task_id": "95",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "97-c0-t0-s626729",
+      "task_id": "97",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "98-c0-t0-s626729",
+      "task_id": "98",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "100-c0-t0-s626729",
+      "task_id": "100",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "99-c0-t0-s626729",
+      "task_id": "99",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "102-c0-t0-s626729",
+      "task_id": "102",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "101-c0-t0-s626729",
+      "task_id": "101",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "103-c0-t0-s626729",
+      "task_id": "103",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "104-c0-t0-s626729",
+      "task_id": "104",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "105-c0-t0-s626729",
+      "task_id": "105",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "106-c0-t0-s626729",
+      "task_id": "106",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "107-c0-t0-s626729",
+      "task_id": "107",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "108-c0-t0-s626729",
+      "task_id": "108",
+      "reward_value": null,
+      "content_hash": "6f88f849003f"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "109-c0-t0-s626729",
+      "task_id": "109",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "110-c0-t0-s626729",
+      "task_id": "110",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "111-c0-t0-s626729",
+      "task_id": "111",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "112-c0-t0-s626729",
+      "task_id": "112",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "113-c0-t0-s626729",
+      "task_id": "113",
+      "reward_value": null,
+      "content_hash": "f5852ec38649"
+    }
+  ]
+}

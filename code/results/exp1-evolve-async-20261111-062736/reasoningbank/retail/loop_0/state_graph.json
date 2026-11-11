@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "root_domain": "retail",
+  "families": [
+    "authentication",
+    "status",
+    "exchange_modify",
+    "variant",
+    "payment"
+  ],
+  "nodes": [
+    {
+      "id": "retail:root",
+      "type": "root",
+      "label": "retail",
+      "family": null
+    },
+    {
+      "id": "retail:authentication",
+      "type": "family",
+      "label": "authentication",
+      "family": "authentication"
+    },
+    {
+      "id": "retail:status",
+      "type": "family",
+      "label": "status",
+      "family": "status"
+    },
+    {
+      "id": "retail:exchange_modify",
+      "type": "family",
+      "label": "exchange_modify",
+      "family": "exchange_modify"
+    },
+    {
+      "id": "retail:variant",
+      "type": "family",
+      "label": "variant",
+      "family": "variant"
+    },
+    {
+      "id": "retail:payment",
+      "type": "family",
+      "label": "payment",
+      "family": "payment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "retail:root",
+      "target": "retail:authentication",
+      "type": "family"
+    },
+    {
+      "source": "retail:root",
+      "target": "retail:status",
+      "type": "family"
+    },
+    {
+      "source": "retail:root",
+      "target": "retail:exchange_modify",
+      "type": "family"
+    },
+    {
+      "source": "retail:root",
+      "target": "retail:variant",
+      "type": "family"
+    },
+    {
+      "source": "retail:root",
+      "target": "retail:payment",
+      "type": "family"
+    }
+  ]
+}

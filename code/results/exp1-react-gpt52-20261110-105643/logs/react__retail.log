@@ -1,0 +1,7 @@
+
+tau2-bench/retail:   0%|          | 0/114 [00:00<?, ?it/s]
+tau2-bench/retail:   2%|▏         | 2/114 [44:19<41:22:37, 1329.98s/it]
+tau2-bench/retail:   2%|▏         | 2/114 [44:19<41:22:37, 1329.98s/it, failure=1, success=1]
+tau2-bench/retail:   4%|▎         | 4/114 [49:24<19:28:08, 637.17s/it, failure=1, success=1] 
+tau2-bench/retail:   4%|▎         | 4/114 [49:24<19:28:08, 637.17s/it, failure=1, success=3]
+tau2-bench/retail:   5%|▌         | 6/114 [49:39<10:29:22, 349.65s/it, failure=1, success=3]

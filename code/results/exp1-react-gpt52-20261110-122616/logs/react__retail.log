@@ -1,0 +1,444 @@
+
+tau2-bench/retail:   0%|          | 0/114 [00:00<?, ?it/s]
+tau2-bench/retail:   1%|          | 1/114 [05:03<9:31:10, 303.28s/it]
+tau2-bench/retail:   1%|          | 1/114 [05:03<9:31:10, 303.28s/it, failure=0, success=1]
+tau2-bench/retail:   2%|▏         | 2/114 [06:44<5:44:32, 184.58s/it, failure=0, success=1]
+tau2-bench/retail:   2%|▏         | 2/114 [06:44<5:44:32, 184.58s/it, failure=0, success=2]
+tau2-bench/retail:   3%|▎         | 3/114 [07:17<3:33:33, 115.43s/it, failure=0, success=2]
+tau2-bench/retail:   3%|▎         | 3/114 [07:17<3:33:33, 115.43s/it, failure=1, success=2]
+tau2-bench/retail:   4%|▎         | 4/114 [07:22<2:11:42, 71.84s/it, failure=1, success=2] 
+tau2-bench/retail:   4%|▎         | 4/114 [07:22<2:11:42, 71.84s/it, failure=1, success=3]
+tau2-bench/retail:   4%|▍         | 5/114 [07:30<1:28:35, 48.77s/it, failure=1, success=3]
+tau2-bench/retail:   4%|▍         | 5/114 [07:30<1:28:35, 48.77s/it, failure=1, success=4]
+tau2-bench/retail:   5%|▌         | 6/114 [07:52<1:11:16, 39.60s/it, failure=1, success=4]
+tau2-bench/retail:   5%|▌         | 6/114 [07:52<1:11:16, 39.60s/it, failure=1, success=5]
+tau2-bench/retail:   6%|▌         | 7/114 [08:04<54:37, 30.63s/it, failure=1, success=5]  
+tau2-bench/retail:   6%|▌         | 7/114 [08:04<54:37, 30.63s/it, failure=2, success=5]
+tau2-bench/retail:   7%|▋         | 8/114 [08:20<45:34, 25.79s/it, failure=2, success=5]
+tau2-bench/retail:   7%|▋         | 8/114 [08:20<45:34, 25.79s/it, failure=2, success=6]
+tau2-bench/retail:   8%|▊         | 9/114 [08:56<51:06, 29.21s/it, failure=2, success=6]
+tau2-bench/retail:   8%|▊         | 9/114 [08:56<51:06, 29.21s/it, failure=2, success=7]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:   9%|▉         | 10/114 [11:23<1:53:16, 65.35s/it, failure=2, success=7]
+tau2-bench/retail:   9%|▉         | 10/114 [11:23<1:53:16, 65.35s/it, failure=2, success=8]
+tau2-bench/retail:  10%|▉         | 11/114 [11:48<1:30:57, 52.98s/it, failure=2, success=8]
+tau2-bench/retail:  10%|▉         | 11/114 [11:48<1:30:57, 52.98s/it, failure=2, success=9]
+tau2-bench/retail:  11%|█         | 12/114 [14:20<2:21:43, 83.37s/it, failure=2, success=9]
+tau2-bench/retail:  11%|█         | 12/114 [14:20<2:21:43, 83.37s/it, failure=2, success=10]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  11%|█▏        | 13/114 [15:29<2:12:33, 78.74s/it, failure=2, success=10]
+tau2-bench/retail:  11%|█▏        | 13/114 [15:29<2:12:33, 78.74s/it, failure=2, success=11]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  12%|█▏        | 14/114 [17:51<2:43:19, 97.99s/it, failure=2, success=11]
+tau2-bench/retail:  12%|█▏        | 14/114 [17:51<2:43:19, 97.99s/it, failure=2, success=12]
+tau2-bench/retail:  13%|█▎        | 15/114 [18:41<2:18:01, 83.65s/it, failure=2, success=12]
+tau2-bench/retail:  13%|█▎        | 15/114 [18:41<2:18:01, 83.65s/it, failure=2, success=13]
+tau2-bench/retail:  14%|█▍        | 16/114 [18:52<1:40:28, 61.51s/it, failure=2, success=13]
+tau2-bench/retail:  14%|█▍        | 16/114 [18:52<1:40:28, 61.51s/it, failure=2, success=14]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  15%|█▍        | 17/114 [19:52<1:39:05, 61.30s/it, failure=2, success=14]
+tau2-bench/retail:  15%|█▍        | 17/114 [19:52<1:39:05, 61.30s/it, failure=2, success=15]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  16%|█▌        | 18/114 [20:23<1:23:07, 51.95s/it, failure=2, success=15]
+tau2-bench/retail:  16%|█▌        | 18/114 [20:23<1:23:07, 51.95s/it, failure=2, success=16]
+tau2-bench/retail:  17%|█▋        | 19/114 [20:57<1:13:48, 46.61s/it, failure=2, success=16]
+tau2-bench/retail:  17%|█▋        | 19/114 [20:57<1:13:48, 46.61s/it, failure=2, success=17]
+tau2-bench/retail:  18%|█▊        | 20/114 [21:12<58:28, 37.33s/it, failure=2, success=17]  
+tau2-bench/retail:  18%|█▊        | 20/114 [21:12<58:28, 37.33s/it, failure=2, success=18]
+tau2-bench/retail:  18%|█▊        | 21/114 [21:26<46:59, 30.31s/it, failure=2, success=18]
+tau2-bench/retail:  18%|█▊        | 21/114 [21:26<46:59, 30.31s/it, failure=2, success=19]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  19%|█▉        | 22/114 [23:42<1:35:04, 62.01s/it, failure=2, success=19]
+tau2-bench/retail:  19%|█▉        | 22/114 [23:42<1:35:04, 62.01s/it, failure=2, success=20]
+tau2-bench/retail:  20%|██        | 23/114 [24:24<1:24:38, 55.81s/it, failure=2, success=20]
+tau2-bench/retail:  20%|██        | 23/114 [24:24<1:24:38, 55.81s/it, failure=2, success=21]
+tau2-bench/retail:  21%|██        | 24/114 [25:51<1:38:05, 65.40s/it, failure=2, success=21]
+tau2-bench/retail:  21%|██        | 24/114 [25:51<1:38:05, 65.40s/it, failure=2, success=22]
+tau2-bench/retail:  22%|██▏       | 25/114 [27:49<2:00:01, 80.92s/it, failure=2, success=22]
+tau2-bench/retail:  22%|██▏       | 25/114 [27:49<2:00:01, 80.92s/it, failure=2, success=23]
+tau2-bench/retail:  23%|██▎       | 26/114 [28:31<1:41:46, 69.39s/it, failure=2, success=23]
+tau2-bench/retail:  23%|██▎       | 26/114 [28:31<1:41:46, 69.39s/it, failure=2, success=24]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  24%|██▎       | 27/114 [29:56<1:47:34, 74.20s/it, failure=2, success=24]
+tau2-bench/retail:  24%|██▎       | 27/114 [29:56<1:47:34, 74.20s/it, failure=3, success=24]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  25%|██▍       | 28/114 [30:23<1:25:51, 59.90s/it, failure=3, success=24]
+tau2-bench/retail:  25%|██▍       | 28/114 [30:23<1:25:51, 59.90s/it, failure=3, success=25]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  25%|██▌       | 29/114 [31:14<1:21:05, 57.24s/it, failure=3, success=25]
+tau2-bench/retail:  25%|██▌       | 29/114 [31:14<1:21:05, 57.24s/it, failure=4, success=25]
+tau2-bench/retail:  26%|██▋       | 30/114 [31:34<1:04:32, 46.11s/it, failure=4, success=25]
+tau2-bench/retail:  26%|██▋       | 30/114 [31:34<1:04:32, 46.11s/it, failure=4, success=26]
+tau2-bench/retail:  27%|██▋       | 31/114 [32:46<1:14:31, 53.87s/it, failure=4, success=26]
+tau2-bench/retail:  27%|██▋       | 31/114 [32:46<1:14:31, 53.87s/it, failure=4, success=27]
+tau2-bench/retail:  28%|██▊       | 32/114 [33:57<1:20:44, 59.07s/it, failure=4, success=27]
+tau2-bench/retail:  28%|██▊       | 32/114 [33:57<1:20:44, 59.07s/it, failure=4, success=28]
+tau2-bench/retail:  29%|██▉       | 33/114 [34:19<1:04:33, 47.82s/it, failure=4, success=28]
+tau2-bench/retail:  29%|██▉       | 33/114 [34:19<1:04:33, 47.82s/it, failure=4, success=29]
+tau2-bench/retail:  30%|██▉       | 34/114 [35:28<1:12:15, 54.19s/it, failure=4, success=29]
+tau2-bench/retail:  30%|██▉       | 34/114 [35:28<1:12:15, 54.19s/it, failure=4, success=30]
+tau2-bench/retail:  31%|███       | 35/114 [36:37<1:17:02, 58.51s/it, failure=4, success=30]
+tau2-bench/retail:  31%|███       | 35/114 [36:37<1:17:02, 58.51s/it, failure=5, success=30]
+tau2-bench/retail:  32%|███▏      | 36/114 [36:44<55:57, 43.05s/it, failure=5, success=30]  
+tau2-bench/retail:  32%|███▏      | 36/114 [36:44<55:57, 43.05s/it, failure=5, success=31]
+tau2-bench/retail:  32%|███▏      | 37/114 [37:01<45:31, 35.47s/it, failure=5, success=31]
+tau2-bench/retail:  32%|███▏      | 37/114 [37:01<45:31, 35.47s/it, failure=6, success=31]
+tau2-bench/retail:  33%|███▎      | 38/114 [37:07<33:37, 26.55s/it, failure=6, success=31]
+tau2-bench/retail:  33%|███▎      | 38/114 [37:07<33:37, 26.55s/it, failure=7, success=31]
+tau2-bench/retail:  34%|███▍      | 39/114 [37:07<23:18, 18.64s/it, failure=7, success=31]
+tau2-bench/retail:  34%|███▍      | 39/114 [37:07<23:18, 18.64s/it, failure=8, success=31]
+tau2-bench/retail:  35%|███▌      | 40/114 [37:34<25:50, 20.95s/it, failure=8, success=31]
+tau2-bench/retail:  35%|███▌      | 40/114 [37:34<25:50, 20.95s/it, failure=8, success=32]
+tau2-bench/retail:  36%|███▌      | 41/114 [38:00<27:34, 22.67s/it, failure=8, success=32]
+tau2-bench/retail:  36%|███▌      | 41/114 [38:00<27:34, 22.67s/it, failure=8, success=33]
+tau2-bench/retail:  37%|███▋      | 42/114 [38:46<35:26, 29.53s/it, failure=8, success=33]
+tau2-bench/retail:  37%|███▋      | 42/114 [38:46<35:26, 29.53s/it, failure=8, success=34]
+tau2-bench/retail:  38%|███▊      | 43/114 [38:48<25:09, 21.26s/it, failure=8, success=34]
+tau2-bench/retail:  38%|███▊      | 43/114 [38:48<25:09, 21.26s/it, failure=8, success=35]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  39%|███▊      | 44/114 [39:20<28:45, 24.65s/it, failure=8, success=35]
+tau2-bench/retail:  39%|███▊      | 44/114 [39:20<28:45, 24.65s/it, failure=8, success=36]
+tau2-bench/retail:  39%|███▉      | 45/114 [39:25<21:25, 18.63s/it, failure=8, success=36]
+tau2-bench/retail:  39%|███▉      | 45/114 [39:25<21:25, 18.63s/it, failure=8, success=37]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  40%|████      | 46/114 [39:51<23:36, 20.83s/it, failure=8, success=37]
+tau2-bench/retail:  40%|████      | 46/114 [39:51<23:36, 20.83s/it, failure=8, success=38]
+tau2-bench/retail:  41%|████      | 47/114 [40:24<27:13, 24.38s/it, failure=8, success=38]
+tau2-bench/retail:  41%|████      | 47/114 [40:24<27:13, 24.38s/it, failure=8, success=39]
+tau2-bench/retail:  42%|████▏     | 48/114 [40:39<24:01, 21.84s/it, failure=8, success=39]
+tau2-bench/retail:  42%|████▏     | 48/114 [40:39<24:01, 21.84s/it, failure=8, success=40]
+tau2-bench/retail:  43%|████▎     | 49/114 [41:55<41:14, 38.07s/it, failure=8, success=40]
+tau2-bench/retail:  43%|████▎     | 49/114 [41:55<41:14, 38.07s/it, failure=8, success=41]
+tau2-bench/retail:  44%|████▍     | 50/114 [42:48<45:15, 42.43s/it, failure=8, success=41]
+tau2-bench/retail:  44%|████▍     | 50/114 [42:48<45:15, 42.43s/it, failure=8, success=42]
+tau2-bench/retail:  45%|████▍     | 51/114 [44:46<1:08:30, 65.24s/it, failure=8, success=42]
+tau2-bench/retail:  45%|████▍     | 51/114 [44:46<1:08:30, 65.24s/it, failure=8, success=43]
+tau2-bench/retail:  46%|████▌     | 52/114 [47:47<1:43:02, 99.72s/it, failure=8, success=43]
+tau2-bench/retail:  46%|████▌     | 52/114 [47:47<1:43:02, 99.72s/it, failure=8, success=44]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  46%|████▋     | 53/114 [48:34<1:25:20, 83.94s/it, failure=8, success=44]
+tau2-bench/retail:  46%|████▋     | 53/114 [48:34<1:25:20, 83.94s/it, failure=9, success=44]
+tau2-bench/retail:  47%|████▋     | 54/114 [48:34<58:47, 58.80s/it, failure=9, success=44]  
+tau2-bench/retail:  47%|████▋     | 54/114 [48:34<58:47, 58.80s/it, failure=9, success=45]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  48%|████▊     | 55/114 [49:06<49:48, 50.66s/it, failure=9, success=45]
+tau2-bench/retail:  48%|████▊     | 55/114 [49:06<49:48, 50.66s/it, failure=9, success=46]
+tau2-bench/retail:  49%|████▉     | 56/114 [49:45<45:39, 47.23s/it, failure=9, success=46]
+tau2-bench/retail:  49%|████▉     | 56/114 [49:45<45:39, 47.23s/it, failure=9, success=47]
+tau2-bench/retail:  50%|█████     | 57/114 [50:06<37:29, 39.47s/it, failure=9, success=47]
+tau2-bench/retail:  50%|█████     | 57/114 [50:06<37:29, 39.47s/it, failure=9, success=48]
+tau2-bench/retail:  51%|█████     | 58/114 [50:14<27:52, 29.86s/it, failure=9, success=48]
+tau2-bench/retail:  51%|█████     | 58/114 [50:14<27:52, 29.86s/it, failure=9, success=49]
+tau2-bench/retail:  52%|█████▏    | 59/114 [52:08<50:43, 55.34s/it, failure=9, success=49]
+tau2-bench/retail:  52%|█████▏    | 59/114 [52:08<50:43, 55.34s/it, failure=10, success=49]
+tau2-bench/retail:  53%|█████▎    | 60/114 [53:22<54:46, 60.85s/it, failure=10, success=49]
+tau2-bench/retail:  53%|█████▎    | 60/114 [53:22<54:46, 60.85s/it, failure=10, success=50]
+tau2-bench/retail:  54%|█████▎    | 61/114 [53:55<46:23, 52.52s/it, failure=10, success=50]
+tau2-bench/retail:  54%|█████▎    | 61/114 [53:55<46:23, 52.52s/it, failure=10, success=51]
+tau2-bench/retail:  54%|█████▍    | 62/114 [54:22<38:57, 44.95s/it, failure=10, success=51]
+tau2-bench/retail:  54%|█████▍    | 62/114 [54:22<38:57, 44.95s/it, failure=10, success=52]
+tau2-bench/retail:  55%|█████▌    | 63/114 [56:37<1:01:04, 71.85s/it, failure=10, success=52]
+tau2-bench/retail:  55%|█████▌    | 63/114 [56:37<1:01:04, 71.85s/it, failure=10, success=53]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  56%|█████▌    | 64/114 [58:24<1:08:40, 82.40s/it, failure=10, success=53]
+tau2-bench/retail:  56%|█████▌    | 64/114 [58:24<1:08:40, 82.40s/it, failure=11, success=53]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  57%|█████▋    | 65/114 [58:40<51:06, 62.59s/it, failure=11, success=53]  
+tau2-bench/retail:  57%|█████▋    | 65/114 [58:40<51:06, 62.59s/it, failure=11, success=54]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  58%|█████▊    | 66/114 [59:26<45:58, 57.47s/it, failure=11, success=54]
+tau2-bench/retail:  58%|█████▊    | 66/114 [59:26<45:58, 57.47s/it, failure=12, success=54]
+tau2-bench/retail:  59%|█████▉    | 67/114 [1:00:04<40:33, 51.77s/it, failure=12, success=54]
+tau2-bench/retail:  59%|█████▉    | 67/114 [1:00:04<40:33, 51.77s/it, failure=12, success=55]
+tau2-bench/retail:  60%|█████▉    | 68/114 [1:00:10<28:59, 37.81s/it, failure=12, success=55]
+tau2-bench/retail:  60%|█████▉    | 68/114 [1:00:10<28:59, 37.81s/it, failure=12, success=56]
+tau2-bench/retail:  61%|██████    | 69/114 [1:00:41<26:50, 35.79s/it, failure=12, success=56]
+tau2-bench/retail:  61%|██████    | 69/114 [1:00:41<26:50, 35.79s/it, failure=12, success=57]
+tau2-bench/retail:  61%|██████▏   | 70/114 [1:00:59<22:21, 30.50s/it, failure=12, success=57]
+tau2-bench/retail:  61%|██████▏   | 70/114 [1:00:59<22:21, 30.50s/it, failure=12, success=58]
+tau2-bench/retail:  62%|██████▏   | 71/114 [1:01:22<20:16, 28.29s/it, failure=12, success=58]
+tau2-bench/retail:  62%|██████▏   | 71/114 [1:01:22<20:16, 28.29s/it, failure=12, success=59]
+tau2-bench/retail:  63%|██████▎   | 72/114 [1:01:32<16:01, 22.89s/it, failure=12, success=59]
+tau2-bench/retail:  63%|██████▎   | 72/114 [1:01:32<16:01, 22.89s/it, failure=12, success=60]
+tau2-bench/retail:  64%|██████▍   | 73/114 [1:01:46<13:45, 20.13s/it, failure=12, success=60]
+tau2-bench/retail:  64%|██████▍   | 73/114 [1:01:46<13:45, 20.13s/it, failure=13, success=60]
+tau2-bench/retail:  65%|██████▍   | 74/114 [1:02:05<13:15, 19.89s/it, failure=13, success=60]
+tau2-bench/retail:  65%|██████▍   | 74/114 [1:02:05<13:15, 19.89s/it, failure=13, success=61]
+tau2-bench/retail:  66%|██████▌   | 75/114 [1:02:53<18:17, 28.15s/it, failure=13, success=61]
+tau2-bench/retail:  66%|██████▌   | 75/114 [1:02:53<18:17, 28.15s/it, failure=13, success=62]
+tau2-bench/retail:  67%|██████▋   | 76/114 [1:03:13<16:21, 25.82s/it, failure=13, success=62]
+tau2-bench/retail:  67%|██████▋   | 76/114 [1:03:13<16:21, 25.82s/it, failure=13, success=63]
+tau2-bench/retail:  68%|██████▊   | 77/114 [1:03:22<12:47, 20.74s/it, failure=13, success=63]
+tau2-bench/retail:  68%|██████▊   | 77/114 [1:03:22<12:47, 20.74s/it, failure=13, success=64]
+tau2-bench/retail:  68%|██████▊   | 78/114 [1:04:11<17:28, 29.13s/it, failure=13, success=64]
+tau2-bench/retail:  68%|██████▊   | 78/114 [1:04:11<17:28, 29.13s/it, failure=13, success=65]
+tau2-bench/retail:  69%|██████▉   | 79/114 [1:04:24<14:11, 24.31s/it, failure=13, success=65]
+tau2-bench/retail:  69%|██████▉   | 79/114 [1:04:24<14:11, 24.31s/it, failure=13, success=66]
+tau2-bench/retail:  70%|███████   | 80/114 [1:04:24<09:44, 17.19s/it, failure=13, success=66]
+tau2-bench/retail:  70%|███████   | 80/114 [1:04:24<09:44, 17.19s/it, failure=13, success=67]
+tau2-bench/retail:  71%|███████   | 81/114 [1:04:25<06:41, 12.18s/it, failure=13, success=67]
+tau2-bench/retail:  71%|███████   | 81/114 [1:04:25<06:41, 12.18s/it, failure=13, success=68]
+tau2-bench/retail:  72%|███████▏  | 82/114 [1:05:05<10:59, 20.60s/it, failure=13, success=68]
+tau2-bench/retail:  72%|███████▏  | 82/114 [1:05:05<10:59, 20.60s/it, failure=13, success=69]
+tau2-bench/retail:  73%|███████▎  | 83/114 [1:05:30<11:17, 21.86s/it, failure=13, success=69]
+tau2-bench/retail:  73%|███████▎  | 83/114 [1:05:30<11:17, 21.86s/it, failure=13, success=70]
+tau2-bench/retail:  74%|███████▎  | 84/114 [1:05:46<10:05, 20.19s/it, failure=13, success=70]
+tau2-bench/retail:  74%|███████▎  | 84/114 [1:05:46<10:05, 20.19s/it, failure=13, success=71]
+tau2-bench/retail:  75%|███████▍  | 85/114 [1:05:58<08:31, 17.64s/it, failure=13, success=71]
+tau2-bench/retail:  75%|███████▍  | 85/114 [1:05:58<08:31, 17.64s/it, failure=14, success=71]
+tau2-bench/retail:  75%|███████▌  | 86/114 [1:06:51<13:08, 28.15s/it, failure=14, success=71]
+tau2-bench/retail:  75%|███████▌  | 86/114 [1:06:51<13:08, 28.15s/it, failure=14, success=72]
+tau2-bench/retail:  76%|███████▋  | 87/114 [1:06:58<09:48, 21.80s/it, failure=14, success=72]
+tau2-bench/retail:  76%|███████▋  | 87/114 [1:06:58<09:48, 21.80s/it, failure=14, success=73]
+tau2-bench/retail:  77%|███████▋  | 88/114 [1:06:58<06:38, 15.31s/it, failure=14, success=73]
+tau2-bench/retail:  77%|███████▋  | 88/114 [1:06:58<06:38, 15.31s/it, failure=14, success=74]
+tau2-bench/retail:  78%|███████▊  | 89/114 [1:07:00<04:45, 11.43s/it, failure=14, success=74]
+tau2-bench/retail:  78%|███████▊  | 89/114 [1:07:00<04:45, 11.43s/it, failure=14, success=75]
+tau2-bench/retail:  79%|███████▉  | 90/114 [1:07:28<06:31, 16.31s/it, failure=14, success=75]
+tau2-bench/retail:  79%|███████▉  | 90/114 [1:07:28<06:31, 16.31s/it, failure=15, success=75]
+tau2-bench/retail:  80%|███████▉  | 91/114 [1:07:53<07:15, 18.94s/it, failure=15, success=75]
+tau2-bench/retail:  80%|███████▉  | 91/114 [1:07:53<07:15, 18.94s/it, failure=15, success=76]
+tau2-bench/retail:  81%|████████  | 92/114 [1:09:00<12:11, 33.26s/it, failure=15, success=76]
+tau2-bench/retail:  81%|████████  | 92/114 [1:09:00<12:11, 33.26s/it, failure=16, success=76]
+tau2-bench/retail:  82%|████████▏ | 93/114 [1:09:12<09:29, 27.14s/it, failure=16, success=76]
+tau2-bench/retail:  82%|████████▏ | 93/114 [1:09:12<09:29, 27.14s/it, failure=16, success=77]
+tau2-bench/retail:  82%|████████▏ | 94/114 [1:10:01<11:12, 33.64s/it, failure=16, success=77]
+tau2-bench/retail:  82%|████████▏ | 94/114 [1:10:01<11:12, 33.64s/it, failure=16, success=78]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  83%|████████▎ | 95/114 [1:13:58<29:55, 94.48s/it, failure=16, success=78]
+tau2-bench/retail:  83%|████████▎ | 95/114 [1:13:58<29:55, 94.48s/it, failure=16, success=79]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  84%|████████▍ | 96/114 [1:15:21<27:21, 91.20s/it, failure=16, success=79]
+tau2-bench/retail:  84%|████████▍ | 96/114 [1:15:21<27:21, 91.20s/it, failure=16, success=80]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  85%|████████▌ | 97/114 [1:18:22<33:27, 118.10s/it, failure=16, success=80]
+tau2-bench/retail:  85%|████████▌ | 97/114 [1:18:22<33:27, 118.10s/it, failure=17, success=80]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  86%|████████▌ | 98/114 [1:18:31<22:45, 85.32s/it, failure=17, success=80] 
+tau2-bench/retail:  86%|████████▌ | 98/114 [1:18:31<22:45, 85.32s/it, failure=18, success=80]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  87%|████████▋ | 99/114 [1:19:16<18:20, 73.35s/it, failure=18, success=80]
+tau2-bench/retail:  87%|████████▋ | 99/114 [1:19:16<18:20, 73.35s/it, failure=18, success=81]
+tau2-bench/retail:  88%|████████▊ | 100/114 [1:19:24<12:28, 53.49s/it, failure=18, success=81]
+tau2-bench/retail:  88%|████████▊ | 100/114 [1:19:24<12:28, 53.49s/it, failure=18, success=82]
+tau2-bench/retail:  89%|████████▊ | 101/114 [1:19:31<08:35, 39.68s/it, failure=18, success=82]
+tau2-bench/retail:  89%|████████▊ | 101/114 [1:19:31<08:35, 39.68s/it, failure=19, success=82]
+tau2-bench/retail:  89%|████████▉ | 102/114 [1:19:53<06:52, 34.41s/it, failure=19, success=82]
+tau2-bench/retail:  89%|████████▉ | 102/114 [1:19:53<06:52, 34.41s/it, failure=20, success=82]
+tau2-bench/retail:  90%|█████████ | 103/114 [1:20:02<04:53, 26.68s/it, failure=20, success=82]
+tau2-bench/retail:  90%|█████████ | 103/114 [1:20:02<04:53, 26.68s/it, failure=20, success=83]
+tau2-bench/retail:  91%|█████████ | 104/114 [1:20:12<03:38, 21.89s/it, failure=20, success=83]
+tau2-bench/retail:  91%|█████████ | 104/114 [1:20:12<03:38, 21.89s/it, failure=20, success=84]
+tau2-bench/retail:  92%|█████████▏| 105/114 [1:21:24<05:31, 36.79s/it, failure=20, success=84]
+tau2-bench/retail:  92%|█████████▏| 105/114 [1:21:24<05:31, 36.79s/it, failure=21, success=84]
+tau2-bench/retail:  93%|█████████▎| 106/114 [1:22:49<06:49, 51.15s/it, failure=21, success=84]
+tau2-bench/retail:  93%|█████████▎| 106/114 [1:22:49<06:49, 51.15s/it, failure=22, success=84]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  94%|█████████▍| 107/114 [1:24:21<07:24, 63.52s/it, failure=22, success=84]
+tau2-bench/retail:  94%|█████████▍| 107/114 [1:24:21<07:24, 63.52s/it, failure=22, success=85]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  95%|█████████▍| 108/114 [1:24:36<04:53, 48.98s/it, failure=22, success=85]
+tau2-bench/retail:  95%|█████████▍| 108/114 [1:24:36<04:53, 48.98s/it, failure=22, success=86]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  96%|█████████▌| 109/114 [1:27:15<06:49, 81.88s/it, failure=22, success=86]
+tau2-bench/retail:  96%|█████████▌| 109/114 [1:27:15<06:49, 81.88s/it, failure=23, success=86]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+Exception ignored in: <function _patched_del at 0x7f292dbe7b00>
+Traceback (most recent call last):
+  File "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/vendor/tau2-bench/src/tau2/runner/batch.py", line 75, in _patched_del
+TypeError: 'NoneType' object is not callable
+
+tau2-bench/retail:  96%|█████████▋| 110/114 [1:28:37<05:27, 81.93s/it, failure=23, success=86]
+tau2-bench/retail:  96%|█████████▋| 110/114 [1:28:37<05:27, 81.93s/it, failure=24, success=86]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  97%|█████████▋| 111/114 [1:29:30<03:40, 73.43s/it, failure=24, success=86]
+tau2-bench/retail:  97%|█████████▋| 111/114 [1:29:30<03:40, 73.43s/it, failure=25, success=86]
+tau2-bench/retail:  98%|█████████▊| 112/114 [1:32:19<03:23, 101.85s/it, failure=25, success=86]
+tau2-bench/retail:  98%|█████████▊| 112/114 [1:32:19<03:23, 101.85s/it, failure=25, success=87]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail:  99%|█████████▉| 113/114 [1:33:37<01:34, 94.79s/it, failure=25, success=87] 
+tau2-bench/retail:  99%|█████████▉| 113/114 [1:33:37<01:34, 94.79s/it, failure=25, success=88]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail: 100%|██████████| 114/114 [1:39:37<00:00, 174.36s/it, failure=25, success=88]
+tau2-bench/retail: 100%|██████████| 114/114 [1:39:37<00:00, 174.36s/it, failure=25, success=89]
+tau2-bench/retail: 100%|██████████| 114/114 [1:39:37<00:00, 52.43s/it, failure=25, success=89] 
+{"method": "react", "output_dir": "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/results/exp1-react-gpt52-20261110-122616/react/retail", "status": "succeeded"}

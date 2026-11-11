@@ -1,0 +1,144 @@
+
+tau2-bench/airline:   0%|          | 0/50 [00:00<?, ?it/s]
+tau2-bench/airline:   2%|▏         | 1/50 [03:29<2:50:49, 209.17s/it]
+tau2-bench/airline:   2%|▏         | 1/50 [03:29<2:50:49, 209.17s/it, failure=0, success=1]
+tau2-bench/airline:   4%|▍         | 2/50 [03:34<1:11:26, 89.31s/it, failure=0, success=1] 
+tau2-bench/airline:   4%|▍         | 2/50 [03:34<1:11:26, 89.31s/it, failure=1, success=1]
+tau2-bench/airline:   6%|▌         | 3/50 [03:47<42:29, 54.24s/it, failure=1, success=1]  
+tau2-bench/airline:   6%|▌         | 3/50 [03:47<42:29, 54.24s/it, failure=1, success=2]
+tau2-bench/airline:   8%|▊         | 4/50 [04:39<41:05, 53.59s/it, failure=1, success=2]
+tau2-bench/airline:   8%|▊         | 4/50 [04:39<41:05, 53.59s/it, failure=1, success=3]
+tau2-bench/airline:  10%|█         | 5/50 [04:41<26:14, 34.98s/it, failure=1, success=3]
+tau2-bench/airline:  10%|█         | 5/50 [04:41<26:14, 34.98s/it, failure=1, success=4]
+tau2-bench/airline:  12%|█▏        | 6/50 [05:28<28:41, 39.13s/it, failure=1, success=4]
+tau2-bench/airline:  12%|█▏        | 6/50 [05:28<28:41, 39.13s/it, failure=2, success=4]
+tau2-bench/airline:  14%|█▍        | 7/50 [05:40<21:36, 30.15s/it, failure=2, success=4]
+tau2-bench/airline:  14%|█▍        | 7/50 [05:40<21:36, 30.15s/it, failure=2, success=5]
+tau2-bench/airline:  16%|█▌        | 8/50 [05:57<18:13, 26.04s/it, failure=2, success=5]
+tau2-bench/airline:  16%|█▌        | 8/50 [05:57<18:13, 26.04s/it, failure=2, success=6]
+tau2-bench/airline:  18%|█▊        | 9/50 [06:02<13:17, 19.45s/it, failure=2, success=6]
+tau2-bench/airline:  18%|█▊        | 9/50 [06:02<13:17, 19.45s/it, failure=3, success=6]
+tau2-bench/airline:  20%|██        | 10/50 [06:10<10:33, 15.85s/it, failure=3, success=6]
+tau2-bench/airline:  20%|██        | 10/50 [06:10<10:33, 15.85s/it, failure=3, success=7]
+tau2-bench/airline:  22%|██▏       | 11/50 [06:15<08:10, 12.59s/it, failure=3, success=7]
+tau2-bench/airline:  22%|██▏       | 11/50 [06:15<08:10, 12.59s/it, failure=3, success=8]
+tau2-bench/airline:  24%|██▍       | 12/50 [06:16<05:42,  9.01s/it, failure=3, success=8]
+tau2-bench/airline:  24%|██▍       | 12/50 [06:16<05:42,  9.01s/it, failure=4, success=8]
+tau2-bench/airline:  26%|██▌       | 13/50 [06:35<07:26, 12.06s/it, failure=4, success=8]
+tau2-bench/airline:  26%|██▌       | 13/50 [06:35<07:26, 12.06s/it, failure=4, success=9]
+tau2-bench/airline:  28%|██▊       | 14/50 [06:55<08:42, 14.52s/it, failure=4, success=9]
+tau2-bench/airline:  28%|██▊       | 14/50 [06:55<08:42, 14.52s/it, failure=4, success=10]
+tau2-bench/airline:  30%|███       | 15/50 [07:20<10:12, 17.49s/it, failure=4, success=10]
+tau2-bench/airline:  30%|███       | 15/50 [07:20<10:12, 17.49s/it, failure=4, success=11]
+tau2-bench/airline:  32%|███▏      | 16/50 [07:41<10:35, 18.69s/it, failure=4, success=11]
+tau2-bench/airline:  32%|███▏      | 16/50 [07:41<10:35, 18.69s/it, failure=5, success=11]
+tau2-bench/airline:  34%|███▍      | 17/50 [07:41<07:14, 13.16s/it, failure=5, success=11]
+tau2-bench/airline:  34%|███▍      | 17/50 [07:41<07:14, 13.16s/it, failure=6, success=11]
+tau2-bench/airline:  36%|███▌      | 18/50 [07:46<05:35, 10.48s/it, failure=6, success=11]
+tau2-bench/airline:  36%|███▌      | 18/50 [07:46<05:35, 10.48s/it, failure=6, success=12]
+tau2-bench/airline:  38%|███▊      | 19/50 [08:58<14:57, 28.94s/it, failure=6, success=12]
+tau2-bench/airline:  38%|███▊      | 19/50 [08:58<14:57, 28.94s/it, failure=6, success=13]
+tau2-bench/airline:  40%|████      | 20/50 [09:05<11:16, 22.55s/it, failure=6, success=13]
+tau2-bench/airline:  40%|████      | 20/50 [09:05<11:16, 22.55s/it, failure=6, success=14]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline:  42%|████▏     | 21/50 [10:13<17:29, 36.18s/it, failure=6, success=14]
+tau2-bench/airline:  42%|████▏     | 21/50 [10:13<17:29, 36.18s/it, failure=7, success=14]
+tau2-bench/airline:  44%|████▍     | 22/50 [10:14<11:55, 25.54s/it, failure=7, success=14]
+tau2-bench/airline:  44%|████▍     | 22/50 [10:14<11:55, 25.54s/it, failure=8, success=14]
+tau2-bench/airline:  46%|████▌     | 23/50 [10:26<09:40, 21.51s/it, failure=8, success=14]
+tau2-bench/airline:  46%|████▌     | 23/50 [10:26<09:40, 21.51s/it, failure=8, success=15]
+tau2-bench/airline:  48%|████▊     | 24/50 [10:54<10:08, 23.39s/it, failure=8, success=15]
+tau2-bench/airline:  48%|████▊     | 24/50 [10:54<10:08, 23.39s/it, failure=8, success=16]
+tau2-bench/airline:  50%|█████     | 25/50 [11:00<07:38, 18.33s/it, failure=8, success=16]
+tau2-bench/airline:  50%|█████     | 25/50 [11:00<07:38, 18.33s/it, failure=9, success=16]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline:  52%|█████▏    | 26/50 [11:29<08:30, 21.28s/it, failure=9, success=16]
+tau2-bench/airline:  52%|█████▏    | 26/50 [11:29<08:30, 21.28s/it, failure=10, success=16]
+tau2-bench/airline:  54%|█████▍    | 27/50 [11:35<06:27, 16.83s/it, failure=10, success=16]
+tau2-bench/airline:  54%|█████▍    | 27/50 [11:35<06:27, 16.83s/it, failure=11, success=16]
+tau2-bench/airline:  56%|█████▌    | 28/50 [12:14<08:38, 23.56s/it, failure=11, success=16]
+tau2-bench/airline:  56%|█████▌    | 28/50 [12:14<08:38, 23.56s/it, failure=12, success=16]
+tau2-bench/airline:  58%|█████▊    | 29/50 [12:15<05:50, 16.71s/it, failure=12, success=16]
+tau2-bench/airline:  58%|█████▊    | 29/50 [12:15<05:50, 16.71s/it, failure=12, success=17]
+tau2-bench/airline:  60%|██████    | 30/50 [12:18<04:14, 12.75s/it, failure=12, success=17]
+tau2-bench/airline:  60%|██████    | 30/50 [12:18<04:14, 12.75s/it, failure=12, success=18]
+tau2-bench/airline:  62%|██████▏   | 31/50 [12:39<04:48, 15.18s/it, failure=12, success=18]
+tau2-bench/airline:  62%|██████▏   | 31/50 [12:39<04:48, 15.18s/it, failure=12, success=19]
+tau2-bench/airline:  64%|██████▍   | 32/50 [13:10<05:58, 19.94s/it, failure=12, success=19]
+tau2-bench/airline:  64%|██████▍   | 32/50 [13:10<05:58, 19.94s/it, failure=12, success=20]
+tau2-bench/airline:  66%|██████▌   | 33/50 [13:46<06:58, 24.60s/it, failure=12, success=20]
+tau2-bench/airline:  66%|██████▌   | 33/50 [13:46<06:58, 24.60s/it, failure=13, success=20]
+tau2-bench/airline:  68%|██████▊   | 34/50 [14:00<05:41, 21.31s/it, failure=13, success=20]
+tau2-bench/airline:  68%|██████▊   | 34/50 [14:00<05:41, 21.31s/it, failure=13, success=21]
+tau2-bench/airline:  70%|███████   | 35/50 [14:12<04:40, 18.68s/it, failure=13, success=21]
+tau2-bench/airline:  70%|███████   | 35/50 [14:12<04:40, 18.68s/it, failure=14, success=21]
+tau2-bench/airline:  72%|███████▏  | 36/50 [14:32<04:27, 19.09s/it, failure=14, success=21]
+tau2-bench/airline:  72%|███████▏  | 36/50 [14:32<04:27, 19.09s/it, failure=14, success=22]
+tau2-bench/airline:  74%|███████▍  | 37/50 [14:45<03:43, 17.16s/it, failure=14, success=22]
+tau2-bench/airline:  74%|███████▍  | 37/50 [14:45<03:43, 17.16s/it, failure=14, success=23]
+tau2-bench/airline:  76%|███████▌  | 38/50 [16:41<09:22, 46.88s/it, failure=14, success=23]
+tau2-bench/airline:  76%|███████▌  | 38/50 [16:41<09:22, 46.88s/it, failure=15, success=23]
+tau2-bench/airline:  78%|███████▊  | 39/50 [17:07<07:25, 40.48s/it, failure=15, success=23]
+tau2-bench/airline:  78%|███████▊  | 39/50 [17:07<07:25, 40.48s/it, failure=16, success=23]
+tau2-bench/airline:  80%|████████  | 40/50 [17:26<05:43, 34.31s/it, failure=16, success=23]
+tau2-bench/airline:  80%|████████  | 40/50 [17:26<05:43, 34.31s/it, failure=17, success=23]
+tau2-bench/airline:  82%|████████▏ | 41/50 [19:21<08:45, 58.39s/it, failure=17, success=23]
+tau2-bench/airline:  82%|████████▏ | 41/50 [19:21<08:45, 58.39s/it, failure=17, success=24]
+tau2-bench/airline:  84%|████████▍ | 42/50 [19:40<06:12, 46.61s/it, failure=17, success=24]
+tau2-bench/airline:  84%|████████▍ | 42/50 [19:40<06:12, 46.61s/it, failure=17, success=25]
+tau2-bench/airline:  86%|████████▌ | 43/50 [20:15<05:02, 43.20s/it, failure=17, success=25]
+tau2-bench/airline:  86%|████████▌ | 43/50 [20:15<05:02, 43.20s/it, failure=17, success=26]
+tau2-bench/airline:  88%|████████▊ | 44/50 [20:28<03:24, 34.15s/it, failure=17, success=26]
+tau2-bench/airline:  88%|████████▊ | 44/50 [20:28<03:24, 34.15s/it, failure=18, success=26]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline:  90%|█████████ | 45/50 [23:04<05:53, 70.72s/it, failure=18, success=26]
+tau2-bench/airline:  90%|█████████ | 45/50 [23:04<05:53, 70.72s/it, failure=18, success=27]
+tau2-bench/airline:  92%|█████████▏| 46/50 [23:36<03:56, 59.02s/it, failure=18, success=27]
+tau2-bench/airline:  92%|█████████▏| 46/50 [23:36<03:56, 59.02s/it, failure=18, success=28]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline:  94%|█████████▍| 47/50 [28:05<06:06, 122.00s/it, failure=18, success=28]
+tau2-bench/airline:  94%|█████████▍| 47/50 [28:05<06:06, 122.00s/it, failure=18, success=29]Exception ignored in: <function _patched_del at 0x7fc660463b00>
+Traceback (most recent call last):
+  File "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/vendor/tau2-bench/src/tau2/runner/batch.py", line 75, in _patched_del
+TypeError: 'NoneType' object is not callable
+
+tau2-bench/airline:  96%|█████████▌| 48/50 [28:32<03:07, 93.50s/it, failure=18, success=29] 
+tau2-bench/airline:  96%|█████████▌| 48/50 [28:32<03:07, 93.50s/it, failure=19, success=29]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline:  98%|█████████▊| 49/50 [29:17<01:18, 78.84s/it, failure=19, success=29]
+tau2-bench/airline:  98%|█████████▊| 49/50 [29:17<01:18, 78.84s/it, failure=20, success=29]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline: 100%|██████████| 50/50 [32:10<00:00, 107.29s/it, failure=20, success=29]
+tau2-bench/airline: 100%|██████████| 50/50 [32:10<00:00, 107.29s/it, failure=21, success=29]
+tau2-bench/airline: 100%|██████████| 50/50 [32:10<00:00, 38.62s/it, failure=21, success=29] 
+Exception ignored in: <function _patched_del at 0x7fc1e1febb00>
+Traceback (most recent call last):
+  File "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/vendor/tau2-bench/src/tau2/runner/batch.py", line 75, in _patched_del
+TypeError: 'NoneType' object is not callable
+{"method": "react", "output_dir": "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/results/exp1-react-gpt52-20261110-122616/react/airline", "status": "succeeded"}

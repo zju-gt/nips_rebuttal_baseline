@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "domain": "telecom",
+  "families": [
+    "mobile_data",
+    "mms",
+    "roaming",
+    "billing",
+    "apn_reboot"
+  ],
+  "entries": [],
+  "family_index": {},
+  "events": []
+}

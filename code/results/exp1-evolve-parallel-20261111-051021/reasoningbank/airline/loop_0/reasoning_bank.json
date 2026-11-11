@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "domain": "airline",
+  "families": [
+    "cancellation"
+  ],
+  "entries": [
+    {
+      "id": "cancellation:f5a5bb5125c5",
+      "content_hash": "f5a5bb5125c5",
+      "title": "When refund eligibility is constrained by the booking.",
+      "lesson": "When refund eligibility is constrained by the booking record (e.g., no insurance, basic economy, >24 hours, no airline cancellation), clearly state limitations, avoid committing to exceptions, and offer a human-agent transfer for.",
+      "applicability": "when handling similar cancellation cases",
+      "family": "cancellation",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When refund eligibility is constrained by the booking.\nApplicability: when handling similar cancellation cases\nLesson: When refund eligibility is constrained by the booking record (e.g., no insurance, basic economy, >24 hours, no airline cancellation), clearly state limitations, avoid committing to exceptions, and offer a human-agent transfer for.\nFamily: cancellation\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "0",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    }
+  ],
+  "family_index": {
+    "cancellation": [
+      "cancellation:f5a5bb5125c5"
+    ]
+  },
+  "events": [
+    {
+      "family": "cancellation",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "0",
+      "reward_value": 1.0,
+      "content_hash": "f5a5bb5125c5"
+    }
+  ]
+}

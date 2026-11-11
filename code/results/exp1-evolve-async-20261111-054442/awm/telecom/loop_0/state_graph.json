@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "root_domain": "telecom",
+  "families": [
+    "mobile_data",
+    "mms",
+    "roaming",
+    "billing",
+    "apn_reboot"
+  ],
+  "nodes": [
+    {
+      "id": "telecom:root",
+      "type": "root",
+      "label": "telecom",
+      "family": null
+    },
+    {
+      "id": "telecom:mobile_data",
+      "type": "family",
+      "label": "mobile_data",
+      "family": "mobile_data"
+    },
+    {
+      "id": "telecom:mms",
+      "type": "family",
+      "label": "mms",
+      "family": "mms"
+    },
+    {
+      "id": "telecom:roaming",
+      "type": "family",
+      "label": "roaming",
+      "family": "roaming"
+    },
+    {
+      "id": "telecom:billing",
+      "type": "family",
+      "label": "billing",
+      "family": "billing"
+    },
+    {
+      "id": "telecom:apn_reboot",
+      "type": "family",
+      "label": "apn_reboot",
+      "family": "apn_reboot"
+    }
+  ],
+  "edges": [
+    {
+      "source": "telecom:root",
+      "target": "telecom:mobile_data",
+      "type": "family"
+    },
+    {
+      "source": "telecom:root",
+      "target": "telecom:mms",
+      "type": "family"
+    },
+    {
+      "source": "telecom:root",
+      "target": "telecom:roaming",
+      "type": "family"
+    },
+    {
+      "source": "telecom:root",
+      "target": "telecom:billing",
+      "type": "family"
+    },
+    {
+      "source": "telecom:root",
+      "target": "telecom:apn_reboot",
+      "type": "family"
+    }
+  ]
+}

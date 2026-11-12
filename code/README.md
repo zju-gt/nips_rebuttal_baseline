@@ -94,6 +94,11 @@ asynchronously. Their API calls share a 20 requests/minute limit, configurable
 with `TAU2_API_RPM_LIMIT`. HTTP 429 responses are retried after a pause. A job
 with infrastructure errors is marked failed, and later jobs are not started.
 
+`run_retail_first.sh` selects the unfinished ReasoningBank and EvoTest jobs,
+running both retail domains before airline and telecom. It uses a new run ID
+and keeps prior results intact. When the API rejects the `reasoning` parameter,
+the runtime remembers that limitation for later calls to the same model route.
+
 Useful options:
 
 - `--verify-bundle`: recompute every vendored file hash and reject missing, added, or modified files before planning jobs.

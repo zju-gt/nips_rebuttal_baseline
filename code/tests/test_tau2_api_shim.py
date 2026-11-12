@@ -279,6 +279,44 @@ def test_rate_limited_wrapper_retries_http_429(
     assert [record["status"] for record in records] == ["failed", "succeeded"]
 
 
+def test_usage_wrapper_remembers_unsupported_reasoning(tmp_path: Path) -> None:
+    from runtime_shim.tau2_api_shim import ShimSettings, patch_litellm
+
+    class UnsupportedReasoning(RuntimeError):
+        status_code = 400
+
+    requests: list[dict[str, object]] = []
+    response = SimpleNamespace(id="accepted", usage=None)
+
+    def _complete(*args: object, **kwargs: object) -> object:
+        requests.append(dict(kwargs))
+        if "reasoning" in kwargs:
+            raise UnsupportedReasoning("Unknown parameter: reasoning")
+        return response
+
+    module = ModuleType("litellm")
+    module.completion = _complete
+    settings = ShimSettings(
+        output_dir=tmp_path / "output",
+        user_model="gpt-5.1-2025-11-13",
+        seed=300,
+        usage_log=tmp_path / "usage.jsonl",
+    )
+    patch_litellm(module, settings)
+    call = {
+        "model": "openai/gpt-5.2",
+        "base_url": "https://example.invalid/v1",
+        "reasoning": {"effort": "medium"},
+    }
+
+    with pytest.raises(UnsupportedReasoning):
+        module.completion(**call)
+    assert module.completion(**call) is response
+    assert "reasoning" in requests[0]
+    assert "reasoning" not in requests[1]
+    assert "reasoning" in call
+
+
 def test_sitecustomize_patches_spawned_interpreters(tmp_path: Path) -> None:
     fake_modules = tmp_path / "fake_modules"
     fake_modules.mkdir()

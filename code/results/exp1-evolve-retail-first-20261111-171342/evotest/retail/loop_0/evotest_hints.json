@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "tasks": {
+    "0": {
+      "task_id": "0",
+      "task_family": "exchange_modify",
+      "failure_count": 2,
+      "success_count": 1,
+      "hints": [
+        {
+          "text": "After the user confirms the exact replacement item_ids, re-run the price-difference computation (or pull the tool’s computed exchange_price_difference) and restate the final refund/charge and.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "After the user confirms the exact variants, recompute totals (or fetch and cite exchange_price_difference from the updated order after execution) and communicate the final.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Authenticate user and confirm exact order identifier before accessing/modifying order",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "0-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "1": {
+      "task_id": "1",
+      "task_family": "exchange_modify",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Confirm order ID and current status allows exchange processing.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Correctly match customer identity and order (e.g., name + ZIP) before making changes",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "For each item, verify the exact requested variant attributes (e.g., switch type + RGB + size) and stock availability before committing.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "1-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "2": {
+      "task_id": "2",
+      "task_family": "status",
+      "failure_count": 2,
+      "success_count": 1,
+      "hints": [
+        {
+          "text": "After confirmation, explicitly state whether you can submit the return now; if fee data is unavailable, proceed with submission if allowed and note fees.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Authenticate user via email or first+last name+ZIP before accessing profile/orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Compute available=true count and answer with an explicit statement like 'There are X [product] options available right now,' then optionally add total variant context.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "2-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "3": {
+      "task_id": "3",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user identity before accessing profile/orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Count and report only currently available (in-stock) variants when answering availability.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Do not access user profile/orders until authentication succeeds (email or name+ZIP resolving to a unique user_id).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "3-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "4": {
+      "task_id": "4",
+      "task_family": "status",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Authenticate user via email or (first+last+ZIP) and confirm matched user_id before accessing/modifying orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate using the least personal data sufficient (email OR first+last name + ZIP) before accessing orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Explicitly state the counting rule (e.g., count only variants with available=true) and re-check the computed number against the data/filters used; if ambiguity exists, ask.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "4-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "5": {
+      "task_id": "5",
+      "task_family": "authentication",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Authenticate user by matching provided identifiers (email or name+ZIP) before accessing orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Before submission, confirm available post-submit options (cancel exchange/return window, support transfer) and communicate limitations; if reversibility is unclear, pause submission and offer human escalation.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Confirm the selected order actually contains the target item(s) and is eligible (e.g., delivered) for exchange/return",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "5-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "6": {
+      "task_id": "6",
+      "task_family": "authentication",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Authenticate with email or (first+last+ZIP) and confirm retrieved profile matches requester before proceeding.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Before submit_exchange, present a concise summary (order #, each old item_id → new item_id, payment method, price difference) and ask for an explicit 'Yes.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Do not proceed without a unique user match from email or (first+last name+ZIP).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "6-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "7": {
+      "task_id": "7",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate via account email or (first+last name + ZIP) before retrieving account/order details.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate via approved factors (email or first+last+ZIP) before retrieving user/order details",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm the correct order is eligible (e.g., delivered) and the exact order item_id(s) to exchange are identified.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "7-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "8": {
+      "task_id": "8",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user with approved identifiers (email or first+last+ZIP) before any account/order access.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm selected order is eligible (e.g., delivered) and contains the items the user wants to exchange",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm the exact exchange scope (which line items included/excluded) and re-scope immediately if the user changes their mind.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "8-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "9": {
+      "task_id": "9",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate successfully before accessing orders or making changes.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user before revealing or operating on order details.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm the order is the correct delivered order and contains the target item_id(s) to be exchanged.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "9-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "10": {
+      "task_id": "10",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Confirm user identity via account lookup before discussing/modifying orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Do not access or disclose order/payment details until authentication succeeds (email or name+ZIP match).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Each provided order ID is found and is associated with the authenticated user account before proceeding with return/refund steps.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "10-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "11": {
+      "task_id": "11",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user (e.g., email→user_id) before accessing order details or initiating returns",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user via email or (name + ZIP) and confirm the resolved user_id matches the requester.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "If any order lookup returns 'Order not found', stop and reconcile by listing/orders-on-account and have user correct/confirm the intended order IDs.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "11-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "12": {
+      "task_id": "12",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user via approved identifier (email or name+ZIP) before accessing account/order data",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm order status (e.g., delivered vs processing) to determine cancel vs return eligibility",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm order status before stating cancelability vs returnability; delivered orders are not cancelable under stated policy.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "12-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "13": {
+      "task_id": "13",
+      "task_family": "authentication",
+      "failure_count": 2,
+      "success_count": 1,
+      "hints": [
+        {
+          "text": "After submit_* tool calls, re-fetch the affected order(s)/return record(s) with tools and confirm the new statuses and recorded parameters match the submission; only then.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Ask for the exact identifier required (prefer email; otherwise name+ZIP), rerun the correct lookup tool, and only then call get_user_details/fetch_orders.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Check order status: if delivered, do not offer cancellation; move to return/refund options instead.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "13-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "14": {
+      "task_id": "14",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate the user (e.g., via email lookup or name+ZIP) before accessing order data or taking actions",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate via email or name+ZIP and map to a single user_id before accessing orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authentication match: provided identifier (e.g., email) resolves to a single user_id before proceeding.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "14-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "15": {
+      "task_id": "15",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user via email or (first+last name + ZIP) and ensure resolved user_id matches the intended account.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user with acceptable identifiers (email OR first+last name + ZIP; optionally order ID) before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate using email or (first+last name + ZIP) before accessing orders; request optional order ID to disambiguate.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "15-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "16": {
+      "task_id": "16",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user via email or (first+last name + ZIP) before accessing order details",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user with name + ZIP before accessing or modifying orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm which orders are pending vs delivered; only cancel pending orders and only return specified delivered item(s).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "16-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "17": {
+      "task_id": "17",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate requester via approved method (email or first+last name + ZIP) and obtain correct user_id.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Identity match: provided credentials resolve to exactly one user_id",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Order exists and belongs to the authenticated user_id",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "17-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "18": {
+      "task_id": "18",
+      "task_family": "authentication",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Always finish with an explicit state-change tool call (submit_return/submit_exchange equivalent) that appears in logs, then immediately re-run get_order_details to confirm the new status and.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Authenticate the user via email or (first name, last name, ZIP) before accessing order data",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user via email or (first+last name and ZIP) and match retrieved profile to requester before accessing orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "18-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "19": {
+      "task_id": "19",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Confirm order status is delivered and contains the exact item_ids intended for return/exchange",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm user identity matches retrieved account (name/ZIP/email consistency) before accessing order details.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Ensure the chosen order is delivered/eligible and contains the specified item_ids before attempting return/exchange",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "19-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "20": {
+      "task_id": "20",
+      "task_family": "variant",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "After modify_order, cross-check every line item against the intended item_id→variant mapping (product_id, variant_id/options, unit price, and item name). If mismatched/corrupted, do not claim completion.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Authenticate user via email or (first+last+ZIP) before accessing orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm order is modifiable (e.g., pending); do not attempt upgrades on processed orders",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "20-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "21": {
+      "task_id": "21",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authentication matches a unique user_id and the correct order is selected (order number/items verified).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm identity (email or first+last name + ZIP) before accessing orders/payment methods.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm the order is still pending/eligible; if pending, frame as one-time item modification (not a delivered exchange).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "21-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "22": {
+      "task_id": "22",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate using approved identifiers (e.g., email or first+last+ZIP) before any account/order changes.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Identity uniquely resolved to a single user_id before any modification",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Require successful authentication (email or first+last name+ZIP) before accessing/modifying account data",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "22-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "23": {
+      "task_id": "23",
+      "task_family": "exchange_modify",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user via email or (first name + last name + ZIP) before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate using approved identifiers (email OR first+last name+ZIP) and ensure a single correct user_id match before proceeding.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Correct target orders identified by status (delivered vs pending) and correct line item_id selected for each request",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "23-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "24": {
+      "task_id": "24",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Confirm the specific order ID and item(s) being discussed before summarizing materials/variants.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Do not access or disclose any order/account data until authentication succeeds (email or name+ZIP matches a user).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Do not access or disclose order details until the user is authenticated (email or name+ZIP matches an account).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "24-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "25": {
+      "task_id": "25",
+      "task_family": "status",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Authenticate user using provided email or (first name, last name, ZIP) before disclosing order details",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm the correct order by matching ship-to location, status (shipped/delivered), and item list before giving tracking/return instructions",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm user identity match via provided name/ZIP (or email) before disclosing order/tracking details.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "25-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "26": {
+      "task_id": "26",
+      "task_family": "status",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Authenticate user by matching provided identifiers (e.g., first+last name and ZIP) to a single user_id before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user via approved identifiers before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm non-possession and wrong-address details, then initiate/escalate via the dedicated misdelivery/not-received workflow (claim/replacement/trace) rather than requesting return confirmations.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "26-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "27": {
+      "task_id": "27",
+      "task_family": "authentication",
+      "failure_count": 1,
+      "success_count": 2,
+      "hints": [
+        {
+          "text": "Authenticate via approved factors (email or first+last name + ZIP) before any order access/modification.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Before submitting any return, verify exchange eligibility/status constraints; execute the exchange first (or use a combined return+exchange workflow if available), then submit the return.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Confirm the selected order actually contains the requested SKUs/item_ids before proceeding.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "27-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "28": {
+      "task_id": "28",
+      "task_family": "status",
+      "failure_count": 2,
+      "success_count": 1,
+      "hints": [
+        {
+          "text": "Always provide labeled totals in sequence: (1) 'Returns total refund: $X.XX' (exact sum of returned item prices), then (2) 'Order modification refund: $Y.YY', then.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Authenticate user (name+ZIP) and confirm the user_id before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Before communicating the final refund total, re-check each return's refundable amount using the order/return breakdown (item price + taxes/fees/adjustments) and sum those system-derived values.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "28-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "29": {
+      "task_id": "29",
+      "task_family": "exchange_modify",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate the user and confirm user_id matches retrieved profile (name/email/ZIP) before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user (email or first+last name+ZIP) and confirm matched account before accessing order details",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user (email or name+ZIP) before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "29-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "30": {
+      "task_id": "30",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user with required identifiers before accessing order details.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate using an allowed method (email OR first+last name + ZIP OR order ID) before accessing order details.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm the selected order contains the requested item and is the correct fulfillment (avoid mixing multiple orders).",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "30-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    }
+  }
+}

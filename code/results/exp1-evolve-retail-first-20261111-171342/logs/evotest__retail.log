@@ -1,0 +1,491 @@
+
+tau2-bench/retail (evolve):   0%|          | 0/342 [00:00<?, ?it/s]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   0%|          | 0/342 [04:41<?, ?it/s, cycle=1/1, failure=0, success=1]
+tau2-bench/retail (evolve):   0%|          | 1/342 [04:41<26:41:53, 281.86s/it, cycle=1/1, failure=0, success=1]
+tau2-bench/retail (evolve):   0%|          | 1/342 [08:26<26:41:53, 281.86s/it, cycle=1/1, failure=1, success=1]
+tau2-bench/retail (evolve):   1%|          | 2/342 [08:26<23:26:09, 248.14s/it, cycle=1/1, failure=1, success=1]
+tau2-bench/retail (evolve):   1%|          | 2/342 [10:58<23:26:09, 248.14s/it, cycle=1/1, failure=2, success=1]
+tau2-bench/retail (evolve):   1%|          | 3/342 [10:58<19:13:06, 204.09s/it, cycle=1/1, failure=2, success=1]
+tau2-bench/retail (evolve):   1%|          | 3/342 [13:01<19:13:06, 204.09s/it, cycle=1/1, failure=2, success=2]
+tau2-bench/retail (evolve):   1%|          | 4/342 [13:01<16:11:00, 172.37s/it, cycle=1/1, failure=2, success=2]
+tau2-bench/retail (evolve):   1%|          | 4/342 [15:03<16:11:00, 172.37s/it, cycle=1/1, failure=2, success=3]
+tau2-bench/retail (evolve):   1%|▏         | 5/342 [15:03<14:25:24, 154.08s/it, cycle=1/1, failure=2, success=3]
+tau2-bench/retail (evolve):   1%|▏         | 5/342 [16:42<14:25:24, 154.08s/it, cycle=1/1, failure=2, success=4]
+tau2-bench/retail (evolve):   2%|▏         | 6/342 [16:42<12:38:06, 135.38s/it, cycle=1/1, failure=2, success=4]
+tau2-bench/retail (evolve):   2%|▏         | 6/342 [23:09<12:38:06, 135.38s/it, cycle=1/1, failure=2, success=5]
+tau2-bench/retail (evolve):   2%|▏         | 7/342 [23:09<20:14:19, 217.49s/it, cycle=1/1, failure=2, success=5]
+tau2-bench/retail (evolve):   2%|▏         | 7/342 [29:23<20:14:19, 217.49s/it, cycle=1/1, failure=3, success=5]
+tau2-bench/retail (evolve):   2%|▏         | 8/342 [29:23<24:47:55, 267.29s/it, cycle=1/1, failure=3, success=5]
+tau2-bench/retail (evolve):   2%|▏         | 8/342 [36:06<24:47:55, 267.29s/it, cycle=1/1, failure=4, success=5]
+tau2-bench/retail (evolve):   3%|▎         | 9/342 [36:06<28:39:44, 309.86s/it, cycle=1/1, failure=4, success=5]
+tau2-bench/retail (evolve):   3%|▎         | 9/342 [40:07<28:39:44, 309.86s/it, cycle=1/1, failure=4, success=6]
+tau2-bench/retail (evolve):   3%|▎         | 10/342 [40:07<26:36:25, 288.51s/it, cycle=1/1, failure=4, success=6]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   3%|▎         | 10/342 [46:36<26:36:25, 288.51s/it, cycle=1/1, failure=4, success=7]
+tau2-bench/retail (evolve):   3%|▎         | 11/342 [46:36<29:22:40, 319.52s/it, cycle=1/1, failure=4, success=7]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   3%|▎         | 11/342 [1:03:29<29:22:40, 319.52s/it, cycle=1/1, failure=4, success=8]
+tau2-bench/retail (evolve):   4%|▎         | 12/342 [1:03:29<48:37:32, 530.46s/it, cycle=1/1, failure=4, success=8]
+tau2-bench/retail (evolve):   4%|▎         | 12/342 [1:06:36<48:37:32, 530.46s/it, cycle=1/1, failure=4, success=9]
+tau2-bench/retail (evolve):   4%|▍         | 13/342 [1:06:36<38:56:48, 426.16s/it, cycle=1/1, failure=4, success=9]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   4%|▍         | 13/342 [1:21:14<38:56:48, 426.16s/it, cycle=1/1, failure=4, success=10]
+tau2-bench/retail (evolve):   4%|▍         | 14/342 [1:21:14<51:16:56, 562.85s/it, cycle=1/1, failure=4, success=10]
+tau2-bench/retail (evolve):   4%|▍         | 14/342 [1:29:04<51:16:56, 562.85s/it, cycle=1/1, failure=5, success=10]
+tau2-bench/retail (evolve):   4%|▍         | 15/342 [1:29:04<48:35:05, 534.88s/it, cycle=1/1, failure=5, success=10]
+tau2-bench/retail (evolve):   4%|▍         | 15/342 [1:31:00<48:35:05, 534.88s/it, cycle=1/1, failure=6, success=10]
+tau2-bench/retail (evolve):   5%|▍         | 16/342 [1:31:00<37:00:29, 408.68s/it, cycle=1/1, failure=6, success=10]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   5%|▍         | 16/342 [1:39:07<37:00:29, 408.68s/it, cycle=1/1, failure=6, success=11]
+tau2-bench/retail (evolve):   5%|▍         | 17/342 [1:39:07<39:00:40, 432.12s/it, cycle=1/1, failure=6, success=11]
+tau2-bench/retail (evolve):   5%|▍         | 17/342 [1:48:52<39:00:40, 432.12s/it, cycle=1/1, failure=6, success=12]
+tau2-bench/retail (evolve):   5%|▌         | 18/342 [1:48:52<43:01:51, 478.12s/it, cycle=1/1, failure=6, success=12]
+tau2-bench/retail (evolve):   5%|▌         | 18/342 [2:00:48<43:01:51, 478.12s/it, cycle=1/1, failure=6, success=13]
+tau2-bench/retail (evolve):   6%|▌         | 19/342 [2:00:48<49:18:05, 549.49s/it, cycle=1/1, failure=6, success=13]
+tau2-bench/retail (evolve):   6%|▌         | 19/342 [2:04:46<49:18:05, 549.49s/it, cycle=1/1, failure=6, success=14]
+tau2-bench/retail (evolve):   6%|▌         | 20/342 [2:04:46<40:48:24, 456.23s/it, cycle=1/1, failure=6, success=14]
+tau2-bench/retail (evolve):   6%|▌         | 20/342 [2:09:36<40:48:24, 456.23s/it, cycle=1/1, failure=7, success=14]
+tau2-bench/retail (evolve):   6%|▌         | 21/342 [2:09:36<36:12:47, 406.13s/it, cycle=1/1, failure=7, success=14]
+tau2-bench/retail (evolve):   6%|▌         | 21/342 [2:11:47<36:12:47, 406.13s/it, cycle=1/1, failure=7, success=15]
+tau2-bench/retail (evolve):   6%|▋         | 22/342 [2:11:47<28:46:45, 323.77s/it, cycle=1/1, failure=7, success=15]
+tau2-bench/retail (evolve):   6%|▋         | 22/342 [2:24:19<28:46:45, 323.77s/it, cycle=1/1, failure=7, success=16]
+tau2-bench/retail (evolve):   7%|▋         | 23/342 [2:24:19<40:03:58, 452.16s/it, cycle=1/1, failure=7, success=16]
+tau2-bench/retail (evolve):   7%|▋         | 23/342 [2:28:48<40:03:58, 452.16s/it, cycle=1/1, failure=7, success=17]
+tau2-bench/retail (evolve):   7%|▋         | 24/342 [2:28:48<35:05:02, 397.18s/it, cycle=1/1, failure=7, success=17]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   7%|▋         | 24/342 [2:43:16<35:05:02, 397.18s/it, cycle=1/1, failure=7, success=18]
+tau2-bench/retail (evolve):   7%|▋         | 25/342 [2:43:16<47:24:43, 538.43s/it, cycle=1/1, failure=7, success=18]
+tau2-bench/retail (evolve):   7%|▋         | 25/342 [2:47:11<47:24:43, 538.43s/it, cycle=1/1, failure=7, success=19]
+tau2-bench/retail (evolve):   8%|▊         | 26/342 [2:47:11<39:17:07, 447.56s/it, cycle=1/1, failure=7, success=19]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   8%|▊         | 26/342 [2:51:05<39:17:07, 447.56s/it, cycle=1/1, failure=7, success=20]
+tau2-bench/retail (evolve):   8%|▊         | 27/342 [2:51:05<33:32:17, 383.29s/it, cycle=1/1, failure=7, success=20]
+tau2-bench/retail (evolve):   8%|▊         | 27/342 [2:53:23<33:32:17, 383.29s/it, cycle=1/1, failure=7, success=21]
+tau2-bench/retail (evolve):   8%|▊         | 28/342 [2:53:23<27:00:37, 309.67s/it, cycle=1/1, failure=7, success=21]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):   8%|▊         | 28/342 [2:59:31<27:00:37, 309.67s/it, cycle=1/1, failure=7, success=22]
+tau2-bench/retail (evolve):   8%|▊         | 29/342 [2:59:31<28:26:58, 327.21s/it, cycle=1/1, failure=7, success=22]
+tau2-bench/retail (evolve):   8%|▊         | 29/342 [3:06:28<28:26:58, 327.21s/it, cycle=1/1, failure=7, success=23]
+tau2-bench/retail (evolve):   9%|▉         | 30/342 [3:06:28<30:41:23, 354.12s/it, cycle=1/1, failure=7, success=23]
+tau2-bench/retail (evolve):   9%|▉         | 30/342 [3:09:48<30:41:23, 354.12s/it, cycle=1/1, failure=7, success=24]
+tau2-bench/retail (evolve):   9%|▉         | 31/342 [3:09:48<26:36:35, 308.03s/it, cycle=1/1, failure=7, success=24]
+tau2-bench/retail (evolve):   9%|▉         | 31/342 [3:10:54<26:36:35, 308.03s/it, cycle=1/1, failure=7, success=25]
+tau2-bench/retail (evolve):   9%|▉         | 32/342 [3:10:54<20:15:18, 235.22s/it, cycle=1/1, failure=7, success=25]
+tau2-bench/retail (evolve):   9%|▉         | 32/342 [3:17:41<20:15:18, 235.22s/it, cycle=1/1, failure=7, success=26]
+tau2-bench/retail (evolve):  10%|▉         | 33/342 [3:17:41<24:37:49, 286.96s/it, cycle=1/1, failure=7, success=26]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):  10%|▉         | 33/342 [3:25:43<24:37:49, 286.96s/it, cycle=1/1, failure=7, success=27]
+tau2-bench/retail (evolve):  10%|▉         | 34/342 [3:25:43<29:33:01, 345.39s/it, cycle=1/1, failure=7, success=27]
+tau2-bench/retail (evolve):  10%|▉         | 34/342 [3:37:53<29:33:01, 345.39s/it, cycle=1/1, failure=7, success=28]
+tau2-bench/retail (evolve):  10%|█         | 35/342 [3:37:53<39:17:00, 460.65s/it, cycle=1/1, failure=7, success=28]
+tau2-bench/retail (evolve):  10%|█         | 35/342 [3:47:07<39:17:00, 460.65s/it, cycle=1/1, failure=7, success=29]
+tau2-bench/retail (evolve):  11%|█         | 36/342 [3:47:07<41:32:55, 488.81s/it, cycle=1/1, failure=7, success=29]
+tau2-bench/retail (evolve):  11%|█         | 36/342 [3:52:29<41:32:55, 488.81s/it, cycle=1/1, failure=7, success=30]
+tau2-bench/retail (evolve):  11%|█         | 37/342 [3:52:29<37:10:39, 438.82s/it, cycle=1/1, failure=7, success=30]
+tau2-bench/retail (evolve):  11%|█         | 37/342 [4:00:56<37:10:39, 438.82s/it, cycle=1/1, failure=7, success=31]
+tau2-bench/retail (evolve):  11%|█         | 38/342 [4:00:56<38:45:58, 459.07s/it, cycle=1/1, failure=7, success=31]
+tau2-bench/retail (evolve):  11%|█         | 38/342 [4:02:30<38:45:58, 459.07s/it, cycle=1/1, failure=7, success=32]
+tau2-bench/retail (evolve):  11%|█▏        | 39/342 [4:02:30<29:25:32, 349.61s/it, cycle=1/1, failure=7, success=32]
+tau2-bench/retail (evolve):  11%|█▏        | 39/342 [4:04:26<29:25:32, 349.61s/it, cycle=1/1, failure=7, success=33]
+tau2-bench/retail (evolve):  12%|█▏        | 40/342 [4:04:26<23:26:54, 279.52s/it, cycle=1/1, failure=7, success=33]
+tau2-bench/retail (evolve):  12%|█▏        | 40/342 [4:06:42<23:26:54, 279.52s/it, cycle=1/1, failure=8, success=33]
+tau2-bench/retail (evolve):  12%|█▏        | 41/342 [4:06:42<19:47:09, 236.64s/it, cycle=1/1, failure=8, success=33]
+tau2-bench/retail (evolve):  12%|█▏        | 41/342 [4:09:14<19:47:09, 236.64s/it, cycle=1/1, failure=9, success=33]
+tau2-bench/retail (evolve):  12%|█▏        | 42/342 [4:09:14<17:35:10, 211.03s/it, cycle=1/1, failure=9, success=33]
+tau2-bench/retail (evolve):  12%|█▏        | 42/342 [4:11:02<17:35:10, 211.03s/it, cycle=1/1, failure=9, success=34]
+tau2-bench/retail (evolve):  13%|█▎        | 43/342 [4:11:02<14:58:15, 180.25s/it, cycle=1/1, failure=9, success=34]
+tau2-bench/retail (evolve):  13%|█▎        | 43/342 [4:13:21<14:58:15, 180.25s/it, cycle=1/1, failure=9, success=35]
+tau2-bench/retail (evolve):  13%|█▎        | 44/342 [4:13:21<13:53:10, 167.75s/it, cycle=1/1, failure=9, success=35]
+tau2-bench/retail (evolve):  13%|█▎        | 44/342 [4:15:59<13:53:10, 167.75s/it, cycle=1/1, failure=9, success=36]
+tau2-bench/retail (evolve):  13%|█▎        | 45/342 [4:15:59<13:36:49, 165.02s/it, cycle=1/1, failure=9, success=36]
+tau2-bench/retail (evolve):  13%|█▎        | 45/342 [4:17:39<13:36:49, 165.02s/it, cycle=1/1, failure=9, success=37]
+tau2-bench/retail (evolve):  13%|█▎        | 46/342 [4:17:39<11:56:52, 145.31s/it, cycle=1/1, failure=9, success=37]
+tau2-bench/retail (evolve):  13%|█▎        | 46/342 [4:20:46<11:56:52, 145.31s/it, cycle=1/1, failure=9, success=38]
+tau2-bench/retail (evolve):  14%|█▎        | 47/342 [4:20:46<12:55:59, 157.83s/it, cycle=1/1, failure=9, success=38]
+tau2-bench/retail (evolve):  14%|█▎        | 47/342 [4:22:44<12:55:59, 157.83s/it, cycle=1/1, failure=9, success=39]
+tau2-bench/retail (evolve):  14%|█▍        | 48/342 [4:22:44<11:54:46, 145.87s/it, cycle=1/1, failure=9, success=39]
+tau2-bench/retail (evolve):  14%|█▍        | 48/342 [4:27:04<11:54:46, 145.87s/it, cycle=1/1, failure=9, success=40]
+tau2-bench/retail (evolve):  14%|█▍        | 49/342 [4:27:04<14:39:34, 180.12s/it, cycle=1/1, failure=9, success=40]
+tau2-bench/retail (evolve):  14%|█▍        | 49/342 [4:31:56<14:39:34, 180.12s/it, cycle=1/1, failure=9, success=41]
+tau2-bench/retail (evolve):  15%|█▍        | 50/342 [4:31:56<17:19:47, 213.66s/it, cycle=1/1, failure=9, success=41]
+tau2-bench/retail (evolve):  15%|█▍        | 50/342 [4:38:43<17:19:47, 213.66s/it, cycle=1/1, failure=9, success=42]
+tau2-bench/retail (evolve):  15%|█▍        | 51/342 [4:38:43<21:57:45, 271.70s/it, cycle=1/1, failure=9, success=42]
+tau2-bench/retail (evolve):  15%|█▍        | 51/342 [4:40:18<21:57:45, 271.70s/it, cycle=1/1, failure=9, success=43]
+tau2-bench/retail (evolve):  15%|█▌        | 52/342 [4:40:18<17:37:10, 218.73s/it, cycle=1/1, failure=9, success=43]
+tau2-bench/retail (evolve):  15%|█▌        | 52/342 [4:41:42<17:37:10, 218.73s/it, cycle=1/1, failure=9, success=44]
+tau2-bench/retail (evolve):  15%|█▌        | 53/342 [4:41:42<14:18:54, 178.32s/it, cycle=1/1, failure=9, success=44]
+tau2-bench/retail (evolve):  15%|█▌        | 53/342 [4:48:33<14:18:54, 178.32s/it, cycle=1/1, failure=9, success=45]
+tau2-bench/retail (evolve):  16%|█▌        | 54/342 [4:48:33<19:51:27, 248.22s/it, cycle=1/1, failure=9, success=45]
+tau2-bench/retail (evolve):  16%|█▌        | 54/342 [4:50:44<19:51:27, 248.22s/it, cycle=1/1, failure=10, success=45]
+tau2-bench/retail (evolve):  16%|█▌        | 55/342 [4:50:44<16:59:12, 213.08s/it, cycle=1/1, failure=10, success=45]
+tau2-bench/retail (evolve):  16%|█▌        | 55/342 [4:55:07<16:59:12, 213.08s/it, cycle=1/1, failure=10, success=46]
+tau2-bench/retail (evolve):  16%|█▋        | 56/342 [4:55:07<18:07:16, 228.10s/it, cycle=1/1, failure=10, success=46]
+tau2-bench/retail (evolve):  16%|█▋        | 56/342 [5:00:37<18:07:16, 228.10s/it, cycle=1/1, failure=10, success=47]
+tau2-bench/retail (evolve):  17%|█▋        | 57/342 [5:00:37<20:27:22, 258.39s/it, cycle=1/1, failure=10, success=47]
+tau2-bench/retail (evolve):  17%|█▋        | 57/342 [5:15:27<20:27:22, 258.39s/it, cycle=1/1, failure=10, success=48]
+tau2-bench/retail (evolve):  17%|█▋        | 58/342 [5:15:27<35:21:02, 448.11s/it, cycle=1/1, failure=10, success=48]
+tau2-bench/retail (evolve):  17%|█▋        | 58/342 [5:19:17<35:21:02, 448.11s/it, cycle=1/1, failure=10, success=49]
+tau2-bench/retail (evolve):  17%|█▋        | 59/342 [5:19:17<30:04:58, 382.68s/it, cycle=1/1, failure=10, success=49]
+tau2-bench/retail (evolve):  17%|█▋        | 59/342 [5:28:48<30:04:58, 382.68s/it, cycle=1/1, failure=10, success=50]
+tau2-bench/retail (evolve):  18%|█▊        | 60/342 [5:28:48<34:23:57, 439.14s/it, cycle=1/1, failure=10, success=50]
+tau2-bench/retail (evolve):  18%|█▊        | 60/342 [5:37:42<34:23:57, 439.14s/it, cycle=1/1, failure=10, success=51]
+tau2-bench/retail (evolve):  18%|█▊        | 61/342 [5:37:42<36:30:17, 467.68s/it, cycle=1/1, failure=10, success=51]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):  18%|█▊        | 61/342 [5:51:42<36:30:17, 467.68s/it, cycle=1/1, failure=10, success=52]
+tau2-bench/retail (evolve):  18%|█▊        | 62/342 [5:51:42<45:03:28, 579.31s/it, cycle=1/1, failure=10, success=52]
+tau2-bench/retail (evolve):  18%|█▊        | 62/342 [5:59:22<45:03:28, 579.31s/it, cycle=1/1, failure=11, success=52]
+tau2-bench/retail (evolve):  18%|█▊        | 63/342 [5:59:22<42:07:08, 543.47s/it, cycle=1/1, failure=11, success=52]
+tau2-bench/retail (evolve):  18%|█▊        | 63/342 [6:15:41<42:07:08, 543.47s/it, cycle=1/1, failure=11, success=53]
+tau2-bench/retail (evolve):  19%|█▊        | 64/342 [6:15:41<52:02:50, 673.99s/it, cycle=1/1, failure=11, success=53]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):  19%|█▊        | 64/342 [6:26:50<52:02:50, 673.99s/it, cycle=1/1, failure=11, success=54]
+tau2-bench/retail (evolve):  19%|█▉        | 65/342 [6:26:50<51:44:37, 672.48s/it, cycle=1/1, failure=11, success=54]
+tau2-bench/retail (evolve):  19%|█▉        | 65/342 [6:33:45<51:44:37, 672.48s/it, cycle=1/1, failure=11, success=55]
+tau2-bench/retail (evolve):  19%|█▉        | 66/342 [6:33:45<45:38:59, 595.43s/it, cycle=1/1, failure=11, success=55]
+tau2-bench/retail (evolve):  19%|█▉        | 66/342 [6:37:44<45:38:59, 595.43s/it, cycle=1/1, failure=11, success=56]
+tau2-bench/retail (evolve):  20%|█▉        | 67/342 [6:37:44<37:18:56, 488.49s/it, cycle=1/1, failure=11, success=56]
+tau2-bench/retail (evolve):  20%|█▉        | 67/342 [6:52:22<37:18:56, 488.49s/it, cycle=1/1, failure=11, success=57]
+tau2-bench/retail (evolve):  20%|█▉        | 68/342 [6:52:22<46:04:26, 605.35s/it, cycle=1/1, failure=11, success=57]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/retail (evolve):  20%|█▉        | 68/342 [7:02:58<46:04:26, 605.35s/it, cycle=1/1, failure=11, success=58]
+tau2-bench/retail (evolve):  20%|██        | 69/342 [7:02:58<46:35:16, 614.35s/it, cycle=1/1, failure=11, success=58]
+tau2-bench/retail (evolve):  20%|██        | 69/342 [7:08:42<46:35:16, 614.35s/it, cycle=1/1, failure=11, success=59]
+tau2-bench/retail (evolve):  20%|██        | 70/342 [7:08:42<40:18:21, 533.46s/it, cycle=1/1, failure=11, success=59]
+tau2-bench/retail (evolve):  20%|██        | 70/342 [7:14:30<40:18:21, 533.46s/it, cycle=1/1, failure=11, success=60]
+tau2-bench/retail (evolve):  21%|██        | 71/342 [7:14:30<35:57:43, 477.73s/it, cycle=1/1, failure=11, success=60]
+tau2-bench/retail (evolve):  21%|██        | 71/342 [7:19:57<35:57:43, 477.73s/it, cycle=1/1, failure=11, success=61]
+tau2-bench/retail (evolve):  21%|██        | 72/342 [7:19:57<32:26:53, 432.64s/it, cycle=1/1, failure=11, success=61]
+tau2-bench/retail (evolve):  21%|██        | 72/342 [7:22:30<32:26:53, 432.64s/it, cycle=1/1, failure=11, success=62]
+tau2-bench/retail (evolve):  21%|██▏       | 73/342 [7:22:30<26:02:54, 348.60s/it, cycle=1/1, failure=11, success=62]
+tau2-bench/retail (evolve):  21%|██▏       | 73/342 [7:24:40<26:02:54, 348.60s/it, cycle=1/1, failure=11, success=63]
+tau2-bench/retail (evolve):  22%|██▏       | 74/342 [7:24:40<21:03:37, 282.90s/it, cycle=1/1, failure=11, success=63]
+tau2-bench/retail (evolve):  22%|██▏       | 74/342 [7:32:00<21:03:37, 282.90s/it, cycle=1/1, failure=11, success=64]
+tau2-bench/retail (evolve):  22%|██▏       | 75/342 [7:32:00<24:29:22, 330.19s/it, cycle=1/1, failure=11, success=64]
+tau2-bench/retail (evolve):  22%|██▏       | 75/342 [7:41:01<24:29:22, 330.19s/it, cycle=1/1, failure=11, success=65]
+tau2-bench/retail (evolve):  22%|██▏       | 76/342 [7:41:01<29:03:31, 393.28s/it, cycle=1/1, failure=11, success=65]
+tau2-bench/retail (evolve):  22%|██▏       | 76/342 [7:49:20<29:03:31, 393.28s/it, cycle=1/1, failure=11, success=66]
+tau2-bench/retail (evolve):  23%|██▎       | 77/342 [7:49:20<31:17:38, 425.12s/it, cycle=1/1, failure=11, success=66]
+tau2-bench/retail (evolve):  23%|██▎       | 77/342 [7:53:00<31:17:38, 425.12s/it, cycle=1/1, failure=12, success=66]
+tau2-bench/retail (evolve):  23%|██▎       | 78/342 [7:53:00<26:39:42, 363.57s/it, cycle=1/1, failure=12, success=66]
+tau2-bench/retail (evolve):  23%|██▎       | 78/342 [7:59:32<26:39:42, 363.57s/it, cycle=1/1, failure=12, success=67]
+tau2-bench/retail (evolve):  23%|██▎       | 79/342 [7:59:32<27:10:30, 371.98s/it, cycle=1/1, failure=12, success=67]
+tau2-bench/retail (evolve):  23%|██▎       | 79/342 [8:05:24<27:10:30, 371.98s/it, cycle=1/1, failure=12, success=68]
+tau2-bench/retail (evolve):  23%|██▎       | 80/342 [8:05:24<26:39:06, 366.21s/it, cycle=1/1, failure=12, success=68]
+tau2-bench/retail (evolve):  23%|██▎       | 80/342 [8:09:04<26:39:06, 366.21s/it, cycle=1/1, failure=13, success=68]
+tau2-bench/retail (evolve):  24%|██▎       | 81/342 [8:09:04<23:21:46, 322.25s/it, cycle=1/1, failure=13, success=68]
+tau2-bench/retail (evolve):  24%|██▎       | 81/342 [8:25:10<23:21:46, 322.25s/it, cycle=1/1, failure=13, success=69]
+tau2-bench/retail (evolve):  24%|██▍       | 82/342 [8:25:10<37:13:21, 515.39s/it, cycle=1/1, failure=13, success=69]
+tau2-bench/retail (evolve):  24%|██▍       | 82/342 [8:28:39<37:13:21, 515.39s/it, cycle=1/1, failure=14, success=69]
+tau2-bench/retail (evolve):  24%|██▍       | 83/342 [8:28:39<30:28:25, 423.57s/it, cycle=1/1, failure=14, success=69]
+tau2-bench/retail (evolve):  24%|██▍       | 83/342 [8:31:48<30:28:25, 423.57s/it, cycle=1/1, failure=14, success=70]
+tau2-bench/retail (evolve):  25%|██▍       | 84/342 [8:31:48<25:17:49, 352.98s/it, cycle=1/1, failure=14, success=70]
+tau2-bench/retail (evolve):  25%|██▍       | 84/342 [8:35:55<25:17:49, 352.98s/it, cycle=1/1, failure=15, success=70]
+tau2-bench/retail (evolve):  25%|██▍       | 85/342 [8:35:55<22:56:15, 321.30s/it, cycle=1/1, failure=15, success=70]
+tau2-bench/retail (evolve):  25%|██▍       | 85/342 [8:39:12<22:56:15, 321.30s/it, cycle=1/1, failure=15, success=71]
+tau2-bench/retail (evolve):  25%|██▌       | 86/342 [8:39:12<20:12:16, 284.13s/it, cycle=1/1, failure=15, success=71]
+tau2-bench/retail (evolve):  25%|██▌       | 86/342 [8:43:32<20:12:16, 284.13s/it, cycle=1/1, failure=16, success=71]
+tau2-bench/retail (evolve):  25%|██▌       | 87/342 [8:43:32<19:36:00, 276.71s/it, cycle=1/1, failure=16, success=71]
+tau2-bench/retail (evolve):  25%|██▌       | 87/342 [8:46:40<19:36:00, 276.71s/it, cycle=1/1, failure=16, success=72]
+tau2-bench/retail (evolve):  26%|██▌       | 88/342 [8:46:40<17:38:35, 250.06s/it, cycle=1/1, failure=16, success=72]
+tau2-bench/retail (evolve):  26%|██▌       | 88/342 [8:55:16<17:38:35, 250.06s/it, cycle=1/1, failure=16, success=73]
+tau2-bench/retail (evolve):  26%|██▌       | 89/342 [8:55:16<23:10:45, 329.82s/it, cycle=1/1, failure=16, success=73]
+tau2-bench/retail (evolve):  26%|██▌       | 89/342 [9:00:24<23:10:45, 329.82s/it, cycle=1/1, failure=16, success=74]
+tau2-bench/retail (evolve):  26%|██▋       | 90/342 [9:00:24<22:37:39, 323.25s/it, cycle=1/1, failure=16, success=74]
+tau2-bench/retail (evolve):  26%|██▋       | 90/342 [9:09:35<22:37:39, 323.25s/it, cycle=1/1, failure=16, success=75]
+tau2-bench/retail (evolve):  27%|██▋       | 91/342 [9:09:35<27:18:31, 391.68s/it, cycle=1/1, failure=16, success=75]
+tau2-bench/retail (evolve):  27%|██▋       | 91/342 [9:23:57<27:18:31, 391.68s/it, cycle=1/1, failure=16, success=76]
+tau2-bench/retail (evolve):  27%|██▋       | 92/342 [9:23:57<36:59:27, 532.67s/it, cycle=1/1, failure=16, success=76]
+tau2-bench/retail (evolve):  27%|██▋       | 92/342 [9:43:12<36:59:27, 532.67s/it, cycle=1/1, failure=16, success=77]

@@ -282,24 +282,48 @@ def patch_litellm(module: ModuleType, settings: ShimSettings) -> None:
     original = getattr(module, "completion")
     if getattr(original, "_tau2_usage_wrapper", False):
         return
+    unsupported_reasoning: set[tuple[str, str]] = set()
 
     @wraps(original)
     def completion(*args: Any, **kwargs: Any) -> Any:
+        capability_key = (
+            str(kwargs.get("model") or (args[0] if args else "") or ""),
+            str(kwargs.get("base_url") or kwargs.get("api_base") or ""),
+        )
+        call_kwargs = dict(kwargs)
+        if capability_key in unsupported_reasoning:
+            call_kwargs.pop("reasoning", None)
         for attempt in range(4):
             _pace_api_request(settings)
             started_at = time.perf_counter()
             try:
-                response = original(*args, **kwargs)
+                response = original(*args, **call_kwargs)
             except Exception as exc:
                 append_usage_record(
                     settings.usage_log,
                     _usage_record(
-                        kwargs=kwargs,
+                        kwargs=call_kwargs,
                         started_at=started_at,
                         status="failed",
                         error=exc,
                     ),
                 )
+                error_text = f"{type(exc).__name__}: {exc!s}".lower()
+                if (
+                    "reasoning" in call_kwargs
+                    and getattr(exc, "status_code", None) == 400
+                    and "reasoning" in error_text
+                    and any(
+                        marker in error_text
+                        for marker in (
+                            "unknown parameter",
+                            "unknown_parameter",
+                            "unrecognized request argument",
+                            "invalidparameter",
+                        )
+                    )
+                ):
+                    unsupported_reasoning.add(capability_key)
                 if (
                     settings.rpm_limit > 0
                     and getattr(exc, "status_code", None) == 429
@@ -311,7 +335,7 @@ def patch_litellm(module: ModuleType, settings: ShimSettings) -> None:
             append_usage_record(
                 settings.usage_log,
                 _usage_record(
-                    kwargs=kwargs,
+                    kwargs=call_kwargs,
                     started_at=started_at,
                     status="succeeded",
                     response=response,

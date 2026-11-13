@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "root_domain": "airline",
+  "families": [
+    "cancellation",
+    "modification",
+    "compensation",
+    "booking",
+    "verification"
+  ],
+  "nodes": [
+    {
+      "id": "airline:root",
+      "type": "root",
+      "label": "airline",
+      "family": null
+    },
+    {
+      "id": "airline:cancellation",
+      "type": "family",
+      "label": "cancellation",
+      "family": "cancellation"
+    },
+    {
+      "id": "airline:modification",
+      "type": "family",
+      "label": "modification",
+      "family": "modification"
+    },
+    {
+      "id": "airline:compensation",
+      "type": "family",
+      "label": "compensation",
+      "family": "compensation"
+    },
+    {
+      "id": "airline:booking",
+      "type": "family",
+      "label": "booking",
+      "family": "booking"
+    },
+    {
+      "id": "airline:verification",
+      "type": "family",
+      "label": "verification",
+      "family": "verification"
+    }
+  ],
+  "edges": [
+    {
+      "source": "airline:root",
+      "target": "airline:cancellation",
+      "type": "family"
+    },
+    {
+      "source": "airline:root",
+      "target": "airline:modification",
+      "type": "family"
+    },
+    {
+      "source": "airline:root",
+      "target": "airline:compensation",
+      "type": "family"
+    },
+    {
+      "source": "airline:root",
+      "target": "airline:booking",
+      "type": "family"
+    },
+    {
+      "source": "airline:root",
+      "target": "airline:verification",
+      "type": "family"
+    }
+  ]
+}

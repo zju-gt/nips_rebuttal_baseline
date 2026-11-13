@@ -1,0 +1,17 @@
+{
+  "method": "reasoningbank",
+  "domain": "airline",
+  "model": "gpt-5.2-2025-12-11",
+  "split_hash": "5e1f2c90732642f95a8abba491b4034942ace49e62eb20d6d3fcd9cdceb9d063",
+  "train_ids_hash": "bcc987c27502616e448ac628c4bb93ba0aac1ec99216bfddb023a4fd10d2d8a0",
+  "train_task_count": 35,
+  "cycles": 1,
+  "runner_source_sha256": "f866012297203242b9da4ad9f06dabe4ca3e3193f912446279dd2df74328f960",
+  "tau2_repo_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "runner_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "meta_sop_empty": null,
+  "files": {
+    "reasoning_bank.json": "f36ccabd175a080662b06fffe47de9e2a8a9d789378252ae803854eb1f88c01d"
+  },
+  "created_at": "2026-11-12T18:07:07.186997+00:00"
+}

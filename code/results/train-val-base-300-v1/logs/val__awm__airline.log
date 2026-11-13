@@ -1,0 +1,23 @@
+
+tau2-bench/airline (frozen):   0%|          | 0/15 [00:00<?, ?it/s]
+tau2-bench/airline (frozen):   7%|▋         | 1/15 [04:06<57:35, 246.86s/it]
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (frozen):  13%|█▎        | 2/15 [05:07<29:42, 137.13s/it]
+tau2-bench/airline (frozen):  20%|██        | 3/15 [05:29<16:54, 84.55s/it] 
+tau2-bench/airline (frozen):  27%|██▋       | 4/15 [05:38<10:05, 55.04s/it]
+tau2-bench/airline (frozen):  33%|███▎      | 5/15 [06:26<08:42, 52.29s/it]
+tau2-bench/airline (frozen):  40%|████      | 6/15 [08:06<10:16, 68.48s/it]
+tau2-bench/airline (frozen):  47%|████▋     | 7/15 [08:17<06:37, 49.68s/it]
+tau2-bench/airline (frozen):  53%|█████▎    | 8/15 [09:00<05:34, 47.75s/it]
+tau2-bench/airline (frozen):  60%|██████    | 9/15 [10:19<05:44, 57.43s/it]
+tau2-bench/airline (frozen):  67%|██████▋   | 10/15 [10:19<03:18, 39.78s/it]
+tau2-bench/airline (frozen):  73%|███████▎  | 11/15 [10:34<02:08, 32.01s/it]
+tau2-bench/airline (frozen):  80%|████████  | 12/15 [13:18<03:37, 72.34s/it]
+tau2-bench/airline (frozen):  87%|████████▋ | 13/15 [13:44<01:56, 58.08s/it]
+tau2-bench/airline (frozen):  93%|█████████▎| 14/15 [14:27<00:53, 53.68s/it]
+tau2-bench/airline (frozen): 100%|██████████| 15/15 [15:38<00:00, 58.80s/it]
+tau2-bench/airline (frozen): 100%|██████████| 15/15 [15:38<00:00, 62.55s/it]
+{"method": "awm", "output_dir": "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/results/train-val-base-300-v1/val/awm/airline", "status": "succeeded"}

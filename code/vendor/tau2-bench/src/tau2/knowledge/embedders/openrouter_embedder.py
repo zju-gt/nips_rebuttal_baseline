@@ -9,7 +9,7 @@ import time
 from typing import List, Optional
 
 import numpy as np
-from openai import APIConnectionError, APIError, OpenAI, RateLimitError
+from openai_test import APIConnectionError, APIError, OpenAI, RateLimitError
 
 from tau2.knowledge.embedders.base import BaseEmbedder
 

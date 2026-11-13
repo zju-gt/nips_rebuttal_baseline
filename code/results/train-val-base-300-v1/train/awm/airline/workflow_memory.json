@@ -1,0 +1,814 @@
+{
+  "version": 1,
+  "domain": "airline",
+  "families": [
+    "cancellation",
+    "modification",
+    "compensation",
+    "booking",
+    "verification"
+  ],
+  "entries": [
+    {
+      "id": "modification:ebc68355c19d",
+      "family": "modification",
+      "title": "Assess feasibility of modifying an existing flight reservation and propose next best.",
+      "task_signature": "User requests a change to an existing itinerary (possibly changing only one segment) and wants options without rebooking.",
+      "workflow": [
+        "Collect identifiers and constraints: traveler/reservation identifiers, which segment to change, desired new.",
+        "Retrieve and summarize reservation details: cabin/fare type, current segments/dates, passenger list, and.",
+        "Validate policy and feasibility: determine whether the fare class permits changes and.",
+        "Offer allowable alternatives: options like upgrading fare class (if it enables changes).",
+        "Escalate when requested change is blocked or requires discretion: transfer to a."
+      ],
+      "applicability": "Reuse when a customer wants to modify an existing flight reservation, especially when fare rules or itinerary-structure changes may prevent the requested modification.",
+      "retrieval_text": "Title: Assess feasibility of modifying an existing flight reservation and propose next best.\nApplicability: Reuse when a customer wants to modify an existing flight reservation, especially when fare rules or itinerary-structure changes may prevent the requested modification.\nTask Signature: User requests a change to an existing itinerary (possibly changing only one segment) and wants options without rebooking.\nWorkflow: Collect identifiers and constraints: traveler/reservation identifiers, which segment to change, desired new. -> Retrieve and summarize reservation details: cabin/fare type, current segments/dates, passenger list, and. -> Validate policy and feasibility: determine whether the fare class permits changes and. -> Offer allowable alternatives: options like upgrading fare class (if it enables changes). -> Escalate when requested change is blocked or requires discretion: transfer to a.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "13-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "13"
+      ],
+      "last_task_query": "Hi, I need some help changing an existing reservation. I’ve got a one-stop return flight from Atlanta (ATL) to Los Angeles (LAX), and I’d like to change just that return segment to a **nonstop flight from ATL to Las Vegas.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:b27cc98b7186",
+      "family": "modification",
+      "title": "Change flight date and upgrade cabin for an existing reservation",
+      "task_signature": "User requests modifying an existing itinerary (date change for a segment and cabin upgrade for all travelers), wants options and an exact price delta.",
+      "workflow": [
+        "Collect identifiers to locate the booking (reservation code if available; otherwise account/user.",
+        "Retrieve and summarize the current itinerary and key constraints/policies that affect the.",
+        "Search availability for the requested new date/routing in the target cabin and.",
+        "Attempt to produce an exact reprice/quote including fare difference and fees; if.",
+        "If an exact quote is required but unavailable via self-serve tools, escalate/transfer."
+      ],
+      "applicability": "Reuse when a traveler wants to change dates/segments and/or upgrade cabin on an existing booking and requires a firm total additional cost before approving any ticketing.",
+      "retrieval_text": "Title: Change flight date and upgrade cabin for an existing reservation\nApplicability: Reuse when a traveler wants to change dates/segments and/or upgrade cabin on an existing booking and requires a firm total additional cost before approving any ticketing.\nTask Signature: User requests modifying an existing itinerary (date change for a segment and cabin upgrade for all travelers), wants options and an exact price delta.\nWorkflow: Collect identifiers to locate the booking (reservation code if available; otherwise account/user. -> Retrieve and summarize the current itinerary and key constraints/policies that affect the. -> Search availability for the requested new date/routing in the target cabin and. -> Attempt to produce an exact reprice/quote including fare difference and fees; if. -> If an exact quote is required but unavailable via self-serve tools, escalate/transfer.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "10-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "10"
+      ],
+      "last_task_query": "Hi! I need some help changing an upcoming trip. I have a flight from Houston (IAH) to Seattle (SEA) on May 23, and I’d like to move it to May 24 and also upgrade the cabin to business for everyone.",
+      "status": "candidate"
+    },
+    {
+      "id": "cancellation:9d6ec07c2166",
+      "family": "cancellation",
+      "title": "Flight cancellation with 24-hour full refund check",
+      "task_signature": "User requests to cancel a recently booked flight and receive a full refund, typically relying on a 24-hour risk-free cancellation window.",
+      "workflow": [
+        "Collect identifiers needed to locate the booking (user identifier and confirmation/reservation code).",
+        "Retrieve reservation details and verify eligibility for a full refund (booking timestamp.",
+        "If there is a discrepancy between the user’s claim and system data.",
+        "If eligible and confirmed, cancel the reservation with the stated reason and.",
+        "If eligibility or booking-time discrepancy cannot be resolved via available tools, escalate/transfer."
+      ],
+      "applicability": "Reuse when a customer wants to cancel a flight shortly after booking and expects a full refund under a 24-hour policy, especially when booking-time data conflicts arise.",
+      "retrieval_text": "Title: Flight cancellation with 24-hour full refund check\nApplicability: Reuse when a customer wants to cancel a flight shortly after booking and expects a full refund under a 24-hour policy, especially when booking-time data conflicts arise.\nTask Signature: User requests to cancel a recently booked flight and receive a full refund, typically relying on a 24-hour risk-free cancellation window.\nWorkflow: Collect identifiers needed to locate the booking (user identifier and confirmation/reservation code). -> Retrieve reservation details and verify eligibility for a full refund (booking timestamp. -> If there is a discrepancy between the user’s claim and system data. -> If eligible and confirmed, cancel the reservation with the stated reason and. -> If eligibility or booking-time discrepancy cannot be resolved via available tools, escalate/transfer.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "48-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "48"
+      ],
+      "last_task_query": "Hi, I need to cancel a flight I booked by mistake earlier today and get a full refund. I booked it about 10 hours ago.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:a17a422b355f",
+      "family": "modification",
+      "title": "Handle upgrade-with-budget request and add checked bags using membership benefits",
+      "task_signature": "Customer asks to upgrade a flight reservation within a total budget (with fallback options) and also add checked bags, potentially free via loyalty status.",
+      "workflow": [
+        "Collect required identifiers and constraints (user/account ID, reservation ID, route/dates, passenger count/names.",
+        "Retrieve reservation and account details; verify passenger names on the booking and.",
+        "Price the requested upgrade by pulling current availability/prices for each flight segment.",
+        "If upgrade is not feasible or violates constraints, offer the closest supported.",
+        "Apply the bag change, selecting a saved payment method if required, ensure."
+      ],
+      "applicability": "Use when a traveler wants cabin upgrades constrained by a budget and also wants baggage added based on loyalty/free allowance, requiring pricing, policy clarification, and a safe modification flow.",
+      "retrieval_text": "Title: Handle upgrade-with-budget request and add checked bags using membership benefits\nApplicability: Use when a traveler wants cabin upgrades constrained by a budget and also wants baggage added based on loyalty/free allowance, requiring pricing, policy clarification, and a safe modification flow.\nTask Signature: Customer asks to upgrade a flight reservation within a total budget (with fallback options) and also add checked bags, potentially free via loyalty status.\nWorkflow: Collect required identifiers and constraints (user/account ID, reservation ID, route/dates, passenger count/names. -> Retrieve reservation and account details; verify passenger names on the booking and. -> Price the requested upgrade by pulling current availability/prices for each flight segment. -> If upgrade is not feasible or violates constraints, offer the closest supported. -> Apply the bag change, selecting a saved payment method if required, ensure.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "12-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "12"
+      ],
+      "last_task_query": "Hi, I’ve got an upcoming flight from Boston to Minneapolis under reservation ID YAX4DR, and I’d like some help with changes. 1. I want to upgrade the whole reservation to business class for all passengers, as long as the extra.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:9775574958ef",
+      "family": "modification",
+      "title": "Handle passenger removal request by offering valid modification or cancellation options",
+      "task_signature": "User asks to remove a passenger from an existing reservation; system may not support changing passenger count, requiring alternative actions such as replacement or.",
+      "workflow": [
+        "Retrieve the user profile and the target reservation using provided identifiers.",
+        "Check policy/constraints on passenger-count changes; if removal is unsupported, present allowed alternatives.",
+        "Ask for any missing details needed to execute the chosen alternative (e.g."
+      ],
+      "applicability": "Reuse when a customer requests removing a traveler from an existing booking and the system requires either passenger replacement or full reservation cancellation.",
+      "retrieval_text": "Title: Handle passenger removal request by offering valid modification or cancellation options\nApplicability: Reuse when a customer requests removing a traveler from an existing booking and the system requires either passenger replacement or full reservation cancellation.\nTask Signature: User asks to remove a passenger from an existing reservation; system may not support changing passenger count, requiring alternative actions such as replacement or.\nWorkflow: Retrieve the user profile and the target reservation using provided identifiers. -> Check policy/constraints on passenger-count changes; if removal is unsupported, present allowed alternatives. -> Ask for any missing details needed to execute the chosen alternative (e.g.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "24-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "24"
+      ],
+      "last_task_query": "Hi! I actually need help with a couple of things on my bookings. First, I’d like to remove a passenger named Ethan from one of my existing reservations. Then I’m also hoping to book a new trip from New York.",
+      "status": "candidate"
+    },
+    {
+      "id": "booking:2f0dd464de9a",
+      "family": "booking",
+      "title": "Book cheapest nonstop round trip with flexible airports and prioritized payment methods",
+      "task_signature": "User wants a new round-trip booking with flexible origin/destination within a region, cheapest nonstop constraint, specified dates/cabin, passenger pulled from profile, and payment priority.",
+      "workflow": [
+        "Gather trip requirements (trip type, date range, cabin, nonstop-only, acceptable origin airports.",
+        "Search candidate nonstop flights across the flexible airport set for both outbound.",
+        "Present the best itinerary and total price; confirm baggage/insurance preferences and any.",
+        "Collect payment preference order and apply balances sequentially (e.g., smaller gift card."
+      ],
+      "applicability": "Reuse when booking a cost-minimized itinerary across multiple possible airports/cities with a nonstop requirement and multi-instrument payment ordering.",
+      "retrieval_text": "Title: Book cheapest nonstop round trip with flexible airports and prioritized payment methods\nApplicability: Reuse when booking a cost-minimized itinerary across multiple possible airports/cities with a nonstop requirement and multi-instrument payment ordering.\nTask Signature: User wants a new round-trip booking with flexible origin/destination within a region, cheapest nonstop constraint, specified dates/cabin, passenger pulled from profile, and payment priority.\nWorkflow: Gather trip requirements (trip type, date range, cabin, nonstop-only, acceptable origin airports. -> Search candidate nonstop flights across the flexible airport set for both outbound. -> Present the best itinerary and total price; confirm baggage/insurance preferences and any. -> Collect payment preference order and apply balances sequentially (e.g., smaller gift card.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "24-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "24"
+      ],
+      "last_task_query": "Hi! I actually need help with a couple of things on my bookings. First, I’d like to remove a passenger named Ethan from one of my existing reservations. Then I’m also hoping to book a new trip from New York.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:9d786ae82cb8",
+      "family": "modification",
+      "title": "Modify an existing flight booking to a different flight option",
+      "task_signature": "User wants to change an existing reservation (e.g., switch to a nonstop or different time) while keeping other segments the same and applying any.",
+      "workflow": [
+        "Collect booking identifiers (user ID and reservation/confirmation code) and clarify the exact.",
+        "Retrieve the reservation details and search for eligible alternative flights that match.",
+        "Ask the user to confirm: chosen replacement flight, whether any other segments.",
+        "Upon explicit confirmation, apply the itinerary change, process the fare difference/refund to."
+      ],
+      "applicability": "Use when a customer needs to modify an existing flight booking and select from available alternatives while keeping payment handling and policy constraints clear.",
+      "retrieval_text": "Title: Modify an existing flight booking to a different flight option\nApplicability: Use when a customer needs to modify an existing flight booking and select from available alternatives while keeping payment handling and policy constraints clear.\nTask Signature: User wants to change an existing reservation (e.g., switch to a nonstop or different time) while keeping other segments the same and applying any.\nWorkflow: Collect booking identifiers (user ID and reservation/confirmation code) and clarify the exact. -> Retrieve the reservation details and search for eligible alternative flights that match. -> Ask the user to confirm: chosen replacement flight, whether any other segments. -> Upon explicit confirmation, apply the itinerary change, process the fare difference/refund to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "30-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "30"
+      ],
+      "last_task_query": "Hi, I actually need some help with an existing booking I have from Las Vegas to Houston. I’d like to make some changes to that flight.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:1aec19921710",
+      "family": "modification",
+      "title": "Assess feasibility of same-day flight change under cost and fare rules",
+      "task_signature": "User wants to move to an earlier nonstop flight on the same date with a strict out-of-pocket cap, preferring modification over buying a new.",
+      "workflow": [
+        "Collect lookup identifiers (account/user reference plus reservation reference if available) and the.",
+        "Locate the correct reservation, confirm fare/cabin and changeability rules (e.g., basic economy.",
+        "If fare rules block changes, check for airline-initiated disruptions (cancellations/significant schedule changes).",
+        "Search for qualifying alternative flights that meet the user’s constraints and compare.",
+        "If no option meets constraints, summarize the decision rationale and confirm the."
+      ],
+      "applicability": "Reuse when a traveler requests a same-day itinerary change with constraints on nonstop/time and a maximum additional cost, especially when fare rules may prevent modifications.",
+      "retrieval_text": "Title: Assess feasibility of same-day flight change under cost and fare rules\nApplicability: Reuse when a traveler requests a same-day itinerary change with constraints on nonstop/time and a maximum additional cost, especially when fare rules may prevent modifications.\nTask Signature: User wants to move to an earlier nonstop flight on the same date with a strict out-of-pocket cap, preferring modification over buying a new.\nWorkflow: Collect lookup identifiers (account/user reference plus reservation reference if available) and the. -> Locate the correct reservation, confirm fare/cabin and changeability rules (e.g., basic economy. -> If fare rules block changes, check for airline-initiated disruptions (cancellations/significant schedule changes). -> Search for qualifying alternative flights that meet the user’s constraints and compare. -> If no option meets constraints, summarize the decision rationale and confirm the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "31-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "31"
+      ],
+      "last_task_query": "Hi. My cat is really sick and I need to get home earlier than planned. I have an upcoming flight from JFK on May 17, and I’d like to change it to a *nonstop* flight that same day. I’m only.",
+      "status": "candidate"
+    },
+    {
+      "id": "verification:5a834ab35a72",
+      "family": "verification",
+      "title": "Identify and resolve overlapping flight bookings",
+      "task_signature": "User suspects duplicate/overlapping flights around key dates and wants the correct itinerary kept while cancelling conflicting bookings for the correct traveler only.",
+      "workflow": [
+        "Collect account identifier and the user’s known anchor itinerary details (dates, cities/airports).",
+        "Retrieve all reservations on the account and filter to those where the.",
+        "Compare flights against the anchor dates/cities to flag conflicts (same-day departures from.",
+        "Ask for explicit confirmation of which reservations to keep and which to.",
+        "Execute cancellations for the confirmed reservations and provide a completion summary including."
+      ],
+      "applicability": "Use when a traveler is unsure what is booked and needs a verification pass to detect duplicates/overlaps and then safely cancel the unwanted reservations without affecting other passengers.",
+      "retrieval_text": "Title: Identify and resolve overlapping flight bookings\nApplicability: Use when a traveler is unsure what is booked and needs a verification pass to detect duplicates/overlaps and then safely cancel the unwanted reservations without affecting other passengers.\nTask Signature: User suspects duplicate/overlapping flights around key dates and wants the correct itinerary kept while cancelling conflicting bookings for the correct traveler only.\nWorkflow: Collect account identifier and the user’s known anchor itinerary details (dates, cities/airports). -> Retrieve all reservations on the account and filter to those where the. -> Compare flights against the anchor dates/cities to flag conflicts (same-day departures from. -> Ask for explicit confirmation of which reservations to keep and which to. -> Execute cancellations for the confirmed reservations and provide a completion summary including.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "42-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "42"
+      ],
+      "last_task_query": "Hi! I think I might have a problem with my bookings. I had a mix‑up with my assistant and I’m worried that I might have multiple flights booked for the same days. Could you check my profile for any overlapping.",
+      "status": "candidate"
+    },
+    {
+      "id": "cancellation:9477af751b87",
+      "family": "cancellation",
+      "title": "Assess flight cancellation eligibility and escalate if needed",
+      "task_signature": "User requests to cancel a flight reservation; determine eligibility under policy, verify operational disruptions, then either proceed or escalate for goodwill review.",
+      "workflow": [
+        "Collect identifiers and context: user ID, reservation ID (or help locate), and.",
+        "Retrieve reservation details and summarize key policy drivers (fare type, time since.",
+        "If user cites airline disruption or uncertain eligibility, check segment status and.",
+        "If ineligible under policy, clearly state the outcome and offer next-best actions.",
+        "When the user disputes advice received or requests an exception, escalate/transfer to."
+      ],
+      "applicability": "Reuse when handling flight cancellation requests that may be constrained by fare rules, 24-hour windows, insurance coverage, or require verification of airline cancellations and potential escalation for goodwill.",
+      "retrieval_text": "Title: Assess flight cancellation eligibility and escalate if needed\nApplicability: Reuse when handling flight cancellation requests that may be constrained by fare rules, 24-hour windows, insurance coverage, or require verification of airline cancellations and potential escalation for goodwill.\nTask Signature: User requests to cancel a flight reservation; determine eligibility under policy, verify operational disruptions, then either proceed or escalate for goodwill review.\nWorkflow: Collect identifiers and context: user ID, reservation ID (or help locate), and. -> Retrieve reservation details and summarize key policy drivers (fare type, time since. -> If user cites airline disruption or uncertain eligibility, check segment status and. -> If ineligible under policy, clearly state the outcome and offer next-best actions. -> When the user disputes advice received or requests an exception, escalate/transfer to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "0-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "0"
+      ],
+      "last_task_query": "Hi! I need help canceling a flight reservation I have.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:fdb653a0f4e5",
+      "family": "modification",
+      "title": "Change flight date on an existing reservation",
+      "task_signature": "User requests shifting a flight date (often outbound only) without canceling; agent must verify booking details, check fare rules, and either execute the change.",
+      "workflow": [
+        "Express empathy if the request involves a sensitive situation, then confirm the.",
+        "Retrieve the reservation using the provided identifiers and verify key facts (itinerary.",
+        "Check change eligibility based on fare rules (e.g., Basic Economy restrictions), plus.",
+        "If changes are allowed, present available options for the requested date shift.",
+        "If changes are not allowed, clearly state the reason, confirm there are."
+      ],
+      "applicability": "Reuse when a customer asks to move travel dates on an existing booking (especially segment-specific changes) and the outcome depends on fare restrictions and reservation verification.",
+      "retrieval_text": "Title: Change flight date on an existing reservation\nApplicability: Reuse when a customer asks to move travel dates on an existing booking (especially segment-specific changes) and the outcome depends on fare restrictions and reservation verification.\nTask Signature: User requests shifting a flight date (often outbound only) without canceling; agent must verify booking details, check fare rules, and either execute the change.\nWorkflow: Express empathy if the request involves a sensitive situation, then confirm the. -> Retrieve the reservation using the provided identifiers and verify key facts (itinerary. -> Check change eligibility based on fare rules (e.g., Basic Economy restrictions), plus. -> If changes are allowed, present available options for the requested date shift. -> If changes are not allowed, clearly state the reason, confirm there are.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "36-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "36"
+      ],
+      "last_task_query": "Hi… I, uh… I need to change the date on one of my flights. My name is Lucas Brown, and the reservation code is EUJUY6. I don’t want to cancel it, I just… I just need to move it out.",
+      "status": "candidate"
+    },
+    {
+      "id": "compensation:6f11a6c04bf7",
+      "family": "compensation",
+      "title": "Handle flight delay compensation request when booking cannot be located",
+      "task_signature": "Customer requests complaint/compensation for a delayed flight and asks agent to look up their booking via profile, but the flight or reservation cannot be.",
+      "workflow": [
+        "Acknowledge the issue and state what information is required to verify eligibility.",
+        "Attempt lookup using provided identifiers; if results conflict or the flight/status cannot.",
+        "Ask for the next best identifier to locate the correct booking (reservation.",
+        "If verification still fails, explain that compensation cannot be confirmed/issued without a.",
+        "Proceed with transfer/escalation when the customer cannot provide additional identifiers."
+      ],
+      "applicability": "Reuse when a customer seeks compensation for a disruption but automated tools cannot find the flight/reservation under the provided profile details, especially with possible corporate or alternate accounts.",
+      "retrieval_text": "Title: Handle flight delay compensation request when booking cannot be located\nApplicability: Reuse when a customer seeks compensation for a disruption but automated tools cannot find the flight/reservation under the provided profile details, especially with possible corporate or alternate accounts.\nTask Signature: Customer requests complaint/compensation for a delayed flight and asks agent to look up their booking via profile, but the flight or reservation cannot be.\nWorkflow: Acknowledge the issue and state what information is required to verify eligibility. -> Attempt lookup using provided identifiers; if results conflict or the flight/status cannot. -> Ask for the next best identifier to locate the correct booking (reservation. -> If verification still fails, explain that compensation cannot be confirmed/issued without a. -> Proceed with transfer/escalation when the customer cannot provide additional identifiers.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "5-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "5"
+      ],
+      "last_task_query": "Hi. I’m really upset about my delayed flight and I need to file a complaint and talk about compensation. My flight is HAT045 from Phoenix to Seattle, and I’m a Gold member with your airline. Because of this delay I’m.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:22858cb4f122",
+      "family": "modification",
+      "title": "Account balance totals + cheapest same-date cabin rebook plan",
+      "task_signature": "User asks to total stored-value balances (gift cards/certificates) and to change an existing reservation to the cheapest business-class round trip while keeping dates, potentially.",
+      "workflow": [
+        "Retrieve the user profile and enumerate stored payment instruments; sum balances by.",
+        "Load the target reservation and verify key constraints (cabin/fare rules, passenger count.",
+        "Search inventory for the same travel dates in business cabin, allowing connections.",
+        "Explain payment application constraints (e.g., limits on number/type of instruments per booking).",
+        "Before finalizing, confirm critical user choices (which passengers, which single certificate to."
+      ],
+      "applicability": "Reuse when a customer needs both (a) totals across multiple stored-value instruments on their profile and (b) a same-date fare/cabin change where rules may force cancellation and rebooking with prioritized payment allocation.",
+      "retrieval_text": "Title: Account balance totals + cheapest same-date cabin rebook plan\nApplicability: Reuse when a customer needs both (a) totals across multiple stored-value instruments on their profile and (b) a same-date fare/cabin change where rules may force cancellation and rebooking with prioritized payment allocation.\nTask Signature: User asks to total stored-value balances (gift cards/certificates) and to change an existing reservation to the cheapest business-class round trip while keeping dates, potentially.\nWorkflow: Retrieve the user profile and enumerate stored payment instruments; sum balances by. -> Load the target reservation and verify key constraints (cabin/fare rules, passenger count. -> Search inventory for the same travel dates in business cabin, allowing connections. -> Explain payment application constraints (e.g., limits on number/type of instruments per booking). -> Before finalizing, confirm critical user choices (which passengers, which single certificate to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "23-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "23"
+      ],
+      "last_task_query": "Hi! I’d like help with a couple of things on my account and a recent booking. 1) First, I want to know the **total balance on all of my gift cards** and the **total balance on all of my travel.",
+      "status": "candidate"
+    },
+    {
+      "id": "cancellation:ef0ee8053e07",
+      "family": "cancellation",
+      "title": "Cancel a specific flight reservation when duplicate bookings are reported",
+      "task_signature": "User requests cancellation of one of multiple same-day bookings; assistant must identify the correct reservation, validate cancellation eligibility, and either complete cancellation or route.",
+      "workflow": [
+        "Collect identifiers needed to locate the booking (at minimum user account identifier.",
+        "Retrieve the user’s reservations and identify the matching itinerary by origin/destination/date; present.",
+        "Check cancellation eligibility against policy constraints (e.g., 24-hour window, airline-initiated cancellation, premium.",
+        "If permitted, execute the cancellation and confirm outcome; if not permitted, clearly.",
+        "If the user challenges the outcome (e.g., membership status), restate constraints, note."
+      ],
+      "applicability": "Reuse when a user asks to cancel a specific flight but lacks a reservation ID, and the assistant must find the booking, validate policy eligibility, and decide between automated cancellation vs. transfer.",
+      "retrieval_text": "Title: Cancel a specific flight reservation when duplicate bookings are reported\nApplicability: Reuse when a user asks to cancel a specific flight but lacks a reservation ID, and the assistant must find the booking, validate policy eligibility, and decide between automated cancellation vs. transfer.\nTask Signature: User requests cancellation of one of multiple same-day bookings; assistant must identify the correct reservation, validate cancellation eligibility, and either complete cancellation or route.\nWorkflow: Collect identifiers needed to locate the booking (at minimum user account identifier. -> Retrieve the user’s reservations and identify the matching itinerary by origin/destination/date; present. -> Check cancellation eligibility against policy constraints (e.g., 24-hour window, airline-initiated cancellation, premium. -> If permitted, execute the cancellation and confirm outcome; if not permitted, clearly. -> If the user challenges the outcome (e.g., membership status), restate constraints, note.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "43-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "43"
+      ],
+      "last_task_query": "Hi! I actually need some help with a booking issue. I realized I accidentally booked two flights on the same day, May 17, and I’d like to cancel one of them—the one from ATL to JFK. Could you help me.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:dee815066aea",
+      "family": "modification",
+      "title": "Change passenger name on an existing flight reservation",
+      "task_signature": "User requests updating a traveler’s name on a flight booking while keeping the same traveler identity",
+      "workflow": [
+        "Collect required identifiers (user account reference and reservation reference) and the requested.",
+        "Retrieve the reservation and list passengers to identify the correct traveler; use.",
+        "Summarize the exact proposed change (including which passenger and what remains unchanged).",
+        "Submit the passenger update and re-fetch the reservation to verify the new.",
+        "Confirm completion by restating the updated passenger list/details relevant to the change"
+      ],
+      "applicability": "Reuse when a customer wants to correct or update a passenger name on an existing flight reservation and the system requires validating the correct traveler before applying changes",
+      "retrieval_text": "Title: Change passenger name on an existing flight reservation\nApplicability: Reuse when a customer wants to correct or update a passenger name on an existing flight reservation and the system requires validating the correct traveler before applying changes\nTask Signature: User requests updating a traveler’s name on a flight booking while keeping the same traveler identity\nWorkflow: Collect required identifiers (user account reference and reservation reference) and the requested. -> Retrieve the reservation and list passengers to identify the correct traveler; use. -> Summarize the exact proposed change (including which passenger and what remains unchanged). -> Submit the passenger update and re-fetch the reservation to verify the new. -> Confirm completion by restating the updated passenger list/details relevant to the change",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "40-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "40"
+      ],
+      "last_task_query": "Hi, I need to change the passenger name on my flight reservation. I want to change it from Mei Lee to Mei Garcia.",
+      "status": "candidate"
+    },
+    {
+      "id": "compensation:2dbab43fb9e6",
+      "family": "compensation",
+      "title": "Handle compensation request for canceled flight with missing reservation match",
+      "task_signature": "Customer requests compensation for a canceled flight (including consequential losses) but the reservation cannot be found in the visible account records; agent must verify.",
+      "workflow": [
+        "Collect verification and trip identifiers (account/user ID, reservation code if available, flight.",
+        "Search the account’s listed reservations and compare against provided flight/date/route; if no.",
+        "State the compensation policy and channel limits (e.g., goodwill certificate cap; no.",
+        "Offer an escalation path for higher-level review (supervisor/customer relations) and transfer with."
+      ],
+      "applicability": "Use when a customer seeks compensation for a disrupted/canceled flight, especially when the reservation is not found or the customer demands compensation beyond standard goodwill limits.",
+      "retrieval_text": "Title: Handle compensation request for canceled flight with missing reservation match\nApplicability: Use when a customer seeks compensation for a disrupted/canceled flight, especially when the reservation is not found or the customer demands compensation beyond standard goodwill limits.\nTask Signature: Customer requests compensation for a canceled flight (including consequential losses) but the reservation cannot be found in the visible account records; agent must verify.\nWorkflow: Collect verification and trip identifiers (account/user ID, reservation code if available, flight. -> Search the account’s listed reservations and compare against provided flight/date/route; if no. -> State the compensation policy and channel limits (e.g., goodwill certificate cap; no. -> Offer an escalation path for higher-level review (supervisor/customer relations) and transfer with.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "4-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "4"
+      ],
+      "last_task_query": "Hi. I had a really bad experience with one of your flights earlier this month. My business flight was canceled, I missed a very important meeting because of it, and I want compensation for the inconvenience and for the meeting.",
+      "status": "candidate"
+    },
+    {
+      "id": "cancellation:3f4416b9db9d",
+      "family": "cancellation",
+      "title": "Cancel booking and handle refund/credit negotiation with escalation",
+      "task_signature": "User requests cancellation of an existing flight reservation and asks for refund options (including exceptions, credits, vouchers) when standard policy may not allow a.",
+      "workflow": [
+        "Retrieve the reservation using provided locator and traveler identity; summarize itinerary, fare.",
+        "Determine eligibility for refund under standard rules (e.g., 24-hour window, airline cancellation.",
+        "If refund-ineligible, present alternative outcomes: cancel with no refund, cancel with potential.",
+        "Ask a targeted follow-up question to confirm cancellation reason and any qualifying.",
+        "If the user requests a policy exception or compensation beyond standard rules."
+      ],
+      "applicability": "Reuse when a customer wants to cancel a flight booking and seeks a refund or alternative compensation, especially for restrictive fares or outside the standard refund window, and may require escalation.",
+      "retrieval_text": "Title: Cancel booking and handle refund/credit negotiation with escalation\nApplicability: Reuse when a customer wants to cancel a flight booking and seeks a refund or alternative compensation, especially for restrictive fares or outside the standard refund window, and may require escalation.\nTask Signature: User requests cancellation of an existing flight reservation and asks for refund options (including exceptions, credits, vouchers) when standard policy may not allow a.\nWorkflow: Retrieve the reservation using provided locator and traveler identity; summarize itinerary, fare. -> Determine eligibility for refund under standard rules (e.g., 24-hour window, airline cancellation. -> If refund-ineligible, present alternative outcomes: cancel with no refund, cancel with potential. -> Ask a targeted follow-up question to confirm cancellation reason and any qualifying. -> If the user requests a policy exception or compensation beyond standard rules.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "28-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "28"
+      ],
+      "last_task_query": "Hi, I need to cancel my flights under reservation ID **SI5UKW** and I want to get a **refund** for that booking. Can you pull up the reservation under the name **Amelia Rossi** and let me know what my options are.",
+      "status": "candidate"
+    },
+    {
+      "id": "booking:d5781986307c",
+      "family": "booking",
+      "title": "Book a one-way flight with constraints and saved profile/payment",
+      "task_signature": "User requests a one-way flight on a specific date with time/cabin constraints; assistant searches, offers options, collects passenger details (or retrieves from profile with.",
+      "workflow": [
+        "Collect required trip parameters (date, origin/destination airports, cabin, passenger count) and any.",
+        "Search availability and present itineraries that match constraints (nonstop first, then alternatives.",
+        "Gather passenger details required for ticketing; if the user prefers profile lookup.",
+        "Confirm the full booking summary (itinerary, passenger, cabin, add-ons/insurance choice, total) and.",
+        "Apply payment per user instructions (e.g., multiple certificates then card for remainder."
+      ],
+      "applicability": "Reuse when booking flights where the user has constraints, may need connecting options, and wants to use saved profile details and/or stored payment instruments like certificates plus a backup card.",
+      "retrieval_text": "Title: Book a one-way flight with constraints and saved profile/payment\nApplicability: Reuse when booking flights where the user has constraints, may need connecting options, and wants to use saved profile details and/or stored payment instruments like certificates plus a backup card.\nTask Signature: User requests a one-way flight on a specific date with time/cabin constraints; assistant searches, offers options, collects passenger details (or retrieves from profile with.\nWorkflow: Collect required trip parameters (date, origin/destination airports, cabin, passenger count) and any. -> Search availability and present itineraries that match constraints (nonstop first, then alternatives. -> Gather passenger details required for ticketing; if the user prefers profile lookup. -> Confirm the full booking summary (itinerary, passenger, cabin, add-ons/insurance choice, total) and. -> Apply payment per user instructions (e.g., multiple certificates then card for remainder.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "20-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "20"
+      ],
+      "last_task_query": "Hi, I’d like to book a one‑way flight from New York to Seattle on May 20.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:171e8b0e2c59",
+      "family": "modification",
+      "title": "Downgrade cabin and issue fare-difference refund to original payment method",
+      "task_signature": "Customer cannot change passenger count on an existing flight reservation, so they instead request a cabin downgrade on all segments and a refund of.",
+      "workflow": [
+        "Locate the reservation using available identifiers (e.g., user account, traveler name, route.",
+        "Validate eligibility for a cabin change (e.g., segments not flown) and check.",
+        "Compute the estimated fare difference (old cabin total minus new cabin total).",
+        "Apply the cabin change for all segments as requested while keeping flights.",
+        "Provide a clear completion summary: final refund amount, confirmation it has been."
+      ],
+      "applicability": "Use when a traveler wants to reduce cost after booking and receive a refund via a downgrade or fare adjustment, especially when passenger removal is not possible but itinerary/cabin changes are allowed.",
+      "retrieval_text": "Title: Downgrade cabin and issue fare-difference refund to original payment method\nApplicability: Use when a traveler wants to reduce cost after booking and receive a refund via a downgrade or fare adjustment, especially when passenger removal is not possible but itinerary/cabin changes are allowed.\nTask Signature: Customer cannot change passenger count on an existing flight reservation, so they instead request a cabin downgrade on all segments and a refund of.\nWorkflow: Locate the reservation using available identifiers (e.g., user account, traveler name, route. -> Validate eligibility for a cabin change (e.g., segments not flown) and check. -> Compute the estimated fare difference (old cabin total minus new cabin total). -> Apply the cabin change for all segments as requested while keeping flights. -> Provide a clear completion summary: final refund amount, confirmation it has been.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "11-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "11"
+      ],
+      "last_task_query": "Hi, I need to change an upcoming reservation. I have round-trip flights from Las Vegas (LAS) to Denver (DEN), leaving May 19 and returning May 20, and I want to remove one passenger, Sophia, from both flights and get her.",
+      "status": "candidate"
+    },
+    {
+      "id": "modification:8bb8341cfc8a",
+      "family": "modification",
+      "title": "Bundle flight modification quote with constraints and budget gate",
+      "task_signature": "User requests multiple reservation changes as a single package (dates/flight type/time window/cabin/bags) and needs an all-in price check before authorizing, with a hard budget.",
+      "workflow": [
+        "Authenticate and retrieve the existing reservation using the required account identifier plus.",
+        "Translate the user’s package request into explicit, testable constraints (date shifts, nonstop.",
+        "Build an itemized cost estimate for the exact package: compare current itinerary.",
+        "Handle policy uncertainty by stating what can and cannot be confirmed (e.g.",
+        "If the quote exceeds the user’s stated budget, do not apply partial."
+      ],
+      "applicability": "Reuse when a traveler wants a combined set of reservation changes and requires an upfront total cost estimate under specific constraints and a strict budget before approving any modifications.",
+      "retrieval_text": "Title: Bundle flight modification quote with constraints and budget gate\nApplicability: Reuse when a traveler wants a combined set of reservation changes and requires an upfront total cost estimate under specific constraints and a strict budget before approving any modifications.\nTask Signature: User requests multiple reservation changes as a single package (dates/flight type/time window/cabin/bags) and needs an all-in price check before authorizing, with a hard budget.\nWorkflow: Authenticate and retrieve the existing reservation using the required account identifier plus. -> Translate the user’s package request into explicit, testable constraints (date shifts, nonstop. -> Build an itemized cost estimate for the exact package: compare current itinerary. -> Handle policy uncertainty by stating what can and cannot be confirmed (e.g. -> If the quote exceeds the user’s stated budget, do not apply partial.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "34-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "34"
+      ],
+      "last_task_query": "Hi, I actually need some help with an existing reservation. I have a booking with confirmation code HXDUBJ, and I’d like to make several changes to it as a package: 1. Change my **outgoing flight** to a **nonstop flight** on.",
+      "status": "candidate"
+    },
+    {
+      "id": "cancellation:de240ff38a24",
+      "family": "cancellation",
+      "title": "Handle urgent flight cancellation with refund constraints and alternatives",
+      "task_signature": "User requests immediate flight cancellation due to emergency and demands a full refund to original payment method; agent must validate booking, explain refund eligibility.",
+      "workflow": [
+        "Retrieve and verify the reservation details (traveler name, itinerary, fare type, purchase.",
+        "State clearly whether a full refund to the original payment method is.",
+        "Do not cancel unless the user explicitly authorizes cancellation after understanding refund.",
+        "If refund is not available, check feasible alternatives within constraints (e.g., change.",
+        "If the user requests actions outside available capabilities (exception/compassionate review, adding insurance."
+      ],
+      "applicability": "Use when a traveler wants an urgent cancellation and insists on a refund due to extenuating circumstances, especially for restrictive fares where refunds/changes are limited and the agent must prevent accidental cancellation.",
+      "retrieval_text": "Title: Handle urgent flight cancellation with refund constraints and alternatives\nApplicability: Use when a traveler wants an urgent cancellation and insists on a refund due to extenuating circumstances, especially for restrictive fares where refunds/changes are limited and the agent must prevent accidental cancellation.\nTask Signature: User requests immediate flight cancellation due to emergency and demands a full refund to original payment method; agent must validate booking, explain refund eligibility.\nWorkflow: Retrieve and verify the reservation details (traveler name, itinerary, fare type, purchase. -> State clearly whether a full refund to the original payment method is. -> Do not cancel unless the user explicitly authorizes cancellation after understanding refund. -> If refund is not available, check feasible alternatives within constraints (e.g., change. -> If the user requests actions outside available capabilities (exception/compassionate review, adding insurance.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "45-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "45"
+      ],
+      "last_task_query": "I need to cancel my flight right away. There’s been a family emergency and I can’t travel anymore. My reservation number is PEP4E0, and my name is Sophia Taylor. I want this fully refunded because of the situation, not as.",
+      "status": "candidate"
+    },
+    {
+      "id": "verification:7f806f899bda",
+      "family": "verification",
+      "title": "Verify baggage allowance on a flight reservation",
+      "task_signature": "User asks for the total number of suitcases/bags allowed on an upcoming booking and wants an accurate numeric answer.",
+      "workflow": [
+        "Request the minimum identifier needed to locate the customer record (e.g., user.",
+        "Retrieve the user profile and list available reservations; select the relevant reservation.",
+        "Fetch reservation details and read the included baggage allowance field(s) for total/checked.",
+        "Respond with the allowance as a single numeric value as requested.",
+        "Clarify scope (e.g., checked vs carry-on/personal items) based on what the reservation."
+      ],
+      "applicability": "Use when a customer wants confirmation of baggage/suitcase allowance tied to a specific flight reservation and needs the result as a clear number with scope clarification.",
+      "retrieval_text": "Title: Verify baggage allowance on a flight reservation\nApplicability: Use when a customer wants confirmation of baggage/suitcase allowance tied to a specific flight reservation and needs the result as a clear number with scope clarification.\nTask Signature: User asks for the total number of suitcases/bags allowed on an upcoming booking and wants an accurate numeric answer.\nWorkflow: Request the minimum identifier needed to locate the customer record (e.g., user. -> Retrieve the user profile and list available reservations; select the relevant reservation. -> Fetch reservation details and read the included baggage allowance field(s) for total/checked. -> Respond with the allowance as a single numeric value as requested. -> Clarify scope (e.g., checked vs carry-on/personal items) based on what the reservation.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "3-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "3"
+      ],
+      "last_task_query": "Hi, I actually have a question about my baggage allowance. I have an upcoming flight and I need to know the total number of suitcases I’m allowed to take on that reservation. It’s really important that this is accurate because.",
+      "status": "candidate"
+    }
+  ],
+  "family_index": {
+    "modification": [
+      "modification:ebc68355c19d",
+      "modification:b27cc98b7186",
+      "modification:a17a422b355f",
+      "modification:9775574958ef",
+      "modification:9d786ae82cb8",
+      "modification:1aec19921710",
+      "modification:fdb653a0f4e5",
+      "modification:22858cb4f122",
+      "modification:dee815066aea",
+      "modification:171e8b0e2c59",
+      "modification:8bb8341cfc8a"
+    ],
+    "cancellation": [
+      "cancellation:9d6ec07c2166",
+      "cancellation:9477af751b87",
+      "cancellation:ef0ee8053e07",
+      "cancellation:3f4416b9db9d",
+      "cancellation:de240ff38a24"
+    ],
+    "booking": [
+      "booking:2f0dd464de9a",
+      "booking:d5781986307c"
+    ],
+    "verification": [
+      "verification:5a834ab35a72",
+      "verification:7f806f899bda"
+    ],
+    "compensation": [
+      "compensation:6f11a6c04bf7",
+      "compensation:2dbab43fb9e6"
+    ]
+  },
+  "events": [
+    {
+      "family": "modification",
+      "entry_id": "modification:ebc68355c19d",
+      "source_cycle": 0,
+      "source_task": "13-c0-t0-s626729",
+      "task_id": "13",
+      "task_query": "Hi, I need some help changing an existing reservation. I’ve got a one-stop return flight from Atlanta (ATL) to Los Angeles (LAX), and I’d like to change just that return segment to a **nonstop flight from ATL to Las Vegas.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:b27cc98b7186",
+      "source_cycle": 0,
+      "source_task": "10-c0-t0-s626729",
+      "task_id": "10",
+      "task_query": "Hi! I need some help changing an upcoming trip. I have a flight from Houston (IAH) to Seattle (SEA) on May 23, and I’d like to move it to May 24 and also upgrade the cabin to business for everyone.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "cancellation",
+      "entry_id": "cancellation:9d6ec07c2166",
+      "source_cycle": 0,
+      "source_task": "48-c0-t0-s626729",
+      "task_id": "48",
+      "task_query": "Hi, I need to cancel a flight I booked by mistake earlier today and get a full refund. I booked it about 10 hours ago.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:a17a422b355f",
+      "source_cycle": 0,
+      "source_task": "12-c0-t0-s626729",
+      "task_id": "12",
+      "task_query": "Hi, I’ve got an upcoming flight from Boston to Minneapolis under reservation ID YAX4DR, and I’d like some help with changes. 1. I want to upgrade the whole reservation to business class for all passengers, as long as the extra.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:9775574958ef",
+      "source_cycle": 0,
+      "source_task": "24-c0-t0-s626729",
+      "task_id": "24",
+      "task_query": "Hi! I actually need help with a couple of things on my bookings. First, I’d like to remove a passenger named Ethan from one of my existing reservations. Then I’m also hoping to book a new trip from New York.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "booking",
+      "entry_id": "booking:2f0dd464de9a",
+      "source_cycle": 0,
+      "source_task": "24-c0-t0-s626729",
+      "task_id": "24",
+      "task_query": "Hi! I actually need help with a couple of things on my bookings. First, I’d like to remove a passenger named Ethan from one of my existing reservations. Then I’m also hoping to book a new trip from New York.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:9d786ae82cb8",
+      "source_cycle": 0,
+      "source_task": "30-c0-t0-s626729",
+      "task_id": "30",
+      "task_query": "Hi, I actually need some help with an existing booking I have from Las Vegas to Houston. I’d like to make some changes to that flight.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:1aec19921710",
+      "source_cycle": 0,
+      "source_task": "31-c0-t0-s626729",
+      "task_id": "31",
+      "task_query": "Hi. My cat is really sick and I need to get home earlier than planned. I have an upcoming flight from JFK on May 17, and I’d like to change it to a *nonstop* flight that same day. I’m only.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "verification",
+      "entry_id": "verification:5a834ab35a72",
+      "source_cycle": 0,
+      "source_task": "42-c0-t0-s626729",
+      "task_id": "42",
+      "task_query": "Hi! I think I might have a problem with my bookings. I had a mix‑up with my assistant and I’m worried that I might have multiple flights booked for the same days. Could you check my profile for any overlapping.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "cancellation",
+      "entry_id": "cancellation:9477af751b87",
+      "source_cycle": 0,
+      "source_task": "0-c0-t0-s626729",
+      "task_id": "0",
+      "task_query": "Hi! I need help canceling a flight reservation I have.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:fdb653a0f4e5",
+      "source_cycle": 0,
+      "source_task": "36-c0-t0-s626729",
+      "task_id": "36",
+      "task_query": "Hi… I, uh… I need to change the date on one of my flights. My name is Lucas Brown, and the reservation code is EUJUY6. I don’t want to cancel it, I just… I just need to move it out.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "compensation",
+      "entry_id": "compensation:6f11a6c04bf7",
+      "source_cycle": 0,
+      "source_task": "5-c0-t0-s626729",
+      "task_id": "5",
+      "task_query": "Hi. I’m really upset about my delayed flight and I need to file a complaint and talk about compensation. My flight is HAT045 from Phoenix to Seattle, and I’m a Gold member with your airline. Because of this delay I’m.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:22858cb4f122",
+      "source_cycle": 0,
+      "source_task": "23-c0-t0-s626729",
+      "task_id": "23",
+      "task_query": "Hi! I’d like help with a couple of things on my account and a recent booking. 1) First, I want to know the **total balance on all of my gift cards** and the **total balance on all of my travel.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "cancellation",
+      "entry_id": "cancellation:ef0ee8053e07",
+      "source_cycle": 0,
+      "source_task": "43-c0-t0-s626729",
+      "task_id": "43",
+      "task_query": "Hi! I actually need some help with a booking issue. I realized I accidentally booked two flights on the same day, May 17, and I’d like to cancel one of them—the one from ATL to JFK. Could you help me.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:dee815066aea",
+      "source_cycle": 0,
+      "source_task": "40-c0-t0-s626729",
+      "task_id": "40",
+      "task_query": "Hi, I need to change the passenger name on my flight reservation. I want to change it from Mei Lee to Mei Garcia.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "compensation",
+      "entry_id": "compensation:2dbab43fb9e6",
+      "source_cycle": 0,
+      "source_task": "4-c0-t0-s626729",
+      "task_id": "4",
+      "task_query": "Hi. I had a really bad experience with one of your flights earlier this month. My business flight was canceled, I missed a very important meeting because of it, and I want compensation for the inconvenience and for the meeting.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "cancellation",
+      "entry_id": "cancellation:3f4416b9db9d",
+      "source_cycle": 0,
+      "source_task": "28-c0-t0-s626729",
+      "task_id": "28",
+      "task_query": "Hi, I need to cancel my flights under reservation ID **SI5UKW** and I want to get a **refund** for that booking. Can you pull up the reservation under the name **Amelia Rossi** and let me know what my options are.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "booking",
+      "entry_id": "booking:d5781986307c",
+      "source_cycle": 0,
+      "source_task": "20-c0-t0-s626729",
+      "task_id": "20",
+      "task_query": "Hi, I’d like to book a one‑way flight from New York to Seattle on May 20.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:171e8b0e2c59",
+      "source_cycle": 0,
+      "source_task": "11-c0-t0-s626729",
+      "task_id": "11",
+      "task_query": "Hi, I need to change an upcoming reservation. I have round-trip flights from Las Vegas (LAS) to Denver (DEN), leaving May 19 and returning May 20, and I want to remove one passenger, Sophia, from both flights and get her.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "modification",
+      "entry_id": "modification:8bb8341cfc8a",
+      "source_cycle": 0,
+      "source_task": "34-c0-t0-s626729",
+      "task_id": "34",
+      "task_query": "Hi, I actually need some help with an existing reservation. I have a booking with confirmation code HXDUBJ, and I’d like to make several changes to it as a package: 1. Change my **outgoing flight** to a **nonstop flight** on.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "cancellation",
+      "entry_id": "cancellation:de240ff38a24",
+      "source_cycle": 0,
+      "source_task": "45-c0-t0-s626729",
+      "task_id": "45",
+      "task_query": "I need to cancel my flight right away. There’s been a family emergency and I can’t travel anymore. My reservation number is PEP4E0, and my name is Sophia Taylor. I want this fully refunded because of the situation, not as.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "verification",
+      "entry_id": "verification:7f806f899bda",
+      "source_cycle": 0,
+      "source_task": "3-c0-t0-s626729",
+      "task_id": "3",
+      "task_query": "Hi, I actually have a question about my baggage allowance. I have an upcoming flight and I need to know the total number of suitcases I’m allowed to take on that reservation. It’s really important that this is accurate because.",
+      "status": "candidate",
+      "success_count": 1
+    }
+  ]
+}

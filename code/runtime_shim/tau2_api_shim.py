@@ -138,6 +138,7 @@ def patch_tau2_runner(module: ModuleType, settings: ShimSettings) -> None:
     original_load = getattr(module, "load_runner_config")
     original_build = getattr(module, "build_tau2_config")
     original_get_modules = getattr(module, "get_tau2_modules", None)
+    original_get_tasks = getattr(module, "get_tasks_for_domain", None)
 
     def build_run_dir(config: Any) -> Path:
         del config
@@ -192,6 +193,25 @@ def patch_tau2_runner(module: ModuleType, settings: ShimSettings) -> None:
     module.build_run_dir = build_run_dir
     module.load_runner_config = load_runner_config
     module.build_tau2_config = build_tau2_config
+    task_ids_file = os.environ.get("TAU2_TASK_IDS_FILE", "")
+    if task_ids_file and callable(original_get_tasks):
+        @wraps(original_get_tasks)
+        def get_tasks_for_domain(mods: Any, domain: str) -> list[Any]:
+            selection = json.loads(Path(task_ids_file).read_text(encoding="utf-8"))
+            if selection.get("domain") != domain:
+                raise ValueError("task selection domain mismatch")
+            ids = selection.get("task_ids")
+            if not isinstance(ids, list) or not ids or not all(isinstance(x, str) for x in ids):
+                raise ValueError("task selection must contain nonempty string task_ids")
+            if len(ids) != len(set(ids)):
+                raise ValueError("task selection contains duplicate IDs")
+            base_tasks = original_get_tasks(mods, domain)
+            by_id = {str(task.id): task for task in base_tasks}
+            if len(by_id) != len(base_tasks) or not set(ids) <= set(by_id):
+                raise ValueError("task selection must be a subset of the base split")
+            return [by_id[task_id] for task_id in ids]
+
+        module.get_tasks_for_domain = get_tasks_for_domain
     module._tau2_api_shim_patched = True
 
 

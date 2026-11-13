@@ -1,0 +1,153 @@
+
+tau2-bench/airline (evolve):   0%|          | 0/35 [00:00<?, ?it/s]
+tau2-bench/airline (evolve):   3%|▎         | 1/35 [06:08<3:28:41, 368.29s/it]
+tau2-bench/airline (evolve):   3%|▎         | 1/35 [06:08<3:28:41, 368.29s/it, cycle=1/1, failure=0, inflight=9, success=0]
+tau2-bench/airline (evolve):   3%|▎         | 1/35 [06:08<3:28:41, 368.29s/it, cycle=1/1, failure=0, success=1]            
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (evolve):   6%|▌         | 2/35 [07:21<1:47:06, 194.73s/it, cycle=1/1, failure=0, success=1]
+tau2-bench/airline (evolve):   6%|▌         | 2/35 [07:21<1:47:06, 194.73s/it, cycle=1/1, failure=0, inflight=9, success=1]
+tau2-bench/airline (evolve):   6%|▌         | 2/35 [07:22<1:47:06, 194.73s/it, cycle=1/1, failure=0, success=2]            
+tau2-bench/airline (evolve):   9%|▊         | 3/35 [08:28<1:12:44, 136.38s/it, cycle=1/1, failure=0, success=2]
+tau2-bench/airline (evolve):   9%|▊         | 3/35 [08:28<1:12:44, 136.38s/it, cycle=1/1, failure=0, inflight=9, success=2]
+tau2-bench/airline (evolve):   9%|▊         | 3/35 [08:28<1:12:44, 136.38s/it, cycle=1/1, failure=0, success=3]            
+tau2-bench/airline (evolve):  11%|█▏        | 4/35 [08:46<46:13, 89.47s/it, cycle=1/1, failure=0, success=3]   
+tau2-bench/airline (evolve):  11%|█▏        | 4/35 [08:46<46:13, 89.47s/it, cycle=1/1, failure=0, inflight=9, success=3]
+tau2-bench/airline (evolve):  11%|█▏        | 4/35 [08:46<46:13, 89.47s/it, cycle=1/1, failure=1, success=3]            
+tau2-bench/airline (evolve):  14%|█▍        | 5/35 [09:12<33:24, 66.82s/it, cycle=1/1, failure=1, success=3]
+tau2-bench/airline (evolve):  14%|█▍        | 5/35 [09:12<33:24, 66.82s/it, cycle=1/1, failure=1, inflight=9, success=3]
+tau2-bench/airline (evolve):  14%|█▍        | 5/35 [09:13<33:24, 66.82s/it, cycle=1/1, failure=1, success=4]            
+tau2-bench/airline (evolve):  17%|█▋        | 6/35 [09:44<26:31, 54.88s/it, cycle=1/1, failure=1, success=4]
+tau2-bench/airline (evolve):  17%|█▋        | 6/35 [09:44<26:31, 54.88s/it, cycle=1/1, failure=1, inflight=9, success=4]
+tau2-bench/airline (evolve):  17%|█▋        | 6/35 [09:44<26:31, 54.88s/it, cycle=1/1, failure=1, success=5]            
+tau2-bench/airline (evolve):  20%|██        | 7/35 [11:25<32:43, 70.13s/it, cycle=1/1, failure=1, success=5]
+tau2-bench/airline (evolve):  20%|██        | 7/35 [11:25<32:43, 70.13s/it, cycle=1/1, failure=1, inflight=9, success=5]
+tau2-bench/airline (evolve):  20%|██        | 7/35 [11:26<32:43, 70.13s/it, cycle=1/1, failure=2, success=5]            
+tau2-bench/airline (evolve):  23%|██▎       | 8/35 [12:18<29:04, 64.62s/it, cycle=1/1, failure=2, success=5]
+tau2-bench/airline (evolve):  23%|██▎       | 8/35 [12:18<29:04, 64.62s/it, cycle=1/1, failure=2, inflight=9, success=5]
+tau2-bench/airline (evolve):  23%|██▎       | 8/35 [12:19<29:04, 64.62s/it, cycle=1/1, failure=2, success=6]            
+tau2-bench/airline (evolve):  26%|██▌       | 9/35 [12:40<22:10, 51.19s/it, cycle=1/1, failure=2, success=6]
+tau2-bench/airline (evolve):  26%|██▌       | 9/35 [12:40<22:10, 51.19s/it, cycle=1/1, failure=2, inflight=9, success=6]
+tau2-bench/airline (evolve):  26%|██▌       | 9/35 [12:40<22:10, 51.19s/it, cycle=1/1, failure=2, success=7]            
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (evolve):  29%|██▊       | 10/35 [13:50<23:44, 56.99s/it, cycle=1/1, failure=2, success=7]
+tau2-bench/airline (evolve):  29%|██▊       | 10/35 [13:50<23:44, 56.99s/it, cycle=1/1, failure=2, inflight=9, success=7]
+tau2-bench/airline (evolve):  29%|██▊       | 10/35 [13:50<23:44, 56.99s/it, cycle=1/1, failure=3, success=7]            
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (evolve):  31%|███▏      | 11/35 [13:55<16:27, 41.14s/it, cycle=1/1, failure=3, success=7]
+tau2-bench/airline (evolve):  31%|███▏      | 11/35 [13:55<16:27, 41.14s/it, cycle=1/1, failure=3, inflight=9, success=7]
+tau2-bench/airline (evolve):  31%|███▏      | 11/35 [13:56<16:27, 41.14s/it, cycle=1/1, failure=3, success=8]            
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (evolve):  34%|███▍      | 12/35 [14:32<15:19, 39.96s/it, cycle=1/1, failure=3, success=8]
+tau2-bench/airline (evolve):  34%|███▍      | 12/35 [14:32<15:19, 39.96s/it, cycle=1/1, failure=3, inflight=9, success=8]
+tau2-bench/airline (evolve):  34%|███▍      | 12/35 [14:33<15:19, 39.96s/it, cycle=1/1, failure=3, success=9]            
+tau2-bench/airline (evolve):  37%|███▋      | 13/35 [14:51<12:14, 33.38s/it, cycle=1/1, failure=3, success=9]
+tau2-bench/airline (evolve):  37%|███▋      | 13/35 [14:51<12:14, 33.38s/it, cycle=1/1, failure=3, inflight=9, success=9]
+tau2-bench/airline (evolve):  37%|███▋      | 13/35 [14:51<12:14, 33.38s/it, cycle=1/1, failure=4, success=9]            
+tau2-bench/airline (evolve):  40%|████      | 14/35 [15:18<11:00, 31.45s/it, cycle=1/1, failure=4, success=9]
+tau2-bench/airline (evolve):  40%|████      | 14/35 [15:18<11:00, 31.45s/it, cycle=1/1, failure=4, inflight=9, success=9]
+tau2-bench/airline (evolve):  40%|████      | 14/35 [15:18<11:00, 31.45s/it, cycle=1/1, failure=5, success=9]            
+tau2-bench/airline (evolve):  43%|████▎     | 15/35 [16:07<12:19, 36.97s/it, cycle=1/1, failure=5, success=9]
+tau2-bench/airline (evolve):  43%|████▎     | 15/35 [16:07<12:19, 36.97s/it, cycle=1/1, failure=5, inflight=9, success=9]
+tau2-bench/airline (evolve):  43%|████▎     | 15/35 [16:08<12:19, 36.97s/it, cycle=1/1, failure=6, success=9]            
+tau2-bench/airline (evolve):  46%|████▌     | 16/35 [16:11<08:30, 26.84s/it, cycle=1/1, failure=6, success=9]
+tau2-bench/airline (evolve):  46%|████▌     | 16/35 [16:11<08:30, 26.84s/it, cycle=1/1, failure=6, inflight=9, success=9]
+tau2-bench/airline (evolve):  46%|████▌     | 16/35 [16:11<08:30, 26.84s/it, cycle=1/1, failure=6, success=10]           
+tau2-bench/airline (evolve):  49%|████▊     | 17/35 [16:45<08:44, 29.16s/it, cycle=1/1, failure=6, success=10]
+tau2-bench/airline (evolve):  49%|████▊     | 17/35 [16:45<08:44, 29.16s/it, cycle=1/1, failure=6, inflight=9, success=10]
+tau2-bench/airline (evolve):  49%|████▊     | 17/35 [16:46<08:44, 29.16s/it, cycle=1/1, failure=7, success=10]            
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (evolve):  51%|█████▏    | 18/35 [20:01<22:24, 79.11s/it, cycle=1/1, failure=7, success=10]
+tau2-bench/airline (evolve):  51%|█████▏    | 18/35 [20:01<22:24, 79.11s/it, cycle=1/1, failure=7, inflight=9, success=10]
+tau2-bench/airline (evolve):  51%|█████▏    | 18/35 [20:01<22:24, 79.11s/it, cycle=1/1, failure=8, success=10]            
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+tau2-bench/airline (evolve):  54%|█████▍    | 19/35 [21:11<20:25, 76.58s/it, cycle=1/1, failure=8, success=10]
+tau2-bench/airline (evolve):  54%|█████▍    | 19/35 [21:11<20:25, 76.58s/it, cycle=1/1, failure=8, inflight=9, success=10]
+tau2-bench/airline (evolve):  54%|█████▍    | 19/35 [21:12<20:25, 76.58s/it, cycle=1/1, failure=8, success=11]            
+tau2-bench/airline (evolve):  57%|█████▋    | 20/35 [21:19<13:59, 55.95s/it, cycle=1/1, failure=8, success=11]
+tau2-bench/airline (evolve):  57%|█████▋    | 20/35 [21:19<13:59, 55.95s/it, cycle=1/1, failure=8, inflight=9, success=11]
+tau2-bench/airline (evolve):  57%|█████▋    | 20/35 [21:20<13:59, 55.95s/it, cycle=1/1, failure=9, success=11]            
+tau2-bench/airline (evolve):  60%|██████    | 21/35 [21:28<09:47, 41.93s/it, cycle=1/1, failure=9, success=11]
+tau2-bench/airline (evolve):  60%|██████    | 21/35 [21:28<09:47, 41.93s/it, cycle=1/1, failure=9, inflight=9, success=11]
+tau2-bench/airline (evolve):  60%|██████    | 21/35 [21:29<09:47, 41.93s/it, cycle=1/1, failure=10, success=11]           
+tau2-bench/airline (evolve):  63%|██████▎   | 22/35 [21:35<06:47, 31.37s/it, cycle=1/1, failure=10, success=11]
+tau2-bench/airline (evolve):  63%|██████▎   | 22/35 [21:35<06:47, 31.37s/it, cycle=1/1, failure=10, inflight=9, success=11]
+tau2-bench/airline (evolve):  63%|██████▎   | 22/35 [21:36<06:47, 31.37s/it, cycle=1/1, failure=10, success=12]            
+tau2-bench/airline (evolve):  66%|██████▌   | 23/35 [23:16<10:27, 52.31s/it, cycle=1/1, failure=10, success=12]
+tau2-bench/airline (evolve):  66%|██████▌   | 23/35 [23:16<10:27, 52.31s/it, cycle=1/1, failure=10, inflight=9, success=12]
+tau2-bench/airline (evolve):  66%|██████▌   | 23/35 [23:17<10:27, 52.31s/it, cycle=1/1, failure=10, success=13]            
+tau2-bench/airline (evolve):  69%|██████▊   | 24/35 [23:29<07:25, 40.52s/it, cycle=1/1, failure=10, success=13]
+tau2-bench/airline (evolve):  69%|██████▊   | 24/35 [23:29<07:25, 40.52s/it, cycle=1/1, failure=10, inflight=9, success=13]
+tau2-bench/airline (evolve):  69%|██████▊   | 24/35 [23:30<07:25, 40.52s/it, cycle=1/1, failure=11, success=13]            
+tau2-bench/airline (evolve):  71%|███████▏  | 25/35 [24:32<07:51, 47.12s/it, cycle=1/1, failure=11, success=13]
+tau2-bench/airline (evolve):  71%|███████▏  | 25/35 [24:32<07:51, 47.12s/it, cycle=1/1, failure=11, inflight=9, success=13]
+tau2-bench/airline (evolve):  71%|███████▏  | 25/35 [24:32<07:51, 47.12s/it, cycle=1/1, failure=12, success=13]            
+tau2-bench/airline (evolve):  74%|███████▍  | 26/35 [24:35<05:04, 33.87s/it, cycle=1/1, failure=12, success=13]
+tau2-bench/airline (evolve):  74%|███████▍  | 26/35 [24:35<05:04, 33.87s/it, cycle=1/1, failure=12, inflight=9, success=13]
+tau2-bench/airline (evolve):  74%|███████▍  | 26/35 [24:35<05:04, 33.87s/it, cycle=1/1, failure=13, success=13]            
+tau2-bench/airline (evolve):  77%|███████▋  | 27/35 [25:47<06:02, 45.30s/it, cycle=1/1, failure=13, success=13]
+tau2-bench/airline (evolve):  77%|███████▋  | 27/35 [25:47<06:02, 45.30s/it, cycle=1/1, failure=13, inflight=8, success=13]
+tau2-bench/airline (evolve):  77%|███████▋  | 27/35 [25:47<06:02, 45.30s/it, cycle=1/1, failure=13, success=14]            
+tau2-bench/airline (evolve):  80%|████████  | 28/35 [27:56<08:12, 70.36s/it, cycle=1/1, failure=13, success=14]
+tau2-bench/airline (evolve):  80%|████████  | 28/35 [27:56<08:12, 70.36s/it, cycle=1/1, failure=13, inflight=7, success=14]
+tau2-bench/airline (evolve):  80%|████████  | 28/35 [27:56<08:12, 70.36s/it, cycle=1/1, failure=14, success=14]            
+tau2-bench/airline (evolve):  83%|████████▎ | 29/35 [27:59<05:02, 50.37s/it, cycle=1/1, failure=14, success=14]
+tau2-bench/airline (evolve):  83%|████████▎ | 29/35 [27:59<05:02, 50.37s/it, cycle=1/1, failure=14, inflight=6, success=14]
+tau2-bench/airline (evolve):  83%|████████▎ | 29/35 [28:00<05:02, 50.37s/it, cycle=1/1, failure=15, success=14]            
+tau2-bench/airline (evolve):  86%|████████▌ | 30/35 [28:12<03:15, 39.04s/it, cycle=1/1, failure=15, success=14]
+tau2-bench/airline (evolve):  86%|████████▌ | 30/35 [28:12<03:15, 39.04s/it, cycle=1/1, failure=15, inflight=5, success=14]
+tau2-bench/airline (evolve):  86%|████████▌ | 30/35 [28:12<03:15, 39.04s/it, cycle=1/1, failure=16, success=14]            
+tau2-bench/airline (evolve):  89%|████████▊ | 31/35 [29:13<03:02, 45.59s/it, cycle=1/1, failure=16, success=14]
+tau2-bench/airline (evolve):  89%|████████▊ | 31/35 [29:13<03:02, 45.59s/it, cycle=1/1, failure=16, inflight=4, success=14]
+tau2-bench/airline (evolve):  89%|████████▊ | 31/35 [29:13<03:02, 45.59s/it, cycle=1/1, failure=17, success=14]            
+tau2-bench/airline (evolve):  91%|█████████▏| 32/35 [29:18<01:40, 33.50s/it, cycle=1/1, failure=17, success=14]
+tau2-bench/airline (evolve):  91%|█████████▏| 32/35 [29:18<01:40, 33.50s/it, cycle=1/1, failure=17, inflight=3, success=14]
+tau2-bench/airline (evolve):  91%|█████████▏| 32/35 [29:19<01:40, 33.50s/it, cycle=1/1, failure=17, success=15]            
+tau2-bench/airline (evolve):  94%|█████████▍| 33/35 [30:02<01:13, 36.66s/it, cycle=1/1, failure=17, success=15]
+tau2-bench/airline (evolve):  94%|█████████▍| 33/35 [30:02<01:13, 36.66s/it, cycle=1/1, failure=17, inflight=2, success=15]
+tau2-bench/airline (evolve):  94%|█████████▍| 33/35 [30:03<01:13, 36.66s/it, cycle=1/1, failure=17, success=16]            
+tau2-bench/airline (evolve):  97%|█████████▋| 34/35 [30:50<00:40, 40.12s/it, cycle=1/1, failure=17, success=16]
+tau2-bench/airline (evolve):  97%|█████████▋| 34/35 [30:50<00:40, 40.12s/it, cycle=1/1, failure=17, inflight=1, success=16]
+tau2-bench/airline (evolve):  97%|█████████▋| 34/35 [30:51<00:40, 40.12s/it, cycle=1/1, failure=17, success=17]            
+tau2-bench/airline (evolve): 100%|██████████| 35/35 [32:08<00:00, 51.40s/it, cycle=1/1, failure=17, success=17]
+tau2-bench/airline (evolve): 100%|██████████| 35/35 [32:08<00:00, 51.40s/it, cycle=1/1, failure=17, inflight=0, success=17]
+tau2-bench/airline (evolve): 100%|██████████| 35/35 [32:08<00:00, 51.40s/it, cycle=1/1, failure=17, success=18]            
+tau2-bench/airline (evolve): 100%|██████████| 35/35 [32:09<00:00, 55.12s/it, cycle=1/1, failure=17, success=18]
+{"method": "awm", "output_dir": "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/results/train-val-base-300-v1/train/awm/airline", "status": "succeeded"}

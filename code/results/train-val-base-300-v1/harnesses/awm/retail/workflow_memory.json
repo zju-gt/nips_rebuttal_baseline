@@ -1,0 +1,2357 @@
+{
+  "version": 1,
+  "domain": "retail",
+  "families": [
+    "authentication",
+    "status",
+    "exchange_modify",
+    "variant",
+    "payment"
+  ],
+  "entries": [
+    {
+      "id": "exchange_modify:46d5c05ac8d0",
+      "family": "exchange_modify",
+      "title": "Exchange delivered item to highest-available spec variant with payment adjustment",
+      "task_signature": "Customer wants to exchange a delivered product for the maximum available capability (e.g., zoom) while keeping other specs the same where possible, and pay.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., email or name + ZIP).",
+        "Identify the purchased item and retrieve all in-catalog variants; determine the maximum.",
+        "Explain trade-offs when the exact spec match at the maximum capability is.",
+        "Confirm exchange inputs explicitly (order, old item, new item, single-exchange constraints, and.",
+        "Submit the exchange request with the selected new variant and payment method."
+      ],
+      "applicability": "Reuse when processing an exchange for a delivered order where the customer requests the highest-performance variant, needs spec-matching where possible, and requires charging/refunding a price difference via a chosen payment method.",
+      "retrieval_text": "Title: Exchange delivered item to highest-available spec variant with payment adjustment\nApplicability: Reuse when processing an exchange for a delivered order where the customer requests the highest-performance variant, needs spec-matching where possible, and requires charging/refunding a price difference via a chosen payment method.\nTask Signature: Customer wants to exchange a delivered product for the maximum available capability (e.g., zoom) while keeping other specs the same where possible, and pay.\nWorkflow: Authenticate the customer using available identifiers (e.g., email or name + ZIP). -> Identify the purchased item and retrieve all in-catalog variants; determine the maximum. -> Explain trade-offs when the exact spec match at the maximum capability is. -> Confirm exchange inputs explicitly (order, old item, new item, single-exchange constraints, and. -> Submit the exchange request with the selected new variant and payment method.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "52-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "52"
+      ],
+      "last_task_query": "Hi! I just received a digital camera from your store, and the zoom isn’t nearly as strong as I expected. I use it for bird‑watching and I’d like to exchange it for a model that has the *maximum* zoom capacity.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:3162db2ba5c4",
+      "family": "exchange_modify",
+      "title": "Modify or cancel pending order items with fallback to cancellation",
+      "task_signature": "Customer wants to remove an accidental item and/or change an item configuration in a pending order, with instructions to cancel if changes are not.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers (e.g., account email or name plus.",
+        "Locate the relevant pending order(s) and confirm current items, options, and order.",
+        "Check whether requested item removal or configuration change is permitted; if the.",
+        "If modification/removal is not possible or the variant is unavailable, offer cancellation.",
+        "Ask the customer to confirm which order(s) to act on and to."
+      ],
+      "applicability": "Use when a customer needs to edit a pending order (remove an item or change product options) and wants the order canceled if the edit cannot be completed.",
+      "retrieval_text": "Title: Modify or cancel pending order items with fallback to cancellation\nApplicability: Use when a customer needs to edit a pending order (remove an item or change product options) and wants the order canceled if the edit cannot be completed.\nTask Signature: Customer wants to remove an accidental item and/or change an item configuration in a pending order, with instructions to cancel if changes are not.\nWorkflow: Authenticate the customer using approved identifiers (e.g., account email or name plus. -> Locate the relevant pending order(s) and confirm current items, options, and order. -> Check whether requested item removal or configuration change is permitted; if the. -> If modification/removal is not possible or the variant is unavailable, offer cancellation. -> Ask the customer to confirm which order(s) to act on and to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "76-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "76"
+      ],
+      "last_task_query": "Hi! I actually need help with an order I placed. - I accidentally added a fleece jacket and I’d like to remove it from the pending order. If you can’t remove just that item, please cancel the whole order because.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:c5e46699b7d3",
+      "family": "exchange_modify",
+      "title": "Modify an order variant or cancel if unavailable",
+      "task_signature": "Customer wants to switch an item in an existing order to a specific size/variant while keeping other attributes the same, with a fallback request.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers and request the order reference; if.",
+        "Locate the target item in the order and capture its key options.",
+        "Check the product’s variant catalog for the requested alternative that matches the.",
+        "If the requested variant is available, propose the exchange/modify action and ask.",
+        "Execute the confirmed action (modify or cancel) and provide a concise summary."
+      ],
+      "applicability": "Use when a customer requests an order change to a different size/version of the same product while preserving other attributes, and wants cancellation if the exact variant cannot be provided.",
+      "retrieval_text": "Title: Modify an order variant or cancel if unavailable\nApplicability: Use when a customer requests an order change to a different size/version of the same product while preserving other attributes, and wants cancellation if the exact variant cannot be provided.\nTask Signature: Customer wants to switch an item in an existing order to a specific size/variant while keeping other attributes the same, with a fallback request.\nWorkflow: Authenticate the customer using approved identifiers and request the order reference; if. -> Locate the target item in the order and capture its key options. -> Check the product’s variant catalog for the requested alternative that matches the. -> If the requested variant is available, propose the exchange/modify action and ask. -> Execute the confirmed action (modify or cancel) and provide a concise summary.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "88-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "88"
+      ],
+      "last_task_query": "Hi there! I actually have an order I’d like to change, if possible. I ordered a bookshelf and I’m hoping to switch it to a 4-foot version, but with the exact same material and color as the one I already.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:08109632a952",
+      "family": "exchange_modify",
+      "title": "Modify a recent order and submit an exchange for a prior order",
+      "task_signature": "Customer wants to update shipping details and swap an item on a newly placed order, and also exchange an item from a previously delivered.",
+      "workflow": [
+        "Authenticate and locate the customer record, then identify the relevant orders by.",
+        "Check each order’s status to determine allowed actions (e.g., address updates and.",
+        "Confirm the exact target shipping address and clarify the desired replacement options.",
+        "Calculate and present price differences (refunds/charges), required payment method for any upcharge.",
+        "Execute changes: update address, perform the item swap, submit the exchange request."
+      ],
+      "applicability": "Reuse when a customer needs multiple post-purchase adjustments across different orders, requiring status checks, variant selection, price-difference handling, and explicit confirmation before applying changes.",
+      "retrieval_text": "Title: Modify a recent order and submit an exchange for a prior order\nApplicability: Reuse when a customer needs multiple post-purchase adjustments across different orders, requiring status checks, variant selection, price-difference handling, and explicit confirmation before applying changes.\nTask Signature: Customer wants to update shipping details and swap an item on a newly placed order, and also exchange an item from a previously delivered.\nWorkflow: Authenticate and locate the customer record, then identify the relevant orders by. -> Check each order’s status to determine allowed actions (e.g., address updates and. -> Confirm the exact target shipping address and clarify the desired replacement options. -> Calculate and present price differences (refunds/charges), required payment method for any upcharge. -> Execute changes: update address, perform the item swap, submit the exchange request.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "102-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "102"
+      ],
+      "last_task_query": "I need help fixing a recent order I just placed. There are a few changes: - I need to update the shipping address. - I want to change one of the items in that order. - And I also need.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:a88e496f2979",
+      "family": "exchange_modify",
+      "title": "Authenticate, locate orders, then cancel and modify pending purchases",
+      "task_signature": "User requests to cancel a pending order without an order ID and to exchange/modify a recently purchased item to a different configuration.",
+      "workflow": [
+        "Authenticate the customer using an accepted identifier (e.g., email or name +.",
+        "Retrieve and summarize recent orders, highlighting which are pending vs delivered and.",
+        "For cancellation: ask the customer to confirm the specific order and select.",
+        "For item change on a pending order: distinguish pending-order modification vs delivered.",
+        "Confirm final actions explicitly (what will be canceled/modified), capture the payment method."
+      ],
+      "applicability": "Reuse when a customer needs to cancel an order they can’t identify by ID and also wants to change an item to a different variant/spec, especially when orders are still pending and.",
+      "retrieval_text": "Title: Authenticate, locate orders, then cancel and modify pending purchases\nApplicability: Reuse when a customer needs to cancel an order they can’t identify by ID and also wants to change an item to a different variant/spec, especially when orders are still pending and.\nTask Signature: User requests to cancel a pending order without an order ID and to exchange/modify a recently purchased item to a different configuration.\nWorkflow: Authenticate the customer using an accepted identifier (e.g., email or name +. -> Retrieve and summarize recent orders, highlighting which are pending vs delivered and. -> For cancellation: ask the customer to confirm the specific order and select. -> For item change on a pending order: distinguish pending-order modification vs delivered. -> Confirm final actions explicitly (what will be canceled/modified), capture the payment method.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "74-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "74"
+      ],
+      "last_task_query": "Um, hi… thanks. I, uh, actually need help with two things about my recent purchases: 1. I just bought a laptop and I’d like to exchange it for the version with an i9 processor. If there are options, I’d want.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:e72b539d562c",
+      "family": "authentication",
+      "title": "Authenticate customer before initiating return or exchange",
+      "task_signature": "Customer requests a return/exchange; agent verifies identity using account details and locates the relevant order and item.",
+      "workflow": [
+        "Request authentication using one of multiple identifiers (e.g., account email or full.",
+        "Retrieve the customer profile and list of recent orders; identify the order.",
+        "Confirm with the customer the exact order and item to act on.",
+        "Proceed only after the customer provides explicit confirmation to submit the return/exchange."
+      ],
+      "applicability": "Reuse when a customer needs help with a return or exchange and the agent must verify identity and find the correct order/item without the customer having the order number handy.",
+      "retrieval_text": "Title: Authenticate customer before initiating return or exchange\nApplicability: Reuse when a customer needs help with a return or exchange and the agent must verify identity and find the correct order/item without the customer having the order number handy.\nTask Signature: Customer requests a return/exchange; agent verifies identity using account details and locates the relevant order and item.\nWorkflow: Request authentication using one of multiple identifiers (e.g., account email or full. -> Retrieve the customer profile and list of recent orders; identify the order. -> Confirm with the customer the exact order and item to act on. -> Proceed only after the customer provides explicit confirmation to submit the return/exchange.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "18-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "18"
+      ],
+      "last_task_query": "Hi… I need help with an office chair I bought. It arrived with some broken pieces and I want to return it.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:aa97782b95b6",
+      "family": "authentication",
+      "title": "Authenticate then retrieve order shipping, tracking, and item variant details",
+      "task_signature": "Customer asks to verify where an order shipped, obtain tracking, confirm transit/delivery status, and confirm a product option (e.g., storage), requiring account access",
+      "workflow": [
+        "Request one of a few acceptable authentication factors (e.g., account email or.",
+        "After verification, locate relevant recent order(s) and report ship-to address, tracking number.",
+        "Confirm the requested item variant/spec from the order line options (e.g., tablet.",
+        "If an order is cancelled/refunded or delivered, state the implication for transit."
+      ],
+      "applicability": "Use when a customer needs order lookup details plus item configuration confirmation, and access is gated by account authentication",
+      "retrieval_text": "Title: Authenticate then retrieve order shipping, tracking, and item variant details\nApplicability: Use when a customer needs order lookup details plus item configuration confirmation, and access is gated by account authentication\nTask Signature: Customer asks to verify where an order shipped, obtain tracking, confirm transit/delivery status, and confirm a product option (e.g., storage), requiring account access\nWorkflow: Request one of a few acceptable authentication factors (e.g., account email or. -> After verification, locate relevant recent order(s) and report ship-to address, tracking number. -> Confirm the requested item variant/spec from the order line options (e.g., tablet. -> If an order is cancelled/refunded or delivered, state the implication for transit.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "43-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "43"
+      ],
+      "last_task_query": "Oh, hi there. Thanks for picking up. I ordered a few things for my daughter recently, but she hasn’t received them yet. I wanted to check on that order—specifically: - Which address it was shipped to - The tracking number.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:75e8b9c54b90",
+      "family": "exchange_modify",
+      "title": "Update default shipping address after explicit confirmation",
+      "task_signature": "Customer requests changing the account’s default shipping address, often to match a prior order’s ship-to address",
+      "workflow": [
+        "Confirm the exact new default address fields (address lines, city, state, ZIP.",
+        "Apply the address update to the customer profile and then echo the.",
+        "Ask whether future orders should always use the new default and invite."
+      ],
+      "applicability": "Use when a customer wants their saved/default shipping address changed for future purchases",
+      "retrieval_text": "Title: Update default shipping address after explicit confirmation\nApplicability: Use when a customer wants their saved/default shipping address changed for future purchases\nTask Signature: Customer requests changing the account’s default shipping address, often to match a prior order’s ship-to address\nWorkflow: Confirm the exact new default address fields (address lines, city, state, ZIP. -> Apply the address update to the customer profile and then echo the. -> Ask whether future orders should always use the new default and invite.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "43-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "43"
+      ],
+      "last_task_query": "Oh, hi there. Thanks for picking up. I ordered a few things for my daughter recently, but she hasn’t received them yet. I wanted to check on that order—specifically: - Which address it was shipped to - The tracking number.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:9e63d60de090",
+      "family": "exchange_modify",
+      "title": "Start a multi-item return with credit-card refund across one or more orders",
+      "task_signature": "Customer requests returns for multiple delivered items (possibly spanning multiple orders) and wants refunds back to the original credit card.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., email or name + ZIP).",
+        "Locate the relevant delivered order(s) by matching items in the request; if.",
+        "Present a clear itemized list (item names, key options, item IDs, prices).",
+        "Ask for explicit confirmation of the exact item IDs to return per.",
+        "Submit the return request update for each order with the selected return_items."
+      ],
+      "applicability": "Use when a customer wants to return multiple items from a delivery and needs refunds to a credit card, especially when items span multiple orders and must be separated into distinct return.",
+      "retrieval_text": "Title: Start a multi-item return with credit-card refund across one or more orders\nApplicability: Use when a customer wants to return multiple items from a delivery and needs refunds to a credit card, especially when items span multiple orders and must be separated into distinct return.\nTask Signature: Customer requests returns for multiple delivered items (possibly spanning multiple orders) and wants refunds back to the original credit card.\nWorkflow: Authenticate the customer using available identifiers (e.g., email or name + ZIP). -> Locate the relevant delivered order(s) by matching items in the request; if. -> Present a clear itemized list (item names, key options, item IDs, prices). -> Ask for explicit confirmation of the exact item IDs to return per. -> Submit the return request update for each order with the selected return_items.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "92-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "92"
+      ],
+      "last_task_query": "Hi! I just got a delivery from you and I’m really unhappy with the quality of the two skateboards I bought. I want to return them and get the refund back to my credit card. Can you help me start.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:514384ea83f9",
+      "family": "exchange_modify",
+      "title": "Authenticate, locate order, and prepare an exchange with variant selection",
+      "task_signature": "User requests an exchange for one or more items and needs help identifying the correct order and available replacement variants, then confirming price differences.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier set (e.g., email or name.",
+        "Find the order containing the target items and verify eligibility (e.g., delivered.",
+        "For each item to exchange, collect desired replacement attributes (e.g., size, color.",
+        "Ask the customer to confirm the exact replacement item ID(s), confirm which.",
+        "Submit the exchange modification for the confirmed items on the specified order."
+      ],
+      "applicability": "Reuse when a customer wants to exchange items but lacks order details or needs help choosing an available variant and understanding any price difference before the exchange is placed.",
+      "retrieval_text": "Title: Authenticate, locate order, and prepare an exchange with variant selection\nApplicability: Reuse when a customer wants to exchange items but lacks order details or needs help choosing an available variant and understanding any price difference before the exchange is placed.\nTask Signature: User requests an exchange for one or more items and needs help identifying the correct order and available replacement variants, then confirming price differences.\nWorkflow: Authenticate the customer using an approved identifier set (e.g., email or name. -> Find the order containing the target items and verify eligibility (e.g., delivered. -> For each item to exchange, collect desired replacement attributes (e.g., size, color. -> Ask the customer to confirm the exact replacement item ID(s), confirm which. -> Submit the exchange modification for the confirmed items on the specified order.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "6-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "6"
+      ],
+      "last_task_query": "Hi! I’d like to do an exchange on a couple of things I bought: a water bottle and a desk lamp.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:b0016743c83c",
+      "family": "exchange_modify",
+      "title": "Multi-item returns and exchanges from recent orders",
+      "task_signature": "Customer wants to return and/or exchange multiple items, may not know order ID or account email, and may request specific variant changes or new.",
+      "workflow": [
+        "Authenticate the customer using alternate identifiers (e.g., name + ZIP) when email/order.",
+        "Identify which order(s) contain each requested item and capture the specific line.",
+        "For each exchange request, fetch available variants for the product and confirm.",
+        "Confirm inventory availability and any price differences for the selected replacement variant(s).",
+        "Submit the return/exchange request(s) for the selected item IDs and provide the."
+      ],
+      "applicability": "Reuse when handling mixed returns and exchanges across one or more recent orders, especially when the customer lacks order details and when exchanges depend on variant availability or configurable options.",
+      "retrieval_text": "Title: Multi-item returns and exchanges from recent orders\nApplicability: Reuse when handling mixed returns and exchanges across one or more recent orders, especially when the customer lacks order details and when exchanges depend on variant availability or configurable options.\nTask Signature: Customer wants to return and/or exchange multiple items, may not know order ID or account email, and may request specific variant changes or new.\nWorkflow: Authenticate the customer using alternate identifiers (e.g., name + ZIP) when email/order. -> Identify which order(s) contain each requested item and capture the specific line. -> For each exchange request, fetch available variants for the product and confirm. -> Confirm inventory availability and any price differences for the selected replacement variant(s). -> Submit the return/exchange request(s) for the selected item IDs and provide the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "100-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "100"
+      ],
+      "last_task_query": "Uh, hi… I actually need help with a few returns and exchanges from a recent order, if that’s okay. I want to: - Return a luggage set and get the exact same one but in red. - Return a skateboard.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:260fe4030859",
+      "family": "authentication",
+      "title": "Authenticate then retrieve multi-order details and confirm actions",
+      "task_signature": "Customer asks what information is needed to look up orders, wants to potentially cancel one order and verify item attributes (e.g., variants/materials) in another.",
+      "workflow": [
+        "Request authentication using one of two minimal identifiers (e.g., account email OR.",
+        "Locate the customer profile, list recent orders, and pull the specific order(s).",
+        "For cancellation inquiries, check the order’s current status to determine eligibility and.",
+        "For item-detail inquiries, enumerate the specific items and restate key attributes (e.g.",
+        "Confirm the final outcome explicitly (e.g., cancellation not performed / order unchanged)."
+      ],
+      "applicability": "Use when a customer needs order lookup and a mix of actions (possible cancellation) plus verification of item/variant attributes across one or more orders.",
+      "retrieval_text": "Title: Authenticate then retrieve multi-order details and confirm actions\nApplicability: Use when a customer needs order lookup and a mix of actions (possible cancellation) plus verification of item/variant attributes across one or more orders.\nTask Signature: Customer asks what information is needed to look up orders, wants to potentially cancel one order and verify item attributes (e.g., variants/materials) in another.\nWorkflow: Request authentication using one of two minimal identifiers (e.g., account email OR. -> Locate the customer profile, list recent orders, and pull the specific order(s). -> For cancellation inquiries, check the order’s current status to determine eligibility and. -> For item-detail inquiries, enumerate the specific items and restate key attributes (e.g. -> Confirm the final outcome explicitly (e.g., cancellation not performed / order unchanged).",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "24-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "24"
+      ],
+      "last_task_query": "Hi! I had a couple of questions about my recent orders. First, I have a grill I ordered that I was thinking about canceling. And then I also have another order with two t‑shirts, and I’d like to confirm which.",
+      "status": "candidate"
+    },
+    {
+      "id": "status:fdb7a763507d",
+      "family": "status",
+      "title": "Cancel pending orders and initiate returns for delivered orders",
+      "task_signature": "Customer needs to reduce spend by canceling unshipped orders and returning delivered items, with refunds sent to the original payment method, and wants a.",
+      "workflow": [
+        "Authenticate the customer account using an identifier (e.g., email) and retrieve a.",
+        "For each order, fetch details and classify by status (pending/in-progress vs delivered.",
+        "Collect explicit customer decisions: which pending orders to cancel (with cancellation reasons).",
+        "Restate the exact intended actions and compute expected refund totals per order.",
+        "After authorization, execute cancellations for eligible pending orders and create return requests."
+      ],
+      "applicability": "Reuse when a customer asks to cancel any orders not yet shipped/fulfilled and return already delivered items, and needs confirmation, refund totals, and return logistics.",
+      "retrieval_text": "Title: Cancel pending orders and initiate returns for delivered orders\nApplicability: Reuse when a customer asks to cancel any orders not yet shipped/fulfilled and return already delivered items, and needs confirmation, refund totals, and return logistics.\nTask Signature: Customer needs to reduce spend by canceling unshipped orders and returning delivered items, with refunds sent to the original payment method, and wants a.\nWorkflow: Authenticate the customer account using an identifier (e.g., email) and retrieve a. -> For each order, fetch details and classify by status (pending/in-progress vs delivered. -> Collect explicit customer decisions: which pending orders to cancel (with cancellation reasons). -> Restate the exact intended actions and compute expected refund totals per order. -> After authorization, execute cancellations for eligible pending orders and create return requests.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "55-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "55"
+      ],
+      "last_task_query": "Oh—hi. Sorry, I’m actually the customer here, I think things got flipped around a bit. I really need help with my orders. I’ve run into a pretty serious financial issue and I’m honestly a bit overwhelmed right now. I want.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:4f9c5ae971fe",
+      "family": "exchange_modify",
+      "title": "Modify pending orders: address change and item/variant swaps with price adjustments",
+      "task_signature": "Customer needs to update shipping address and change one or more items to different variants on recently placed orders, possibly across multiple orders, with.",
+      "workflow": [
+        "Authenticate the customer using account identifiers (e.g., name + ZIP or email).",
+        "For each referenced order, verify it is still modifiable (e.g., pending/not shipped).",
+        "Fetch available variants for the products being changed; select the best match.",
+        "Compute per-order price differences (refund/charge) and present a clear change summary (new.",
+        "Apply updates to each order (address update and item/variant replacements), charge or."
+      ],
+      "applicability": "Reuse when a customer requests post-purchase changes such as updating the shipping address and swapping items/variants (size/material/color/features) on orders that are still pending, especially when multiple orders and price differences are involved.",
+      "retrieval_text": "Title: Modify pending orders: address change and item/variant swaps with price adjustments\nApplicability: Reuse when a customer requests post-purchase changes such as updating the shipping address and swapping items/variants (size/material/color/features) on orders that are still pending, especially when multiple orders and price differences are involved.\nTask Signature: Customer needs to update shipping address and change one or more items to different variants on recently placed orders, possibly across multiple orders, with.\nWorkflow: Authenticate the customer using account identifiers (e.g., name + ZIP or email). -> For each referenced order, verify it is still modifiable (e.g., pending/not shipped). -> Fetch available variants for the products being changed; select the best match. -> Compute per-order price differences (refund/charge) and present a clear change summary (new. -> Apply updates to each order (address update and item/variant replacements), charge or.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "101-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "101"
+      ],
+      "last_task_query": "I just placed a couple of orders and I need to make some changes. First one: it has two watches in it. - I need the shipping address changed to my New York address. It should already be on file.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:cc6b55686b6c",
+      "family": "exchange_modify",
+      "title": "Authenticate, locate orders, and execute multi-item exchanges with price-difference payment preference",
+      "task_signature": "User requests several exchanges (and possibly a cancellation) across recent orders, with specific variant constraints and a preferred payment method for any price differences/refunds.",
+      "workflow": [
+        "Authenticate the user using approved identifiers, then retrieve the user profile including.",
+        "Locate the relevant items by scanning recent orders; confirm eligibility by checking.",
+        "Fetch product variants for each requested item; filter to variants that meet.",
+        "Summarize proposed changes by order and item (old variant → new variant).",
+        "Upon confirmation, submit the exchange(s) using the selected payment method for price."
+      ],
+      "applicability": "Reuse when handling multi-item exchanges/changes across one or more orders, especially when the user has variant preferences and wants all price adjustments handled via a specific saved payment method.",
+      "retrieval_text": "Title: Authenticate, locate orders, and execute multi-item exchanges with price-difference payment preference\nApplicability: Reuse when handling multi-item exchanges/changes across one or more orders, especially when the user has variant preferences and wants all price adjustments handled via a specific saved payment method.\nTask Signature: User requests several exchanges (and possibly a cancellation) across recent orders, with specific variant constraints and a preferred payment method for any price differences/refunds.\nWorkflow: Authenticate the user using approved identifiers, then retrieve the user profile including. -> Locate the relevant items by scanning recent orders; confirm eligibility by checking. -> Fetch product variants for each requested item; filter to variants that meet. -> Summarize proposed changes by order and item (old variant → new variant). -> Upon confirmation, submit the exchange(s) using the selected payment method for price.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "99-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "99"
+      ],
+      "last_task_query": "Hi there! I need some help with a few things on my recent orders. I’d like to: 1) Exchange my kid’s bicycle for one with a larger frame size. I’m fine switching from a road bike to a mountain bike.",
+      "status": "candidate"
+    },
+    {
+      "id": "variant:a4de5442835f",
+      "family": "variant",
+      "title": "Upgrade past-order items to highest-priced in-stock variants",
+      "task_signature": "Customer wants to change items in one or more past orders to the most expensive available variants while preserving a constraint (e.g., shoe size).",
+      "workflow": [
+        "Authenticate the customer using an approved identifier (e.g., account email or name.",
+        "For each requested order, verify eligibility to modify/exchange based on order status.",
+        "For each eligible order item, fetch variant availability and prices; apply constraints.",
+        "Present a clear proposed swap list (current item vs. upgraded variant), summarize.",
+        "Request explicit customer approval before applying changes, then execute the modification/exchange and."
+      ],
+      "applicability": "Use when a customer asks to upgrade or change items from existing orders to premium variants with inventory checks, constraints like size retention, and a payment-method preference/fallback for any price difference.",
+      "retrieval_text": "Title: Upgrade past-order items to highest-priced in-stock variants\nApplicability: Use when a customer asks to upgrade or change items from existing orders to premium variants with inventory checks, constraints like size retention, and a payment-method preference/fallback for any price difference.\nTask Signature: Customer wants to change items in one or more past orders to the most expensive available variants while preserving a constraint (e.g., shoe size).\nWorkflow: Authenticate the customer using an approved identifier (e.g., account email or name. -> For each requested order, verify eligibility to modify/exchange based on order status. -> For each eligible order item, fetch variant availability and prices; apply constraints. -> Present a clear proposed swap list (current item vs. upgraded variant), summarize. -> Request explicit customer approval before applying changes, then execute the modification/exchange and.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "20-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "20"
+      ],
+      "last_task_query": "Hi, I’ve had a bit of a lucky day and want to upgrade some items from my past orders to the most expensive versions available. I care about keeping the same shoe size, but everything else can change. I’d also.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:132e5ba2d316",
+      "family": "exchange_modify",
+      "title": "Update shipping/default address and adjust items in a pending order",
+      "task_signature": "Customer moved and needs an address corrected on a pending order, wants the account default address updated, and wants to swap a product in.",
+      "workflow": [
+        "Authenticate and retrieve the customer profile, default address, and all relevant orders.",
+        "Resolve any ambiguity about “old vs new” addresses by asking the customer.",
+        "If an exchange is requested for an undelivered order, convert the request.",
+        "Present a numbered action plan (address change, default address update, item swap/refund).",
+        "Execute changes in a safe sequence (update shipping address and default address."
+      ],
+      "applicability": "Reuse when a customer needs to correct shipping details due to a move and also wants changes to items/pricing in a pending order, especially when multiple addresses in the account cause confusion.",
+      "retrieval_text": "Title: Update shipping/default address and adjust items in a pending order\nApplicability: Reuse when a customer needs to correct shipping details due to a move and also wants changes to items/pricing in a pending order, especially when multiple addresses in the account cause confusion.\nTask Signature: Customer moved and needs an address corrected on a pending order, wants the account default address updated, and wants to swap a product in.\nWorkflow: Authenticate and retrieve the customer profile, default address, and all relevant orders. -> Resolve any ambiguity about “old vs new” addresses by asking the customer. -> If an exchange is requested for an undelivered order, convert the request. -> Present a numbered action plan (address change, default address update, item swap/refund). -> Execute changes in a safe sequence (update shipping address and default address.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "109-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "109"
+      ],
+      "last_task_query": "Hi! I need some help with a few account and order changes. 1. I recently moved to a new house on the same street (Elm Avenue here in Houston). One of my recent orders—a luggage set—was correctly sent to my.",
+      "status": "candidate"
+    },
+    {
+      "id": "status:d33fafefabc8",
+      "family": "status",
+      "title": "Initiate multi-item return and set refund expectations",
+      "task_signature": "User wants to return multiple items from a recent order, confirm refund amount, submit the return to the original payment method, and provide return.",
+      "workflow": [
+        "Authenticate the customer using supported identifiers, then request/validate the order ID format.",
+        "Confirm the exact items to return (by item ID/variant), confirm refund destination.",
+        "Compute and confirm the exact refund total for the selected return items.",
+        "Submit the return request in the system with the selected item IDs.",
+        "Calculate and report the remaining amount paid for the non-returned items (order."
+      ],
+      "applicability": "Reuse when a customer asks to start a return for multiple items and needs an exact refund total, timeline expectations, and confirmation details after submission.",
+      "retrieval_text": "Title: Initiate multi-item return and set refund expectations\nApplicability: Reuse when a customer asks to start a return for multiple items and needs an exact refund total, timeline expectations, and confirmation details after submission.\nTask Signature: User wants to return multiple items from a recent order, confirm refund amount, submit the return to the original payment method, and provide return.\nWorkflow: Authenticate the customer using supported identifiers, then request/validate the order ID format. -> Confirm the exact items to return (by item ID/variant), confirm refund destination. -> Compute and confirm the exact refund total for the selected return items. -> Submit the return request in the system with the selected item IDs. -> Calculate and report the remaining amount paid for the non-returned items (order.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "47-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "47"
+      ],
+      "last_task_query": "I need to return two items from my recent order: an air purifier and a vacuum cleaner. Can you help me start a return for those and let me know how fast I can get my refund? I really need.",
+      "status": "candidate"
+    },
+    {
+      "id": "status:9f014f7ecad9",
+      "family": "status",
+      "title": "Process multiple returns and handle a pending-order cancel constraint",
+      "task_signature": "User requests multiple returns across different delivered orders plus a cancellation (or item-level change) on a pending order, and asks for the total refund.",
+      "workflow": [
+        "Authenticate the customer using allowed identifiers (e.g., name + ZIP or email).",
+        "Map each requested return/cancel item to the correct order and item(s); separate.",
+        "Explain operational constraints for pending orders (e.g., whether partial cancellation/modification is possible).",
+        "Confirm refund destination (typically original payment method) and obtain explicit approval to.",
+        "Summarize actions taken (returns submitted, pending order left unchanged or updated per."
+      ],
+      "applicability": "Reuse when a customer needs several returns at once, wants to cancel or change an item in a pending order, and expects a consolidated refund total and clear confirmation of what was.",
+      "retrieval_text": "Title: Process multiple returns and handle a pending-order cancel constraint\nApplicability: Reuse when a customer needs several returns at once, wants to cancel or change an item in a pending order, and expects a consolidated refund total and clear confirmation of what was.\nTask Signature: User requests multiple returns across different delivered orders plus a cancellation (or item-level change) on a pending order, and asks for the total refund.\nWorkflow: Authenticate the customer using allowed identifiers (e.g., name + ZIP or email). -> Map each requested return/cancel item to the correct order and item(s); separate. -> Explain operational constraints for pending orders (e.g., whether partial cancellation/modification is possible). -> Confirm refund destination (typically original payment method) and obtain explicit approval to. -> Summarize actions taken (returns submitted, pending order left unchanged or updated per.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "28-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "28"
+      ],
+      "last_task_query": "Hi, I need help with some returns and one item to cancel from a recent order.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:00a75bd1daab",
+      "family": "exchange_modify",
+      "title": "Exchange delivered item for different variant with price-difference charge/refund",
+      "task_signature": "Customer requests an exchange for a delivered product to a different size/color/feature and wants the exact amount due today charged/refunded to the original payment.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., name+ZIP or email) and locate.",
+        "Confirm the original item details (item/variant, price) and verify order eligibility for.",
+        "Fetch product variants and filter to customer requirements (size, preferred color, required.",
+        "Compute and disclose the exact price difference (due or refund) for each.",
+        "Collect explicit customer authorization and the chosen replacement variant, then submit the."
+      ],
+      "applicability": "Use when a customer wants to exchange a delivered item for another variant and needs exact payment difference details charged/refunded to the original payment method.",
+      "retrieval_text": "Title: Exchange delivered item for different variant with price-difference charge/refund\nApplicability: Use when a customer wants to exchange a delivered item for another variant and needs exact payment difference details charged/refunded to the original payment method.\nTask Signature: Customer requests an exchange for a delivered product to a different size/color/feature and wants the exact amount due today charged/refunded to the original payment.\nWorkflow: Authenticate the customer using available identifiers (e.g., name+ZIP or email) and locate. -> Confirm the original item details (item/variant, price) and verify order eligibility for. -> Fetch product variants and filter to customer requirements (size, preferred color, required. -> Compute and disclose the exact price difference (due or refund) for each. -> Collect explicit customer authorization and the chosen replacement variant, then submit the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "70-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "70"
+      ],
+      "last_task_query": "Yeah, I actually need help with an exchange. I just got a helmet from you and I’m not happy with it. The size is too small, and I want to swap it for a medium with really good ventilation. If.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:9a36d0f5c47c",
+      "family": "exchange_modify",
+      "title": "Update shipping address on an order",
+      "task_signature": "Customer requests a delivery/shipping address change for an existing order and needs to confirm what information is required and complete the update.",
+      "workflow": [
+        "Authenticate the customer using an approved minimal set of identifiers (e.g., email.",
+        "Verify the order is still eligible for address changes (e.g., not shipped/fulfilled).",
+        "Collect the full updated address or the specific fields to change, and.",
+        "Request explicit confirmation to proceed with the update.",
+        "Submit the address update and confirm completion by summarizing the updated shipping."
+      ],
+      "applicability": "Use when a customer wants to modify the shipping/delivery address on an order and the order must be checked for eligibility before making changes.",
+      "retrieval_text": "Title: Update shipping address on an order\nApplicability: Use when a customer wants to modify the shipping/delivery address on an order and the order must be checked for eligibility before making changes.\nTask Signature: Customer requests a delivery/shipping address change for an existing order and needs to confirm what information is required and complete the update.\nWorkflow: Authenticate the customer using an approved minimal set of identifiers (e.g., email. -> Verify the order is still eligible for address changes (e.g., not shipped/fulfilled). -> Collect the full updated address or the specific fields to change, and. -> Request explicit confirmation to proceed with the update. -> Submit the address update and confirm completion by summarizing the updated shipping.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "17-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "17"
+      ],
+      "last_task_query": "Hi, I just need to update the delivery address on an order. I’d like order **#W8665881** to be delivered to **Suite 641** instead of the current address. What do you need from me to make that change?",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:3e0b5fad0ce1",
+      "family": "exchange_modify",
+      "title": "Verify product option and modify or cancel a pending order",
+      "task_signature": "Customer asks to confirm an ordered item's specification (e.g., zoom) and, if needed, switch to a different variant while keeping other options the same.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers, then locate the correct recent order.",
+        "Inspect the ordered item's current options/specs and report whether it matches the.",
+        "If a change is requested, look up available variants for the same.",
+        "Present a clear confirmation prompt summarizing the exact item swap (old item.",
+        "If the customer opts to cancel instead, summarize cancellation details (order id."
+      ],
+      "applicability": "Reuse when a customer wants to verify item attributes on an order and either exchange for a specific feature/variant or decide to cancel after reviewing availability and price impact.",
+      "retrieval_text": "Title: Verify product option and modify or cancel a pending order\nApplicability: Reuse when a customer wants to verify item attributes on an order and either exchange for a specific feature/variant or decide to cancel after reviewing availability and price impact.\nTask Signature: Customer asks to confirm an ordered item's specification (e.g., zoom) and, if needed, switch to a different variant while keeping other options the same.\nWorkflow: Authenticate the customer using approved identifiers, then locate the correct recent order. -> Inspect the ordered item's current options/specs and report whether it matches the. -> If a change is requested, look up available variants for the same. -> Present a clear confirmation prompt summarizing the exact item swap (old item. -> If the customer opts to cancel instead, summarize cancellation details (order id.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "90-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "90"
+      ],
+      "last_task_query": "Hi! I just placed an order for a digital camera and I want to check something about it. I need to know whether the camera I bought is a 10x zoom model. If it isn’t, I’d like to change it.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:796f951bf3ea",
+      "family": "exchange_modify",
+      "title": "Process a delivered-order product exchange to a specific variant",
+      "task_signature": "Customer requests exchanging an item from a delivered order to another variant with different attributes (e.g., color/specs), requiring availability and price-difference handling",
+      "workflow": [
+        "Authenticate the customer using account identifiers, then retrieve the order and confirm.",
+        "Identify the exact current line-item to exchange and look up product variants.",
+        "Compute and clearly present any price difference and the payment method to.",
+        "Ask the customer to confirm the specific swap (old item → new.",
+        "Submit the exchange request, provide the updated status and summary, and explain."
+      ],
+      "applicability": "Reuse when a customer wants to exchange an item from an existing order for a different in-stock variant and the exchange must be confirmed, priced, and submitted",
+      "retrieval_text": "Title: Process a delivered-order product exchange to a specific variant\nApplicability: Reuse when a customer wants to exchange an item from an existing order for a different in-stock variant and the exchange must be confirmed, priced, and submitted\nTask Signature: Customer requests exchanging an item from a delivered order to another variant with different attributes (e.g., color/specs), requiring availability and price-difference handling\nWorkflow: Authenticate the customer using account identifiers, then retrieve the order and confirm. -> Identify the exact current line-item to exchange and look up product variants. -> Compute and clearly present any price difference and the payment method to. -> Ask the customer to confirm the specific swap (old item → new. -> Submit the exchange request, provide the updated status and summary, and explain.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "75-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "75"
+      ],
+      "last_task_query": "Hi! I need help with an exchange on a recent order. I have Wireless Earbuds from order **#W6908222** that are **blue**, have **8-hour battery life**, and **IPX4 water resistance**. I’d like to exchange them for a version that’s **black**, with.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:bb4bfda1e8c5",
+      "family": "authentication",
+      "title": "Authenticate user and retrieve amount paid for most recent order",
+      "task_signature": "User wants the total paid for their most recent order but doesn’t know the order date/ID",
+      "workflow": [
+        "Request account authentication using one of two paths (email, or full name.",
+        "If lookup fails, ask the user to verify/correct the provided identifiers and.",
+        "After successful user match, identify the most recent order from the user’s.",
+        "Report the total amount paid from payment history along with payment method.",
+        "If asked about shipping, check fulfillment/tracking records; if none exist, state that."
+      ],
+      "applicability": "Use when an order total needs to be confirmed but the user can’t provide an order number or date and must be located via account credentials first",
+      "retrieval_text": "Title: Authenticate user and retrieve amount paid for most recent order\nApplicability: Use when an order total needs to be confirmed but the user can’t provide an order number or date and must be located via account credentials first\nTask Signature: User wants the total paid for their most recent order but doesn’t know the order date/ID\nWorkflow: Request account authentication using one of two paths (email, or full name. -> If lookup fails, ask the user to verify/correct the provided identifiers and. -> After successful user match, identify the most recent order from the user’s. -> Report the total amount paid from payment history along with payment method. -> If asked about shipping, check fulfillment/tracking records; if none exist, state that.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "68-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "68"
+      ],
+      "last_task_query": "Hi! I’m trying to find out how much I paid for my most recent order. I’m not sure when I placed it.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:df87679347ed",
+      "family": "exchange_modify",
+      "title": "Exchange an item to a different variant and update default address via.",
+      "task_signature": "Customer wants to exchange a purchased item for a different color/style variant and update their default shipping address without re-typing it, using an address.",
+      "workflow": [
+        "Authenticate the customer using an approved account identifier (e.g., email or name.",
+        "Locate the relevant order and item, then verify eligibility by checking order.",
+        "Retrieve product variants and confirm the requested replacement variant is available; if.",
+        "Calculate any price difference between the original item and the new variant.",
+        "Update the default shipping address by presenting a list of previously used."
+      ],
+      "applicability": "Reuse when a customer requests an exchange to another variant while also wanting to change their default shipping address using an address already associated with their account.",
+      "retrieval_text": "Title: Exchange an item to a different variant and update default address via.\nApplicability: Reuse when a customer requests an exchange to another variant while also wanting to change their default shipping address using an address already associated with their account.\nTask Signature: Customer wants to exchange a purchased item for a different color/style variant and update their default shipping address without re-typing it, using an address.\nWorkflow: Authenticate the customer using an approved account identifier (e.g., email or name. -> Locate the relevant order and item, then verify eligibility by checking order. -> Retrieve product variants and confirm the requested replacement variant is available; if. -> Calculate any price difference between the original item and the new variant. -> Update the default shipping address by presenting a list of previously used.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "86-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "86"
+      ],
+      "last_task_query": "Hi. I… um, I’d like some help with an order. I want to exchange a fleece jacket I bought—for a red one, with a half zipper instead of the one I have now. Also, I’d like to update my default.",
+      "status": "candidate"
+    },
+    {
+      "id": "variant:a4ac37475dc0",
+      "family": "variant",
+      "title": "Authenticate and swap ordered item to a different variant with price protection",
+      "task_signature": "Customer wants to change an item in an existing order to a different variant (e.g., color) while keeping price the same or lower, and.",
+      "workflow": [
+        "Authenticate the customer using alternate identifiers available (e.g., name + shipping ZIP/address).",
+        "Confirm the order is eligible for modification (e.g., pending/not fulfilled) and identify.",
+        "Retrieve all available variants for the product and filter to those matching.",
+        "Present eligible variant choices with key specs and price differences, and request.",
+        "Apply the modification, record any refund to the chosen payment method, then."
+      ],
+      "applicability": "Reuse when a customer requests changing a product to another variant in an existing order, especially when they cannot provide the ordering email and require no price increase.",
+      "retrieval_text": "Title: Authenticate and swap ordered item to a different variant with price protection\nApplicability: Reuse when a customer requests changing a product to another variant in an existing order, especially when they cannot provide the ordering email and require no price increase.\nTask Signature: Customer wants to change an item in an existing order to a different variant (e.g., color) while keeping price the same or lower, and.\nWorkflow: Authenticate the customer using alternate identifiers available (e.g., name + shipping ZIP/address). -> Confirm the order is eligible for modification (e.g., pending/not fulfilled) and identify. -> Retrieve all available variants for the product and filter to those matching. -> Present eligible variant choices with key specs and price differences, and request. -> Apply the modification, record any refund to the chosen payment method, then.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "61-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "61"
+      ],
+      "last_task_query": "Hi, I’d like to change the wireless earbuds in my recent order W5061109 to the blue-colored version instead of the one I originally selected. My details: - Name: Chen Johnson - Location: Houston, TX 77004 I don’t remember which email.",
+      "status": "candidate"
+    },
+    {
+      "id": "status:c4a9e93d5d37",
+      "family": "status",
+      "title": "Authenticate user, locate mis-shipped order, provide tracking, and submit partial return",
+      "task_signature": "Customer lacks order number and needs the tracking number plus a return for some (but not all) items from an order shipped to the.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers (e.g., account email or name +.",
+        "Retrieve the customer profile, list recent orders, and identify the target order.",
+        "Provide the shipment tracking number from the order fulfillment record and summarize.",
+        "Collect explicit confirmation of which item(s) to return vs. exclude and confirm.",
+        "Submit the return request for the confirmed item IDs, then report updated."
+      ],
+      "applicability": "Reuse when a customer can’t provide an order number but needs shipment tracking and a selective (partial) return while ensuring proper authentication and confirmation steps",
+      "retrieval_text": "Title: Authenticate user, locate mis-shipped order, provide tracking, and submit partial return\nApplicability: Reuse when a customer can’t provide an order number but needs shipment tracking and a selective (partial) return while ensuring proper authentication and confirmation steps\nTask Signature: Customer lacks order number and needs the tracking number plus a return for some (but not all) items from an order shipped to the.\nWorkflow: Authenticate the customer using approved identifiers (e.g., account email or name +. -> Retrieve the customer profile, list recent orders, and identify the target order. -> Provide the shipment tracking number from the order fulfillment record and summarize. -> Collect explicit confirmation of which item(s) to return vs. exclude and confirm. -> Submit the return request for the confirmed item IDs, then report updated.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "26-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "26"
+      ],
+      "last_task_query": "Hi, I had an order that was accidentally shipped to an address in Texas instead of to me here in 32286, and I need some urgent help with it. I don’t remember the order number, but I need: 1) The.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:d1c87c9da98a",
+      "family": "exchange_modify",
+      "title": "Modify a pending order item to a different variant with PayPal price.",
+      "task_signature": "Customer has a pending order and wants to change an item’s variant (e.g., size/material), confirm availability, and handle any price difference/refund via PayPal.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers (e.g., name + ZIP or account.",
+        "Identify the exact line item to change and retrieve product variant inventory.",
+        "Confirm the target variant choice and payment method to use for any.",
+        "Compute and present a pre-change summary: current vs. new variant, line-item price.",
+        "Upon receiving a clear “yes,” apply the item modification on the pending."
+      ],
+      "applicability": "Reuse when an order is still pending and the customer requests changing an item’s variant while requiring a confirmed price impact and a specific payment channel (e.g., PayPal) for adjustments.",
+      "retrieval_text": "Title: Modify a pending order item to a different variant with PayPal price.\nApplicability: Reuse when an order is still pending and the customer requests changing an item’s variant while requiring a confirmed price impact and a specific payment channel (e.g., PayPal) for adjustments.\nTask Signature: Customer has a pending order and wants to change an item’s variant (e.g., size/material), confirm availability, and handle any price difference/refund via PayPal.\nWorkflow: Authenticate the customer using approved identifiers (e.g., name + ZIP or account. -> Identify the exact line item to change and retrieve product variant inventory. -> Confirm the target variant choice and payment method to use for any. -> Compute and present a pre-change summary: current vs. new variant, line-item price. -> Upon receiving a clear “yes,” apply the item modification on the pending.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "15-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "15"
+      ],
+      "last_task_query": "Hi, I’ve got an order with a pair of boots that’s still pending, and I’d like to change the size to an 8. I also want to make sure they’re a specific material, but I don’t really care whether they’re.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:2e178460119e",
+      "family": "exchange_modify",
+      "title": "Process an order item exchange to a different variant",
+      "task_signature": "Customer wants to exchange an item from a delivered order for another variant in the same product line and needs required details, variant options.",
+      "workflow": [
+        "Authenticate the customer using an accepted identifier set (e.g., email or name.",
+        "Retrieve the order; if not found, request a corrected order identifier or.",
+        "Fetch product variants for the same product line, filter to the requested.",
+        "Clarify how any price difference will be handled (charge vs refund) and.",
+        "Summarize the exact exchange (old item ID → new item ID, prices."
+      ],
+      "applicability": "Reuse when a customer wants to exchange an item from a prior order for a different variant/model within the same product line and the workflow requires variant discovery plus price-difference payment selection.",
+      "retrieval_text": "Title: Process an order item exchange to a different variant\nApplicability: Reuse when a customer wants to exchange an item from a prior order for a different variant/model within the same product line and the workflow requires variant discovery plus price-difference payment selection.\nTask Signature: Customer wants to exchange an item from a delivered order for another variant in the same product line and needs required details, variant options.\nWorkflow: Authenticate the customer using an accepted identifier set (e.g., email or name. -> Retrieve the order; if not found, request a corrected order identifier or. -> Fetch product variants for the same product line, filter to the requested. -> Clarify how any price difference will be handled (charge vs refund) and. -> Summarize the exact exchange (old item ID → new item ID, prices.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "45-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "45"
+      ],
+      "last_task_query": "Hi! I’m looking to exchagne a robotic vacuum cleaner from my recent order for a canister-style one from the same product line. Can you help me with that, and let me knwo what info you need from me to get.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:4a22943affba",
+      "family": "authentication",
+      "title": "Authenticate, then determine cancel vs return and refund constraints",
+      "task_signature": "User wants to cancel and/or return recent purchases and requests a specific refund destination (e.g., PayPal) across multiple orders",
+      "workflow": [
+        "Authenticate the customer using an approved identifier (e.g., account email or name.",
+        "Classify each order by fulfillment status to determine the available action: pending/processing.",
+        "For each eligible return, map refund destinations to policy constraints (typically original.",
+        "Ask the customer to confirm exactly which items to act on (by.",
+        "If the customer requires a refund destination that policy does not allow."
+      ],
+      "applicability": "Reuse when handling multi-order cancel/return requests where the customer also cares about whether refunds can be sent to a specific payment method",
+      "retrieval_text": "Title: Authenticate, then determine cancel vs return and refund constraints\nApplicability: Reuse when handling multi-order cancel/return requests where the customer also cares about whether refunds can be sent to a specific payment method\nTask Signature: User wants to cancel and/or return recent purchases and requests a specific refund destination (e.g., PayPal) across multiple orders\nWorkflow: Authenticate the customer using an approved identifier (e.g., account email or name. -> Classify each order by fulfillment status to determine the available action: pending/processing. -> For each eligible return, map refund destinations to policy constraints (typically original. -> Ask the customer to confirm exactly which items to act on (by. -> If the customer requires a refund destination that policy does not allow.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "12-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "12"
+      ],
+      "last_task_query": "Hey. I need to cancel or return a bunch of recent stuff I bought that I don’t really want anymore. Can you help me sort out what can still be canceled vs. what I can return? I’d like refunds sent.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:e7b44d097666",
+      "family": "exchange_modify",
+      "title": "Start a multi-item return and summarize refund impact",
+      "task_signature": "User wants to return multiple items from a recent delivered order and needs refund method confirmation, total refund amount, and updated order/remaining-items totals.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., name + ZIP) and retrieve.",
+        "List the order’s items with distinguishing attributes (e.g., item IDs/variants) and ask.",
+        "Calculate and confirm the expected refund total for the selected return items.",
+        "Communicate what can and cannot be guaranteed about refund timing; provide the.",
+        "Provide post-return financial summary on request (e.g., remaining-items total) and, if the."
+      ],
+      "applicability": "Reuse when a customer requests returns for multiple items from a prior order and also asks for refund totals, refund-method confirmation, and what they will still pay for remaining items.",
+      "retrieval_text": "Title: Start a multi-item return and summarize refund impact\nApplicability: Reuse when a customer requests returns for multiple items from a prior order and also asks for refund totals, refund-method confirmation, and what they will still pay for remaining items.\nTask Signature: User wants to return multiple items from a recent delivered order and needs refund method confirmation, total refund amount, and updated order/remaining-items totals.\nWorkflow: Authenticate the customer using available identifiers (e.g., name + ZIP) and retrieve. -> List the order’s items with distinguishing attributes (e.g., item IDs/variants) and ask. -> Calculate and confirm the expected refund total for the selected return items. -> Communicate what can and cannot be guaranteed about refund timing; provide the. -> Provide post-return financial summary on request (e.g., remaining-items total) and, if the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "46-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "46"
+      ],
+      "last_task_query": "I need to return a couple of items from my last order—an air purifier and a vacuum cleaner. Can you help me start a return for those?",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:35272f56ef48",
+      "family": "exchange_modify",
+      "title": "Conditional multi-item exchange with variant constraints",
+      "task_signature": "Customer requests exchanging one or more items from an order for specific variants, with fallback rules if a preferred variant is unavailable, and wants.",
+      "workflow": [
+        "Authenticate the customer using an accepted identifier set (e.g., email or name.",
+        "Retrieve the order and confirm exchange eligibility (e.g., delivered status), then identify.",
+        "Check catalog variants for each requested exchange, validating both (a) same-product/same-model requirement.",
+        "Compute the net price difference between original items and replacement variants and.",
+        "Summarize the final exchange plan for explicit customer confirmation, then submit the."
+      ],
+      "applicability": "Use when a customer wants an exchange that depends on specific variant attributes and availability, includes multiple items with possible partial completion, and requires clear confirmation and payment/refund handling.",
+      "retrieval_text": "Title: Conditional multi-item exchange with variant constraints\nApplicability: Use when a customer wants an exchange that depends on specific variant attributes and availability, includes multiple items with possible partial completion, and requires clear confirmation and payment/refund handling.\nTask Signature: Customer requests exchanging one or more items from an order for specific variants, with fallback rules if a preferred variant is unavailable, and wants.\nWorkflow: Authenticate the customer using an accepted identifier set (e.g., email or name. -> Retrieve the order and confirm exchange eligibility (e.g., delivered status), then identify. -> Check catalog variants for each requested exchange, validating both (a) same-product/same-model requirement. -> Compute the net price difference between original items and replacement variants and. -> Summarize the final exchange plan for explicit customer confirmation, then submit the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "1-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "1"
+      ],
+      "last_task_query": "Hi! I actually need some help with a recent order I received. I’d like to do an exchange on two items from order **#W2378156**: - The **mechanical keyboard** for the *same model*, but with **clicky switches** - The **smart thermostat**.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:4061f7ecbe81",
+      "family": "exchange_modify",
+      "title": "Modify an order item to a specific variant with price confirmation and.",
+      "task_signature": "Customer requests changing an item in an existing order to a different color/variant, with constraints (e.g., feature preferences) and an explicit requirement to confirm.",
+      "workflow": [
+        "Authenticate and locate the order using available non-email identifiers (e.g., name, shipping.",
+        "Identify the original line item and retrieve all product variants; filter to.",
+        "Compare the selected variant price against the original paid price; explicitly state.",
+        "Request explicit customer approval that names the old item and the new.",
+        "Apply the item modification and record the refund/charge; provide a post-change summary."
+      ],
+      "applicability": "Reuse when a customer wants to swap an item in an order to a different color/model variant and needs a clear price check plus refund/charge confirmation before the change is executed.",
+      "retrieval_text": "Title: Modify an order item to a specific variant with price confirmation and.\nApplicability: Reuse when a customer wants to swap an item in an order to a different color/model variant and needs a clear price check plus refund/charge confirmation before the change is executed.\nTask Signature: Customer requests changing an item in an existing order to a different color/variant, with constraints (e.g., feature preferences) and an explicit requirement to confirm.\nWorkflow: Authenticate and locate the order using available non-email identifiers (e.g., name, shipping. -> Identify the original line item and retrieve all product variants; filter to. -> Compare the selected variant price against the original paid price; explicitly state. -> Request explicit customer approval that names the old item and the new. -> Apply the item modification and record the refund/charge; provide a post-change summary.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "60-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "60"
+      ],
+      "last_task_query": "Hi, I’d like to change an item in my recent order and need your help. I’m **Chen Johnson from Houston, TX 77004**, and I have order **W5061109**. In that order, I purchased a pair of **wireless earbuds**, and I want.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:5dd5e3041674",
+      "family": "exchange_modify",
+      "title": "Authenticate customer and cancel an order when item swap is not allowed",
+      "task_signature": "Customer asks to change an item in an existing order to a different product type; agent verifies identity, checks order status, explains modification limits.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers (e.g., account email or name +.",
+        "Review order status and contents; determine whether the requested change is allowed.",
+        "Offer viable alternatives (cancel order and reorder desired item, or place a.",
+        "Answer policy questions upfront (fees, refund method, typical timing) and summarize the.",
+        "Get explicit final confirmation, execute the cancellation/refund, then confirm the final status."
+      ],
+      "applicability": "Reuse when a customer wants to swap an item for a different product category after ordering and the system only supports limited modifications, requiring cancellation and refund as the resolution.",
+      "retrieval_text": "Title: Authenticate customer and cancel an order when item swap is not allowed\nApplicability: Reuse when a customer wants to swap an item for a different product category after ordering and the system only supports limited modifications, requiring cancellation and refund as the resolution.\nTask Signature: Customer asks to change an item in an existing order to a different product type; agent verifies identity, checks order status, explains modification limits.\nWorkflow: Authenticate the customer using approved identifiers (e.g., account email or name +. -> Review order status and contents; determine whether the requested change is allowed. -> Offer viable alternatives (cancel order and reorder desired item, or place a. -> Answer policy questions upfront (fees, refund method, typical timing) and summarize the. -> Get explicit final confirmation, execute the cancellation/refund, then confirm the final status.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "66-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "66"
+      ],
+      "last_task_query": "Hi! I need some help with a recent order. I ordered a luggage set, but I’ve changed my mind and would like to switch that item to a coat instead. Can you tell me if it’s possible to change the.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:7a5df8883bf5",
+      "family": "exchange_modify",
+      "title": "Choose highest-savings return vs. exchange and execute allowed action",
+      "task_signature": "Customer wants to return one item and exchange other items for cheapest available variants, and requests a comparison of savings plus execution with a.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., name + ZIP) and locate.",
+        "For each requested exchange item, pull product variants, filter to available options.",
+        "Compute the refund amount for the requested return and compare savings of.",
+        "Ask the customer to confirm the desired path (return, exchange, or attempt.",
+        "Attempt to process the customer’s preferred combined action; if system constraints allow."
+      ],
+      "applicability": "Reuse when a customer requests both a return and exchanges on the same order and needs a savings comparison and a decision path in case only one action can be completed.",
+      "retrieval_text": "Title: Choose highest-savings return vs. exchange and execute allowed action\nApplicability: Reuse when a customer requests both a return and exchanges on the same order and needs a savings comparison and a decision path in case only one action can be completed.\nTask Signature: Customer wants to return one item and exchange other items for cheapest available variants, and requests a comparison of savings plus execution with a.\nWorkflow: Authenticate the customer using available identifiers (e.g., name + ZIP) and locate. -> For each requested exchange item, pull product variants, filter to available options. -> Compute the refund amount for the requested return and compare savings of. -> Ask the customer to confirm the desired path (return, exchange, or attempt. -> Attempt to process the customer’s preferred combined action; if system constraints allow.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "19-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "19"
+      ],
+      "last_task_query": "Hi… I need some help with my recent order. I’d like to: 1) Return a water bottle, and 2) Exchange both a pet bed and an office chair for the cheapest versions you have. I’d really like to get both.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:c3a73c8d36d4",
+      "family": "authentication",
+      "title": "Authenticate customer using name + ZIP, then retrieve order details",
+      "task_signature": "Customer can’t recall account email but needs order item details; authenticate via alternative identifiers and fetch recent orders to answer product questions.",
+      "workflow": [
+        "Ask for authentication details (email, or fallback to first/last name + ZIP).",
+        "Look up the customer profile using provided identifiers and confirm the matched.",
+        "Retrieve the relevant recent order(s) and extract the requested item attributes (e.g.",
+        "Invite clarification if multiple orders/items could match (e.g., confirm which order or."
+      ],
+      "applicability": "Use when a customer requests order or item information but cannot provide the account email.",
+      "retrieval_text": "Title: Authenticate customer using name + ZIP, then retrieve order details\nApplicability: Use when a customer requests order or item information but cannot provide the account email.\nTask Signature: Customer can’t recall account email but needs order item details; authenticate via alternative identifiers and fetch recent orders to answer product questions.\nWorkflow: Ask for authentication details (email, or fallback to first/last name + ZIP). -> Look up the customer profile using provided identifiers and confirm the matched. -> Retrieve the relevant recent order(s) and extract the requested item attributes (e.g. -> Invite clarification if multiple orders/items could match (e.g., confirm which order or.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "63-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "63"
+      ],
+      "last_task_query": "Let’s start with something fun before we get into my order. Can you guess the poem from this first line? “Two roads diverged in a yellow wood,”",
+      "status": "candidate"
+    },
+    {
+      "id": "status:ca1df9986974",
+      "family": "status",
+      "title": "Partial return from a delivered order with refund estimate",
+      "task_signature": "Customer wants to return some items from a delivered order (keep one or more items) and asks for return setup plus an estimated refund.",
+      "workflow": [
+        "Authenticate and locate the customer account using alternate identifiers (e.g., name and.",
+        "Retrieve recent orders and select the relevant delivered order; present the item.",
+        "Confirm refund destination (original payment method vs gift card) and map it.",
+        "Compute and share an estimated refund by summing the prices of the.",
+        "Submit the return request with the selected item IDs and refund method."
+      ],
+      "applicability": "Reuse when a customer requests a return for only part of an order and wants both the return initiated and an approximate refund amount, especially if order lookup requires identity verification beyond.",
+      "retrieval_text": "Title: Partial return from a delivered order with refund estimate\nApplicability: Reuse when a customer requests a return for only part of an order and wants both the return initiated and an approximate refund amount, especially if order lookup requires identity verification beyond.\nTask Signature: Customer wants to return some items from a delivered order (keep one or more items) and asks for return setup plus an estimated refund.\nWorkflow: Authenticate and locate the customer account using alternate identifiers (e.g., name and. -> Retrieve recent orders and select the relevant delivered order; present the item. -> Confirm refund destination (original payment method vs gift card) and map it. -> Compute and share an estimated refund by summing the prices of the. -> Submit the return request with the selected item IDs and refund method.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "108-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "108"
+      ],
+      "last_task_query": "Hi, I need some help with a recent order I just received. I’d like to return everything from that order **except** the tablet. There’s also an e-reader in there that I definitely want to send back. Can you help me.",
+      "status": "candidate"
+    },
+    {
+      "id": "status:4692d022c01e",
+      "family": "status",
+      "title": "Handle request to reinstate a cancelled/refunded order",
+      "task_signature": "Customer asks to undo an order cancellation and ship the original order quickly, potentially insisting on preserving original pricing and fulfillment.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier set (e.g., email or name.",
+        "Verify and summarize key order facts: order status (cancelled), refund state/payment method.",
+        "State the system constraint clearly (cannot reinstate once cancelled/refunded) and explain why.",
+        "Offer the best available alternative path: recreate the order with the same.",
+        "If the customer requests an override/escalation, transfer/escalate to a human/specialized team with."
+      ],
+      "applicability": "Use when an order has already been cancelled (especially with refund issued) and the customer wants the original order reactivated rather than placing a new one.",
+      "retrieval_text": "Title: Handle request to reinstate a cancelled/refunded order\nApplicability: Use when an order has already been cancelled (especially with refund issued) and the customer wants the original order reactivated rather than placing a new one.\nTask Signature: Customer asks to undo an order cancellation and ship the original order quickly, potentially insisting on preserving original pricing and fulfillment.\nWorkflow: Authenticate the customer using an approved identifier set (e.g., email or name. -> Verify and summarize key order facts: order status (cancelled), refund state/payment method. -> State the system constraint clearly (cannot reinstate once cancelled/refunded) and explain why. -> Offer the best available alternative path: recreate the order with the same. -> If the customer requests an override/escalation, transfer/escalate to a human/specialized team with.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "50-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "50"
+      ],
+      "last_task_query": "Hi, I need help with an order I canceled earlier. I want to undo that cancellation and have the original order shipped out to me as soon as possible. I’m in a bit of a rush, so I really need.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:12cbca963130",
+      "family": "exchange_modify",
+      "title": "Bulk update pending orders to an on-file address and set as default",
+      "task_signature": "User wants all modifiable (e.g., pending) orders switched to an existing on-file shipping address without re-stating it, and also wants that address saved as.",
+      "workflow": [
+        "Authenticate the user using an approved identifier (e.g., email or name+ZIP) and.",
+        "Inspect orders to locate the target on-file address (e.g., the one associated.",
+        "Summarize the exact changes to be applied: list eligible order IDs to.",
+        "Apply the address update to each eligible order and update the account.",
+        "Return a completion summary noting which orders were updated and any orders."
+      ],
+      "applicability": "Reuse when a customer requests changing shipping addresses across multiple orders and prefers reusing an existing address already on file, especially when only certain order statuses are editable and an explicit confirmation.",
+      "retrieval_text": "Title: Bulk update pending orders to an on-file address and set as default\nApplicability: Reuse when a customer requests changing shipping addresses across multiple orders and prefers reusing an existing address already on file, especially when only certain order statuses are editable and an explicit confirmation.\nTask Signature: User wants all modifiable (e.g., pending) orders switched to an existing on-file shipping address without re-stating it, and also wants that address saved as.\nWorkflow: Authenticate the user using an approved identifier (e.g., email or name+ZIP) and. -> Inspect orders to locate the target on-file address (e.g., the one associated. -> Summarize the exact changes to be applied: list eligible order IDs to. -> Apply the address update to each eligible order and update the account. -> Return a completion summary noting which orders were updated and any orders.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "87-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "87"
+      ],
+      "last_task_query": "Hi. I need to update some shipping addresses. I want all of my pending orders to use the same address as one of my existing orders going to Washington, DC, and I also want that same address set as my.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:460da26d40e5",
+      "family": "exchange_modify",
+      "title": "Process multi-order exchanges with spec upgrades and compute amount due",
+      "task_signature": "Customer wants to exchange one or more items (possibly across multiple orders) for a higher-spec variant and asks for the total charge/refund and return/shipping.",
+      "workflow": [
+        "Authenticate the customer (collect account identifiers such as name + ZIP or.",
+        "Identify the exact item(s) to exchange (item IDs and current options), confirm.",
+        "Find the in-stock target variant matching the requested specs; present the mapping.",
+        "Confirm payment/refund routing (use original payment method vs another saved method) and.",
+        "Create the exchange transaction(s) so the system computes final totals; report the."
+      ],
+      "applicability": "Reuse when a customer requests an exchange that changes product configuration/variant, needs a combined total due/refund, or has items spread across multiple orders and also needs return logistics.",
+      "retrieval_text": "Title: Process multi-order exchanges with spec upgrades and compute amount due\nApplicability: Reuse when a customer requests an exchange that changes product configuration/variant, needs a combined total due/refund, or has items spread across multiple orders and also needs return logistics.\nTask Signature: Customer wants to exchange one or more items (possibly across multiple orders) for a higher-spec variant and asks for the total charge/refund and return/shipping.\nWorkflow: Authenticate the customer (collect account identifiers such as name + ZIP or. -> Identify the exact item(s) to exchange (item IDs and current options), confirm. -> Find the in-stock target variant matching the requested specs; present the mapping. -> Confirm payment/refund routing (use original payment method vs another saved method) and. -> Create the exchange transaction(s) so the system computes final totals; report the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "95-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "95"
+      ],
+      "last_task_query": "I need to exchange a laptop order and I want to upgrade the specs. I’ve got two 15‑inch laptops that I want to swap for versions with: - i7 processor - 8GB RAM - 1TB SSD I’d like to know.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:142c81acee80",
+      "family": "authentication",
+      "title": "Authenticate, review recent orders, and process full returns with compliant refund routing",
+      "task_signature": "Customer wants to return all items from their last two orders and receive refunds; refund destination must follow policy constraints.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier (e.g., account email or name.",
+        "Verify each order’s delivery status and list all items (item identifiers and.",
+        "Ask the customer to choose an allowed refund destination per policy (original.",
+        "If the customer requests disallowed refund routing, restate valid options and request."
+      ],
+      "applicability": "Use when a customer requests full returns across multiple recent orders and also specifies or negotiates refund destinations that may conflict with refund policy.",
+      "retrieval_text": "Title: Authenticate, review recent orders, and process full returns with compliant refund routing\nApplicability: Use when a customer requests full returns across multiple recent orders and also specifies or negotiates refund destinations that may conflict with refund policy.\nTask Signature: Customer wants to return all items from their last two orders and receive refunds; refund destination must follow policy constraints.\nWorkflow: Authenticate the customer using an approved identifier (e.g., account email or name. -> Verify each order’s delivery status and list all items (item identifiers and. -> Ask the customer to choose an allowed refund destination per policy (original. -> If the customer requests disallowed refund routing, restate valid options and request.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "10-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "10"
+      ],
+      "last_task_query": "I want to return everything from my last two orders and get refunds.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:0eeb553ac638",
+      "family": "exchange_modify",
+      "title": "Price-threshold decision then process return for an order item",
+      "task_signature": "User asks for the lowest-priced available variant and wants an exchange if below a threshold, otherwise a return of their current item; assistant confirms.",
+      "workflow": [
+        "Authenticate or locate the customer profile using provided identifiers (name, ZIP) and.",
+        "Query the product’s variants, filter to in-stock options, and identify the lowest-priced.",
+        "Compare the lowest in-stock price to the user’s threshold rule and choose.",
+        "If returning: confirm order ID, item ID(s), and refund method; submit the.",
+        "Communicate what is known about next steps (e.g., instructions sent by email)."
+      ],
+      "applicability": "Reuse when a user wants the cheapest available option and a conditional decision to exchange or return based on a price threshold, requiring order lookup, variant comparison, confirmation, and then return processing.",
+      "retrieval_text": "Title: Price-threshold decision then process return for an order item\nApplicability: Reuse when a user wants the cheapest available option and a conditional decision to exchange or return based on a price threshold, requiring order lookup, variant comparison, confirmation, and then return processing.\nTask Signature: User asks for the lowest-priced available variant and wants an exchange if below a threshold, otherwise a return of their current item; assistant confirms.\nWorkflow: Authenticate or locate the customer profile using provided identifiers (name, ZIP) and. -> Query the product’s variants, filter to in-stock options, and identify the lowest-priced. -> Compare the lowest in-stock price to the user’s threshold rule and choose. -> If returning: confirm order ID, item ID(s), and refund method; submit the. -> Communicate what is known about next steps (e.g., instructions sent by email).",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "89-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "89"
+      ],
+      "last_task_query": "Hi, I’m actually hoping you can help me. I’m looking for the **cheapest mechanical keyboard** you have available right now and what options it comes with (like switch type, size, wired/wireless, etc.). Depending on the price: - If it’s **under.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:48568d8c5203",
+      "family": "exchange_modify",
+      "title": "Modify items and update shipping address on an order",
+      "task_signature": "Customer wants to change items in a recent order and update the shipping address, but the provided order ID may be incorrect or unavailable.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers (e.g., account email or name plus.",
+        "Locate the order by validating the provided order ID format; if it.",
+        "Confirm eligibility to change the order (e.g., order status allows modifications/address edits).",
+        "Collect and verify the full updated shipping address details and apply the.",
+        "Apply the item modifications, summarize all changes for confirmation, and note any."
+      ],
+      "applicability": "Use when a customer requests order modifications and/or a shipping address change and the order cannot be found immediately from the provided order number.",
+      "retrieval_text": "Title: Modify items and update shipping address on an order\nApplicability: Use when a customer requests order modifications and/or a shipping address change and the order cannot be found immediately from the provided order number.\nTask Signature: Customer wants to change items in a recent order and update the shipping address, but the provided order ID may be incorrect or unavailable.\nWorkflow: Authenticate the customer using approved identifiers (e.g., account email or name plus. -> Locate the order by validating the provided order ID format; if it. -> Confirm eligibility to change the order (e.g., order status allows modifications/address edits). -> Collect and verify the full updated shipping address details and apply the. -> Apply the item modifications, summarize all changes for confirmation, and note any.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "72-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "72"
+      ],
+      "last_task_query": "Hi! I need to make a couple of changes to a recent order: I’d like to modify some items in it, and I also need the shipping address updated from my son’s place in DC to my home in Charlotte.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:053d677667bf",
+      "family": "exchange_modify",
+      "title": "Modify pending order item variant and update shipping address",
+      "task_signature": "Customer requests to switch an item to a different (e.g., cheapest) variant and change shipping address, possibly to an address already on file, with.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier set (e.g., email or name.",
+        "Select the target order and verify eligibility based on order status: use.",
+        "Retrieve product variants, filter to the requested attributes (e.g., color) and availability.",
+        "If the customer prefers not to restate the address, present saved addresses.",
+        "Ask for explicit confirmation covering: order ID, item swap (old item to."
+      ],
+      "applicability": "Reuse when a customer wants both a product variant change and a shipping address update on an order, especially when the order is still pending and the new address can be selected.",
+      "retrieval_text": "Title: Modify pending order item variant and update shipping address\nApplicability: Reuse when a customer wants both a product variant change and a shipping address update on an order, especially when the order is still pending and the new address can be selected.\nTask Signature: Customer requests to switch an item to a different (e.g., cheapest) variant and change shipping address, possibly to an address already on file, with.\nWorkflow: Authenticate the customer using an approved identifier set (e.g., email or name. -> Select the target order and verify eligibility based on order status: use. -> Retrieve product variants, filter to the requested attributes (e.g., color) and availability. -> If the customer prefers not to restate the address, present saved addresses. -> Ask for explicit confirmation covering: order ID, item swap (old item to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "97-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "97"
+      ],
+      "last_task_query": "Hi. I need help with two things on my recent order, if that’s okay. First, I’d like to exchange the Bluetooth speaker on it to the cheapest green version you have. And second, I need the shipping address changed from.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:ab203bb18099",
+      "family": "exchange_modify",
+      "title": "Modify a pending order item to a different size/variant with price adjustment",
+      "task_signature": "Customer wants to change one line item in a recent order to a different size/variant (with constraints like color match) without canceling the order.",
+      "workflow": [
+        "Identify the customer account and locate the relevant recent/pending order(s) containing the.",
+        "Clarify the exact target variant requirements (e.g., size, color match to another.",
+        "Check variant availability and present viable replacement options that satisfy constraints; select.",
+        "Calculate the price difference and state the financial outcome (additional charge or.",
+        "Obtain explicit confirmation, apply the item swap on the order, and confirm."
+      ],
+      "applicability": "Reuse when a shopper requests changing an item already purchased to another size/color/material variant while keeping the order active, especially when inventory constraints and price differences must be confirmed before modifying a.",
+      "retrieval_text": "Title: Modify a pending order item to a different size/variant with price adjustment\nApplicability: Reuse when a shopper requests changing an item already purchased to another size/color/material variant while keeping the order active, especially when inventory constraints and price differences must be confirmed before modifying a.\nTask Signature: Customer wants to change one line item in a recent order to a different size/variant (with constraints like color match) without canceling the order.\nWorkflow: Identify the customer account and locate the relevant recent/pending order(s) containing the. -> Clarify the exact target variant requirements (e.g., size, color match to another. -> Check variant availability and present viable replacement options that satisfy constraints; select. -> Calculate the price difference and state the financial outcome (additional charge or. -> Obtain explicit confirmation, apply the item swap on the order, and confirm.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "79-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "79"
+      ],
+      "last_task_query": "Hi… um, I actually need some help with a recent purchase. I just bought a 500 ml water bottle, but I’ve realized I’d really rather have it in the 1000 ml size, like the other bottle I just ordered. I.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:03e4fdd3198a",
+      "family": "exchange_modify",
+      "title": "Authenticate, map requests to orders, and execute multi-item exchanges and cancellations",
+      "task_signature": "Customer requests multiple exchanges across one or more orders (option changes within same product) plus a cancellation on a different order, with payment method.",
+      "workflow": [
+        "Authenticate the customer using account identifiers, then retrieve recent orders and identify.",
+        "For each requested exchange, check policy constraints (must remain within same product/product.",
+        "Calculate/communicate how exchange price differences are handled and ask the customer to.",
+        "For cancellations, verify order status eligibility and whether partial cancellation is supported.",
+        "After receiving explicit yes/no confirmations for each action, submit the exchange and."
+      ],
+      "applicability": "Reuse when a customer needs to exchange multiple items (often with variant constraints and preferences) and cancel another order, requiring order lookup, variant selection, confirmations, and payment method selection.",
+      "retrieval_text": "Title: Authenticate, map requests to orders, and execute multi-item exchanges and cancellations\nApplicability: Reuse when a customer needs to exchange multiple items (often with variant constraints and preferences) and cancel another order, requiring order lookup, variant selection, confirmations, and payment method selection.\nTask Signature: Customer requests multiple exchanges across one or more orders (option changes within same product) plus a cancellation on a different order, with payment method.\nWorkflow: Authenticate the customer using account identifiers, then retrieve recent orders and identify. -> For each requested exchange, check policy constraints (must remain within same product/product. -> Calculate/communicate how exchange price differences are handled and ask the customer to. -> For cancellations, verify order status eligibility and whether partial cancellation is supported. -> After receiving explicit yes/no confirmations for each action, submit the exchange and.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "98-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "98"
+      ],
+      "last_task_query": "Hi! I actually need help with a few things on my recent orders, if that’s okay. 1. I’d like to **exchange a bicycle** I bought for my kid for one with a **larger frame size**. I’m also fine switching from.",
+      "status": "candidate"
+    },
+    {
+      "id": "payment:2486d940b04f",
+      "family": "payment",
+      "title": "Initiate return with refund to original payment method",
+      "task_signature": "Customer requests to return an item due to dissatisfaction and wants the refund issued back to the original method of payment; order info may.",
+      "workflow": [
+        "Authenticate the customer using one approved identifier set (e.g., account email or.",
+        "Retrieve the order by provided order ID; if not found, list recent.",
+        "Validate the order is eligible for return (e.g., delivered status) and identify.",
+        "Confirm the original payment method from order payment history and restate the.",
+        "Submit the return request for the confirmed item(s) and set the refund."
+      ],
+      "applicability": "Use when a customer wants to start a return and ensure the refund goes back to the original payment method, especially if they may not have the correct order ID and need.",
+      "retrieval_text": "Title: Initiate return with refund to original payment method\nApplicability: Use when a customer wants to start a return and ensure the refund goes back to the original payment method, especially if they may not have the correct order ID and need.\nTask Signature: Customer requests to return an item due to dissatisfaction and wants the refund issued back to the original method of payment; order info may.\nWorkflow: Authenticate the customer using one approved identifier set (e.g., account email or. -> Retrieve the order by provided order ID; if not found, list recent. -> Validate the order is eligible for return (e.g., delivered status) and identify. -> Confirm the original payment method from order payment history and restate the. -> Submit the return request for the confirmed item(s) and set the refund.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "48-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "48"
+      ],
+      "last_task_query": "Hi! I’d like to return an air purifier I received because it doesn’t seem to work very well. I’d like the refund to go back to my original method of payment. What information do you need from me to start.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:a00a076d2cfc",
+      "family": "authentication",
+      "title": "Authenticate customer to locate latest order without email",
+      "task_signature": "Customer wants to modify/return/exchange an item but cannot recall the email used for the order; use alternative identifiers to find the account and order.",
+      "workflow": [
+        "Request and confirm non-email identifiers (e.g., first name, last name, ZIP/postal code).",
+        "Use authenticated profile to retrieve the most recent order and list key.",
+        "Explain policy constraints relevant to the request (e.g., exchanges limited to same.",
+        "If action cannot be taken yet, provide the prerequisite event (e.g., delivery)."
+      ],
+      "applicability": "Reuse when an order lookup is needed for an exchange/return but the customer lacks the order email and needs guidance on what information to provide and what actions are currently possible.",
+      "retrieval_text": "Title: Authenticate customer to locate latest order without email\nApplicability: Reuse when an order lookup is needed for an exchange/return but the customer lacks the order email and needs guidance on what information to provide and what actions are currently possible.\nTask Signature: Customer wants to modify/return/exchange an item but cannot recall the email used for the order; use alternative identifiers to find the account and order.\nWorkflow: Request and confirm non-email identifiers (e.g., first name, last name, ZIP/postal code). -> Use authenticated profile to retrieve the most recent order and list key. -> Explain policy constraints relevant to the request (e.g., exchanges limited to same. -> If action cannot be taken yet, provide the prerequisite event (e.g., delivery).",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "65-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "65"
+      ],
+      "last_task_query": "Hi, I’d like to exchange the bookshelf from my most recent order for a camera instead—ideally something as close in price as possible but not more expensive than what I paid for the bookshelf. What do you need from me.",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:c25b2e7ce23d",
+      "family": "authentication",
+      "title": "Update account address using latest order address (privacy-preserving)",
+      "task_signature": "User wants to change their default account address but prefers not to restate it; use an address from a recent order and confirm before.",
+      "workflow": [
+        "Authenticate the user based on available account identifiers and retrieve the current.",
+        "Retrieve the user’s most recent order and extract the shipping address to.",
+        "Present both the current default address and the proposed new address, and.",
+        "Upon confirmation, update the account default address to the selected order’s address."
+      ],
+      "applicability": "Use when a user requests an address change and indicates their correct address is available on a recent order or they prefer not to type it out.",
+      "retrieval_text": "Title: Update account address using latest order address (privacy-preserving)\nApplicability: Use when a user requests an address change and indicates their correct address is available on a recent order or they prefer not to type it out.\nTask Signature: User wants to change their default account address but prefers not to restate it; use an address from a recent order and confirm before.\nWorkflow: Authenticate the user based on available account identifiers and retrieve the current. -> Retrieve the user’s most recent order and extract the shipping address to. -> Present both the current default address and the proposed new address, and. -> Upon confirmation, update the account default address to the selected order’s address.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "39-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "39"
+      ],
+      "last_task_query": "Oh wow, role reversal! I was about to ask you that. I need help with two things: 1. I just moved from Florida to Phoenix, and my account still has my old Florida address. I need to get that updated.",
+      "status": "candidate"
+    },
+    {
+      "id": "variant:65f79dc70524",
+      "family": "variant",
+      "title": "Find cheapest in-stock variant and provide purchase-ready details",
+      "task_signature": "User asks for the cheapest available item (e.g., apparel) and whether the assistant can order it; provide the lowest-priced available variant and the exact.",
+      "workflow": [
+        "Look up the product catalog entry for the requested product type and.",
+        "Filter to in-stock variants and select the minimum price; record the item/variant.",
+        "Report the cheapest available price along with product name, item/variant ID, and.",
+        "If asked to place the order and tooling does not support checkout."
+      ],
+      "applicability": "Use when users want the cheapest currently available variant and need exact selection details, especially when the assistant cannot directly place orders.",
+      "retrieval_text": "Title: Find cheapest in-stock variant and provide purchase-ready details\nApplicability: Use when users want the cheapest currently available variant and need exact selection details, especially when the assistant cannot directly place orders.\nTask Signature: User asks for the cheapest available item (e.g., apparel) and whether the assistant can order it; provide the lowest-priced available variant and the exact.\nWorkflow: Look up the product catalog entry for the requested product type and. -> Filter to in-stock variants and select the minimum price; record the item/variant. -> Report the cheapest available price along with product name, item/variant ID, and. -> If asked to place the order and tooling does not support checkout.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "39-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "39"
+      ],
+      "last_task_query": "Oh wow, role reversal! I was about to ask you that. I need help with two things: 1. I just moved from Florida to Phoenix, and my account still has my old Florida address. I need to get that updated.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:8b39bdee6274",
+      "family": "exchange_modify",
+      "title": "Exchange an item for a different variant",
+      "task_signature": "User requests an exchange of a purchased product into a different size/color/feature variant (e.g., zipper type), potentially without having the order ID handy.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier (e.g., account email or name.",
+        "Locate the relevant order by scanning recent orders for the target product.",
+        "Translate the requested replacement into specific variant attributes (size, color, feature) and.",
+        "Confirm the exact 'from' item and 'to' variant, disclose any price difference.",
+        "Create the exchange record by linking the original item and the new."
+      ],
+      "applicability": "Reuse when a customer wants to exchange an item for another variant of the same product and the assistant needs to authenticate, find the correct order, confirm variant availability, and finalize the.",
+      "retrieval_text": "Title: Exchange an item for a different variant\nApplicability: Reuse when a customer wants to exchange an item for another variant of the same product and the assistant needs to authenticate, find the correct order, confirm variant availability, and finalize the.\nTask Signature: User requests an exchange of a purchased product into a different size/color/feature variant (e.g., zipper type), potentially without having the order ID handy.\nWorkflow: Authenticate the customer using an approved identifier (e.g., account email or name. -> Locate the relevant order by scanning recent orders for the target product. -> Translate the requested replacement into specific variant attributes (size, color, feature) and. -> Confirm the exact 'from' item and 'to' variant, disclose any price difference. -> Create the exchange record by linking the original item and the new.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "85-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "85"
+      ],
+      "last_task_query": "Hi… um, I’d like to see if I can do an exchange. I bought a fleece jacket, but I need a different one instead—a large, red fleece jacket with a half zipper. Could you help me with that?",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:e4e8a05333e3",
+      "family": "exchange_modify",
+      "title": "Authenticate then modify a pending order item to the cheapest available replacement",
+      "task_signature": "Customer requests changing an item in a recent order to the cheapest available equivalent and refunding the price difference to a gift card, with.",
+      "workflow": [
+        "Request minimal authentication details (offer a couple of verification options) and validate.",
+        "Retrieve the order and confirm it is eligible for modification (e.g., still.",
+        "Fetch product variants/inventory, filter to available options, select the lowest-priced variant, and.",
+        "Summarize the proposed change (old vs new item/price), the total refund amount.",
+        "Upon confirmation, apply the item update and issue the refund to the."
+      ],
+      "applicability": "Reuse when a customer wants to modify an item in an order (especially to the cheapest available variant) and receive the price difference as a refund to a gift card or original.",
+      "retrieval_text": "Title: Authenticate then modify a pending order item to the cheapest available replacement\nApplicability: Reuse when a customer wants to modify an item in an order (especially to the cheapest available variant) and receive the price difference as a refund to a gift card or original.\nTask Signature: Customer requests changing an item in a recent order to the cheapest available equivalent and refunding the price difference to a gift card, with.\nWorkflow: Request minimal authentication details (offer a couple of verification options) and validate. -> Retrieve the order and confirm it is eligible for modification (e.g., still. -> Fetch product variants/inventory, filter to available options, select the lowest-priced variant, and. -> Summarize the proposed change (old vs new item/price), the total refund amount. -> Upon confirmation, apply the item update and issue the refund to the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "44-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "44"
+      ],
+      "last_task_query": "Hi, I’d like to make a change to a recent order. There’s a Desk Lamp in order **#W9300146** that I want to switch to the **cheapest Desk Lamp you have available**. Any price difference should go onto a **gift card**.",
+      "status": "candidate"
+    },
+    {
+      "id": "payment:ce163af3851c",
+      "family": "payment",
+      "title": "Gift card balance check and payment method update on latest order",
+      "task_signature": "User wants to verify gift card balance, identify the card used on the most recent order, and apply gift card or change the order’s.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier (e.g., account email or name.",
+        "Retrieve the most recent order and read payment history to identify the.",
+        "Fetch and report the gift card balance; assess whether gift card can.",
+        "If the customer confirms a selection, update the order payment method to.",
+        "Confirm outcomes clearly: new payment method on the order, original method no."
+      ],
+      "applicability": "Use when a customer needs gift card balance info and wants to apply it or otherwise change the payment method on an order, especially when eligibility depends on order status and tender-splitting.",
+      "retrieval_text": "Title: Gift card balance check and payment method update on latest order\nApplicability: Use when a customer needs gift card balance info and wants to apply it or otherwise change the payment method on an order, especially when eligibility depends on order status and tender-splitting.\nTask Signature: User wants to verify gift card balance, identify the card used on the most recent order, and apply gift card or change the order’s.\nWorkflow: Authenticate the customer using an approved identifier (e.g., account email or name. -> Retrieve the most recent order and read payment history to identify the. -> Fetch and report the gift card balance; assess whether gift card can. -> If the customer confirms a selection, update the order payment method to. -> Confirm outcomes clearly: new payment method on the order, original method no.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "40-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "40"
+      ],
+      "last_task_query": "Hi—honestly I’m hoping you can help me pretty quickly, I’m juggling finals and this is stressing me out. I need a couple of things: 1. Check how much balance is left on my gift card. 2. For my most recent.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:23792300ee87",
+      "family": "exchange_modify",
+      "title": "Authenticate, locate order, and submit a single post-delivery exchange/return request",
+      "task_signature": "Customer wants to return some items and exchange another item from a delivered order; agent must authenticate, identify the correct order/items, check variant availability.",
+      "workflow": [
+        "Authenticate the customer using an approved identifier set (e.g., email or name.",
+        "Identify the specific delivered order that contains the referenced items and list.",
+        "If exchanging, retrieve product variants and select the matching requested variant (confirm.",
+        "Compute any price difference for the exchange and confirm the payment/refund method.",
+        "Ask the customer to choose the single action to submit and obtain."
+      ],
+      "applicability": "Reuse when a customer needs fast handling of returns and/or exchanges on a recent delivered order and the system requires authentication, order lookup, variant selection, and explicit confirmation before submitting a single.",
+      "retrieval_text": "Title: Authenticate, locate order, and submit a single post-delivery exchange/return request\nApplicability: Reuse when a customer needs fast handling of returns and/or exchanges on a recent delivered order and the system requires authentication, order lookup, variant selection, and explicit confirmation before submitting a single.\nTask Signature: Customer wants to return some items and exchange another item from a delivered order; agent must authenticate, identify the correct order/items, check variant availability.\nWorkflow: Authenticate the customer using an approved identifier set (e.g., email or name. -> Identify the specific delivered order that contains the referenced items and list. -> If exchanging, retrieve product variants and select the matching requested variant (confirm. -> Compute any price difference for the exchange and confirm the payment/refund method. -> Ask the customer to choose the single action to submit and obtain.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "27-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "27"
+      ],
+      "last_task_query": "Hi, I need to take care of a couple of things from my recent order as quickly as possible. I want to: 1) Return the hose and the backpack 2) Exchange the hiking boots for the exact same ones but.",
+      "status": "candidate"
+    },
+    {
+      "id": "payment:27a8e195cf24",
+      "family": "payment",
+      "title": "Process return with correct refund method constraints",
+      "task_signature": "Customer wants to return one or more items from an order and requests a specific refund destination that may differ from the original payment.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., name + ZIP or email).",
+        "Identify the correct item(s) and compare prices if needed; summarize order IDs.",
+        "State refund routing rules (e.g., refunds must go to original payment method.",
+        "Offer viable options (return specific item vs. entire order; refund to original.",
+        "Before submitting, obtain explicit confirmation listing: order, item IDs, and refund method."
+      ],
+      "applicability": "Use when a customer requests a return/refund and wants the refund sent to a different payment method than the one used for purchase.",
+      "retrieval_text": "Title: Process return with correct refund method constraints\nApplicability: Use when a customer requests a return/refund and wants the refund sent to a different payment method than the one used for purchase.\nTask Signature: Customer wants to return one or more items from an order and requests a specific refund destination that may differ from the original payment.\nWorkflow: Authenticate the customer using available identifiers (e.g., name + ZIP or email). -> Identify the correct item(s) and compare prices if needed; summarize order IDs. -> State refund routing rules (e.g., refunds must go to original payment method. -> Offer viable options (return specific item vs. entire order; refund to original. -> Before submitting, obtain explicit confirmation listing: order, item IDs, and refund method.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "82-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "82"
+      ],
+      "last_task_query": "Hey! Yeah, so I kinda messed up with an order and need help fixing it. I ended up with **two tablets** from the same order, but I only actually need **one**. I want to **return the more expensive one** and.",
+      "status": "candidate"
+    },
+    {
+      "id": "payment:f5cd72b91784",
+      "family": "payment",
+      "title": "Handle request to split payment or change payment method on an order",
+      "task_signature": "Customer wants to split an order across multiple cards or change the payment method after placing an order",
+      "workflow": [
+        "Authenticate the customer using an approved identifier set (e.g., email or name+ZIP).",
+        "Locate the order via order ID; if not found, pull the customer’s.",
+        "Check order status and payment history to confirm whether payment updates are.",
+        "Communicate payment constraints clearly (e.g., cannot split across multiple payment methods; can.",
+        "Offer next-best options based on constraints and status (e.g., switch to a."
+      ],
+      "applicability": "Use when a customer discovers insufficient credit/failed payment and asks to split payment, add a second card, or otherwise modify payment on an existing order.",
+      "retrieval_text": "Title: Handle request to split payment or change payment method on an order\nApplicability: Use when a customer discovers insufficient credit/failed payment and asks to split payment, add a second card, or otherwise modify payment on an existing order.\nTask Signature: Customer wants to split an order across multiple cards or change the payment method after placing an order\nWorkflow: Authenticate the customer using an approved identifier set (e.g., email or name+ZIP). -> Locate the order via order ID; if not found, pull the customer’s. -> Check order status and payment history to confirm whether payment updates are. -> Communicate payment constraints clearly (e.g., cannot split across multiple payment methods; can. -> Offer next-best options based on constraints and status (e.g., switch to a.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "36-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "36"
+      ],
+      "last_task_query": "Hey, I just placed an order and I realized my card only has $1,131 credit left, but the order total is over $1,160. Can you help me split the payment with another card?",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:cefbdb2839cb",
+      "family": "exchange_modify",
+      "title": "Exchange delivered item for a different size/variant of the same product",
+      "task_signature": "Customer received an item, wants the largest available size (same fragrance/options) and to submit an exchange with any price difference refunded/charged, plus basic post-submission.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (email or name + ZIP), then.",
+        "Retrieve the delivered order details and identify the exact item/options to keep.",
+        "Compute the price difference and confirm the refund/charge method on file; present.",
+        "Submit the exchange request, then confirm updated order status and recap exchange.",
+        "Answer next-step logistics (return label/shipping instructions) and confirm the shipping address on."
+      ],
+      "applicability": "Use when a customer wants to exchange a delivered product for a different size or variant of the same product and needs help finding the correct variant, confirming price differences, and submitting.",
+      "retrieval_text": "Title: Exchange delivered item for a different size/variant of the same product\nApplicability: Use when a customer wants to exchange a delivered product for a different size or variant of the same product and needs help finding the correct variant, confirming price differences, and submitting.\nTask Signature: Customer received an item, wants the largest available size (same fragrance/options) and to submit an exchange with any price difference refunded/charged, plus basic post-submission.\nWorkflow: Authenticate the customer using available identifiers (email or name + ZIP), then. -> Retrieve the delivered order details and identify the exact item/options to keep. -> Compute the price difference and confirm the refund/charge method on file; present. -> Submit the exchange request, then confirm updated order status and recap exchange. -> Answer next-step logistics (return label/shipping instructions) and confirm the shipping address on.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "77-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "77"
+      ],
+      "last_task_query": "Hi! I just received a perfume I ordered and after trying a bit, I love it. I’d like to get the largest bottle size available for this same fragrance. Can you help me with that?",
+      "status": "candidate"
+    },
+    {
+      "id": "authentication:a3c4a11e3487",
+      "family": "authentication",
+      "title": "Authenticate customer then locate order for return vs cancellation",
+      "task_signature": "Customer requests a refund via return for an item they received, but the exact order date/ID is unknown; determine whether to process a return.",
+      "workflow": [
+        "Request one of the approved identity bundles (account email, or full name.",
+        "Look up the user account and enumerate recent orders with statuses, items.",
+        "Branch based on order status: if delivered and item matches, proceed with.",
+        "Confirm the customer’s intent and required fields for the chosen action (e.g.",
+        "Execute the action in the system and verify outcome (order status updated."
+      ],
+      "applicability": "Use when a customer wants to return/cancel a recent purchase but cannot provide an order ID and the item they received may not match any delivered order on file.",
+      "retrieval_text": "Title: Authenticate customer then locate order for return vs cancellation\nApplicability: Use when a customer wants to return/cancel a recent purchase but cannot provide an order ID and the item they received may not match any delivered order on file.\nTask Signature: Customer requests a refund via return for an item they received, but the exact order date/ID is unknown; determine whether to process a return.\nWorkflow: Request one of the approved identity bundles (account email, or full name. -> Look up the user account and enumerate recent orders with statuses, items. -> Branch based on order status: if delivered and item matches, proceed with. -> Confirm the customer’s intent and required fields for the chosen action (e.g. -> Execute the action in the system and verify outcome (order status updated.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "69-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "69"
+      ],
+      "last_task_query": "Hi! I’d like some help with returning a laptop I just received. I believe I ordered it around April 2023, but I’m not totally sure of the exact date. I found a better deal elsewhere, so I’d like to return.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:0fc26f294099",
+      "family": "exchange_modify",
+      "title": "Count available product variants and modify matching pending order items",
+      "task_signature": "User asks for the exact count of currently available options for a product and requests updates to all pending order line-items that match specific.",
+      "workflow": [
+        "Authenticate the user using an approved identifier set, then retrieve the user.",
+        "Fetch the target product catalog entry and compute (a) total variants and.",
+        "Retrieve details for each order and filter to those with a modifiable.",
+        "Select the best replacement variant using the user’s priority rules (e.g., color.",
+        "Ask for explicit confirmation including order ID, item swap mapping, and payment."
+      ],
+      "applicability": "Reuse when a customer needs an exact count of in-stock product options and wants to update all matching items across pending orders to a specific variant with preference rules and potential price.",
+      "retrieval_text": "Title: Count available product variants and modify matching pending order items\nApplicability: Reuse when a customer needs an exact count of in-stock product options and wants to update all matching items across pending orders to a specific variant with preference rules and potential price.\nTask Signature: User asks for the exact count of currently available options for a product and requests updates to all pending order line-items that match specific.\nWorkflow: Authenticate the user using an approved identifier set, then retrieve the user. -> Fetch the target product catalog entry and compute (a) total variants and. -> Retrieve details for each order and filter to those with a modifiable. -> Select the best replacement variant using the user’s priority rules (e.g., color. -> Ask for explicit confirmation including order ID, item swap mapping, and payment.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "3-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "3"
+      ],
+      "last_task_query": "Hi. I have a couple of questions about my orders and the store: 1) I’d like to know exactly how many t‑shirt options are available in the online store right now. 2) I also want to change all my pending.",
+      "status": "candidate"
+    },
+    {
+      "id": "status:f873d00f5510",
+      "family": "status",
+      "title": "Authenticate and retrieve delivered order tracking, then set expectations on refund/exchange",
+      "task_signature": "User requests tracking information for an order and asks for a refund or reorder after delivery/loss.",
+      "workflow": [
+        "Request and verify account identifiers (e.g., email or name plus ZIP) before.",
+        "Locate the relevant order and provide key status details including delivery state.",
+        "If the order is delivered, explain the available options (return or exchange).",
+        "Offer next best actions (initiate return/exchange if item is available, or proceed."
+      ],
+      "applicability": "Use when a customer needs tracking info and wants a refund/reorder for an order that may already be delivered.",
+      "retrieval_text": "Title: Authenticate and retrieve delivered order tracking, then set expectations on refund/exchange\nApplicability: Use when a customer needs tracking info and wants a refund/reorder for an order that may already be delivered.\nTask Signature: User requests tracking information for an order and asks for a refund or reorder after delivery/loss.\nWorkflow: Request and verify account identifiers (e.g., email or name plus ZIP) before. -> Locate the relevant order and provide key status details including delivery state. -> If the order is delivered, explain the available options (return or exchange). -> Offer next best actions (initiate return/exchange if item is available, or proceed.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "31-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "31"
+      ],
+      "last_task_query": "I just had a really bad day with an order and I need some help sorting it out. I recently got a tablet that I’ve already lost, and I want to see if you can give me the tracking number.",
+      "status": "candidate"
+    },
+    {
+      "id": "payment:49da808cb04f",
+      "family": "payment",
+      "title": "Reduce pending order total by switching items to cheaper variants",
+      "task_signature": "Customer can’t split payment and asks to lower a pending order total by changing items to the cheapest available options of the same products.",
+      "workflow": [
+        "Authenticate the customer and locate the most recent/pending order using available identifiers.",
+        "Set expectations on constraints: no split payments; no removing single items if.",
+        "Fetch variant/option availability and prices for each product in the order; select.",
+        "Confirm the single payment method to use for any adjustment and obtain.",
+        "Apply the modifications, then report the updated order total and the net."
+      ],
+      "applicability": "Use when an order is still pending and the customer wants to reduce total cost without canceling the entire order, by switching each line item to a cheaper in-stock variant while keeping.",
+      "retrieval_text": "Title: Reduce pending order total by switching items to cheaper variants\nApplicability: Use when an order is still pending and the customer wants to reduce total cost without canceling the entire order, by switching each line item to a cheaper in-stock variant while keeping.\nTask Signature: Customer can’t split payment and asks to lower a pending order total by changing items to the cheapest available options of the same products.\nWorkflow: Authenticate the customer and locate the most recent/pending order using available identifiers. -> Set expectations on constraints: no split payments; no removing single items if. -> Fetch variant/option availability and prices for each product in the order; select. -> Confirm the single payment method to use for any adjustment and obtain. -> Apply the modifications, then report the updated order total and the net.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "37-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "37"
+      ],
+      "last_task_query": "Hi, I just placed an order but I messed up my payment. My card only has $1,150 available, but the order total is over $1,160. Can you split the payment across two cards so I can still keep the order?",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:853b9a287100",
+      "family": "exchange_modify",
+      "title": "Process multiple item exchanges while preserving other orders",
+      "task_signature": "Customer wants to swap one or more items (often across different orders) without canceling orders; some orders may be delivered while others are still.",
+      "workflow": [
+        "Authenticate the customer, then retrieve all recent orders and clearly separate delivered.",
+        "For each requested swap, identify the exact source line item (order +.",
+        "Calculate and present per-order price differences (charge vs. refund) and confirm the.",
+        "Ask for an explicit final confirmation listing each exchange action (from →."
+      ],
+      "applicability": "Use when a customer requests multiple exchanges and wants help figuring out which orders/items are involved, especially when some items are delivered (exchange) and others are pending (modify rather than exchange).",
+      "retrieval_text": "Title: Process multiple item exchanges while preserving other orders\nApplicability: Use when a customer requests multiple exchanges and wants help figuring out which orders/items are involved, especially when some items are delivered (exchange) and others are pending (modify rather than exchange).\nTask Signature: Customer wants to swap one or more items (often across different orders) without canceling orders; some orders may be delivered while others are still.\nWorkflow: Authenticate the customer, then retrieve all recent orders and clearly separate delivered. -> For each requested swap, identify the exact source line item (order +. -> Calculate and present per-order price differences (charge vs. refund) and confirm the. -> Ask for an explicit final confirmation listing each exchange action (from →.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "29-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "29"
+      ],
+      "last_task_query": "Hey! I actually called in to get some help with a couple of exchanges. 1. I want to exchange my current skateboard for a shorter one made of bamboo. 2. I also need to exchange a garden hose I received.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:88a3fff3f104",
+      "family": "exchange_modify",
+      "title": "Update pending apparel order variants with confirmation and price-diff charge",
+      "task_signature": "User wants to change variant attributes (e.g., color/size/material/style) on all pending orders for a specific product, and needs an in-stock matching variant plus explicit.",
+      "workflow": [
+        "Authenticate or locate the customer account using available identifiers (e.g., name +.",
+        "Fetch details for each relevant order; filter to pending orders containing the.",
+        "Look up the product’s variants; count in-stock options if requested and identify.",
+        "Prepare a per-order change plan: from-item to to-item mapping, price difference per.",
+        "Obtain explicit user confirmation and chosen payment method ID, then apply the.",
+        "Return a final summary listing each updated order, the new variant/options, additional."
+      ],
+      "applicability": "Reuse when a customer requests changing product variants on pending orders (especially clothing/apparel), where changes require matching an in-stock variant, may affect price, and must be confirmed before executing per-order updates.",
+      "retrieval_text": "Title: Update pending apparel order variants with confirmation and price-diff charge\nApplicability: Reuse when a customer requests changing product variants on pending orders (especially clothing/apparel), where changes require matching an in-stock variant, may affect price, and must be confirmed before executing per-order updates.\nTask Signature: User wants to change variant attributes (e.g., color/size/material/style) on all pending orders for a specific product, and needs an in-stock matching variant plus explicit.\nWorkflow: Authenticate or locate the customer account using available identifiers (e.g., name +. -> Fetch details for each relevant order; filter to pending orders containing the. -> Look up the product’s variants; count in-stock options if requested and identify. -> Prepare a per-order change plan: from-item to to-item mapping, price difference per. -> Obtain explicit user confirmation and chosen payment method ID, then apply the. -> Return a final summary listing each updated order, the new variant/options, additional.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "4-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "4"
+      ],
+      "last_task_query": "Hi. I have a couple of questions about t‑shirts in your online store. First, I’d like to know exactly how many t‑shirt options you have available right now. Second, I want to update all my pending t‑shirt orders so they’re.",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:c871084e337e",
+      "family": "exchange_modify",
+      "title": "Partial return from an order while keeping one item",
+      "task_signature": "Customer wants to return some items from a single order (keep at least one item) and receive a refund to the original payment method.",
+      "workflow": [
+        "Authenticate the customer using approved identifiers (e.g., email or name plus ZIP).",
+        "Collect or locate the order: request the order number and, if lookup.",
+        "Present the order’s itemized list and ask the customer to explicitly confirm.",
+        "Confirm refund destination (original payment method vs. alternative) and summarize the return.",
+        "Submit the return request and then provide next-step logistics (how to return)."
+      ],
+      "applicability": "Use when a customer requests a return for most of an order but wants to keep one or more items, especially when the provided order number cannot be found and account-based order.",
+      "retrieval_text": "Title: Partial return from an order while keeping one item\nApplicability: Use when a customer requests a return for most of an order but wants to keep one or more items, especially when the provided order number cannot be found and account-based order.\nTask Signature: Customer wants to return some items from a single order (keep at least one item) and receive a refund to the original payment method.\nWorkflow: Authenticate the customer using approved identifiers (e.g., email or name plus ZIP). -> Collect or locate the order: request the order number and, if lookup. -> Present the order’s itemized list and ask the customer to explicitly confirm. -> Confirm refund destination (original payment method vs. alternative) and summarize the return. -> Submit the return request and then provide next-step logistics (how to return).",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "73-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "73"
+      ],
+      "last_task_query": "Hi! I’d like some help with a return, please. I just made a purchase and I want to return everything from that order except the coffee machine. What do you need from me to get that started?",
+      "status": "candidate"
+    },
+    {
+      "id": "exchange_modify:2ded5d2f7c2c",
+      "family": "exchange_modify",
+      "title": "Set up an exchange for a delivered item to a different configuration",
+      "task_signature": "Customer received an item and wants to exchange it for a different variant/configuration; agent authenticates, identifies the delivered order and item, finds an in-stock.",
+      "workflow": [
+        "Authenticate the customer using available identifiers (e.g., email or name plus ZIP).",
+        "Locate the relevant delivered order and the specific item to exchange; confirm.",
+        "Look up product variants and inventory; identify an in-stock replacement that matches.",
+        "Calculate the price difference between original and replacement item and confirm the.",
+        "Submit the exchange request by linking the original item and replacement variant."
+      ],
+      "applicability": "Use when a customer wants to exchange a delivered product for another configuration/variant and you must validate eligibility, select an in-stock replacement, and process any price difference.",
+      "retrieval_text": "Title: Set up an exchange for a delivered item to a different configuration\nApplicability: Use when a customer wants to exchange a delivered product for another configuration/variant and you must validate eligibility, select an in-stock replacement, and process any price difference.\nTask Signature: Customer received an item and wants to exchange it for a different variant/configuration; agent authenticates, identifies the delivered order and item, finds an in-stock.\nWorkflow: Authenticate the customer using available identifiers (e.g., email or name plus ZIP). -> Locate the relevant delivered order and the specific item to exchange; confirm. -> Look up product variants and inventory; identify an in-stock replacement that matches. -> Calculate the price difference between original and replacement item and confirm the. -> Submit the exchange request by linking the original item and replacement variant.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "93-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "93"
+      ],
+      "last_task_query": "I just got a laptop delivered and I need to exchange it for a different configuration: Intel i7 processor, 8GB RAM, 1TB SSD. What do I need to do to start an exchange?",
+      "status": "candidate"
+    }
+  ],
+  "family_index": {
+    "exchange_modify": [
+      "exchange_modify:46d5c05ac8d0",
+      "exchange_modify:3162db2ba5c4",
+      "exchange_modify:c5e46699b7d3",
+      "exchange_modify:08109632a952",
+      "exchange_modify:a88e496f2979",
+      "exchange_modify:75e8b9c54b90",
+      "exchange_modify:9e63d60de090",
+      "exchange_modify:514384ea83f9",
+      "exchange_modify:b0016743c83c",
+      "exchange_modify:4f9c5ae971fe",
+      "exchange_modify:cc6b55686b6c",
+      "exchange_modify:132e5ba2d316",
+      "exchange_modify:00a75bd1daab",
+      "exchange_modify:9a36d0f5c47c",
+      "exchange_modify:3e0b5fad0ce1",
+      "exchange_modify:796f951bf3ea",
+      "exchange_modify:df87679347ed",
+      "exchange_modify:d1c87c9da98a",
+      "exchange_modify:2e178460119e",
+      "exchange_modify:e7b44d097666",
+      "exchange_modify:35272f56ef48",
+      "exchange_modify:4061f7ecbe81",
+      "exchange_modify:5dd5e3041674",
+      "exchange_modify:7a5df8883bf5",
+      "exchange_modify:12cbca963130",
+      "exchange_modify:460da26d40e5",
+      "exchange_modify:0eeb553ac638",
+      "exchange_modify:48568d8c5203",
+      "exchange_modify:053d677667bf",
+      "exchange_modify:ab203bb18099",
+      "exchange_modify:03e4fdd3198a",
+      "exchange_modify:8b39bdee6274",
+      "exchange_modify:e4e8a05333e3",
+      "exchange_modify:23792300ee87",
+      "exchange_modify:cefbdb2839cb",
+      "exchange_modify:0fc26f294099",
+      "exchange_modify:853b9a287100",
+      "exchange_modify:88a3fff3f104",
+      "exchange_modify:c871084e337e",
+      "exchange_modify:2ded5d2f7c2c"
+    ],
+    "authentication": [
+      "authentication:e72b539d562c",
+      "authentication:aa97782b95b6",
+      "authentication:260fe4030859",
+      "authentication:bb4bfda1e8c5",
+      "authentication:4a22943affba",
+      "authentication:c3a73c8d36d4",
+      "authentication:142c81acee80",
+      "authentication:a00a076d2cfc",
+      "authentication:c25b2e7ce23d",
+      "authentication:a3c4a11e3487"
+    ],
+    "status": [
+      "status:fdb7a763507d",
+      "status:d33fafefabc8",
+      "status:9f014f7ecad9",
+      "status:c4a9e93d5d37",
+      "status:ca1df9986974",
+      "status:4692d022c01e",
+      "status:f873d00f5510"
+    ],
+    "variant": [
+      "variant:a4de5442835f",
+      "variant:a4ac37475dc0",
+      "variant:65f79dc70524"
+    ],
+    "payment": [
+      "payment:2486d940b04f",
+      "payment:ce163af3851c",
+      "payment:27a8e195cf24",
+      "payment:f5cd72b91784",
+      "payment:49da808cb04f"
+    ]
+  },
+  "events": [
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:46d5c05ac8d0",
+      "source_cycle": 0,
+      "source_task": "52-c0-t0-s626729",
+      "task_id": "52",
+      "task_query": "Hi! I just received a digital camera from your store, and the zoom isn’t nearly as strong as I expected. I use it for bird‑watching and I’d like to exchange it for a model that has the *maximum* zoom capacity.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:3162db2ba5c4",
+      "source_cycle": 0,
+      "source_task": "76-c0-t0-s626729",
+      "task_id": "76",
+      "task_query": "Hi! I actually need help with an order I placed. - I accidentally added a fleece jacket and I’d like to remove it from the pending order. If you can’t remove just that item, please cancel the whole order because.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:c5e46699b7d3",
+      "source_cycle": 0,
+      "source_task": "88-c0-t0-s626729",
+      "task_id": "88",
+      "task_query": "Hi there! I actually have an order I’d like to change, if possible. I ordered a bookshelf and I’m hoping to switch it to a 4-foot version, but with the exact same material and color as the one I already.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:08109632a952",
+      "source_cycle": 0,
+      "source_task": "102-c0-t0-s626729",
+      "task_id": "102",
+      "task_query": "I need help fixing a recent order I just placed. There are a few changes: - I need to update the shipping address. - I want to change one of the items in that order. - And I also need.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:a88e496f2979",
+      "source_cycle": 0,
+      "source_task": "74-c0-t0-s626729",
+      "task_id": "74",
+      "task_query": "Um, hi… thanks. I, uh, actually need help with two things about my recent purchases: 1. I just bought a laptop and I’d like to exchange it for the version with an i9 processor. If there are options, I’d want.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:e72b539d562c",
+      "source_cycle": 0,
+      "source_task": "18-c0-t0-s626729",
+      "task_id": "18",
+      "task_query": "Hi… I need help with an office chair I bought. It arrived with some broken pieces and I want to return it.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:aa97782b95b6",
+      "source_cycle": 0,
+      "source_task": "43-c0-t0-s626729",
+      "task_id": "43",
+      "task_query": "Oh, hi there. Thanks for picking up. I ordered a few things for my daughter recently, but she hasn’t received them yet. I wanted to check on that order—specifically: - Which address it was shipped to - The tracking number.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:75e8b9c54b90",
+      "source_cycle": 0,
+      "source_task": "43-c0-t0-s626729",
+      "task_id": "43",
+      "task_query": "Oh, hi there. Thanks for picking up. I ordered a few things for my daughter recently, but she hasn’t received them yet. I wanted to check on that order—specifically: - Which address it was shipped to - The tracking number.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:9e63d60de090",
+      "source_cycle": 0,
+      "source_task": "92-c0-t0-s626729",
+      "task_id": "92",
+      "task_query": "Hi! I just got a delivery from you and I’m really unhappy with the quality of the two skateboards I bought. I want to return them and get the refund back to my credit card. Can you help me start.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:514384ea83f9",
+      "source_cycle": 0,
+      "source_task": "6-c0-t0-s626729",
+      "task_id": "6",
+      "task_query": "Hi! I’d like to do an exchange on a couple of things I bought: a water bottle and a desk lamp.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:b0016743c83c",
+      "source_cycle": 0,
+      "source_task": "100-c0-t0-s626729",
+      "task_id": "100",
+      "task_query": "Uh, hi… I actually need help with a few returns and exchanges from a recent order, if that’s okay. I want to: - Return a luggage set and get the exact same one but in red. - Return a skateboard.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:260fe4030859",
+      "source_cycle": 0,
+      "source_task": "24-c0-t0-s626729",
+      "task_id": "24",
+      "task_query": "Hi! I had a couple of questions about my recent orders. First, I have a grill I ordered that I was thinking about canceling. And then I also have another order with two t‑shirts, and I’d like to confirm which.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:fdb7a763507d",
+      "source_cycle": 0,
+      "source_task": "55-c0-t0-s626729",
+      "task_id": "55",
+      "task_query": "Oh—hi. Sorry, I’m actually the customer here, I think things got flipped around a bit. I really need help with my orders. I’ve run into a pretty serious financial issue and I’m honestly a bit overwhelmed right now. I want.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:4f9c5ae971fe",
+      "source_cycle": 0,
+      "source_task": "101-c0-t0-s626729",
+      "task_id": "101",
+      "task_query": "I just placed a couple of orders and I need to make some changes. First one: it has two watches in it. - I need the shipping address changed to my New York address. It should already be on file.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:cc6b55686b6c",
+      "source_cycle": 0,
+      "source_task": "99-c0-t0-s626729",
+      "task_id": "99",
+      "task_query": "Hi there! I need some help with a few things on my recent orders. I’d like to: 1) Exchange my kid’s bicycle for one with a larger frame size. I’m fine switching from a road bike to a mountain bike.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "variant",
+      "entry_id": "variant:a4de5442835f",
+      "source_cycle": 0,
+      "source_task": "20-c0-t0-s626729",
+      "task_id": "20",
+      "task_query": "Hi, I’ve had a bit of a lucky day and want to upgrade some items from my past orders to the most expensive versions available. I care about keeping the same shoe size, but everything else can change. I’d also.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:132e5ba2d316",
+      "source_cycle": 0,
+      "source_task": "109-c0-t0-s626729",
+      "task_id": "109",
+      "task_query": "Hi! I need some help with a few account and order changes. 1. I recently moved to a new house on the same street (Elm Avenue here in Houston). One of my recent orders—a luggage set—was correctly sent to my.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:d33fafefabc8",
+      "source_cycle": 0,
+      "source_task": "47-c0-t0-s626729",
+      "task_id": "47",
+      "task_query": "I need to return two items from my recent order: an air purifier and a vacuum cleaner. Can you help me start a return for those and let me know how fast I can get my refund? I really need.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:9f014f7ecad9",
+      "source_cycle": 0,
+      "source_task": "28-c0-t0-s626729",
+      "task_id": "28",
+      "task_query": "Hi, I need help with some returns and one item to cancel from a recent order.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:00a75bd1daab",
+      "source_cycle": 0,
+      "source_task": "70-c0-t0-s626729",
+      "task_id": "70",
+      "task_query": "Yeah, I actually need help with an exchange. I just got a helmet from you and I’m not happy with it. The size is too small, and I want to swap it for a medium with really good ventilation. If.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:9a36d0f5c47c",
+      "source_cycle": 0,
+      "source_task": "17-c0-t0-s626729",
+      "task_id": "17",
+      "task_query": "Hi, I just need to update the delivery address on an order. I’d like order **#W8665881** to be delivered to **Suite 641** instead of the current address. What do you need from me to make that change?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:3e0b5fad0ce1",
+      "source_cycle": 0,
+      "source_task": "90-c0-t0-s626729",
+      "task_id": "90",
+      "task_query": "Hi! I just placed an order for a digital camera and I want to check something about it. I need to know whether the camera I bought is a 10x zoom model. If it isn’t, I’d like to change it.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:796f951bf3ea",
+      "source_cycle": 0,
+      "source_task": "75-c0-t0-s626729",
+      "task_id": "75",
+      "task_query": "Hi! I need help with an exchange on a recent order. I have Wireless Earbuds from order **#W6908222** that are **blue**, have **8-hour battery life**, and **IPX4 water resistance**. I’d like to exchange them for a version that’s **black**, with.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:bb4bfda1e8c5",
+      "source_cycle": 0,
+      "source_task": "68-c0-t0-s626729",
+      "task_id": "68",
+      "task_query": "Hi! I’m trying to find out how much I paid for my most recent order. I’m not sure when I placed it.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:df87679347ed",
+      "source_cycle": 0,
+      "source_task": "86-c0-t0-s626729",
+      "task_id": "86",
+      "task_query": "Hi. I… um, I’d like some help with an order. I want to exchange a fleece jacket I bought—for a red one, with a half zipper instead of the one I have now. Also, I’d like to update my default.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "variant",
+      "entry_id": "variant:a4ac37475dc0",
+      "source_cycle": 0,
+      "source_task": "61-c0-t0-s626729",
+      "task_id": "61",
+      "task_query": "Hi, I’d like to change the wireless earbuds in my recent order W5061109 to the blue-colored version instead of the one I originally selected. My details: - Name: Chen Johnson - Location: Houston, TX 77004 I don’t remember which email.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:c4a9e93d5d37",
+      "source_cycle": 0,
+      "source_task": "26-c0-t0-s626729",
+      "task_id": "26",
+      "task_query": "Hi, I had an order that was accidentally shipped to an address in Texas instead of to me here in 32286, and I need some urgent help with it. I don’t remember the order number, but I need: 1) The.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:d1c87c9da98a",
+      "source_cycle": 0,
+      "source_task": "15-c0-t0-s626729",
+      "task_id": "15",
+      "task_query": "Hi, I’ve got an order with a pair of boots that’s still pending, and I’d like to change the size to an 8. I also want to make sure they’re a specific material, but I don’t really care whether they’re.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:2e178460119e",
+      "source_cycle": 0,
+      "source_task": "45-c0-t0-s626729",
+      "task_id": "45",
+      "task_query": "Hi! I’m looking to exchagne a robotic vacuum cleaner from my recent order for a canister-style one from the same product line. Can you help me with that, and let me knwo what info you need from me to get.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:4a22943affba",
+      "source_cycle": 0,
+      "source_task": "12-c0-t0-s626729",
+      "task_id": "12",
+      "task_query": "Hey. I need to cancel or return a bunch of recent stuff I bought that I don’t really want anymore. Can you help me sort out what can still be canceled vs. what I can return? I’d like refunds sent.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:e7b44d097666",
+      "source_cycle": 0,
+      "source_task": "46-c0-t0-s626729",
+      "task_id": "46",
+      "task_query": "I need to return a couple of items from my last order—an air purifier and a vacuum cleaner. Can you help me start a return for those?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:35272f56ef48",
+      "source_cycle": 0,
+      "source_task": "1-c0-t0-s626729",
+      "task_id": "1",
+      "task_query": "Hi! I actually need some help with a recent order I received. I’d like to do an exchange on two items from order **#W2378156**: - The **mechanical keyboard** for the *same model*, but with **clicky switches** - The **smart thermostat**.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:4061f7ecbe81",
+      "source_cycle": 0,
+      "source_task": "60-c0-t0-s626729",
+      "task_id": "60",
+      "task_query": "Hi, I’d like to change an item in my recent order and need your help. I’m **Chen Johnson from Houston, TX 77004**, and I have order **W5061109**. In that order, I purchased a pair of **wireless earbuds**, and I want.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:5dd5e3041674",
+      "source_cycle": 0,
+      "source_task": "66-c0-t0-s626729",
+      "task_id": "66",
+      "task_query": "Hi! I need some help with a recent order. I ordered a luggage set, but I’ve changed my mind and would like to switch that item to a coat instead. Can you tell me if it’s possible to change the.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:7a5df8883bf5",
+      "source_cycle": 0,
+      "source_task": "19-c0-t0-s626729",
+      "task_id": "19",
+      "task_query": "Hi… I need some help with my recent order. I’d like to: 1) Return a water bottle, and 2) Exchange both a pet bed and an office chair for the cheapest versions you have. I’d really like to get both.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:c3a73c8d36d4",
+      "source_cycle": 0,
+      "source_task": "63-c0-t0-s626729",
+      "task_id": "63",
+      "task_query": "Let’s start with something fun before we get into my order. Can you guess the poem from this first line? “Two roads diverged in a yellow wood,”",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:ca1df9986974",
+      "source_cycle": 0,
+      "source_task": "108-c0-t0-s626729",
+      "task_id": "108",
+      "task_query": "Hi, I need some help with a recent order I just received. I’d like to return everything from that order **except** the tablet. There’s also an e-reader in there that I definitely want to send back. Can you help me.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:4692d022c01e",
+      "source_cycle": 0,
+      "source_task": "50-c0-t0-s626729",
+      "task_id": "50",
+      "task_query": "Hi, I need help with an order I canceled earlier. I want to undo that cancellation and have the original order shipped out to me as soon as possible. I’m in a bit of a rush, so I really need.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:12cbca963130",
+      "source_cycle": 0,
+      "source_task": "87-c0-t0-s626729",
+      "task_id": "87",
+      "task_query": "Hi. I need to update some shipping addresses. I want all of my pending orders to use the same address as one of my existing orders going to Washington, DC, and I also want that same address set as my.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:460da26d40e5",
+      "source_cycle": 0,
+      "source_task": "95-c0-t0-s626729",
+      "task_id": "95",
+      "task_query": "I need to exchange a laptop order and I want to upgrade the specs. I’ve got two 15‑inch laptops that I want to swap for versions with: - i7 processor - 8GB RAM - 1TB SSD I’d like to know.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:142c81acee80",
+      "source_cycle": 0,
+      "source_task": "10-c0-t0-s626729",
+      "task_id": "10",
+      "task_query": "I want to return everything from my last two orders and get refunds.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:0eeb553ac638",
+      "source_cycle": 0,
+      "source_task": "89-c0-t0-s626729",
+      "task_id": "89",
+      "task_query": "Hi, I’m actually hoping you can help me. I’m looking for the **cheapest mechanical keyboard** you have available right now and what options it comes with (like switch type, size, wired/wireless, etc.). Depending on the price: - If it’s **under.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:48568d8c5203",
+      "source_cycle": 0,
+      "source_task": "72-c0-t0-s626729",
+      "task_id": "72",
+      "task_query": "Hi! I need to make a couple of changes to a recent order: I’d like to modify some items in it, and I also need the shipping address updated from my son’s place in DC to my home in Charlotte.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:053d677667bf",
+      "source_cycle": 0,
+      "source_task": "97-c0-t0-s626729",
+      "task_id": "97",
+      "task_query": "Hi. I need help with two things on my recent order, if that’s okay. First, I’d like to exchange the Bluetooth speaker on it to the cheapest green version you have. And second, I need the shipping address changed from.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:ab203bb18099",
+      "source_cycle": 0,
+      "source_task": "79-c0-t0-s626729",
+      "task_id": "79",
+      "task_query": "Hi… um, I actually need some help with a recent purchase. I just bought a 500 ml water bottle, but I’ve realized I’d really rather have it in the 1000 ml size, like the other bottle I just ordered. I.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:03e4fdd3198a",
+      "source_cycle": 0,
+      "source_task": "98-c0-t0-s626729",
+      "task_id": "98",
+      "task_query": "Hi! I actually need help with a few things on my recent orders, if that’s okay. 1. I’d like to **exchange a bicycle** I bought for my kid for one with a **larger frame size**. I’m also fine switching from.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "payment",
+      "entry_id": "payment:2486d940b04f",
+      "source_cycle": 0,
+      "source_task": "48-c0-t0-s626729",
+      "task_id": "48",
+      "task_query": "Hi! I’d like to return an air purifier I received because it doesn’t seem to work very well. I’d like the refund to go back to my original method of payment. What information do you need from me to start.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:a00a076d2cfc",
+      "source_cycle": 0,
+      "source_task": "65-c0-t0-s626729",
+      "task_id": "65",
+      "task_query": "Hi, I’d like to exchange the bookshelf from my most recent order for a camera instead—ideally something as close in price as possible but not more expensive than what I paid for the bookshelf. What do you need from me.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:c25b2e7ce23d",
+      "source_cycle": 0,
+      "source_task": "39-c0-t0-s626729",
+      "task_id": "39",
+      "task_query": "Oh wow, role reversal! I was about to ask you that. I need help with two things: 1. I just moved from Florida to Phoenix, and my account still has my old Florida address. I need to get that updated.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "variant",
+      "entry_id": "variant:65f79dc70524",
+      "source_cycle": 0,
+      "source_task": "39-c0-t0-s626729",
+      "task_id": "39",
+      "task_query": "Oh wow, role reversal! I was about to ask you that. I need help with two things: 1. I just moved from Florida to Phoenix, and my account still has my old Florida address. I need to get that updated.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:8b39bdee6274",
+      "source_cycle": 0,
+      "source_task": "85-c0-t0-s626729",
+      "task_id": "85",
+      "task_query": "Hi… um, I’d like to see if I can do an exchange. I bought a fleece jacket, but I need a different one instead—a large, red fleece jacket with a half zipper. Could you help me with that?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:e4e8a05333e3",
+      "source_cycle": 0,
+      "source_task": "44-c0-t0-s626729",
+      "task_id": "44",
+      "task_query": "Hi, I’d like to make a change to a recent order. There’s a Desk Lamp in order **#W9300146** that I want to switch to the **cheapest Desk Lamp you have available**. Any price difference should go onto a **gift card**.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "payment",
+      "entry_id": "payment:ce163af3851c",
+      "source_cycle": 0,
+      "source_task": "40-c0-t0-s626729",
+      "task_id": "40",
+      "task_query": "Hi—honestly I’m hoping you can help me pretty quickly, I’m juggling finals and this is stressing me out. I need a couple of things: 1. Check how much balance is left on my gift card. 2. For my most recent.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:23792300ee87",
+      "source_cycle": 0,
+      "source_task": "27-c0-t0-s626729",
+      "task_id": "27",
+      "task_query": "Hi, I need to take care of a couple of things from my recent order as quickly as possible. I want to: 1) Return the hose and the backpack 2) Exchange the hiking boots for the exact same ones but.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "payment",
+      "entry_id": "payment:27a8e195cf24",
+      "source_cycle": 0,
+      "source_task": "82-c0-t0-s626729",
+      "task_id": "82",
+      "task_query": "Hey! Yeah, so I kinda messed up with an order and need help fixing it. I ended up with **two tablets** from the same order, but I only actually need **one**. I want to **return the more expensive one** and.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "payment",
+      "entry_id": "payment:f5cd72b91784",
+      "source_cycle": 0,
+      "source_task": "36-c0-t0-s626729",
+      "task_id": "36",
+      "task_query": "Hey, I just placed an order and I realized my card only has $1,131 credit left, but the order total is over $1,160. Can you help me split the payment with another card?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:cefbdb2839cb",
+      "source_cycle": 0,
+      "source_task": "77-c0-t0-s626729",
+      "task_id": "77",
+      "task_query": "Hi! I just received a perfume I ordered and after trying a bit, I love it. I’d like to get the largest bottle size available for this same fragrance. Can you help me with that?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "authentication",
+      "entry_id": "authentication:a3c4a11e3487",
+      "source_cycle": 0,
+      "source_task": "69-c0-t0-s626729",
+      "task_id": "69",
+      "task_query": "Hi! I’d like some help with returning a laptop I just received. I believe I ordered it around April 2023, but I’m not totally sure of the exact date. I found a better deal elsewhere, so I’d like to return.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:0fc26f294099",
+      "source_cycle": 0,
+      "source_task": "3-c0-t0-s626729",
+      "task_id": "3",
+      "task_query": "Hi. I have a couple of questions about my orders and the store: 1) I’d like to know exactly how many t‑shirt options are available in the online store right now. 2) I also want to change all my pending.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "status",
+      "entry_id": "status:f873d00f5510",
+      "source_cycle": 0,
+      "source_task": "31-c0-t0-s626729",
+      "task_id": "31",
+      "task_query": "I just had a really bad day with an order and I need some help sorting it out. I recently got a tablet that I’ve already lost, and I want to see if you can give me the tracking number.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "payment",
+      "entry_id": "payment:49da808cb04f",
+      "source_cycle": 0,
+      "source_task": "37-c0-t0-s626729",
+      "task_id": "37",
+      "task_query": "Hi, I just placed an order but I messed up my payment. My card only has $1,150 available, but the order total is over $1,160. Can you split the payment across two cards so I can still keep the order?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:853b9a287100",
+      "source_cycle": 0,
+      "source_task": "29-c0-t0-s626729",
+      "task_id": "29",
+      "task_query": "Hey! I actually called in to get some help with a couple of exchanges. 1. I want to exchange my current skateboard for a shorter one made of bamboo. 2. I also need to exchange a garden hose I received.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:88a3fff3f104",
+      "source_cycle": 0,
+      "source_task": "4-c0-t0-s626729",
+      "task_id": "4",
+      "task_query": "Hi. I have a couple of questions about t‑shirts in your online store. First, I’d like to know exactly how many t‑shirt options you have available right now. Second, I want to update all my pending t‑shirt orders so they’re.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:c871084e337e",
+      "source_cycle": 0,
+      "source_task": "73-c0-t0-s626729",
+      "task_id": "73",
+      "task_query": "Hi! I’d like some help with a return, please. I just made a purchase and I want to return everything from that order except the coffee machine. What do you need from me to get that started?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "exchange_modify",
+      "entry_id": "exchange_modify:2ded5d2f7c2c",
+      "source_cycle": 0,
+      "source_task": "93-c0-t0-s626729",
+      "task_id": "93",
+      "task_query": "I just got a laptop delivered and I need to exchange it for a different configuration: Intel i7 processor, 8GB RAM, 1TB SSD. What do I need to do to start an exchange?",
+      "status": "candidate",
+      "success_count": 1
+    }
+  ]
+}

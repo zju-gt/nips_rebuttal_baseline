@@ -4,7 +4,7 @@ import os
 from typing import List
 
 import numpy as np
-from openai import OpenAI
+from openai_test import OpenAI
 
 from tau2.knowledge.embedders.base import BaseEmbedder
 

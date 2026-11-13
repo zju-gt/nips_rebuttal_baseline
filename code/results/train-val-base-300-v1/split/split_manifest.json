@@ -1,0 +1,24 @@
+{
+  "version": "base-sha256-v1",
+  "seed": 300,
+  "domains": {
+    "airline": {
+      "split_hash": "5e1f2c90732642f95a8abba491b4034942ace49e62eb20d6d3fcd9cdceb9d063",
+      "base": 50,
+      "train": 35,
+      "val": 15
+    },
+    "retail": {
+      "split_hash": "36d3e4078cdc3a1245f7eee4869bfb6fb4efa8c2f08a4a5a29daf00af049c203",
+      "base": 114,
+      "train": 80,
+      "val": 34
+    },
+    "telecom": {
+      "split_hash": "5aae9748c658a6c22457df8c791eed3cabdf982e331f925c4e6fda515161e1ae",
+      "base": 114,
+      "train": 80,
+      "val": 34
+    }
+  }
+}

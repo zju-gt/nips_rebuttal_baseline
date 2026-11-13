@@ -961,6 +961,192 @@
       ],
       "last_sample_id": "30-c0-t2-s361454",
       "last_outcome_tag": "success"
+    },
+    "31": {
+      "task_id": "31",
+      "task_family": "status",
+      "failure_count": 3,
+      "success_count": 0,
+      "hints": [
+        {
+          "text": "After giving tracking/status, ask key clarifying questions and present the standard refund/reorder/replacement paths and constraints; only transfer if the policy requires manual handling or.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Collect and summarize required details (order/item, tracking, delivered status, loss type, address confirmation, preferred resolution, any timing/notes), create/record the escalation (case/ticket) if available, and.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Trigger the transfer/escalation workflow right away and include a brief case summary (order ID, status, tracking ID, customer request for goodwill/exception) for the receiving.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "31-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "32": {
+      "task_id": "32",
+      "task_family": "status",
+      "failure_count": 3,
+      "success_count": 0,
+      "hints": [
+        {
+          "text": "After giving tracking, directly address the constraint (no item to return): state clearly what is/isn't possible in available workflows for delivered-and-lost situations, offer the.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Initiate the transfer per the workflow/tooling and clearly confirm it is in progress (and include any required context/summary for the agent) before ending the.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Trigger the transfer/escalation workflow right away (and confirm it is in progress) instead of only describing the option; complete the handoff before ending the.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "32-c0-t2-s361454",
+      "last_outcome_tag": "failure"
+    },
+    "33": {
+      "task_id": "33",
+      "task_family": "status",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "Authenticate user before accessing profile/orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Authenticate user with name + ZIP and verify the resulting user_id matches the intended customer profile.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Confirm order status (e.g., pending vs cancelled) and payment/refund history before stating cancellation/refund outcomes.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "33-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "34": {
+      "task_id": "34",
+      "task_family": "status",
+      "failure_count": 2,
+      "success_count": 1,
+      "hints": [
+        {
+          "text": "After authenticating the user, call user-details retrieval and present the account's order list; ask the customer to confirm the correct order ID from that.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "Authenticate user (email or full name + ZIP) before accessing orders.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Before concluding, re-check the updated order status/refund via the relevant status/details tool (or required verification step) and include the exact expected confirmation details (order.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "34-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "35": {
+      "task_id": "35",
+      "task_family": "authentication",
+      "failure_count": 0,
+      "success_count": 3,
+      "hints": [
+        {
+          "text": "After successful authentication, confirm the correct target order and line item(s) using discriminating attributes (price, key features) before acting.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Do not proceed to order lookup/actions without a confirmed user_id tied to provided identifiers.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "If lookup returns 'User not found', do not proceed; request alternate identifiers (different email or first+last+ZIP) and retry.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        }
+      ],
+      "last_sample_id": "35-c0-t2-s361454",
+      "last_outcome_tag": "success"
+    },
+    "36": {
+      "task_id": "36",
+      "task_family": "exchange_modify",
+      "failure_count": 1,
+      "success_count": 1,
+      "hints": [
+        {
+          "text": "Before acting, restate the chosen plan (modify items/variants OR cancel), get explicit confirmation, then execute the corresponding tool call(s). If modification fails constraints, document.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        },
+        {
+          "text": "If user lookup returns 'User not found', re-check identifiers and retry identity resolution before proceeding.",
+          "source": "critical_check",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "success"
+        },
+        {
+          "text": "Stop and ask for corrected/alternate identifiers (email, name+ZIP, or order ID). Re-run lookup and explicitly confirm the matched user (name/user_id) with the user before.",
+          "source": "recovery_action",
+          "score": 3.0,
+          "count": 1,
+          "last_outcome_tag": "failure"
+        }
+      ],
+      "last_sample_id": "36-c0-t1-s373753",
+      "last_outcome_tag": "success"
     }
   }
 }

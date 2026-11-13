@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "domain": "retail",
+  "families": [
+    "authentication",
+    "status",
+    "exchange_modify",
+    "variant",
+    "payment"
+  ],
+  "entries": [],
+  "family_index": {},
+  "events": []
+}

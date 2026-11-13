@@ -462,7 +462,7 @@ def build_openai_compatible_embed_texts(
                 missing_indices.append(index)
 
         if missing_texts:
-            from openai import OpenAI
+            from openai_test import OpenAI
 
             client = OpenAI(api_key=normalized_key, base_url=normalized_base_url)
             for start in range(0, len(missing_texts), batch_size):

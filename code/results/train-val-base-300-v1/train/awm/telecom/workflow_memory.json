@@ -1,0 +1,1495 @@
+{
+  "version": 1,
+  "domain": "telecom",
+  "families": [
+    "mobile_data",
+    "mms",
+    "roaming",
+    "billing",
+    "apn_reboot"
+  ],
+  "entries": [
+    {
+      "id": "apn_reboot:835764312bbc",
+      "family": "apn_reboot",
+      "title": "Triage and troubleshoot 'No Service' on an active line",
+      "task_signature": "Customer reports 'No Service'/no bars and cannot call or text; account/line appears active with no billing suspension.",
+      "workflow": [
+        "Verify account and affected line status (active vs suspended) and confirm no.",
+        "Run quick device toggles: airplane mode on/off, cellular radio/mobile data toggle, and.",
+        "Check SIM/eSIM state in device settings (active/missing/locked) and reseat physical SIM if.",
+        "If still no signal, proceed to network settings checks (preferred network mode.",
+        "Escalate for carrier-side actions (SIM reprovision/replacement, IMEI/line re-registration, network ticket) when on-device."
+      ],
+      "applicability": "Reuse when a user has sudden loss of cellular service ('No Service' or no bars) and cannot place/receive calls/texts, especially when Wi‑Fi still works and the line is not suspended.",
+      "retrieval_text": "Title: Triage and troubleshoot 'No Service' on an active line\nApplicability: Reuse when a user has sudden loss of cellular service ('No Service' or no bars) and cannot place/receive calls/texts, especially when Wi‑Fi still works and the line is not suspended.\nTask Signature: Customer reports 'No Service'/no bars and cannot call or text; account/line appears active with no billing suspension.\nWorkflow: Verify account and affected line status (active vs suspended) and confirm no. -> Run quick device toggles: airplane mode on/off, cellular radio/mobile data toggle, and. -> Check SIM/eSIM state in device settings (active/missing/locked) and reseat physical SIM if. -> If still no signal, proceed to network settings checks (preferred network mode. -> Escalate for carrier-side actions (SIM reprovision/replacement, IMEI/line re-registration, network ticket) when on-device.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, thanks for checking in — you’re actually the customer in this scenario. You should describe the issue you’re having with your phone or service, and I’ll play the role of the customer service agent helping you fix it.",
+      "status": "candidate"
+    },
+    {
+      "id": "apn_reboot:a3450ec29d4e",
+      "family": "apn_reboot",
+      "title": "Resolve 'No Service' caused by SIM not detected / SIM PIN lock",
+      "task_signature": "Customer reports persistent 'No Service'; troubleshooting reveals SIM not detected or SIM locked with a PIN, requiring device-side checks and SIM reseating/unlock before network-level.",
+      "workflow": [
+        "Gather essentials: confirm impact duration, location, device type/model (provide navigation to find.",
+        "Run quick device checks: confirm Airplane Mode off, reboot once, and note.",
+        "If 'No SIM' appears: power off and reseat the physical SIM (remove.",
+        "If SIM is detected but PIN-locked: prompt for SIM PIN entry (or.",
+        "If SIM remains undetected after reseat: confirm physical SIM vs eSIM, check."
+      ],
+      "applicability": "Use when a customer experiences 'No Service' and device indicators point to SIM presence/authentication issues rather than intermittent coverage.",
+      "retrieval_text": "Title: Resolve 'No Service' caused by SIM not detected / SIM PIN lock\nApplicability: Use when a customer experiences 'No Service' and device indicators point to SIM presence/authentication issues rather than intermittent coverage.\nTask Signature: Customer reports persistent 'No Service'; troubleshooting reveals SIM not detected or SIM locked with a PIN, requiring device-side checks and SIM reseating/unlock before network-level.\nWorkflow: Gather essentials: confirm impact duration, location, device type/model (provide navigation to find. -> Run quick device checks: confirm Airplane Mode off, reboot once, and note. -> If 'No SIM' appears: power off and reseat the physical SIM (remove. -> If SIM is detected but PIN-locked: prompt for SIM PIN entry (or. -> If SIM remains undetected after reseat: confirm physical SIM vs eSIM, check.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, thanks for asking — I’m actually here to help you. From what I understand, you’re contacting your mobile provider because your phone has been showing “No Service” for the past few hours, correct? If that’s right, let’s start.",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:082c0cd62469",
+      "family": "mms",
+      "title": "Diagnose MMS send failure while abroad",
+      "task_signature": "Customer can send SMS but cannot send MMS while roaming internationally; support gathers identifiers and verifies mobile data/roaming status before applying a fix.",
+      "workflow": [
+        "Identify the affected line by collecting one account identifier (phone number or.",
+        "Confirm whether mobile data works without Wi‑Fi by having the customer disable.",
+        "Check account/line status and roaming permissions; verify whether international roaming and data.",
+        "If roaming is disabled, obtain customer approval and enable roaming; if data.",
+        "Ask the customer to retry sending an MMS after the change and."
+      ],
+      "applicability": "Reuse when MMS fails but SMS works, especially when the customer is traveling internationally and mobile data connectivity/roaming configuration is likely involved.",
+      "retrieval_text": "Title: Diagnose MMS send failure while abroad\nApplicability: Reuse when MMS fails but SMS works, especially when the customer is traveling internationally and mobile data connectivity/roaming configuration is likely involved.\nTask Signature: Customer can send SMS but cannot send MMS while roaming internationally; support gathers identifiers and verifies mobile data/roaming status before applying a fix.\nWorkflow: Identify the affected line by collecting one account identifier (phone number or. -> Confirm whether mobile data works without Wi‑Fi by having the customer disable. -> Check account/line status and roaming permissions; verify whether international roaming and data. -> If roaming is disabled, obtain customer approval and enable roaming; if data. -> Ask the customer to retry sending an MMS after the change and.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]"
+      ],
+      "last_task_query": "I’m the customer today—you’re the support agent. Here’s my issue: I’m John Smith, currently in France, and for the last few hours I haven’t been able to send MMS (picture) messages from my phone. SMS texts go through, but MMS.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:710f2ee4cde8",
+      "family": "mobile_data",
+      "title": "Restore roaming data by checking allowance and adding a small data refuel",
+      "task_signature": "Customer abroad reports mobile data slow or cutting out; account is active and roaming-enabled but usage may exceed monthly data limit; customer prefers not.",
+      "workflow": [
+        "Verify customer identity and select the impacted line; confirm line status is.",
+        "Check plan data limit vs. current cycle usage and identify whether throttling/cutoff.",
+        "Offer a constrained remedy aligned to the customer’s preference (e.g., small data.",
+        "Execute the data refuel and confirm the new balance/charge and that data.",
+        "Proceed with device-side optimization checklist (network status, preferred network mode, VPN, data."
+      ],
+      "applicability": "Reuse when a roaming customer needs immediate mobile data restoration and improved performance, especially when symptoms match hitting the monthly data cap and the customer is willing to add a small amount.",
+      "retrieval_text": "Title: Restore roaming data by checking allowance and adding a small data refuel\nApplicability: Reuse when a roaming customer needs immediate mobile data restoration and improved performance, especially when symptoms match hitting the monthly data cap and the customer is willing to add a small amount.\nTask Signature: Customer abroad reports mobile data slow or cutting out; account is active and roaming-enabled but usage may exceed monthly data limit; customer prefers not.\nWorkflow: Verify customer identity and select the impacted line; confirm line status is. -> Check plan data limit vs. current cycle usage and identify whether throttling/cutoff. -> Offer a constrained remedy aligned to the customer’s preference (e.g., small data. -> Execute the data refuel and confirm the new balance/charge and that data. -> Proceed with device-side optimization checklist (network status, preferred network mode, VPN, data.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like the support agent you’ve contacted: tell me what’s going on with your mobile service or device, and what you’d like to get fixed or figure out.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:2306f4af7353",
+      "family": "mobile_data",
+      "title": "Restore mobile data connectivity and improve speed",
+      "task_signature": "User reports cellular data is slow or not working at home; goal is to restore working mobile data and verify high performance.",
+      "workflow": [
+        "Confirm the impacted line/account using a minimal identifier (phone number or customer.",
+        "Collect on-device network status: airplane mode, SIM state, signal strength, network type.",
+        "If mobile data is off, enable it; then immediately run a speed.",
+        "If speed test shows no connection despite strong signal and data enabled.",
+        "Re-test after each change; if still failing, check carrier-side provisioning for the."
+      ],
+      "applicability": "Reuse when a user has poor or intermittent mobile data or 'no connection' even with strong signal, especially when Wi‑Fi is unavailable and speed expectations are high.",
+      "retrieval_text": "Title: Restore mobile data connectivity and improve speed\nApplicability: Reuse when a user has poor or intermittent mobile data or 'no connection' even with strong signal, especially when Wi‑Fi is unavailable and speed expectations are high.\nTask Signature: User reports cellular data is slow or not working at home; goal is to restore working mobile data and verify high performance.\nWorkflow: Confirm the impacted line/account using a minimal identifier (phone number or customer. -> Collect on-device network status: airplane mode, SIM state, signal strength, network type. -> If mobile data is off, enable it; then immediately run a speed. -> If speed test shows no connection despite strong signal and data enabled. -> Re-test after each change; if still failing, check carrier-side provisioning for the.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]"
+      ],
+      "last_task_query": "Hi, my mobile data has been acting up. It either stops working completely or is extremely slow on my phone. I’m at home right now in the US, and I don’t have access to Wi‑Fi, so I really need my.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:583d02dcaea2",
+      "family": "mobile_data",
+      "title": "Diagnose slow/no mobile data while abroad and restore service via data add-on",
+      "task_signature": "Customer reports mobile data is slow or not working (often while roaming); confirm account/line status, check data allotment and roaming eligibility, then apply a.",
+      "workflow": [
+        "Collect identifiers and confirm the impacted phone line, current location (domestic vs.",
+        "Validate line status and key service flags (active/suspended, roaming enabled) and compare.",
+        "Explain the root cause in plain terms and present immediate remediation choices.",
+        "If the customer chooses an add-on, apply the selected amount to the.",
+        "Guide the customer to reboot/toggle data to refresh the session and ask."
+      ],
+      "applicability": "Reuse when mobile data performance issues are likely caused by exceeding plan limits and the customer needs a quick restoration without changing plans, including while traveling internationally.",
+      "retrieval_text": "Title: Diagnose slow/no mobile data while abroad and restore service via data add-on\nApplicability: Reuse when mobile data performance issues are likely caused by exceeding plan limits and the customer needs a quick restoration without changing plans, including while traveling internationally.\nTask Signature: Customer reports mobile data is slow or not working (often while roaming); confirm account/line status, check data allotment and roaming eligibility, then apply a.\nWorkflow: Collect identifiers and confirm the impacted phone line, current location (domestic vs. -> Validate line status and key service flags (active/suspended, roaming enabled) and compare. -> Explain the root cause in plain terms and present immediate remediation choices. -> If the customer chooses an add-on, apply the selected amount to the. -> Guide the customer to reboot/toggle data to refresh the session and ask.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like the customer service agent you just called. Tell me what’s going on with your phone or service today, and what you’d like to get fixed, and.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:8cf652a73df0",
+      "family": "mobile_data",
+      "title": "Restore mobile data by clearing device-level blocks",
+      "task_signature": "User reports mobile data is slow or not working; issue may be caused by Airplane Mode or mobile data being disabled despite good signal.",
+      "workflow": [
+        "Collect key context: affected line identifier (or account identifier), device type (Android/iPhone).",
+        "If Airplane Mode is enabled, instruct the user to turn it off.",
+        "If Mobile Data is disabled, instruct the user to enable Mobile Data.",
+        "If data is enabled but performance is still poor, proceed to deeper."
+      ],
+      "applicability": "Reuse when a user needs immediate restoration of cellular internet and the device UI indicates Airplane Mode or Mobile Data toggles may be blocking service.",
+      "retrieval_text": "Title: Restore mobile data by clearing device-level blocks\nApplicability: Reuse when a user needs immediate restoration of cellular internet and the device UI indicates Airplane Mode or Mobile Data toggles may be blocking service.\nTask Signature: User reports mobile data is slow or not working; issue may be caused by Airplane Mode or mobile data being disabled despite good signal.\nWorkflow: Collect key context: affected line identifier (or account identifier), device type (Android/iPhone). -> If Airplane Mode is enabled, instruct the user to turn it off. -> If Mobile Data is disabled, instruct the user to enable Mobile Data. -> If data is enabled but performance is still poor, proceed to deeper.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]"
+      ],
+      "last_task_query": "My mobile data has been acting up. It either stops working completely or is so slow that most apps time out. I’m at home right now and I don’t have access to Wi‑Fi, so I really need my phone’s data.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:6f9b8dcedabe",
+      "family": "roaming",
+      "title": "Restore roaming mobile data when Airplane Mode or data toggles block service",
+      "task_signature": "User abroad reports slow/no mobile internet; status bar indicates Airplane Mode and/or cellular data disabled; account roaming may be off.",
+      "workflow": [
+        "Confirm current status indicators and context: country, roaming/traveling, signal type (2G/3G/4G/5G), and.",
+        "Remove the obvious device-side blocker first: turn Airplane Mode off, wait briefly.",
+        "Verify and enable carrier-side roaming for the affected line if disabled, then.",
+        "If data remains unavailable or very slow, perform standard recovery: toggle cellular.",
+        "Reassure the user that toggling Airplane Mode/cellular data/roaming and rebooting does not."
+      ],
+      "applicability": "Use when a traveler has no/slow mobile data and the phone shows Airplane Mode, data disabled, or roaming disabled, and you can change account roaming settings.",
+      "retrieval_text": "Title: Restore roaming mobile data when Airplane Mode or data toggles block service\nApplicability: Use when a traveler has no/slow mobile data and the phone shows Airplane Mode, data disabled, or roaming disabled, and you can change account roaming settings.\nTask Signature: User abroad reports slow/no mobile internet; status bar indicates Airplane Mode and/or cellular data disabled; account roaming may be off.\nWorkflow: Confirm current status indicators and context: country, roaming/traveling, signal type (2G/3G/4G/5G), and. -> Remove the obvious device-side blocker first: turn Airplane Mode off, wait briefly. -> Verify and enable carrier-side roaming for the affected line if disabled, then. -> If data remains unavailable or very slow, perform standard recovery: toggle cellular. -> Reassure the user that toggling Airplane Mode/cellular data/roaming and rebooting does not.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello! I’m actually here to help you. From what I understand about your situation, you’d typically be calling because something with your mobile phone isn’t working the way you want. Is there anything on your phone bothering you right now—like.",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:eb2c148ccd71",
+      "family": "mms",
+      "title": "Restore service when device shows No Service due to SIM PIN lock",
+      "task_signature": "User reports no signal/no service; account line is active but device cannot register because SIM is PIN-locked.",
+      "workflow": [
+        "Verify the affected line/account is active (not suspended) and confirm the symptoms.",
+        "Collect device diagnostics: network status (airplane mode, network type, roaming, data toggle).",
+        "If SIM is PIN-locked, instruct the user to enter the correct SIM.",
+        "If the SIM becomes PUK-locked or the PIN/PUK is unknown, guide the.",
+        "After successful unlock, have the user toggle airplane mode or reboot to."
+      ],
+      "applicability": "Use when a customer has 'No Service' or no signal bars and diagnostics indicate the SIM is locked with a PIN/PUK even though the line is active.",
+      "retrieval_text": "Title: Restore service when device shows No Service due to SIM PIN lock\nApplicability: Use when a customer has 'No Service' or no signal bars and diagnostics indicate the SIM is locked with a PIN/PUK even though the line is active.\nTask Signature: User reports no signal/no service; account line is active but device cannot register because SIM is PIN-locked.\nWorkflow: Verify the affected line/account is active (not suspended) and confirm the symptoms. -> Collect device diagnostics: network status (airplane mode, network type, roaming, data toggle). -> If SIM is PIN-locked, instruct the user to enter the correct SIM. -> If the SIM becomes PUK-locked or the PIN/PUK is unknown, guide the. -> After successful unlock, have the user toggle airplane mode or reboot to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]"
+      ],
+      "last_task_query": "My phone’s been showing “No Service” for the past few hours, and I can’t make calls or use mobile data. I’m John Smith, and the mobile number on the line with the issue is 555-123-2002. Can you help me get.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:9db6057db0ad",
+      "family": "billing",
+      "title": "Resolve 'No Service' by verifying line status and guiding next actions",
+      "task_signature": "User reports prolonged 'No Service' and needs step-by-step help; agent verifies account/line, identifies suspension/eligibility constraints, and routes to payment and/or human escalation",
+      "workflow": [
+        "Collect a single identifier (phone number, customer ID, or name + DOB).",
+        "Check the affected line’s provisioning status (active vs suspended), contract/eligibility dates, and.",
+        "Review billing/account standing for overdue balances or suspension-related charges that may be.",
+        "If line cannot be reactivated due to eligibility/policy constraints, clearly explain the.",
+        "Offer and execute the actionable next steps in order: send a payment."
+      ],
+      "applicability": "Use when a customer’s phone shows 'No Service' for hours and the likely cause may be line suspension, contract/eligibility limitations, or account standing rather than device settings.",
+      "retrieval_text": "Title: Resolve 'No Service' by verifying line status and guiding next actions\nApplicability: Use when a customer’s phone shows 'No Service' for hours and the likely cause may be line suspension, contract/eligibility limitations, or account standing rather than device settings.\nTask Signature: User reports prolonged 'No Service' and needs step-by-step help; agent verifies account/line, identifies suspension/eligibility constraints, and routes to payment and/or human escalation\nWorkflow: Collect a single identifier (phone number, customer ID, or name + DOB). -> Check the affected line’s provisioning status (active vs suspended), contract/eligibility dates, and. -> Review billing/account standing for overdue balances or suspension-related charges that may be. -> If line cannot be reactivated due to eligibility/policy constraints, clearly explain the. -> Offer and execute the actionable next steps in order: send a payment.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]"
+      ],
+      "last_task_query": "My phone’s been saying “No Service” for a few hours now, and I’m really worried. I just use it for calls and texts mostly, and I’m afraid something’s wrong. I’m not very good with technical things, so could you please.",
+      "status": "candidate"
+    },
+    {
+      "id": "apn_reboot:500883f1a962",
+      "family": "apn_reboot",
+      "title": "Restore service by checking Airplane Mode and basic network toggles",
+      "task_signature": "User reports prolonged 'No Service' and wants minimal-risk steps to restore cellular calling/text service",
+      "workflow": [
+        "Confirm account/line identity and verify the line is active (not suspended) before.",
+        "Ask the user to check the status bar and device network settings.",
+        "If Airplane Mode is ON, instruct the user to turn it OFF.",
+        "Re-check whether the airplane icon disappears and signal bars/network type return; if."
+      ],
+      "applicability": "Reuse when a customer reports 'No Service' for hours and is concerned about making changes, and the goal is to restore basic cellular connectivity with low-risk actions",
+      "retrieval_text": "Title: Restore service by checking Airplane Mode and basic network toggles\nApplicability: Reuse when a customer reports 'No Service' for hours and is concerned about making changes, and the goal is to restore basic cellular connectivity with low-risk actions\nTask Signature: User reports prolonged 'No Service' and wants minimal-risk steps to restore cellular calling/text service\nWorkflow: Confirm account/line identity and verify the line is active (not suspended) before. -> Ask the user to check the status bar and device network settings. -> If Airplane Mode is ON, instruct the user to turn it OFF. -> Re-check whether the airplane icon disappears and signal bars/network type return; if.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]"
+      ],
+      "last_task_query": "My cellphone’s been saying “No Service” for a few hours now, and I’m really worried. I just use it for calls and texts mostly, and I’m afraid of messing something up if I touch the wrong thing. Can you help.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:f0075a17587f",
+      "family": "billing",
+      "title": "Restore service when phone shows 'No Service' due to line suspension",
+      "task_signature": "Customer reports sudden 'No Service' for hours in their normal area; troubleshoot and resolve by checking line/account status and handling suspension-related restoration steps.",
+      "workflow": [
+        "Collect key context: affected phone number, device type, location (travel/roaming), and any.",
+        "Look up the account and specific line status; if the line is.",
+        "If billing-related, initiate/guide payment for the overdue amount via the carrier’s payment.",
+        "Resume/unsuspend the line after payment posts, then instruct the customer to restart.",
+        "If service does not return, escalate to deeper network/SIM diagnostics (SIM/eSIM reprovisioning."
+      ],
+      "applicability": "Use when a customer can’t make calls and sees 'No Service' and the issue is potentially account/line-state related rather than a local outage.",
+      "retrieval_text": "Title: Restore service when phone shows 'No Service' due to line suspension\nApplicability: Use when a customer can’t make calls and sees 'No Service' and the issue is potentially account/line-state related rather than a local outage.\nTask Signature: Customer reports sudden 'No Service' for hours in their normal area; troubleshoot and resolve by checking line/account status and handling suspension-related restoration steps.\nWorkflow: Collect key context: affected phone number, device type, location (travel/roaming), and any. -> Look up the account and specific line status; if the line is. -> If billing-related, initiate/guide payment for the overdue amount via the carrier’s payment. -> Resume/unsuspend the line after payment posts, then instruct the customer to restart. -> If service does not return, escalate to deeper network/SIM diagnostics (SIM/eSIM reprovisioning.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, thanks for checking in—actually, you’re the one needing help today. Your cellphone’s been showing “No Service” for the past few hours. You’re calling your carrier’s support to get that fixed. You’re comfortable with basic phone settings but you.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:d1a9354ea55d",
+      "family": "mobile_data",
+      "title": "Resolve slow/no mobile data by checking cap and adding refuel data",
+      "task_signature": "User reports mobile data is slow or not working; verify line status and data usage against plan limits; if over cap, add a paid.",
+      "workflow": [
+        "Collect the affected phone number/line and confirm whether the user is on.",
+        "Look up the line status and plan details; compare current data usage.",
+        "If data is capped/throttled, present refuel/extra-data options with clear amounts and prices.",
+        "Process the refuel purchase for the correct line, then re-check and confirm.",
+        "Provide next-step troubleshooting guidance for performance validation (e.g., toggle airplane mode/restart, confirm."
+      ],
+      "applicability": "Reuse when a customer needs better mobile data performance and the likely cause is reaching a data limit or being throttled, including while traveling abroad.",
+      "retrieval_text": "Title: Resolve slow/no mobile data by checking cap and adding refuel data\nApplicability: Reuse when a customer needs better mobile data performance and the likely cause is reaching a data limit or being throttled, including while traveling abroad.\nTask Signature: User reports mobile data is slow or not working; verify line status and data usage against plan limits; if over cap, add a paid.\nWorkflow: Collect the affected phone number/line and confirm whether the user is on. -> Look up the line status and plan details; compare current data usage. -> If data is capped/throttled, present refuel/extra-data options with clear amounts and prices. -> Process the refuel purchase for the correct line, then re-check and confirm. -> Provide next-step troubleshooting guidance for performance validation (e.g., toggle airplane mode/restart, confirm.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like the customer service agent you’ve reached. Tell me what’s going on with your mobile service or device right now, and what you’d like to get fixed.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:e55e31c50f9a",
+      "family": "roaming",
+      "title": "Restore and optimize roaming data performance while abroad",
+      "task_signature": "User abroad reports slow or dropping mobile data; resolve by confirming account/line status, enabling roaming if disabled, validating device-side settings, then measuring performance to.",
+      "workflow": [
+        "Identify the customer and the specific line in use; confirm line is.",
+        "If international roaming is disabled, enable roaming on the line and confirm.",
+        "Have the user check and report device network status (airplane mode, signal.",
+        "Request a speed test result to quantify performance; use the outcome to."
+      ],
+      "applicability": "Reuse when a customer is traveling internationally and experiences poor mobile data performance, especially when roaming may be disabled or misconfigured.",
+      "retrieval_text": "Title: Restore and optimize roaming data performance while abroad\nApplicability: Reuse when a customer is traveling internationally and experiences poor mobile data performance, especially when roaming may be disabled or misconfigured.\nTask Signature: User abroad reports slow or dropping mobile data; resolve by confirming account/line status, enabling roaming if disabled, validating device-side settings, then measuring performance to.\nWorkflow: Identify the customer and the specific line in use; confirm line is. -> If international roaming is disabled, enable roaming on the line and confirm. -> Have the user check and report device network status (airplane mode, signal. -> Request a speed test result to quantify performance; use the outcome to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]"
+      ],
+      "last_task_query": "My mobile data is barely working while I’m abroad in France. It keeps dropping or is extremely slow. I need this fixed so that I consistently get *excellent* internet speed on my phone—nothing less than that is acceptable for me.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:a0f600db15d5",
+      "family": "roaming",
+      "title": "Restore fast mobile data while roaming abroad",
+      "task_signature": "User abroad reports very slow or stopped mobile internet; device shows no service and roaming-related settings may be off; goal is to restore connectivity.",
+      "workflow": [
+        "Collect the impacted line identifier and a quick device/network snapshot (airplane mode.",
+        "Verify line/account status and carrier-side roaming eligibility; enable international roaming on the.",
+        "Provide explicit, step-by-step device instructions to disable Airplane Mode, enable Mobile Data.",
+        "Ask the user to report post-change indicators (signal bars, 4G/5G/LTE label) and.",
+        "If service returns but speed is poor, guide basic speed optimizations (confirm."
+      ],
+      "applicability": "Reuse when a traveler has no/slow cellular data abroad and device settings or carrier-side roaming enablement are likely blockers.",
+      "retrieval_text": "Title: Restore fast mobile data while roaming abroad\nApplicability: Reuse when a traveler has no/slow cellular data abroad and device settings or carrier-side roaming enablement are likely blockers.\nTask Signature: User abroad reports very slow or stopped mobile internet; device shows no service and roaming-related settings may be off; goal is to restore connectivity.\nWorkflow: Collect the impacted line identifier and a quick device/network snapshot (airplane mode. -> Verify line/account status and carrier-side roaming eligibility; enable international roaming on the. -> Provide explicit, step-by-step device instructions to disable Airplane Mode, enable Mobile Data. -> Ask the user to report post-change indicators (signal bars, 4G/5G/LTE label) and. -> If service returns but speed is poor, guide basic speed optimizations (confirm.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello! I’m actually here to get some help from you. My mobile internet on my phone has been stopping or getting very slow, and I’m currently abroad in France with no Wi‑Fi available. I only want the very best speed.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:f9e3dd3f6617",
+      "family": "billing",
+      "title": "Restore service by clearing billing suspension",
+      "task_signature": "Customer reports 'No Service' and cannot call or use mobile data; line is suspended due to an overdue bill; resolve by collecting payment and.",
+      "workflow": [
+        "Verify the customer and locate the affected line; check line status to.",
+        "If suspended for billing, identify the overdue bill(s) and amount due; send.",
+        "Confirm the customer completes payment and re-check the bill status to ensure.",
+        "Resume/reactivate the suspended line in the line management system and confirm the.",
+        "Ask the customer to reboot the device (or toggle airplane mode) and."
+      ],
+      "applicability": "Reuse when a customer’s device shows 'No Service' and the account/line is suspended due to an unpaid balance that can be resolved immediately via payment and line resumption",
+      "retrieval_text": "Title: Restore service by clearing billing suspension\nApplicability: Reuse when a customer’s device shows 'No Service' and the account/line is suspended due to an unpaid balance that can be resolved immediately via payment and line resumption\nTask Signature: Customer reports 'No Service' and cannot call or use mobile data; line is suspended due to an overdue bill; resolve by collecting payment and.\nWorkflow: Verify the customer and locate the affected line; check line status to. -> If suspended for billing, identify the overdue bill(s) and amount due; send. -> Confirm the customer completes payment and re-check the bill status to ensure. -> Resume/reactivate the suspended line in the line management system and confirm the. -> Ask the customer to reboot the device (or toggle airplane mode) and.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]"
+      ],
+      "last_task_query": "My phone’s been showing “No Service” for the past few hours, and I can’t make calls or use mobile data. I’m John Smith, and the mobile number is 555-123-2002. Can you help me get my service back?",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:adf04702c99a",
+      "family": "roaming",
+      "title": "Restore mobile data while roaming abroad",
+      "task_signature": "Customer abroad has slow or non-working mobile data; calls/SMS work; device shows weak/limited network and roaming may be disabled on account or handset.",
+      "workflow": [
+        "Verify identity and confirm scope: location abroad, data-only issue vs calls/SMS, and.",
+        "Check account/line provisioning (active status, roaming feature flag) and enable international roaming.",
+        "Have the customer check device status: airplane mode, SIM active, mobile data.",
+        "If data roaming is off on the device, instruct enabling it, then.",
+        "Re-test data (speed test/basic browsing). If still stuck on 2G or no."
+      ],
+      "applicability": "Reuse when troubleshooting poor or failing mobile data while a customer is traveling internationally and roaming settings may be disabled at the account or device level.",
+      "retrieval_text": "Title: Restore mobile data while roaming abroad\nApplicability: Reuse when troubleshooting poor or failing mobile data while a customer is traveling internationally and roaming settings may be disabled at the account or device level.\nTask Signature: Customer abroad has slow or non-working mobile data; calls/SMS work; device shows weak/limited network and roaming may be disabled on account or handset.\nWorkflow: Verify identity and confirm scope: location abroad, data-only issue vs calls/SMS, and. -> Check account/line provisioning (active status, roaming feature flag) and enable international roaming. -> Have the customer check device status: airplane mode, SIM active, mobile data. -> If data roaming is off on the device, instruct enabling it, then. -> Re-test data (speed test/basic browsing). If still stuck on 2G or no.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like a customer calling your telecom support line. I’ll describe my issue, and you can walk me through troubleshooting, ask for checks, and request “tool” actions just.",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:fadc9fb10f57",
+      "family": "mms",
+      "title": "Diagnose and resolve 'No Service' via SIM detection and account verification",
+      "task_signature": "Customer reports sudden loss of cellular service; troubleshoot by distinguishing SIM detection issues from network/account causes and applying targeted fixes.",
+      "workflow": [
+        "Gather key context: duration of outage, device type, whether issue is location-specific.",
+        "Check device indicators to differentiate \"No SIM\" vs \"No Service\" and confirm.",
+        "If SIM is not detected, guide SIM reseat (or eSIM re-provision equivalent).",
+        "If SIM is detected but still \"No Service\", proceed with carrier-side checks.",
+        "Based on results, apply the next corrective action (e.g., network settings refresh/carrier."
+      ],
+      "applicability": "Reuse when a customer reports persistent \"No Service\" and the fix depends on determining whether the phone is failing to detect the SIM/eSIM or the issue is network/provisioning/account related.",
+      "retrieval_text": "Title: Diagnose and resolve 'No Service' via SIM detection and account verification\nApplicability: Reuse when a customer reports persistent \"No Service\" and the fix depends on determining whether the phone is failing to detect the SIM/eSIM or the issue is network/provisioning/account related.\nTask Signature: Customer reports sudden loss of cellular service; troubleshoot by distinguishing SIM detection issues from network/account causes and applying targeted fixes.\nWorkflow: Gather key context: duration of outage, device type, whether issue is location-specific. -> Check device indicators to differentiate \"No SIM\" vs \"No Service\" and confirm. -> If SIM is not detected, guide SIM reseat (or eSIM re-provision equivalent). -> If SIM is detected but still \"No Service\", proceed with carrier-side checks. -> Based on results, apply the next corrective action (e.g., network settings refresh/carrier.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, thanks for checking in — you’re actually the customer in this scenario. Your phone’s been showing **“No Service” for the past few hours**, and you’re contacting your carrier’s support (me) to get it fixed. You can start by.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:834b4640fc17",
+      "family": "roaming",
+      "title": "Restore mobile data while roaming and validate connectivity",
+      "task_signature": "User abroad has strong signal (e.g., 4G/5G) but mobile data is disabled or shows enabled yet no internet; user wants safest, fastest restoration steps.",
+      "workflow": [
+        "Confirm location/roaming context, device type, and status-bar indicators; verify account/line is active.",
+        "Perform the lowest-risk on-device fixes first: ensure Mobile Data is ON, toggle.",
+        "If data shows enabled but there is no connection, check carrier-side flags.",
+        "Guide the user through Android network settings that don’t risk misconfiguration: enable.",
+        "Escalate to APN/SIM remediation only if still failing: verify APN matches carrier."
+      ],
+      "applicability": "Reuse when a customer traveling internationally reports mobile data not working or extremely slow despite good signal, especially when data was toggled off or shows on but apps/web have no connectivity.",
+      "retrieval_text": "Title: Restore mobile data while roaming and validate connectivity\nApplicability: Reuse when a customer traveling internationally reports mobile data not working or extremely slow despite good signal, especially when data was toggled off or shows on but apps/web have no connectivity.\nTask Signature: User abroad has strong signal (e.g., 4G/5G) but mobile data is disabled or shows enabled yet no internet; user wants safest, fastest restoration steps.\nWorkflow: Confirm location/roaming context, device type, and status-bar indicators; verify account/line is active. -> Perform the lowest-risk on-device fixes first: ensure Mobile Data is ON, toggle. -> If data shows enabled but there is no connection, check carrier-side flags. -> Guide the user through Android network settings that don’t risk misconfiguration: enable. -> Escalate to APN/SIM remediation only if still failing: verify APN matches carrier.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello! I’m actually here to get some help from you. My mobile internet on my phone has been acting up. I’m currently in France, and the data either stops working or is very, very slow. I don’t have any Wi‑Fi.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:896c33787d50",
+      "family": "mobile_data",
+      "title": "Restore mobile data when signal shows 4G/5G but no internet works",
+      "task_signature": "User reports slow or intermittent mobile data; device may show weak network (e.g., 2G) or later shows strong 4G/5G signal but apps/speed tests still.",
+      "workflow": [
+        "Collect identifiers and quick context: affected number/line, current location, whether issue is.",
+        "Fix device-side constraints first: disable Data Saver/Low Data mode, ensure cellular data.",
+        "If signal improves but data still fails, perform core connectivity resets: toggle.",
+        "Verify carrier-side line eligibility: confirm the line is Active, not suspended, within.",
+        "If still failing, move to configuration and hardware checks: validate APN settings."
+      ],
+      "applicability": "Reuse when a user needs reliable high-speed mobile data and reports slow/stop-and-go service, especially when the device indicates 2G/poor signal or later shows 4G/5G with full bars but internet still does not.",
+      "retrieval_text": "Title: Restore mobile data when signal shows 4G/5G but no internet works\nApplicability: Reuse when a user needs reliable high-speed mobile data and reports slow/stop-and-go service, especially when the device indicates 2G/poor signal or later shows 4G/5G with full bars but internet still does not.\nTask Signature: User reports slow or intermittent mobile data; device may show weak network (e.g., 2G) or later shows strong 4G/5G signal but apps/speed tests still.\nWorkflow: Collect identifiers and quick context: affected number/line, current location, whether issue is. -> Fix device-side constraints first: disable Data Saver/Low Data mode, ensure cellular data. -> If signal improves but data still fails, perform core connectivity resets: toggle. -> Verify carrier-side line eligibility: confirm the line is Active, not suspended, within. -> If still failing, move to configuration and hardware checks: validate APN settings.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello! I’m actually the one who needs some help. My mobile data hasn’t been working properly on my phone. Sometimes it just stops, and other times it’s very slow. I don’t have Wi‑Fi here at home, so I really need.",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:131f2e5f8dac",
+      "family": "mms",
+      "title": "Restore MMS while abroad by enabling roaming and correcting device radio state",
+      "task_signature": "Customer abroad cannot send MMS/picture messages; line is active but roaming may be disabled and device settings may block connectivity (e.g., Airplane Mode).",
+      "workflow": [
+        "Confirm symptoms and context: MMS failure duration, whether user is abroad, and.",
+        "Check account/line status and roaming provisioning; if roaming is disabled, enable international.",
+        "Guide device setup in order: turn off Airplane Mode, ensure cellular signal.",
+        "Validate connectivity: test loading a webpage on cellular data, then retry sending.",
+        "If MMS still fails with working data, proceed to carrier-specific MMS/APN checks."
+      ],
+      "applicability": "Use when a customer reports MMS/picture messages failing while traveling internationally and line-side roaming or device radio settings may be preventing cellular data/MMS transport.",
+      "retrieval_text": "Title: Restore MMS while abroad by enabling roaming and correcting device radio state\nApplicability: Use when a customer reports MMS/picture messages failing while traveling internationally and line-side roaming or device radio settings may be preventing cellular data/MMS transport.\nTask Signature: Customer abroad cannot send MMS/picture messages; line is active but roaming may be disabled and device settings may block connectivity (e.g., Airplane Mode).\nWorkflow: Confirm symptoms and context: MMS failure duration, whether user is abroad, and. -> Check account/line status and roaming provisioning; if roaming is disabled, enable international. -> Guide device setup in order: turn off Airplane Mode, ensure cellular signal. -> Validate connectivity: test loading a webpage on cellular data, then retry sending. -> If MMS still fails with working data, proceed to carrier-specific MMS/APN checks.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "You’re actually the one I’m here to help. I’m your support assistant for your mobile service. Is there anything not working properly with your phone or your line today—calls, texts, data, roaming, anything like that?",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:30f96eacc43d",
+      "family": "billing",
+      "title": "Restore service when 'No Service' is caused by line suspension",
+      "task_signature": "User reports 'No Service' and inability to call/use data; resolution requires identifying the line, confirming suspension and any overdue balance, initiating payment, and then.",
+      "workflow": [
+        "Collect an account identifier (affected phone number or customer ID) and confirm.",
+        "Look up the affected line status; if suspended, check suspension start reason.",
+        "If an overdue bill exists, offer to send a payment request for.",
+        "Instruct the user to complete/accept the payment request and confirm back once.",
+        "After payment confirmation, proceed with the carrier-side step to remove the suspension."
+      ],
+      "applicability": "Reuse when a customer reports sudden loss of cellular service and backend checks show the line is suspended due to unpaid balance.",
+      "retrieval_text": "Title: Restore service when 'No Service' is caused by line suspension\nApplicability: Reuse when a customer reports sudden loss of cellular service and backend checks show the line is suspended due to unpaid balance.\nTask Signature: User reports 'No Service' and inability to call/use data; resolution requires identifying the line, confirming suspension and any overdue balance, initiating payment, and then.\nWorkflow: Collect an account identifier (affected phone number or customer ID) and confirm. -> Look up the affected line status; if suspended, check suspension start reason. -> If an overdue bill exists, offer to send a payment request for. -> Instruct the user to complete/accept the payment request and confirm back once. -> After payment confirmation, proceed with the carrier-side step to remove the suspension.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]"
+      ],
+      "last_task_query": "Hi, my cell phone’s been showing “No Service” for the past few hours and I can’t make calls or use mobile data. Can you help me get my service back on?",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:7e4e7125e757",
+      "family": "roaming",
+      "title": "Restore roaming mobile data to excellent quality (abroad)",
+      "task_signature": "Customer abroad reports roaming mobile data is slow/unstable or not working; resolution requires an \"excellent\" speed test result without changing the plan.",
+      "workflow": [
+        "Verify the correct line is active and check account-side roaming eligibility; enable.",
+        "Collect device network status and an initial speed test; if there is.",
+        "Confirm network registration and radio type; if still degraded, validate APN and.",
+        "If connected but speed is not \"excellent\", adjust device network mode to.",
+        "If throttling or exhaustion is suspected, check data balance/limits and, with consent."
+      ],
+      "applicability": "Use when troubleshooting roaming data abroad where customer requires top performance and you can iterate settings + carrier-side provisioning until an excellent speed test is achieved.",
+      "retrieval_text": "Title: Restore roaming mobile data to excellent quality (abroad)\nApplicability: Use when troubleshooting roaming data abroad where customer requires top performance and you can iterate settings + carrier-side provisioning until an excellent speed test is achieved.\nTask Signature: Customer abroad reports roaming mobile data is slow/unstable or not working; resolution requires an \"excellent\" speed test result without changing the plan.\nWorkflow: Verify the correct line is active and check account-side roaming eligibility; enable. -> Collect device network status and an initial speed test; if there is. -> Confirm network registration and radio type; if still degraded, validate APN and. -> If connected but speed is not \"excellent\", adjust device network mode to. -> If throttling or exhaustion is suspected, check data balance/limits and, with consent.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like the customer service agent you just called. Tell me what’s going wrong with your mobile service or your phone today, and what you’d like to get.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:a030cd7990c1",
+      "family": "billing",
+      "title": "Resolve 'No Service' caused by account suspension",
+      "task_signature": "Troubleshoot a device showing 'No Service' by verifying line status, identifying suspension due to overdue balance, and initiating payment to restore service",
+      "workflow": [
+        "Collect minimum identifiers to locate the affected line (e.g., phone number) and.",
+        "Look up the line status; if suspended, identify suspension start date and.",
+        "Explain that suspension can directly cause 'No Service' and outline the unlock.",
+        "Send a payment request for the overdue amount and instruct the customer.",
+        "After payment confirmation, resume the line and have the customer reboot/toggle airplane."
+      ],
+      "applicability": "Use when a customer reports sudden 'No Service' and backend tools can verify the line is suspended due to an overdue bill",
+      "retrieval_text": "Title: Resolve 'No Service' caused by account suspension\nApplicability: Use when a customer reports sudden 'No Service' and backend tools can verify the line is suspended due to an overdue bill\nTask Signature: Troubleshoot a device showing 'No Service' by verifying line status, identifying suspension due to overdue balance, and initiating payment to restore service\nWorkflow: Collect minimum identifiers to locate the affected line (e.g., phone number) and. -> Look up the line status; if suspended, identify suspension start date and. -> Explain that suspension can directly cause 'No Service' and outline the unlock. -> Send a payment request for the overdue amount and instruct the customer. -> After payment confirmation, resume the line and have the customer reboot/toggle airplane.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, thanks for checking in—actually, you’re the one who’s supposed to be getting help today. Your cellphone has been showing “No Service” for the past few hours, and we need to troubleshoot that together. Let’s start with this: What.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:d8d2cb25f3ec",
+      "family": "roaming",
+      "title": "Restore mobile data while abroad by checking roaming and data cap",
+      "task_signature": "User abroad reports very slow or non-working mobile data; fix requires account/line verification, roaming status change, and addressing data limit before on-device testing.",
+      "workflow": [
+        "Confirm the affected phone number/line and retrieve line status, plan details, current.",
+        "Identify and explain gating issues that can stop data abroad (roaming disabled.",
+        "With user authorization, enable international roaming on the specific line and add.",
+        "Confirm provisioning changes are complete and instruct the user to refresh connectivity.",
+        "Validate results by having the user run a speed test and report."
+      ],
+      "applicability": "Reuse when a customer traveling internationally has mobile data that is slow or not working and account-side settings/limits may be blocking service.",
+      "retrieval_text": "Title: Restore mobile data while abroad by checking roaming and data cap\nApplicability: Reuse when a customer traveling internationally has mobile data that is slow or not working and account-side settings/limits may be blocking service.\nTask Signature: User abroad reports very slow or non-working mobile data; fix requires account/line verification, roaming status change, and addressing data limit before on-device testing.\nWorkflow: Confirm the affected phone number/line and retrieve line status, plan details, current. -> Identify and explain gating issues that can stop data abroad (roaming disabled. -> With user authorization, enable international roaming on the specific line and add. -> Confirm provisioning changes are complete and instruct the user to refresh connectivity. -> Validate results by having the user run a speed test and report.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like the support agent you’ve contacted: tell me what’s going on with your mobile service or device, and what you’d like to get fixed or figure out.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:94585e474b7b",
+      "family": "roaming",
+      "title": "Restore mobile data abroad by enabling roaming and verifying device radio settings",
+      "task_signature": "User reports slow or non-working mobile data while traveling internationally; account line may have roaming disabled or device radio settings prevent registration on a.",
+      "workflow": [
+        "Collect essentials: affected phone number/line, current country, symptoms (no service vs slow.",
+        "Check carrier-side provisioning for the correct line: confirm line is active and.",
+        "Guide a device-side recovery sequence in order: ensure Airplane Mode is OFF.",
+        "If service returns but data remains slow, continue with targeted follow-ups (current."
+      ],
+      "applicability": "Reuse when a customer abroad has no service or unusable/slow mobile data and you need to isolate account roaming provisioning vs device radio/settings issues.",
+      "retrieval_text": "Title: Restore mobile data abroad by enabling roaming and verifying device radio settings\nApplicability: Reuse when a customer abroad has no service or unusable/slow mobile data and you need to isolate account roaming provisioning vs device radio/settings issues.\nTask Signature: User reports slow or non-working mobile data while traveling internationally; account line may have roaming disabled or device radio settings prevent registration on a.\nWorkflow: Collect essentials: affected phone number/line, current country, symptoms (no service vs slow. -> Check carrier-side provisioning for the correct line: confirm line is active and. -> Guide a device-side recovery sequence in order: ensure Airplane Mode is OFF. -> If service returns but data remains slow, continue with targeted follow-ups (current.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! I’m actually the one here to help you. You can treat me like the support agent you’ve contacted: tell me what’s going on with your mobile service or device, and what you’d like to get fixed or figure out.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:076e6c115fc4",
+      "family": "mobile_data",
+      "title": "Diagnose and restore slow/no mobile data at home",
+      "task_signature": "User reports mobile data is slow or not working and needs best possible speed; verify device settings and network conditions, then retest and escalate.",
+      "workflow": [
+        "Verify the correct line is active and confirm the user is not.",
+        "Collect on-device network diagnostics: signal quality, network type (2G/3G/4G/5G), mobile data toggle.",
+        "If mobile data is OFF or restricted (e.g., data saver/VPN interference suspected).",
+        "After each change, rerun network status + speed test to confirm improvement.",
+        "If still stuck on low network type or poor signal after settings."
+      ],
+      "applicability": "Use when a user has intermittent or very slow cellular internet at a fixed location and initial symptoms may be caused by disabled data, low network mode, or weak coverage rather than.",
+      "retrieval_text": "Title: Diagnose and restore slow/no mobile data at home\nApplicability: Use when a user has intermittent or very slow cellular internet at a fixed location and initial symptoms may be caused by disabled data, low network mode, or weak coverage rather than.\nTask Signature: User reports mobile data is slow or not working and needs best possible speed; verify device settings and network conditions, then retest and escalate.\nWorkflow: Verify the correct line is active and confirm the user is not. -> Collect on-device network diagnostics: signal quality, network type (2G/3G/4G/5G), mobile data toggle. -> If mobile data is OFF or restricted (e.g., data saver/VPN interference suspected). -> After each change, rerun network status + speed test to confirm improvement. -> If still stuck on low network type or poor signal after settings.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on[PERSONA:None]"
+      ],
+      "last_task_query": "Hi, yeah, I’m having an issue with my mobile data. My internet on the phone either stops working completely or is really slow. I’m at home in the US, I don’t have Wi‑Fi here, and I really need *excellent* data.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:6a2a41330dbf",
+      "family": "billing",
+      "title": "Restore service when phone shows 'No Service' due to line suspension",
+      "task_signature": "Customer reports sudden loss of cellular service; support verifies account/line status, identifies suspension caused by overdue balance, collects payment, then restores service and confirms.",
+      "workflow": [
+        "Confirm the affected phone number and authenticate/locate the customer account.",
+        "Check the line’s network provisioning status (active/suspended) and any suspension reason; review.",
+        "If suspension is billing-related, send a payment request for the overdue amount.",
+        "Verify payment completion and update the line status to active/resumed (or trigger.",
+        "Have the customer reboot the device (and, if needed, toggle Airplane Mode."
+      ],
+      "applicability": "Reuse when a customer cannot make calls or use mobile data and the issue is likely account/line-level (e.g., suspension) rather than device settings.",
+      "retrieval_text": "Title: Restore service when phone shows 'No Service' due to line suspension\nApplicability: Reuse when a customer cannot make calls or use mobile data and the issue is likely account/line-level (e.g., suspension) rather than device settings.\nTask Signature: Customer reports sudden loss of cellular service; support verifies account/line status, identifies suspension caused by overdue balance, collects payment, then restores service and confirms.\nWorkflow: Confirm the affected phone number and authenticate/locate the customer account. -> Check the line’s network provisioning status (active/suspended) and any suspension reason; review. -> If suspension is billing-related, send a payment request for the overdue amount. -> Verify payment completion and update the line status to active/resumed (or trigger. -> Have the customer reboot the device (and, if needed, toggle Airplane Mode.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, thanks for checking in—actually, you’re the one seeking help in this scenario. Your cellphone has been showing “No Service” for the past few hours, and you’re contacting your carrier’s customer support to get it working again. You’re reasonably.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:d93b92da0685",
+      "family": "roaming",
+      "title": "Restore mobile data by clearing airplane mode and validating roaming",
+      "task_signature": "User reports slow or intermittent mobile data while traveling internationally and currently has no/limited cellular connectivity.",
+      "workflow": [
+        "Confirm the device status indicators (airplane mode, signal bars, data icon, LTE/5G).",
+        "If airplane mode is on, instruct the user to turn it off.",
+        "Verify the correct subscriber line and confirm account/line status and whether international.",
+        "Ask the user to confirm on-device settings (mobile data and data roaming.",
+        "Based on results, proceed with targeted network troubleshooting (e.g., toggle data/roaming, restart."
+      ],
+      "applicability": "Reuse when a traveler reports mobile data not working or being very slow and the cause may be device settings (airplane mode/roaming) or roaming eligibility.",
+      "retrieval_text": "Title: Restore mobile data by clearing airplane mode and validating roaming\nApplicability: Reuse when a traveler reports mobile data not working or being very slow and the cause may be device settings (airplane mode/roaming) or roaming eligibility.\nTask Signature: User reports slow or intermittent mobile data while traveling internationally and currently has no/limited cellular connectivity.\nWorkflow: Confirm the device status indicators (airplane mode, signal bars, data icon, LTE/5G). -> If airplane mode is on, instruct the user to turn it off. -> Verify the correct subscriber line and confirm account/line status and whether international. -> Ask the user to confirm on-device settings (mobile data and data roaming. -> Based on results, proceed with targeted network troubleshooting (e.g., toggle data/roaming, restart.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]"
+      ],
+      "last_task_query": "My mobile data is giving me a lot of trouble. I’m currently in France, and the internet on my phone keeps either stopping completely or getting very slow. I don’t have access to Wi‑Fi, so I really need my mobile.",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:857ac0511f5a",
+      "family": "mobile_data",
+      "title": "Diagnose and restore slow/unstable mobile data",
+      "task_signature": "User reports mobile data is slow, intermittent, or not working and needs best-possible speed without Wi‑Fi.",
+      "workflow": [
+        "Collect context and verify basics: location (domestic/roaming), whether Wi‑Fi is unavailable, and.",
+        "Request a structured device status snapshot: airplane mode, signal/network type, mobile data.",
+        "Fix blockers first in safe single-step sequence: turn off airplane mode, ensure.",
+        "Remove throughput constraints: disable data saver/background restrictions, disconnect VPN if applicable, and.",
+        "Validate improvement: re-check signal/network type and re-run speed test; if still poor."
+      ],
+      "applicability": "Reuse when troubleshooting mobile data that is unusable or slower than expected, especially when settings (airplane mode, data toggle, data saver, or network mode) may be causing the issue.",
+      "retrieval_text": "Title: Diagnose and restore slow/unstable mobile data\nApplicability: Reuse when troubleshooting mobile data that is unusable or slower than expected, especially when settings (airplane mode, data toggle, data saver, or network mode) may be causing the issue.\nTask Signature: User reports mobile data is slow, intermittent, or not working and needs best-possible speed without Wi‑Fi.\nWorkflow: Collect context and verify basics: location (domestic/roaming), whether Wi‑Fi is unavailable, and. -> Request a structured device status snapshot: airplane mode, signal/network type, mobile data. -> Fix blockers first in safe single-step sequence: turn off airplane mode, ensure. -> Remove throughput constraints: disable data saver/background restrictions, disconnect VPN if applicable, and. -> Validate improvement: re-check signal/network type and re-run speed test; if still poor.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello! I’m actually the one who needs some help. My mobile data on my phone hasn’t been working properly. Sometimes it just stops, and other times it’s very slow. I don’t have Wi‑Fi where I am, so I really need.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:2c0023c584e9",
+      "family": "roaming",
+      "title": "Fix slow/no mobile data while traveling by enabling roaming and improving network.",
+      "task_signature": "User reports very slow or unstable mobile data abroad; account line is active but roaming/settings prevent usable data speeds.",
+      "workflow": [
+        "Confirm the affected line is active and identify whether international roaming is.",
+        "Reassure the user that network-setting changes will not delete personal photos or.",
+        "Collect current device network status (signal strength, network type, mobile data on/off.",
+        "Turn on data roaming on the device, then change network mode to.",
+        "Recheck network status and validate improvement; if still slow, continue with next."
+      ],
+      "applicability": "Reuse when a customer traveling internationally has mobile data enabled but experiences very slow/unstable data and the device shows low-speed network types or roaming disabled.",
+      "retrieval_text": "Title: Fix slow/no mobile data while traveling by enabling roaming and improving network.\nApplicability: Reuse when a customer traveling internationally has mobile data enabled but experiences very slow/unstable data and the device shows low-speed network types or roaming disabled.\nTask Signature: User reports very slow or unstable mobile data abroad; account line is active but roaming/settings prevent usable data speeds.\nWorkflow: Confirm the affected line is active and identify whether international roaming is. -> Reassure the user that network-setting changes will not delete personal photos or. -> Collect current device network status (signal strength, network type, mobile data on/off. -> Turn on data roaming on the device, then change network mode to. -> Recheck network status and validate improvement; if still slow, continue with next.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]"
+      ],
+      "last_task_query": "Thanks for asking. I’m actually the support assistant here to help you. Go ahead and tell me what’s going wrong with your phone or your service today, and I’ll walk you through it step by step, as simply as possible.",
+      "status": "candidate"
+    },
+    {
+      "id": "apn_reboot:69eb908b278a",
+      "family": "apn_reboot",
+      "title": "Restore service when phone shows No Service/No Signal",
+      "task_signature": "Customer reports sudden loss of cellular signal; line appears active; guide through device-side steps to recover network registration",
+      "workflow": [
+        "Verify the affected line is active/not suspended and confirm the symptom on.",
+        "Check and toggle Airplane Mode (confirm it was off; turn on briefly.",
+        "If still no service, power-cycle the phone and reseat the SIM (remove/reinsert).",
+        "After reboot, confirm SIM status (active vs missing/locked) and confirm signal/data indicators."
+      ],
+      "applicability": "Use when a customer has suddenly lost cellular service and the account/line is not suspended, indicating a likely device/SIM/network registration issue.",
+      "retrieval_text": "Title: Restore service when phone shows No Service/No Signal\nApplicability: Use when a customer has suddenly lost cellular service and the account/line is not suspended, indicating a likely device/SIM/network registration issue.\nTask Signature: Customer reports sudden loss of cellular signal; line appears active; guide through device-side steps to recover network registration\nWorkflow: Verify the affected line is active/not suspended and confirm the symptom on. -> Check and toggle Airplane Mode (confirm it was off; turn on briefly. -> If still no service, power-cycle the phone and reseat the SIM (remove/reinsert). -> After reboot, confirm SIM status (active vs missing/locked) and confirm signal/data indicators.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]"
+      ],
+      "last_task_query": "My cell service has been out for a few hours—my phone just shows “No Service.” I’m John Smith, number 555-123-2002. Can you help me get my signal back?",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:0f49a9bc6e23",
+      "family": "mobile_data",
+      "title": "Restore and optimize mobile data when slow or failing",
+      "task_signature": "User reports mobile data is very slow or intermittently not working and needs reliable high speed; troubleshoot device/network settings and re-test until connection is.",
+      "workflow": [
+        "Verify line/account basics (active status, plan limits not exceeded, no suspension) and.",
+        "Collect on-device diagnostics: airplane mode state, cellular service/signal, network type (5G/4G), mobile.",
+        "If there is no connection, resolve blocking settings first (e.g., disable airplane.",
+        "Once service is restored, re-run the speed test and adjust performance-impacting settings.",
+        "If speed remains poor despite good signal and correct settings, escalate to."
+      ],
+      "applicability": "Reuse when a user’s mobile data is slow, unstable, or shows no connection and you need a structured path from restoring service to optimizing speed.",
+      "retrieval_text": "Title: Restore and optimize mobile data when slow or failing\nApplicability: Reuse when a user’s mobile data is slow, unstable, or shows no connection and you need a structured path from restoring service to optimizing speed.\nTask Signature: User reports mobile data is very slow or intermittently not working and needs reliable high speed; troubleshoot device/network settings and re-test until connection is.\nWorkflow: Verify line/account basics (active status, plan limits not exceeded, no suspension) and. -> Collect on-device diagnostics: airplane mode state, cellular service/signal, network type (5G/4G), mobile. -> If there is no connection, resolve blocking settings first (e.g., disable airplane. -> Once service is restored, re-run the speed test and adjust performance-impacting settings. -> If speed remains poor despite good signal and correct settings, escalate to.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]"
+      ],
+      "last_task_query": "Hello, thanks for checking in. My mobile data on my phone has been acting up — it either stops working or it’s very, very slow. I don’t have Wi‑Fi here, so I really need the internet on my phone to.",
+      "status": "candidate"
+    },
+    {
+      "id": "apn_reboot:f6cca08f3428",
+      "family": "apn_reboot",
+      "title": "Restore service for 'No Service' by checking device radio state and line.",
+      "task_signature": "User reports prolonged 'No Service' with inability to call or use mobile data; resolve by verifying device settings first, then confirming carrier-side line status.",
+      "workflow": [
+        "Collect identifiers and context: line phone number (or customer ID), device type.",
+        "Check for device-side causes: ensure Airplane Mode is off, verify mobile data.",
+        "If still no signal, validate carrier-side status for the specific line (active.",
+        "If line is suspended or not provisioned, guide the user through the.",
+        "Confirm recovery with a test call and data session; if not restored."
+      ],
+      "applicability": "Reuse when a user has 'No Service' for hours and cannot call or use mobile data, especially when status-bar icons suggest radio settings issues or when service does not return after toggling.",
+      "retrieval_text": "Title: Restore service for 'No Service' by checking device radio state and line.\nApplicability: Reuse when a user has 'No Service' for hours and cannot call or use mobile data, especially when status-bar icons suggest radio settings issues or when service does not return after toggling.\nTask Signature: User reports prolonged 'No Service' with inability to call or use mobile data; resolve by verifying device settings first, then confirming carrier-side line status.\nWorkflow: Collect identifiers and context: line phone number (or customer ID), device type. -> Check for device-side causes: ensure Airplane Mode is off, verify mobile data. -> If still no signal, validate carrier-side status for the specific line (active. -> If line is suspended or not provisioned, guide the user through the. -> Confirm recovery with a test call and data session; if not restored.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]"
+      ],
+      "last_task_query": "My phone’s been showing “No Service” for the last few hours, and I can’t make calls or use mobile data. Can you help me get my line working again?",
+      "status": "candidate"
+    },
+    {
+      "id": "mobile_data:a7e382310608",
+      "family": "mobile_data",
+      "title": "Troubleshoot slow or intermittent mobile data",
+      "task_signature": "User reports mobile data is slow, stops working, or speed tests fail despite having signal",
+      "workflow": [
+        "Confirm the device is on mobile data (Wi‑Fi off), note signal strength.",
+        "Apply quick local fixes: disable data-restriction mode, then re-test browsing and/or run.",
+        "If still failing (e.g., speed test shows no connection), refresh the radio.",
+        "Re-check status bar indicators and retest data; if the issue persists, proceed."
+      ],
+      "applicability": "Reuse when a customer has good signal but mobile data is unusable or much slower than expected, especially when a speed test cannot complete",
+      "retrieval_text": "Title: Troubleshoot slow or intermittent mobile data\nApplicability: Reuse when a customer has good signal but mobile data is unusable or much slower than expected, especially when a speed test cannot complete\nTask Signature: User reports mobile data is slow, stops working, or speed tests fail despite having signal\nWorkflow: Confirm the device is on mobile data (Wi‑Fi off), note signal strength. -> Apply quick local fixes: disable data-restriction mode, then re-test browsing and/or run. -> If still failing (e.g., speed test shows no connection), refresh the radio. -> Re-check status bar indicators and retest data; if the issue persists, proceed.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi John, actually I’m here to help you. From what I understand, you’re contacting your mobile provider because your mobile data has been stopping or getting very slow, and you want it fixed so that you consistently get *excellent* internet.",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:bb378be801c8",
+      "family": "mms",
+      "title": "Fix MMS sending failure while roaming by validating cellular data and roaming.",
+      "task_signature": "Customer can send SMS but MMS/photo messages stall or fail while traveling abroad; needs guided checks to restore MMS.",
+      "workflow": [
+        "Confirm affected line and clarify whether mobile data works with Wi‑Fi turned.",
+        "Guide the customer step-by-step (with reassurance) to disable Wi‑Fi, verify cellular signal.",
+        "If mobile data is off, instruct enabling Mobile Data and retest webpage.",
+        "If roaming internationally, instruct enabling Data Roaming and retest; if still no."
+      ],
+      "applicability": "Reuse when MMS fails but SMS works, especially when the customer is abroad or unsure about phone settings, and MMS likely depends on cellular data/roaming being enabled.",
+      "retrieval_text": "Title: Fix MMS sending failure while roaming by validating cellular data and roaming.\nApplicability: Reuse when MMS fails but SMS works, especially when the customer is abroad or unsure about phone settings, and MMS likely depends on cellular data/roaming being enabled.\nTask Signature: Customer can send SMS but MMS/photo messages stall or fail while traveling abroad; needs guided checks to restore MMS.\nWorkflow: Confirm affected line and clarify whether mobile data works with Wi‑Fi turned. -> Guide the customer step-by-step (with reassurance) to disable Wi‑Fi, verify cellular signal. -> If mobile data is off, instruct enabling Mobile Data and retest webpage. -> If roaming internationally, instruct enabling Data Roaming and retest; if still no.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]"
+      ],
+      "last_task_query": "I’m the customer reaching out to you. I’m having trouble sending picture messages (MMS) from my phone for the last few hours. Texts go through, but when I try to send a photo, it just sits there and doesn’t send.",
+      "status": "candidate"
+    },
+    {
+      "id": "roaming:81570c85c3d3",
+      "family": "roaming",
+      "title": "Restore mobile data abroad by clearing device-level blockers first",
+      "task_signature": "User reports slow or non-working mobile data while roaming; resolve by identifying and disabling settings that prevent connectivity or throttle data before escalating to.",
+      "workflow": [
+        "Confirm the on-screen status indicators (signal bars, 4G/5G, airplane mode, data enabled.",
+        "If airplane mode/no signal is present, instruct the user to turn airplane.",
+        "If service returns but speeds are poor, disable data-throttling features (e.g., Data.",
+        "If still not excellent, proceed to roaming enablement and network selection checks."
+      ],
+      "applicability": "Reuse when a traveler abroad has intermittent/slow mobile data and wants immediate improvement without changing their plan; especially effective when device settings are likely limiting connectivity or speed.",
+      "retrieval_text": "Title: Restore mobile data abroad by clearing device-level blockers first\nApplicability: Reuse when a traveler abroad has intermittent/slow mobile data and wants immediate improvement without changing their plan; especially effective when device settings are likely limiting connectivity or speed.\nTask Signature: User reports slow or non-working mobile data while roaming; resolve by identifying and disabling settings that prevent connectivity or throttle data before escalating to.\nWorkflow: Confirm the on-screen status indicators (signal bars, 4G/5G, airplane mode, data enabled. -> If airplane mode/no signal is present, instruct the user to turn airplane. -> If service returns but speeds are poor, disable data-throttling features (e.g., Data. -> If still not excellent, proceed to roaming enablement and network selection checks.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]"
+      ],
+      "last_task_query": "My mobile data is giving me a lot of trouble. I’m currently abroad in France and the internet on my phone keeps either stopping completely or getting very slow. I don’t have access to Wi‑Fi, so I need my mobile.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:9dffec194162",
+      "family": "billing",
+      "title": "Resolve 'No Service' caused by account/line suspension",
+      "task_signature": "User reports 'No Service' and inability to make calls; determine whether the issue is device/network vs. line/account suspension and guide through the correct resolution.",
+      "workflow": [
+        "Identify the affected line by collecting the phone number (or customer identifier).",
+        "Check whether the line is suspended and review contributing account factors (e.g.",
+        "If an overdue bill exists, offer to send a payment request for.",
+        "After payment, re-check bill/payment status and clearly explain what actions are possible.",
+        "For items requiring exceptions, retention/number portability, or contract renewal/reactivation beyond available tools."
+      ],
+      "applicability": "Reuse when a customer reports sudden loss of cellular service and the likely cause may be a carrier-side suspension due to billing or contract status rather than device settings.",
+      "retrieval_text": "Title: Resolve 'No Service' caused by account/line suspension\nApplicability: Reuse when a customer reports sudden loss of cellular service and the likely cause may be a carrier-side suspension due to billing or contract status rather than device settings.\nTask Signature: User reports 'No Service' and inability to make calls; determine whether the issue is device/network vs. line/account suspension and guide through the correct resolution.\nWorkflow: Identify the affected line by collecting the phone number (or customer identifier). -> Check whether the line is suspended and review contributing account factors (e.g. -> If an overdue bill exists, offer to send a payment request for. -> After payment, re-check bill/payment status and clearly explain what actions are possible. -> For items requiring exceptions, retention/number portability, or contract renewal/reactivation beyond available tools.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]"
+      ],
+      "last_task_query": "Oh—well, I’m actually the one who needs help. My phone’s been saying “No Service” up at the top for a few hours now, and I can’t make any calls. I’m a bit worried I’ve done something wrong. Can you help.",
+      "status": "candidate"
+    },
+    {
+      "id": "billing:84503ad93f1a",
+      "family": "billing",
+      "title": "Restore service when device shows No Service due to line suspension",
+      "task_signature": "User cannot call/text and sees “No Service”; resolution requires confirming line/account status, clearing any billing holds, resuming the line, and guiding quick device recovery.",
+      "workflow": [
+        "Collect an identifier (affected phone number or customer/account details) to locate the.",
+        "Check line status and account standing; if suspended, identify the suspension reason.",
+        "If payment is required, send a payment request for the overdue balance.",
+        "Resume/unsuspend the affected line once eligibility is met and confirm the status.",
+        "Instruct the user to reboot the device (and optionally toggle airplane mode."
+      ],
+      "applicability": "Reuse when a customer reports sudden loss of cellular service and the account tools can confirm the line is suspended or blocked pending payment or administrative action.",
+      "retrieval_text": "Title: Restore service when device shows No Service due to line suspension\nApplicability: Reuse when a customer reports sudden loss of cellular service and the account tools can confirm the line is suspended or blocked pending payment or administrative action.\nTask Signature: User cannot call/text and sees “No Service”; resolution requires confirming line/account status, clearing any billing holds, resuming the line, and guiding quick device recovery.\nWorkflow: Collect an identifier (affected phone number or customer/account details) to locate the. -> Check line status and account standing; if suspended, identify the suspension reason. -> If payment is required, send a payment request for the overdue balance. -> Resume/unsuspend the affected line once eligibility is met and confirm the status. -> Instruct the user to reboot the device (and optionally toggle airplane mode.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
+      ],
+      "last_task_query": "Hi! My cellphone’s been showing “No Service” for the last few hours. I can’t make or receive calls or texts. Can you help me figure out what’s going on and get my service back?",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:6bd61540a04d",
+      "family": "mms",
+      "title": "Restore MMS sending while roaming by re-establishing cellular service",
+      "task_signature": "Customer abroad cannot send MMS; diagnose device/network state, restore SIM/service and data/roaming prerequisites, then retest MMS.",
+      "workflow": [
+        "Verify the correct line is active and roaming is enabled on the.",
+        "Collect device status via network checks (airplane mode, SIM detected, service/signal, mobile.",
+        "If airplane mode is on or there is no service/SIM missing, disable.",
+        "Once service is restored, enable mobile data and data roaming as needed.",
+        "If MMS still fails after connectivity is restored, proceed to APN/messaging settings."
+      ],
+      "applicability": "Use when a customer reports MMS failures while traveling internationally and device checks indicate no service, airplane mode enabled, or SIM not detected.",
+      "retrieval_text": "Title: Restore MMS sending while roaming by re-establishing cellular service\nApplicability: Use when a customer reports MMS failures while traveling internationally and device checks indicate no service, airplane mode enabled, or SIM not detected.\nTask Signature: Customer abroad cannot send MMS; diagnose device/network state, restore SIM/service and data/roaming prerequisites, then retest MMS.\nWorkflow: Verify the correct line is active and roaming is enabled on the. -> Collect device status via network checks (airplane mode, SIM detected, service/signal, mobile. -> If airplane mode is on or there is no service/SIM missing, disable. -> Once service is restored, enable mobile data and data roaming as needed. -> If MMS still fails after connectivity is restored, proceed to APN/messaging settings.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]"
+      ],
+      "last_task_query": "Hi! I’m actually the customer here. I’m having trouble sending MMS messages (pictures) from my phone for the last few hours. I’m currently abroad in France, and my number is 555-123-2002. I’d like to get this fixed so I can.",
+      "status": "candidate"
+    },
+    {
+      "id": "mms:cef9631fe27a",
+      "family": "mms",
+      "title": "Diagnose MMS send failures by validating cellular data and radio state",
+      "task_signature": "User can send SMS but MMS (picture messages) fails; troubleshoot by confirming account/line status and verifying device network prerequisites before APN resets or escalation.",
+      "workflow": [
+        "Confirm the affected line is active and not suspended; note any recent.",
+        "Ask the user to test MMS prerequisites by turning Wi‑Fi off and.",
+        "If airplane mode is on or there is no cellular signal/network type.",
+        "If cellular data still fails after radio resets, proceed to messaging/mobile data.",
+        "If the device still shows no service in a normal coverage area."
+      ],
+      "applicability": "Reuse when MMS sending fails while SMS works, especially when the issue may be caused by missing cellular data connectivity, airplane mode, or loss of service rather than the messaging app itself.",
+      "retrieval_text": "Title: Diagnose MMS send failures by validating cellular data and radio state\nApplicability: Reuse when MMS sending fails while SMS works, especially when the issue may be caused by missing cellular data connectivity, airplane mode, or loss of service rather than the messaging app itself.\nTask Signature: User can send SMS but MMS (picture messages) fails; troubleshoot by confirming account/line status and verifying device network prerequisites before APN resets or escalation.\nWorkflow: Confirm the affected line is active and not suspended; note any recent. -> Ask the user to test MMS prerequisites by turning Wi‑Fi off and. -> If airplane mode is on or there is no cellular signal/network type. -> If cellular data still fails after radio resets, proceed to messaging/mobile data. -> If the device still shows no service in a normal coverage area.",
+      "source_cycle": 0,
+      "success_count": 1,
+      "source_tasks": [
+        "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]-c0-t0-s626729"
+      ],
+      "task_ids": [
+        "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]"
+      ],
+      "last_task_query": "I’m actually here to help you. Go ahead and tell me what’s going wrong with your phone or account today—what are you trying to do, and what’s not working as expected?",
+      "status": "candidate"
+    }
+  ],
+  "family_index": {
+    "apn_reboot": [
+      "apn_reboot:835764312bbc",
+      "apn_reboot:a3450ec29d4e",
+      "apn_reboot:500883f1a962",
+      "apn_reboot:69eb908b278a",
+      "apn_reboot:f6cca08f3428"
+    ],
+    "mms": [
+      "mms:082c0cd62469",
+      "mms:eb2c148ccd71",
+      "mms:fadc9fb10f57",
+      "mms:131f2e5f8dac",
+      "mms:bb378be801c8",
+      "mms:6bd61540a04d",
+      "mms:cef9631fe27a"
+    ],
+    "mobile_data": [
+      "mobile_data:710f2ee4cde8",
+      "mobile_data:2306f4af7353",
+      "mobile_data:583d02dcaea2",
+      "mobile_data:8cf652a73df0",
+      "mobile_data:d1a9354ea55d",
+      "mobile_data:896c33787d50",
+      "mobile_data:076e6c115fc4",
+      "mobile_data:857ac0511f5a",
+      "mobile_data:0f49a9bc6e23",
+      "mobile_data:a7e382310608"
+    ],
+    "roaming": [
+      "roaming:6f9b8dcedabe",
+      "roaming:e55e31c50f9a",
+      "roaming:a0f600db15d5",
+      "roaming:adf04702c99a",
+      "roaming:834b4640fc17",
+      "roaming:7e4e7125e757",
+      "roaming:d8d2cb25f3ec",
+      "roaming:94585e474b7b",
+      "roaming:d93b92da0685",
+      "roaming:2c0023c584e9",
+      "roaming:81570c85c3d3"
+    ],
+    "billing": [
+      "billing:9db6057db0ad",
+      "billing:f0075a17587f",
+      "billing:f9e3dd3f6617",
+      "billing:30f96eacc43d",
+      "billing:a030cd7990c1",
+      "billing:6a2a41330dbf",
+      "billing:9dffec194162",
+      "billing:84503ad93f1a"
+    ]
+  },
+  "events": [
+    {
+      "family": "apn_reboot",
+      "entry_id": "apn_reboot:835764312bbc",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "task_query": "Hi John, thanks for checking in — you’re actually the customer in this scenario. You should describe the issue you’re having with your phone or service, and I’ll play the role of the customer service agent helping you fix it.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "apn_reboot",
+      "entry_id": "apn_reboot:a3450ec29d4e",
+      "source_cycle": 0,
+      "source_task": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "task_query": "Hi John, thanks for asking — I’m actually here to help you. From what I understand, you’re contacting your mobile provider because your phone has been showing “No Service” for the past few hours, correct? If that’s right, let’s start.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:082c0cd62469",
+      "source_cycle": 0,
+      "source_task": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "task_query": "I’m the customer today—you’re the support agent. Here’s my issue: I’m John Smith, currently in France, and for the last few hours I haven’t been able to send MMS (picture) messages from my phone. SMS texts go through, but MMS.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:710f2ee4cde8",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like the support agent you’ve contacted: tell me what’s going on with your mobile service or device, and what you’d like to get fixed or figure out.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:2306f4af7353",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]",
+      "task_query": "Hi, my mobile data has been acting up. It either stops working completely or is extremely slow on my phone. I’m at home right now in the US, and I don’t have access to Wi‑Fi, so I really need my.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:583d02dcaea2",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like the customer service agent you just called. Tell me what’s going on with your phone or service today, and what you’d like to get fixed, and.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:8cf652a73df0",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+      "task_query": "My mobile data has been acting up. It either stops working completely or is so slow that most apps time out. I’m at home right now and I don’t have access to Wi‑Fi, so I really need my phone’s data.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:6f9b8dcedabe",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "task_query": "Hello! I’m actually here to help you. From what I understand about your situation, you’d typically be calling because something with your mobile phone isn’t working the way you want. Is there anything on your phone bothering you right now—like.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:eb2c148ccd71",
+      "source_cycle": 0,
+      "source_task": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "task_query": "My phone’s been showing “No Service” for the past few hours, and I can’t make calls or use mobile data. I’m John Smith, and the mobile number on the line with the issue is 555-123-2002. Can you help me get.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:9db6057db0ad",
+      "source_cycle": 0,
+      "source_task": "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]",
+      "task_query": "My phone’s been saying “No Service” for a few hours now, and I’m really worried. I just use it for calls and texts mostly, and I’m afraid something’s wrong. I’m not very good with technical things, so could you please.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "apn_reboot",
+      "entry_id": "apn_reboot:500883f1a962",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "task_query": "My cellphone’s been saying “No Service” for a few hours now, and I’m really worried. I just use it for calls and texts mostly, and I’m afraid of messing something up if I touch the wrong thing. Can you help.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:f0075a17587f",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "task_query": "Hi John, thanks for checking in—actually, you’re the one needing help today. Your cellphone’s been showing “No Service” for the past few hours. You’re calling your carrier’s support to get that fixed. You’re comfortable with basic phone settings but you.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:d1a9354ea55d",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like the customer service agent you’ve reached. Tell me what’s going on with your mobile service or device right now, and what you’d like to get fixed.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:e55e31c50f9a",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "task_query": "My mobile data is barely working while I’m abroad in France. It keeps dropping or is extremely slow. I need this fixed so that I consistently get *excellent* internet speed on my phone—nothing less than that is acceptable for me.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:a0f600db15d5",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "task_query": "Hello! I’m actually here to get some help from you. My mobile internet on my phone has been stopping or getting very slow, and I’m currently abroad in France with no Wi‑Fi available. I only want the very best speed.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:f9e3dd3f6617",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "task_query": "My phone’s been showing “No Service” for the past few hours, and I can’t make calls or use mobile data. I’m John Smith, and the mobile number is 555-123-2002. Can you help me get my service back?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:adf04702c99a",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|bad_vpn|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like a customer calling your telecom support line. I’ll describe my issue, and you can walk me through troubleshooting, ask for checks, and request “tool” actions just.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:fadc9fb10f57",
+      "source_cycle": 0,
+      "source_task": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "task_query": "Hi John, thanks for checking in — you’re actually the customer in this scenario. Your phone’s been showing **“No Service” for the past few hours**, and you’re contacting your carrier’s support (me) to get it fixed. You can start by.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:834b4640fc17",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "task_query": "Hello! I’m actually here to get some help from you. My mobile internet on my phone has been acting up. I’m currently in France, and the data either stops working or is very, very slow. I don’t have any Wi‑Fi.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:896c33787d50",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]",
+      "task_query": "Hello! I’m actually the one who needs some help. My mobile data hasn’t been working properly on my phone. Sometimes it just stops, and other times it’s very slow. I don’t have Wi‑Fi here at home, so I really need.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:131f2e5f8dac",
+      "source_cycle": 0,
+      "source_task": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "task_query": "You’re actually the one I’m here to help. I’m your support assistant for your mobile service. Is there anything not working properly with your phone or your line today—calls, texts, data, roaming, anything like that?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:30f96eacc43d",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "task_query": "Hi, my cell phone’s been showing “No Service” for the past few hours and I can’t make calls or use mobile data. Can you help me get my service back on?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:7e4e7125e757",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like the customer service agent you just called. Tell me what’s going wrong with your mobile service or your phone today, and what you’d like to get.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:a030cd7990c1",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "task_query": "Hi John, thanks for checking in—actually, you’re the one who’s supposed to be getting help today. Your cellphone has been showing “No Service” for the past few hours, and we need to troubleshoot that together. Let’s start with this: What.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:d8d2cb25f3ec",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like the support agent you’ve contacted: tell me what’s going on with your mobile service or device, and what you’d like to get fixed or figure out.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:94585e474b7b",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "task_query": "Hi! I’m actually the one here to help you. You can treat me like the support agent you’ve contacted: tell me what’s going on with your mobile service or device, and what you’d like to get fixed or figure out.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:076e6c115fc4",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on[PERSONA:None]",
+      "task_query": "Hi, yeah, I’m having an issue with my mobile data. My internet on the phone either stops working completely or is really slow. I’m at home in the US, I don’t have Wi‑Fi here, and I really need *excellent* data.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:6a2a41330dbf",
+      "source_cycle": 0,
+      "source_task": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "task_query": "Hi John, thanks for checking in—actually, you’re the one seeking help in this scenario. Your cellphone has been showing “No Service” for the past few hours, and you’re contacting your carrier’s customer support to get it working again. You’re reasonably.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:d93b92da0685",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "task_query": "My mobile data is giving me a lot of trouble. I’m currently in France, and the internet on my phone keeps either stopping completely or getting very slow. I don’t have access to Wi‑Fi, so I really need my mobile.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:857ac0511f5a",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+      "task_query": "Hello! I’m actually the one who needs some help. My mobile data on my phone hasn’t been working properly. Sometimes it just stops, and other times it’s very slow. I don’t have Wi‑Fi where I am, so I really need.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:2c0023c584e9",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "task_query": "Thanks for asking. I’m actually the support assistant here to help you. Go ahead and tell me what’s going wrong with your phone or your service today, and I’ll walk you through it step by step, as simply as possible.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "apn_reboot",
+      "entry_id": "apn_reboot:69eb908b278a",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]",
+      "task_query": "My cell service has been out for a few hours—my phone just shows “No Service.” I’m John Smith, number 555-123-2002. Can you help me get my signal back?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:0f49a9bc6e23",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]",
+      "task_query": "Hello, thanks for checking in. My mobile data on my phone has been acting up — it either stops working or it’s very, very slow. I don’t have Wi‑Fi here, so I really need the internet on my phone to.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "apn_reboot",
+      "entry_id": "apn_reboot:f6cca08f3428",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]",
+      "task_query": "My phone’s been showing “No Service” for the last few hours, and I can’t make calls or use mobile data. Can you help me get my line working again?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mobile_data",
+      "entry_id": "mobile_data:a7e382310608",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]",
+      "task_query": "Hi John, actually I’m here to help you. From what I understand, you’re contacting your mobile provider because your mobile data has been stopping or getting very slow, and you want it fixed so that you consistently get *excellent* internet.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:bb378be801c8",
+      "source_cycle": 0,
+      "source_task": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "task_query": "I’m the customer reaching out to you. I’m having trouble sending picture messages (MMS) from my phone for the last few hours. Texts go through, but when I try to send a photo, it just sits there and doesn’t send.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "roaming",
+      "entry_id": "roaming:81570c85c3d3",
+      "source_cycle": 0,
+      "source_task": "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "task_query": "My mobile data is giving me a lot of trouble. I’m currently abroad in France and the internet on my phone keeps either stopping completely or getting very slow. I don’t have access to Wi‑Fi, so I need my mobile.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:9dffec194162",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "task_query": "Oh—well, I’m actually the one who needs help. My phone’s been saying “No Service” up at the top for a few hours now, and I can’t make any calls. I’m a bit worried I’ve done something wrong. Can you help.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "billing",
+      "entry_id": "billing:84503ad93f1a",
+      "source_cycle": 0,
+      "source_task": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]-c0-t0-s626729",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "task_query": "Hi! My cellphone’s been showing “No Service” for the last few hours. I can’t make or receive calls or texts. Can you help me figure out what’s going on and get my service back?",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:6bd61540a04d",
+      "source_cycle": 0,
+      "source_task": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "task_query": "Hi! I’m actually the customer here. I’m having trouble sending MMS messages (pictures) from my phone for the last few hours. I’m currently abroad in France, and my number is 555-123-2002. I’d like to get this fixed so I can.",
+      "status": "candidate",
+      "success_count": 1
+    },
+    {
+      "family": "mms",
+      "entry_id": "mms:cef9631fe27a",
+      "source_cycle": 0,
+      "source_task": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]-c0-t0-s626729",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]",
+      "task_query": "I’m actually here to help you. Go ahead and tell me what’s going wrong with your phone or account today—what are you trying to do, and what’s not working as expected?",
+      "status": "candidate",
+      "success_count": 1
+    }
+  ]
+}

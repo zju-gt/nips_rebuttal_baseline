@@ -1,4 +1,4 @@
-from openai import OpenAI
+from openai_test import OpenAI
 
 # 初始化客户端
 # base_url 必须指向你服务器的地址，并带上 /v1

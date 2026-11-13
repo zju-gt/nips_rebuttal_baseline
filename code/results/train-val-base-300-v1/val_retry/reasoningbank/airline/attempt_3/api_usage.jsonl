@@ -1,0 +1,4 @@
+{"call_name": "", "error_type": "AuthenticationError", "latency_seconds": 19.477453369647264, "model": "openai/gpt-5.1-2025-11-13", "status": "failed", "status_code": 401, "timestamp": "2026-11-12T18:42:04.370335+00:00"}
+{"call_name": "", "error_type": "AuthenticationError", "latency_seconds": 0.3848496377468109, "model": "openai/gpt-5.1-2025-11-13", "status": "failed", "status_code": 401, "timestamp": "2026-11-12T18:42:06.362029+00:00"}
+{"call_name": "", "error_type": "AuthenticationError", "latency_seconds": 0.31863876432180405, "model": "openai/gpt-5.1-2025-11-13", "status": "failed", "status_code": 401, "timestamp": "2026-11-12T18:42:09.291421+00:00"}
+{"call_name": "", "error_type": "AuthenticationError", "latency_seconds": 0.3099158741533756, "model": "openai/gpt-5.1-2025-11-13", "status": "failed", "status_code": 401, "timestamp": "2026-11-12T18:42:12.285945+00:00"}

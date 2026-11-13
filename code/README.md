@@ -129,6 +129,42 @@ The default order is method-major and then domain-minor:
 
 Each runs `retail`, `airline`, and `telecom`. Method-specific mode, trial, memory, hint, SOP, and evolution flags are centralized in `baseline_registry.py`.
 
+## 70/30 train/val experiment
+
+The separate `run_train_val.sh` entry point splits only the existing tau2 `base`
+tasks: Airline 35/15, Retail 80/34, and Telecom 80/34. It trains AWM,
+ReasoningBank, and Living-Harness on the train IDs, exports a separate final
+harness for each method/domain, and evaluates all four methods on the val IDs.
+Validation renders prompts from the saved harness while disabling evolution
+updates in the sample workers. It checks task IDs, missing rewards, and harness
+hashes before producing `table.csv` and `table.md`.
+Validation uses a 20 requests/minute API limit and a 2400-second per-sample
+timeout by default. A throttled run can otherwise exhaust the older
+800-second wall-clock limit while a dialogue waits for its next request.
+
+```bash
+cd code
+bash run_train_val.sh --run-id train-val-base-300-v1 --phase all --dry-run
+bash run_train_val.sh --run-id train-val-base-300-v1 --phase split
+```
+
+Run each domain and phase in the order shown in
+[`docs/tau2_train_val_experiment_plan.md`](../docs/tau2_train_val_experiment_plan.md).
+The script runs method/domain jobs sequentially; `--workers` controls sample
+concurrency within a job. Existing Exp1 results remain under their own run IDs.
+
+If a completed validation job has missing rewards or infrastructure errors,
+retry only those task IDs and retain the original files:
+
+```bash
+.venv/bin/python repair_train_val.py \
+  --run-id train-val-base-300-v1 --method react --domain retail
+```
+
+Retry results and API usage are stored under `val_retry/`; the original full
+results and summary are copied to `results.initial.json` and
+`summary.initial.json` before the repaired aggregate replaces them.
+
 Memory-based methods use the repositories' existing DashScope embedding support when `DASHSCOPE_API_KEY` or `EMBEDDING_API_KEY` is available. Otherwise, their existing lexical fallback remains active.
 
 ## Refreshing the vendor bundle

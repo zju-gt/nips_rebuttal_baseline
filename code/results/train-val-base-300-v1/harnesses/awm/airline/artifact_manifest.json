@@ -1,0 +1,17 @@
+{
+  "method": "awm",
+  "domain": "airline",
+  "model": "gpt-5.2-2025-12-11",
+  "split_hash": "5e1f2c90732642f95a8abba491b4034942ace49e62eb20d6d3fcd9cdceb9d063",
+  "train_ids_hash": "bcc987c27502616e448ac628c4bb93ba0aac1ec99216bfddb023a4fd10d2d8a0",
+  "train_task_count": 35,
+  "cycles": 1,
+  "runner_source_sha256": "6d1265f933982777a0cdbf460f2482929304fe5f3b3f2cce4e9fb20d7338dc11",
+  "tau2_repo_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "runner_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "meta_sop_empty": null,
+  "files": {
+    "workflow_memory.json": "0409a701e327ac3813bd3f3daa90115b5b46a7318b4c3bd6d8d59bed3e852e01"
+  },
+  "created_at": "2026-11-12T12:23:51.630441+00:00"
+}

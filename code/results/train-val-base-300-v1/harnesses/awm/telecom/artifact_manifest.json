@@ -1,0 +1,17 @@
+{
+  "method": "awm",
+  "domain": "telecom",
+  "model": "gpt-5.2-2025-12-11",
+  "split_hash": "5aae9748c658a6c22457df8c791eed3cabdf982e331f925c4e6fda515161e1ae",
+  "train_ids_hash": "57e2c98d07d55e7083babcf3ccf4bc0c7d10f9a5859e712763f91af37e889d0c",
+  "train_task_count": 80,
+  "cycles": 1,
+  "runner_source_sha256": "6d1265f933982777a0cdbf460f2482929304fe5f3b3f2cce4e9fb20d7338dc11",
+  "tau2_repo_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "runner_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "meta_sop_empty": null,
+  "files": {
+    "workflow_memory.json": "90c9eba4e942915b806d29140b2baf6340e009c04d332e5e24794d290645d0ee"
+  },
+  "created_at": "2026-11-12T16:36:43.076423+00:00"
+}

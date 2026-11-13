@@ -1,0 +1,14 @@
+
+tau2-bench/retail (frozen):   0%|          | 0/10 [00:00<?, ?it/s]
+tau2-bench/retail (frozen):  10%|█         | 1/10 [06:31<58:41, 391.27s/it]
+tau2-bench/retail (frozen):  20%|██        | 2/10 [06:53<23:12, 174.04s/it]
+tau2-bench/retail (frozen):  30%|███       | 3/10 [08:19<15:37, 133.88s/it]
+tau2-bench/retail (frozen):  40%|████      | 4/10 [08:23<08:15, 82.55s/it] 
+tau2-bench/retail (frozen):  50%|█████     | 5/10 [08:24<04:26, 53.36s/it]
+tau2-bench/retail (frozen):  60%|██████    | 6/10 [08:51<02:56, 44.21s/it]
+tau2-bench/retail (frozen):  70%|███████   | 7/10 [09:09<01:47, 35.82s/it]
+tau2-bench/retail (frozen):  80%|████████  | 8/10 [09:24<00:58, 29.02s/it]
+tau2-bench/retail (frozen):  90%|█████████ | 9/10 [09:49<00:27, 27.98s/it]
+tau2-bench/retail (frozen): 100%|██████████| 10/10 [10:09<00:00, 25.40s/it]
+tau2-bench/retail (frozen): 100%|██████████| 10/10 [10:09<00:00, 60.96s/it]
+{"method": "react", "output_dir": "/home/gaotu.wyc/wyc/code/nips_rebuttal_baseline/code/results/train-val-base-300-v1/val_retry/react/retail/attempt_1", "status": "succeeded"}

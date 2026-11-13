@@ -1,0 +1,17 @@
+{
+  "method": "awm",
+  "domain": "retail",
+  "model": "gpt-5.2-2025-12-11",
+  "split_hash": "36d3e4078cdc3a1245f7eee4869bfb6fb4efa8c2f08a4a5a29daf00af049c203",
+  "train_ids_hash": "b328d96f83e0cf286f506ee02108a735f171b224f5ac4c3fd6948f6b40ac3181",
+  "train_task_count": 80,
+  "cycles": 1,
+  "runner_source_sha256": "6d1265f933982777a0cdbf460f2482929304fe5f3b3f2cce4e9fb20d7338dc11",
+  "tau2_repo_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "runner_commit": "028d241fde0d4df0eb1e68be03a4914924ec2845",
+  "meta_sop_empty": null,
+  "files": {
+    "workflow_memory.json": "c256bc5a5af1e2e9e40006004ac72a77cfe422094f1addc64ffdaa128fb12f35"
+  },
+  "created_at": "2026-11-12T13:58:04.922882+00:00"
+}

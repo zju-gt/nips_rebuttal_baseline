@@ -1,0 +1,1053 @@
+{
+  "version": 1,
+  "domain": "retail",
+  "families": [
+    "authentication",
+    "exchange_modify",
+    "status"
+  ],
+  "entries": [
+    {
+      "id": "authentication:7ec72420df99",
+      "content_hash": "7ec72420df99",
+      "title": "When the user requests “only one spec change,”.",
+      "lesson": "When the user requests “only one spec change,” verify variant availability; if an exact match doesn’t exist, propose the closest available alternative and obtain explicit confirmation (including payment method for any price.",
+      "applicability": "when handling similar authentication cases",
+      "family": "authentication",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When the user requests “only one spec change,”.\nApplicability: when handling similar authentication cases\nLesson: When the user requests “only one spec change,” verify variant availability; if an exact match doesn’t exist, propose the closest available alternative and obtain explicit confirmation (including payment method for any price.\nFamily: authentication\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "52-c0-t0-s626729",
+      "task_id": "52",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:4282a5cdc25e",
+      "content_hash": "4282a5cdc25e",
+      "title": "Authenticate with available identifiers (name + ZIP when.",
+      "lesson": "Authenticate with available identifiers (name + ZIP when email unknown), verify order status and system constraints, then request explicit confirmation (and required structured reasons) before executing irreversible actions like cancellations.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate with available identifiers (name + ZIP when.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate with available identifiers (name + ZIP when email unknown), verify order status and system constraints, then request explicit confirmation (and required structured reasons) before executing irreversible actions like cancellations.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "76-c0-t0-s626729",
+      "task_id": "76",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "authentication:6935b560045e",
+      "content_hash": "6935b560045e",
+      "title": "Authenticate first, then identify the delivered order and.",
+      "lesson": "Authenticate first, then identify the delivered order and item; if the user changes from return to exchange, validate replacement availability and price difference, get explicit confirmation, and only then submit the exchange.",
+      "applicability": "when handling similar authentication cases",
+      "family": "authentication",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate first, then identify the delivered order and.\nApplicability: when handling similar authentication cases\nLesson: Authenticate first, then identify the delivered order and item; if the user changes from return to exchange, validate replacement availability and price difference, get explicit confirmation, and only then submit the exchange.\nFamily: authentication\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "18-c0-t0-s626729",
+      "task_id": "18",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:e5c1777608c2",
+      "content_hash": "e5c1777608c2",
+      "title": "Authenticate first, then confirm exact order/item IDs and.",
+      "lesson": "Authenticate first, then confirm exact order/item IDs and replacement preferences; if the user changes scope, restate the final item list and submit only what’s confirmed.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate first, then confirm exact order/item IDs and.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate first, then confirm exact order/item IDs and replacement preferences; if the user changes scope, restate the final item list and submit only what’s confirmed.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "6-c0-t0-s626729",
+      "task_id": "6",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:5cdec2c5f071",
+      "content_hash": "5cdec2c5f071",
+      "title": "When a return refund method is rejected, immediately.",
+      "lesson": "When a return refund method is rejected, immediately pivot to using the original payment method (or an allowed gift card) and re-run the return action; for pending orders, use modify rather than.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When a return refund method is rejected, immediately.\nApplicability: when handling similar exchange_modify cases\nLesson: When a return refund method is rejected, immediately pivot to using the original payment method (or an allowed gift card) and re-run the return action; for pending orders, use modify rather than.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "100-c0-t0-s626729",
+      "task_id": "100",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:82be658d3f07",
+      "content_hash": "82be658d3f07",
+      "title": "Authenticate and retrieve orders first, then map requested.",
+      "lesson": "Authenticate and retrieve orders first, then map requested items to their specific order_ids; if items span multiple orders, submit separate return actions per order using the original payment_method_id and get explicit confirmation.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate and retrieve orders first, then map requested.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate and retrieve orders first, then map requested items to their specific order_ids; if items span multiple orders, submit separate return actions per order using the original payment_method_id and get explicit confirmation.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "92-c0-t0-s626729",
+      "task_id": "92",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:c7dac739493a",
+      "content_hash": "c7dac739493a",
+      "title": "Authenticate first, enumerate candidate orders, then resolve ambiguity.",
+      "lesson": "Authenticate first, enumerate candidate orders, then resolve ambiguity with a targeted confirmation (especially when multiple orders fit the description) before executing cancellation/modification actions.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate first, enumerate candidate orders, then resolve ambiguity.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate first, enumerate candidate orders, then resolve ambiguity with a targeted confirmation (especially when multiple orders fit the description) before executing cancellation/modification actions.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "74-c0-t0-s626729",
+      "task_id": "74",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:182c1d7e52c4",
+      "content_hash": "182c1d7e52c4",
+      "title": "Authenticate and enumerate orders first, then require explicit.",
+      "lesson": "Authenticate and enumerate orders first, then require explicit confirmation (including order_id, item_id swaps, shipping address, and payment method) before invoking modify/exchange actions—especially when pending-order modifications are one-time.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate and enumerate orders first, then require explicit.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate and enumerate orders first, then require explicit confirmation (including order_id, item_id swaps, shipping address, and payment method) before invoking modify/exchange actions—especially when pending-order modifications are one-time.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "102-c0-t0-s626729",
+      "task_id": "102",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "status:b815cbe694b1",
+      "content_hash": "b815cbe694b1",
+      "title": "Pivot after repeated 'Order not found' and use alternate lookup paths",
+      "lesson": "When authenticated but multiple order-id lookups return 'Order not found' or the customer has an order number format mismatch (e.g., different prefix/length). | Did not switch to a concrete alternate order-locating workflow (search by date/time window, shipping name/address, email, tracking number, or other order-number formats) and instead stalled on unsupported ID format. | After 1–2 failed lookups, immediately collect alternate identifiers (order date/time, shipping name, address, tracking, email) and use any available order-search tools/flows; if tools cannot support it, proceed to handoff with the gathered identifiers.",
+      "applicability": "When authenticated but multiple order-id lookups return 'Order not found' or the customer has an order number format mismatch (e.g., different prefix/length).",
+      "family": "status",
+      "outcome_type": "failure",
+      "retrieval_text": "Title: Pivot after repeated 'Order not found' and use alternate lookup paths\nApplicability: When authenticated but multiple order-id lookups return 'Order not found' or the customer has an order number format mismatch (e.g., different prefix/length).\nLesson: When authenticated but multiple order-id lookups return 'Order not found' or the customer has an order number format mismatch (e.g., different prefix/length). | Did not switch to a concrete alternate order-locating workflow (search by date/time window, shipping name/address, email, tracking number, or other order-number formats) and instead stalled on unsupported ID format. | After 1–2 failed lookups, immediately collect alternate identifiers (order date/time, shipping name, address, tracking, email) and use any available order-search tools/flows; if tools cannot support it, proceed to handoff with the gathered identifiers.\nFamily: status\nOutcome: failure",
+      "source_cycle": 0,
+      "source_task": "33-c0-t0-s626729",
+      "task_id": "33",
+      "reward_value": 0.0,
+      "confidence": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "status:6eccd5aef5f2",
+      "content_hash": "6eccd5aef5f2",
+      "title": "Execute transfer/handoff immediately when requested",
+      "lesson": "When the user asks to be transferred to a human agent or when required tools/search capabilities are unavailable to complete the task. | Transfer was offered but not executed as an explicit handoff action with context. | Trigger the transfer mechanism right away and include a concise summary (authenticated user_id, failed order IDs, customer-provided alternate order number, date/time, ship name/address clues) to prevent repeating steps.",
+      "applicability": "When the user asks to be transferred to a human agent or when required tools/search capabilities are unavailable to complete the task.",
+      "family": "status",
+      "outcome_type": "failure",
+      "retrieval_text": "Title: Execute transfer/handoff immediately when requested\nApplicability: When the user asks to be transferred to a human agent or when required tools/search capabilities are unavailable to complete the task.\nLesson: When the user asks to be transferred to a human agent or when required tools/search capabilities are unavailable to complete the task. | Transfer was offered but not executed as an explicit handoff action with context. | Trigger the transfer mechanism right away and include a concise summary (authenticated user_id, failed order IDs, customer-provided alternate order number, date/time, ship name/address clues) to prevent repeating steps.\nFamily: status\nOutcome: failure",
+      "source_cycle": 0,
+      "source_task": "33-c0-t0-s626729",
+      "task_id": "33",
+      "reward_value": 0.0,
+      "confidence": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:762d8c51a27d",
+      "content_hash": "762d8c51a27d",
+      "title": "When a requested exchange variant isn’t available, confirm.",
+      "lesson": "When a requested exchange variant isn’t available, confirm unavailability via product variants, then collect explicit cancellation confirmation and a policy-constrained cancellation reason before calling cancel_pending_order and reporting refund details.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When a requested exchange variant isn’t available, confirm.\nApplicability: when handling similar exchange_modify cases\nLesson: When a requested exchange variant isn’t available, confirm unavailability via product variants, then collect explicit cancellation confirmation and a policy-constrained cancellation reason before calling cancel_pending_order and reporting refund details.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "88-c0-t0-s626729",
+      "task_id": "88",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:d7dba3b30104",
+      "content_hash": "d7dba3b30104",
+      "title": "Pivot to account order list when order ID is not found",
+      "lesson": "When an order lookup by provided order number returns 'Order not found' but the user is authenticated and you can retrieve their account/orders list. | Did not open and inspect the orders available on the authenticated account (e.g., iterate through listed order IDs) to identify the delivered item and proceed with exchange eligibility/variant/price checks. | Retrieve the authenticated user’s orders list, then open likely recent orders one-by-one to find the matching delivered laptop and continue the exchange workflow (verify delivered, get item_id, check variant availability, compute price difference, initiate exchange).",
+      "applicability": "When an order lookup by provided order number returns 'Order not found' but the user is authenticated and you can retrieve their account/orders list.",
+      "family": "exchange_modify",
+      "outcome_type": "failure",
+      "retrieval_text": "Title: Pivot to account order list when order ID is not found\nApplicability: When an order lookup by provided order number returns 'Order not found' but the user is authenticated and you can retrieve their account/orders list.\nLesson: When an order lookup by provided order number returns 'Order not found' but the user is authenticated and you can retrieve their account/orders list. | Did not open and inspect the orders available on the authenticated account (e.g., iterate through listed order IDs) to identify the delivered item and proceed with exchange eligibility/variant/price checks. | Retrieve the authenticated user’s orders list, then open likely recent orders one-by-one to find the matching delivered laptop and continue the exchange workflow (verify delivered, get item_id, check variant availability, compute price difference, initiate exchange).\nFamily: exchange_modify\nOutcome: failure",
+      "source_cycle": 0,
+      "source_task": "94-c0-t0-s626729",
+      "task_id": "94",
+      "reward_value": 0.0,
+      "confidence": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:556a1950eb5c",
+      "content_hash": "556a1950eb5c",
+      "title": "Set clear boundary for cross-account/guest order mismatches",
+      "lesson": "When the order number on a packing slip/email does not exist in tools and does not appear under the authenticated account’s orders list. | Did not explicitly determine whether the system supports searching orders outside the authenticated account; lacked a clear tool-supported path vs. required escalation. | State what identifiers/tools you can search with; if cross-account/guest order lookup isn’t supported, explain that only a human agent can locate # by broader search and request specific proof (order confirmation email, purchaser email/phone) before escalating.",
+      "applicability": "When the order number on a packing slip/email does not exist in tools and does not appear under the authenticated account’s orders list.",
+      "family": "exchange_modify",
+      "outcome_type": "failure",
+      "retrieval_text": "Title: Set clear boundary for cross-account/guest order mismatches\nApplicability: When the order number on a packing slip/email does not exist in tools and does not appear under the authenticated account’s orders list.\nLesson: When the order number on a packing slip/email does not exist in tools and does not appear under the authenticated account’s orders list. | Did not explicitly determine whether the system supports searching orders outside the authenticated account; lacked a clear tool-supported path vs. required escalation. | State what identifiers/tools you can search with; if cross-account/guest order lookup isn’t supported, explain that only a human agent can locate # by broader search and request specific proof (order confirmation email, purchaser email/phone) before escalating.\nFamily: exchange_modify\nOutcome: failure",
+      "source_cycle": 0,
+      "source_task": "94-c0-t0-s626729",
+      "task_id": "94",
+      "reward_value": 0.0,
+      "confidence": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "authentication:b5cc6b26ce9c",
+      "content_hash": "b5cc6b26ce9c",
+      "title": "When the customer lacks an order ID, authenticate.",
+      "lesson": "When the customer lacks an order ID, authenticate, pull recent orders, and iterate through them; for account changes (like default address), read back the full address and obtain explicit confirmation before executing.",
+      "applicability": "when handling similar authentication cases",
+      "family": "authentication",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When the customer lacks an order ID, authenticate.\nApplicability: when handling similar authentication cases\nLesson: When the customer lacks an order ID, authenticate, pull recent orders, and iterate through them; for account changes (like default address), read back the full address and obtain explicit confirmation before executing.\nFamily: authentication\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "43-c0-t0-s626729",
+      "task_id": "43",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "status:8f527d761732",
+      "content_hash": "8f527d761732",
+      "title": "Always verify the actual payment method on the.",
+      "lesson": "Always verify the actual payment method on the order (e.g., gift card vs card/bank) before promising “refund to original payment method,” and pre-warn if refunds will be constrained to a gift card.",
+      "applicability": "when handling similar status cases",
+      "family": "status",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Always verify the actual payment method on the.\nApplicability: when handling similar status cases\nLesson: Always verify the actual payment method on the order (e.g., gift card vs card/bank) before promising “refund to original payment method,” and pre-warn if refunds will be constrained to a gift card.\nFamily: status\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "55-c0-t0-s626729",
+      "task_id": "55",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "status:a0eac849ac1c",
+      "content_hash": "a0eac849ac1c",
+      "title": "When an order lookup fails, explicitly prompt for.",
+      "lesson": "When an order lookup fails, explicitly prompt for the correct order-id format and retry with the corrected identifier before attempting return actions; only submit a return after confirming item_ids and refund destination.",
+      "applicability": "when handling similar status cases",
+      "family": "status",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When an order lookup fails, explicitly prompt for.\nApplicability: when handling similar status cases\nLesson: When an order lookup fails, explicitly prompt for the correct order-id format and retry with the corrected identifier before attempting return actions; only submit a return after confirming item_ids and refund destination.\nFamily: status\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "47-c0-t0-s626729",
+      "task_id": "47",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:dcb0b4b045b4",
+      "content_hash": "dcb0b4b045b4",
+      "title": "When a user requests multiple changes across orders.",
+      "lesson": "When a user requests multiple changes across orders, first disambiguate the correct orders/items, then validate variant availability against constraints before executing exchanges; explicitly call out system limitations (e.g., item-level cancel) and get.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When a user requests multiple changes across orders.\nApplicability: when handling similar exchange_modify cases\nLesson: When a user requests multiple changes across orders, first disambiguate the correct orders/items, then validate variant availability against constraints before executing exchanges; explicitly call out system limitations (e.g., item-level cancel) and get.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "99-c0-t0-s626729",
+      "task_id": "99",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:68fbe1f03f18",
+      "content_hash": "68fbe1f03f18",
+      "title": "When a user doesn’t want to read addresses.",
+      "lesson": "When a user doesn’t want to read addresses, infer “old vs new” by comparing recent orders, then present a precise summary and obtain explicit approval before submitting address and item modifications—especially when.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When a user doesn’t want to read addresses.\nApplicability: when handling similar exchange_modify cases\nLesson: When a user doesn’t want to read addresses, infer “old vs new” by comparing recent orders, then present a precise summary and obtain explicit approval before submitting address and item modifications—especially when.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "109-c0-t0-s626729",
+      "task_id": "109",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:cad8e5dacf77",
+      "content_hash": "cad8e5dacf77",
+      "title": "When changing pending orders, first retrieve orders and.",
+      "lesson": "When changing pending orders, first retrieve orders and product variants, then ask for explicit confirmation of the exact saved address, specific item_id swap, and payment method for any price difference before executing.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: When changing pending orders, first retrieve orders and.\nApplicability: when handling similar exchange_modify cases\nLesson: When changing pending orders, first retrieve orders and product variants, then ask for explicit confirmation of the exact saved address, specific item_id swap, and payment method for any price difference before executing.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "101-c0-t0-s626729",
+      "task_id": "101",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "authentication:76b7be9e25a2",
+      "content_hash": "76b7be9e25a2",
+      "title": "Authenticate first, then enumerate candidate orders and map.",
+      "lesson": "Authenticate first, then enumerate candidate orders and map the user’s described purchase (e.g., “two t-shirts”) to the correct order; when requested details aren’t in item records, check product details and explicitly state.",
+      "applicability": "when handling similar authentication cases",
+      "family": "authentication",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate first, then enumerate candidate orders and map.\nApplicability: when handling similar authentication cases\nLesson: Authenticate first, then enumerate candidate orders and map the user’s described purchase (e.g., “two t-shirts”) to the correct order; when requested details aren’t in item records, check product details and explicitly state.\nFamily: authentication\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "24-c0-t0-s626729",
+      "task_id": "24",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "exchange_modify:308ab94c7055",
+      "content_hash": "308ab94c7055",
+      "title": "Authenticate, locate the delivered order item, list available.",
+      "lesson": "Authenticate, locate the delivered order item, list available matching variants with stock status, compute and clearly state the exact price difference, obtain explicit user confirmation, then submit exchange with the original payment.",
+      "applicability": "when handling similar exchange_modify cases",
+      "family": "exchange_modify",
+      "outcome_type": "success",
+      "retrieval_text": "Title: Authenticate, locate the delivered order item, list available.\nApplicability: when handling similar exchange_modify cases\nLesson: Authenticate, locate the delivered order item, list available matching variants with stock status, compute and clearly state the exact price difference, obtain explicit user confirmation, then submit exchange with the original payment.\nFamily: exchange_modify\nOutcome: success",
+      "source_cycle": 0,
+      "source_task": "70-c0-t0-s626729",
+      "task_id": "70",
+      "reward_value": 1.0,
+      "confidence": 0.75,
+      "status": "active"
+    },
+    {
+      "id": "authentication:a877665ee1ea",
+      "content_hash": "a877665ee1ea",
+      "title": "Keep the successful ordering and re-verify prerequisites before.",
+      "lesson": "Keep the successful ordering and re-verify prerequisites before mutation.",
+      "applicability": "when handling similar authentication cases",
+      "family": "authentication",
+      "outcome_type": "infra_error",
+      "retrieval_text": "Title: Keep the successful ordering and re-verify prerequisites before.\nApplicability: when handling similar authentication cases\nLesson: Keep the successful ordering and re-verify prerequisites before mutation.\nFamily: authentication\nOutcome: infra_error",
+      "source_cycle": 0,
+      "source_task": "17-c0-t0-s626729",
+      "task_id": "93",
+      "reward_value": null,
+      "confidence": 45.75,
+      "status": "active",
+      "last_cycle": 0,
+      "last_task": "93-c0-t0-s626729"
+    }
+  ],
+  "family_index": {
+    "authentication": [
+      "authentication:7ec72420df99",
+      "authentication:6935b560045e",
+      "authentication:b5cc6b26ce9c",
+      "authentication:76b7be9e25a2",
+      "authentication:a877665ee1ea"
+    ],
+    "exchange_modify": [
+      "exchange_modify:4282a5cdc25e",
+      "exchange_modify:e5c1777608c2",
+      "exchange_modify:5cdec2c5f071",
+      "exchange_modify:82be658d3f07",
+      "exchange_modify:c7dac739493a",
+      "exchange_modify:182c1d7e52c4",
+      "exchange_modify:762d8c51a27d",
+      "exchange_modify:d7dba3b30104",
+      "exchange_modify:556a1950eb5c",
+      "exchange_modify:dcb0b4b045b4",
+      "exchange_modify:68fbe1f03f18",
+      "exchange_modify:cad8e5dacf77",
+      "exchange_modify:308ab94c7055"
+    ],
+    "status": [
+      "status:b815cbe694b1",
+      "status:6eccd5aef5f2",
+      "status:8f527d761732",
+      "status:a0eac849ac1c"
+    ]
+  },
+  "events": [
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "52-c0-t0-s626729",
+      "task_id": "52",
+      "reward_value": 1.0,
+      "content_hash": "7ec72420df99"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "76-c0-t0-s626729",
+      "task_id": "76",
+      "reward_value": 1.0,
+      "content_hash": "4282a5cdc25e"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "18-c0-t0-s626729",
+      "task_id": "18",
+      "reward_value": 1.0,
+      "content_hash": "6935b560045e"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "6-c0-t0-s626729",
+      "task_id": "6",
+      "reward_value": 1.0,
+      "content_hash": "e5c1777608c2"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "100-c0-t0-s626729",
+      "task_id": "100",
+      "reward_value": 1.0,
+      "content_hash": "5cdec2c5f071"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "92-c0-t0-s626729",
+      "task_id": "92",
+      "reward_value": 1.0,
+      "content_hash": "82be658d3f07"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "74-c0-t0-s626729",
+      "task_id": "74",
+      "reward_value": 1.0,
+      "content_hash": "c7dac739493a"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "102-c0-t0-s626729",
+      "task_id": "102",
+      "reward_value": 1.0,
+      "content_hash": "182c1d7e52c4"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "33-c0-t0-s626729",
+      "task_id": "33",
+      "reward_value": 0.0,
+      "content_hash": "b815cbe694b1"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "33-c0-t0-s626729",
+      "task_id": "33",
+      "reward_value": 0.0,
+      "content_hash": "6eccd5aef5f2"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "88-c0-t0-s626729",
+      "task_id": "88",
+      "reward_value": 1.0,
+      "content_hash": "762d8c51a27d"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "94-c0-t0-s626729",
+      "task_id": "94",
+      "reward_value": 0.0,
+      "content_hash": "d7dba3b30104"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "94-c0-t0-s626729",
+      "task_id": "94",
+      "reward_value": 0.0,
+      "content_hash": "556a1950eb5c"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "43-c0-t0-s626729",
+      "task_id": "43",
+      "reward_value": 1.0,
+      "content_hash": "b5cc6b26ce9c"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "55-c0-t0-s626729",
+      "task_id": "55",
+      "reward_value": 1.0,
+      "content_hash": "8f527d761732"
+    },
+    {
+      "family": "status",
+      "source_cycle": 0,
+      "source_task": "47-c0-t0-s626729",
+      "task_id": "47",
+      "reward_value": 1.0,
+      "content_hash": "a0eac849ac1c"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "99-c0-t0-s626729",
+      "task_id": "99",
+      "reward_value": 1.0,
+      "content_hash": "dcb0b4b045b4"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "109-c0-t0-s626729",
+      "task_id": "109",
+      "reward_value": 1.0,
+      "content_hash": "68fbe1f03f18"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "101-c0-t0-s626729",
+      "task_id": "101",
+      "reward_value": 1.0,
+      "content_hash": "cad8e5dacf77"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "24-c0-t0-s626729",
+      "task_id": "24",
+      "reward_value": 1.0,
+      "content_hash": "76b7be9e25a2"
+    },
+    {
+      "family": "exchange_modify",
+      "source_cycle": 0,
+      "source_task": "70-c0-t0-s626729",
+      "task_id": "70",
+      "reward_value": 1.0,
+      "content_hash": "308ab94c7055"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "17-c0-t0-s626729",
+      "task_id": "17",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "46-c0-t0-s626729",
+      "task_id": "46",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "49-c0-t0-s626729",
+      "task_id": "49",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "28-c0-t0-s626729",
+      "task_id": "28",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "25-c0-t0-s626729",
+      "task_id": "25",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "90-c0-t0-s626729",
+      "task_id": "90",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "86-c0-t0-s626729",
+      "task_id": "86",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "107-c0-t0-s626729",
+      "task_id": "107",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "68-c0-t0-s626729",
+      "task_id": "68",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "60-c0-t0-s626729",
+      "task_id": "60",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "75-c0-t0-s626729",
+      "task_id": "75",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "20-c0-t0-s626729",
+      "task_id": "20",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "83-c0-t0-s626729",
+      "task_id": "83",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "45-c0-t0-s626729",
+      "task_id": "45",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "26-c0-t0-s626729",
+      "task_id": "26",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "61-c0-t0-s626729",
+      "task_id": "61",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "1-c0-t0-s626729",
+      "task_id": "1",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "15-c0-t0-s626729",
+      "task_id": "15",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "32-c0-t0-s626729",
+      "task_id": "32",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "19-c0-t0-s626729",
+      "task_id": "19",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "12-c0-t0-s626729",
+      "task_id": "12",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "110-c0-t0-s626729",
+      "task_id": "110",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "63-c0-t0-s626729",
+      "task_id": "63",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "50-c0-t0-s626729",
+      "task_id": "50",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "66-c0-t0-s626729",
+      "task_id": "66",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "71-c0-t0-s626729",
+      "task_id": "71",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "10-c0-t0-s626729",
+      "task_id": "10",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "108-c0-t0-s626729",
+      "task_id": "108",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "95-c0-t0-s626729",
+      "task_id": "95",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "72-c0-t0-s626729",
+      "task_id": "72",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "87-c0-t0-s626729",
+      "task_id": "87",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "53-c0-t0-s626729",
+      "task_id": "53",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "23-c0-t0-s626729",
+      "task_id": "23",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "7-c0-t0-s626729",
+      "task_id": "7",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "89-c0-t0-s626729",
+      "task_id": "89",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "97-c0-t0-s626729",
+      "task_id": "97",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "98-c0-t0-s626729",
+      "task_id": "98",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "79-c0-t0-s626729",
+      "task_id": "79",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "48-c0-t0-s626729",
+      "task_id": "48",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "64-c0-t0-s626729",
+      "task_id": "64",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "85-c0-t0-s626729",
+      "task_id": "85",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "39-c0-t0-s626729",
+      "task_id": "39",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "65-c0-t0-s626729",
+      "task_id": "65",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "36-c0-t0-s626729",
+      "task_id": "36",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "44-c0-t0-s626729",
+      "task_id": "44",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "34-c0-t0-s626729",
+      "task_id": "34",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "38-c0-t0-s626729",
+      "task_id": "38",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "40-c0-t0-s626729",
+      "task_id": "40",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "82-c0-t0-s626729",
+      "task_id": "82",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "27-c0-t0-s626729",
+      "task_id": "27",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "31-c0-t0-s626729",
+      "task_id": "31",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "37-c0-t0-s626729",
+      "task_id": "37",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "77-c0-t0-s626729",
+      "task_id": "77",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "69-c0-t0-s626729",
+      "task_id": "69",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "105-c0-t0-s626729",
+      "task_id": "105",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "3-c0-t0-s626729",
+      "task_id": "3",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "22-c0-t0-s626729",
+      "task_id": "22",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "29-c0-t0-s626729",
+      "task_id": "29",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "4-c0-t0-s626729",
+      "task_id": "4",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "73-c0-t0-s626729",
+      "task_id": "73",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    },
+    {
+      "family": "authentication",
+      "source_cycle": 0,
+      "source_task": "93-c0-t0-s626729",
+      "task_id": "93",
+      "reward_value": null,
+      "content_hash": "a877665ee1ea"
+    }
+  ]
+}

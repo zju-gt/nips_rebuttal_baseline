@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+import os
 import sys
 from collections.abc import Mapping, Sequence
 from pathlib import Path
@@ -61,7 +62,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not callable(run_benchmark):
         raise EntryError("tau2_runner does not provide run_benchmark()")
     try:
-        returned_summary = run_benchmark()
+        if os.environ.get("TAU2_TRAIN_VAL_PHASE") == "val":
+            from train_val_eval import run_frozen_benchmark
+
+            harness_raw = os.environ.get("TAU2_FROZEN_HARNESS_DIR", "")
+            harness = Path(harness_raw).expanduser().resolve() if harness_raw else None
+            returned_summary = run_frozen_benchmark(runner, args.method, harness)
+        else:
+            returned_summary = run_benchmark()
     except ModuleNotFoundError as exc:
         raise EntryError(
             f"tau2 runner failed (missing Python module: {exc.name})"

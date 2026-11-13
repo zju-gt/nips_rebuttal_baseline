@@ -2,7 +2,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any, Dict, List, Tuple
 
-from openai import OpenAI
+from openai_test import OpenAI
 from pydantic import BaseModel
 
 from tau2.knowledge.postprocessors.base import BasePostprocessor
